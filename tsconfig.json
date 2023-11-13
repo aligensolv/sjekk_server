@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "noUnusedLocals": false,
+        "allowSyntheticDefaultImports": true,
+
+        // "target": "es6",
+        // "module": "commonjs",
+        // "strict": true,
+        // "esModuleInterop": true
+    }
+}
