@@ -1,43 +1,34 @@
 import * as bcrypt from "bcrypt";
-import UserCredentials from "../interfaces/user_credentials";
-import UserCollection from "../models/User";
-import UserRepository from "../repositories/User";
+import UserRepository from "./User.js";
 import * as jwt from "jsonwebtoken"
-import { jwt_secret_key } from '../config'
-import SuccessLoginInterface from "../interfaces/success_login_result";
-import CustomError from "../interfaces/custom_error_class";
-import { BAD_REQUEST, NOT_FOUND } from "../constants/status_codes";
-import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper";
+import { jwt_secret_key } from '../config.js'
+import CustomError from "../interfaces/custom_error_class.js";
+import { BAD_REQUEST, NOT_FOUND } from "../constants/status_codes.js";
+import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
 
 
 class Auth{
-    static encryptPassword(password: string): Promise<string>{
-        return new Promise(async (resolve, reject) =>{
-            try{
+    static encryptPassword(password){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve) =>{
                 let hashedPassword = await bcrypt.hash(password,10)
                 return resolve(hashedPassword)
-            }catch(e){
-                
-                return reject(e.message);
             }
-        })
+        ))
     }
 
-    static decryptAndCheckPasswordMatch(password:string, hashed: string): Promise<boolean>{
-        return new Promise(async (resolve, reject) =>{
-            try{
-                let isMatch = await bcrypt.compare(password,hashed)
-                
-                return resolve(isMatch)
-            }catch(e){
-                return reject(e.message);
-            }
-        })
-    }
-
-    static login(credentials: UserCredentials): Promise<SuccessLoginInterface>{
+    static decryptAndCheckPasswordMatch(password, hashed){
         return new Promise(promiseAsyncWrapepr(
-            async (resolve: (arg0: SuccessLoginInterface) => any, reject: any) =>{
+            async (resolve) =>{
+                let isMatch = await bcrypt.compare(password,hashed)    
+                return resolve(isMatch)
+            }
+        ))
+    }
+
+    static login(credentials){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve, reject) =>{
                 let user = await UserRepository.getUserByIdentifier(credentials.identifier)
                 if(!user){
                     let not_found_error = new CustomError(`User '${credentials.identifier}' does not exist`, NOT_FOUND)

@@ -1,6 +1,5 @@
 import * as request from "supertest"
-import { host,port } from "../config";
-import { PlaceInterface } from "../interfaces/place_interface";
+import { host,port } from "../config.js";
 
 const url = `${host}:${port}`
 
@@ -10,7 +9,7 @@ describe('places test', () => {
         
         expect(response.status).toBe(200);
 
-        expect(response.body).toMatchObject<PlaceInterface[]>([
+        expect(response.body).toMatchObject([
             {
                 location: expect.any(String),
                 policy: expect.any(String),

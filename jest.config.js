@@ -1,12 +1,9 @@
 export default {
-    preset: 'ts-jest',
     testEnvironment: 'node',
     modulePaths: ['<rootDir>/src/'],
     globals: {
-      'ts-jest': {
-        tsconfig: 'tsconfig.json',
-      },
+
     },
-    testMatch: ['<rootDir>/**/*.spec.ts'],
+    testMatch: ['<rootDir>/**/*.spec.js'],
     coveragePathIgnorePatterns: ['/node_modules/', '/dist/'],
 };

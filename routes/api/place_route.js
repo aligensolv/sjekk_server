@@ -1,7 +1,7 @@
-import { Router } from "express";
-import { createPlace, deleteAllPlaces, deletePlace, getAllPlaces, getPlace, updatePlace } from "../../controllers/place_controller";
+import { Router } from 'express'
+import { createPlace, deleteAllPlaces, deletePlace, getAllPlaces, getPlace, updatePlace } from "../../controllers/place_controller.js"
 
-const router: Router = Router();
+const router = Router();
 
 router.get('/places', getAllPlaces)
 router.get('/places/:id', getPlace)

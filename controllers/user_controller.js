@@ -1,26 +1,22 @@
-import { NextFunction, Request, Response } from "express"
-import UserRepository from "../repositories/User"
-import { UserInterface, UserUpdateInterface } from "../interfaces/user_interface"
-import * as moment from "moment"
-import { INTERNAL_SERVER, NOT_CHANGED, NOT_FOUND, OK } from "../constants/status_codes"
-import asyncWrapper from "../middlewares/async_wrapper"
-import CustomError from "../interfaces/custom_error_class"
+import UserRepository from "../repositories/User.js"
+import moment from "moment"
+import { INTERNAL_SERVER, NOT_CHANGED, NOT_FOUND, OK } from "../constants/status_codes.js"
+import asyncWrapper from "../middlewares/async_wrapper.js"
+import CustomError from "../interfaces/custom_error_class.js"
+import UserInterface from "../interfaces/user_interface.js"
 
-export const getAllUsers = async (req: Request, res: Response) => {
-    try{
+export const getAllUsers = asyncWrapper(
+    async (req, res) => {
         let users = await UserRepository.getAllUsers()
         return res.status(OK).json(users)
-    }catch(error){
-        return res.status(INTERNAL_SERVER).send(error)
     }
-}
+    
+)
 
-
-export const registerUser = asyncWrapper(async (req: Request, res: Response) => {
-    let data: UserInterface = req.body
-    console.log(data);
-        
-    let registeredUser: UserInterface = await UserRepository.createUser(data)
+export const registerUser = asyncWrapper(async (req, res) => {
+    let data = UserInterface.from(req.body)
+    let registeredUser = await UserRepository.createUser(data)
+    
     if(registeredUser){
         return res.status(OK).json(registeredUser)
     }
@@ -30,10 +26,10 @@ export const registerUser = asyncWrapper(async (req: Request, res: Response) => 
 
 
 export const getUser = asyncWrapper(
-    async (req: Request, res: Response, next: NextFunction) => {
+    async (req, res, next) => {
         const { id } = req.params
     
-        let user:UserInterface | null = await UserRepository.getUser(id)
+        let user = await UserRepository.getUser(id)
     
         if(user == null){
             let not_found_error = new CustomError('User not found', NOT_FOUND)
@@ -44,12 +40,12 @@ export const getUser = asyncWrapper(
     }
 )
 
-export const updateUser = async (req: Request, res: Response) => {
+export const updateUser = async (req, res) => {
     try{
         const { id } = req.params
-        const data: UserUpdateInterface = req.body
+        const data = req.body
 
-        let user: UserInterface | null = await UserRepository.getUser(id)
+        let user = await UserRepository.getUser(id)
 
         if(user == null){
             return res.status(NOT_FOUND).json({
@@ -75,9 +71,9 @@ export const updateUser = async (req: Request, res: Response) => {
     }
 }
 export const deleteUser = asyncWrapper(
-    async (req: Request, res:Response, next: NextFunction) => {
+    async (req, res, next) => {
         const { id } = req.params
-        let user: UserInterface | null = await UserRepository.getUser(id)
+        let user = await UserRepository.getUser(id)
 
         if(user == null){
             let not_found_error = new CustomError('User not found', NOT_FOUND)
@@ -94,7 +90,7 @@ export const deleteUser = asyncWrapper(
         })
     }
 )
-export const deleteAllUsers = async (req: Request, res:Response) => {
+export const deleteAllUsers = async (req, res) => {
     try{
         let total = await UserRepository.deleteAllUsers()
 

@@ -1,7 +1,7 @@
-import { Router } from "express"
-import { deleteAllUsers, deleteUser, getAllUsers, getUser, registerUser, updateUser } from "../../controllers/user_controller"
+import { Router } from 'express'
+import { deleteAllUsers, deleteUser, getAllUsers, getUser, registerUser, updateUser } from "../../controllers/user_controller.js"
 
-const router: Router = Router()
+const router = Router()
 
 router.get('/users', getAllUsers)
 router.get('/users/:id', getUser)
