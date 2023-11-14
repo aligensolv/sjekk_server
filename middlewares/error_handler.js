@@ -1,5 +1,7 @@
+import logger from "../logger.js"
+
 const ErrorHandlerMiddleware = (error, req, res, next) => {
-    console.log(error.message);
+    logger.error(error.message)
 
     return res.status(error.status).json({
         error: error.message,
