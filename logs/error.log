@@ -1,0 +1,45 @@
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:15:01"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:18:22"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:23:17"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:24:11"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:26:54"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:27:13"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:27:32"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:28:01"}
+{"level":"error","message":"xxx","timestamp":"2023-11-14 10:28:15"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\places\\update.ejs:28\n    26|                     <li class=\"breadcrumb-item\"><a href=\"/\">Hjem</a></li>\r\n    27|                     <li class=\"breadcrumb-item\"><a href=\"/users\">Brukere</a></li>\r\n >> 28|                     <li class=\"breadcrumb-item\"><a href=\"/users\"><%= user.identifier %></a></li>\r\n    29|                     <li class=\"breadcrumb-item active\">Update</li>\r\n    30|                     </ol>\r\n    31|                 </div><!-- /.col -->\r\n\nuser is not defined","timestamp":"2023-11-14 11:27:32"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\places\\update.ejs:28\n    26|                     <li class=\"breadcrumb-item\"><a href=\"/\">Hjem</a></li>\r\n    27|                     <li class=\"breadcrumb-item\"><a href=\"/users\">Brukere</a></li>\r\n >> 28|                     <li class=\"breadcrumb-item\"><a href=\"/users\"><%= user.identifier %></a></li>\r\n    29|                     <li class=\"breadcrumb-item active\">Update</li>\r\n    30|                     </ol>\r\n    31|                 </div><!-- /.col -->\r\n\nuser is not defined","timestamp":"2023-11-14 11:28:36"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\places\\update.ejs:28\n    26|                     <li class=\"breadcrumb-item\"><a href=\"/\">Hjem</a></li>\r\n    27|                     <li class=\"breadcrumb-item\"><a href=\"/users\">Brukere</a></li>\r\n >> 28|                     <li class=\"breadcrumb-item\"><a href=\"/users\"><%= user.identifier %></a></li>\r\n    29|                     <li class=\"breadcrumb-item active\">Update</li>\r\n    30|                     </ol>\r\n    31|                 </div><!-- /.col -->\r\n\nuser is not defined","timestamp":"2023-11-14 11:32:46"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\places\\update.ejs:57\n    55|                                                       <span class=\"input-group-text\"><i class=\"fa fa-user\"></i></span>\r\n    56|                                                     </div>\r\n >> 57|                                                     <input type=\"text\" class=\"form-control\" placeholder=\"Navn\" name=\"name\" id=\"name\" value=\"<%= user.name %>\">\r\n    58|                                                   </div>\r\n    59|                                                 <div class=\"input-group form-group mb-3\">\r\n    60|                                                     <div class=\"input-group-prepend\">\r\n\nuser is not defined","timestamp":"2023-11-14 11:33:22"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\places\\update.ejs:147\n    145|         const password = document.getElementById(\"password\");\r\n    146| \r\n >> 147|         const userId = \"<%= user._id %>\";\r\n    148| \r\n    149|         fetch(`/admin/api/users/${userId}`, {\r\n    150|             method: 'PUT',\r\n\nuser is not defined","timestamp":"2023-11-14 11:34:27"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\places\\update.ejs:147\n    145|         const password = document.getElementById(\"password\");\r\n    146| \r\n >> 147|         const userId = \"<%= user._id %>\";\r\n    148| \r\n    149|         fetch(`/admin/api/users/${userId}`, {\r\n    150|             method: 'PUT',\r\n\nuser is not defined","timestamp":"2023-11-14 11:34:28"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\places\\update.ejs:147\n    145|         const password = document.getElementById(\"password\");\r\n    146| \r\n >> 147|         const userId = \"<%= user._id %>\";\r\n    148| \r\n    149|         fetch(`/admin/api/users/${userId}`, {\r\n    150|             method: 'PUT',\r\n\nuser is not defined","timestamp":"2023-11-14 11:35:13"}
+{"level":"error","message":"Please provide identifier and password","timestamp":"2023-11-14 12:09:32"}
+{"level":"error","message":"jwt.sign is not a function","timestamp":"2023-11-14 12:10:59"}
+{"level":"error","message":"success_login_resulst is not defined","timestamp":"2023-11-14 12:13:16"}
+{"level":"error","message":"jwt.verify is not a function","timestamp":"2023-11-14 12:17:21"}
+{"level":"error","message":"jwt.verify is not a function","timestamp":"2023-11-14 12:17:24"}
+{"level":"error","message":"Please provide api token","timestamp":"2023-11-14 12:18:16"}
+{"level":"error","message":"Please provide api token","timestamp":"2023-11-14 12:19:33"}
+{"level":"error","message":"Please provide api token","timestamp":"2023-11-14 12:19:58"}
+{"level":"error","message":"Please provide api token","timestamp":"2023-11-14 12:24:17"}
+{"level":"error","message":"Please provide api token","timestamp":"2023-11-14 12:34:53"}
+{"level":"error","message":"Please provide api token","timestamp":"2023-11-14 12:35:30"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:08:33"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:09:09"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:09:46"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:10:19"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:10:25"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:10:33"}
+[31m[31merror[31m[39m:   Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net
+[31m[31merror[31m[39m:   Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net
+{"level":"error","message":"Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net","timestamp":"2023-11-14 16:11:14"}
+{"level":"error","message":"Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net","timestamp":"2023-11-14 16:12:02"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:12:04"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:12:14"}
+[31merror[39m: Connection Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.uyhqfof.mongodb.net {"timestamp":"2023-11-14 16:12:55"}
+[31merror[39m: Cast to ObjectId failed for value "completed" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 11:54:20"}
+[31merror[39m: Cast to ObjectId failed for value "completed" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 11:55:56"}
+[31merror[39m: Cast to ObjectId failed for value "saved" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 11:56:01"}
+[31merror[39m: Cast to ObjectId failed for value "completed" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 11:56:09"}
+[31merror[39m: Cast to ObjectId failed for value "saved" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 11:58:51"}

@@ -1,6 +1,6 @@
 import * as bcrypt from "bcrypt";
 import UserRepository from "./User.js";
-import * as jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken"
 import { jwt_secret_key } from '../config.js'
 import CustomError from "../interfaces/custom_error_class.js";
 import { BAD_REQUEST, NOT_FOUND } from "../constants/status_codes.js";
@@ -52,7 +52,7 @@ class Auth{
     
                 return resolve({
                     token: token,
-                    user_data: user
+                    user: user
                 })
             }
         ))

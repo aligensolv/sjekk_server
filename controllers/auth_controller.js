@@ -6,19 +6,20 @@ import CustomError from "../interfaces/custom_error_class.js";
 export const login = asyncWrapper(
     async (req, res, next) => {
         const {
-            identifier,
+            user_identifier,
             password
         } = req.body
     
-        if(!identifier || !password){
+        if(!user_identifier || !password){
             let missing_data_error = new CustomError('Please provide identifier and password', BAD_REQUEST)
             return next(missing_data_error)
         }
         let credentials = {
-            identifier: identifier,
+            identifier: user_identifier,
             password: password
         }
-        let success_login_result = await AuthRepository.login(credentials)        
+        let success_login_result = await AuthRepository.login(credentials)   
+        console.log(success_login_result);     
     
         return res.status(OK).json(success_login_result)
     }

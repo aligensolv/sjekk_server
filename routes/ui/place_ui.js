@@ -18,8 +18,7 @@ router.get('/places',uiAsyncWrapper(
 router.get('/places/:id/update', uiAsyncWrapper(
     async (req, res) => {
         const { id } = req.params
-        let place = await PlaceRepository.getPlace(id)
-        
+        let place = await PlaceRepository.getPlace(id)        
     
         return res.status(OK).render('places/update',{
             place: place

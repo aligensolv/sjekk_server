@@ -1,8 +1,5 @@
 import { createLogger, format, transports } from 'winston'
-import { is_development } from './config.js';
-
-// Check if the environment is development
-const isDevelopment = is_development;
+import { is_development } from '../config.js';
 
 // Define log levels and colors
 const customLevels = {
@@ -33,25 +30,34 @@ const logger = createLogger({
   ),
   transports: [
     // Log to the console only in development
-    isDevelopment ? new transports.Console({
+    is_development ? new transports.Console({
       format: format.combine(
         format.colorize(),
-        format.simple(),
+        format.cli(),
       ),
     }) : null,
     // Log to a file in all environments
     new transports.File({
-      filename: 'loggers/error.log',
+      filename: 'logs/error.log',
       level: 'error',
+      format: format.combine(
+        format.colorize(),
+        format.simple(),
+      ),
     }),
 
     new transports.File({
-      filename: 'loggers/info.log',
-      level: 'info'
+      filename: 'logs/info.log',
+      level: 'info',
+      format: format.combine(
+        format.colorize(),
+        format.simple(),
+      )
     }),
     
     new transports.File({
-      filename: 'loggers/combined.log',
+      filename: 'logs/combined.log',
+
     }),
   ].filter(Boolean), // Filter out null transports in case of non-development environment
 });

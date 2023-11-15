@@ -1,7 +1,7 @@
 import { BAD_REQUEST, NOT_AUTHORIZED } from "../constants/status_codes.js"
 
 import { jwt_secret_key } from "../config.js"
-import * as jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 import CustomError from "../interfaces/custom_error_class.js"
 import asyncWrapepr from "./async_wrapper.js"
 

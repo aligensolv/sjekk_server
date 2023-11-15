@@ -7,6 +7,8 @@ import { port, host } from './config.js'
 import { OK } from './constants/status_codes.js'
 import ErrorHandlerMiddleware from './middlewares/error_handler.js'
 import { fileURLToPath } from 'url'
+import logger from './utils/logger.js'
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -30,6 +32,8 @@ import ValidateApiToken from './middlewares/validate_api_token.js'
 import UserRoute from './routes/api/user_route.js'
 import AuthRoute from './routes/api/auth_route.js'
 import PlaceRoute from './routes/api/place_route.js'
+import ViolationApi from './routes/api/violation_route.js'
+
 
 // public routes
 app.use(
@@ -42,7 +46,8 @@ app.use(
     '/api',
     // ValidateApiToken,
     UserRoute,
-    PlaceRoute
+    PlaceRoute,
+    ViolationApi
 )
 
 import AuthUi from './routes/ui/auth_route.js'
@@ -52,7 +57,7 @@ import PlaceUi from './routes/ui/place_ui.js'
 app.use(
     AuthUi,
     UserUi,
-    PlaceUi
+    PlaceUi,
 )
 
 
@@ -68,9 +73,13 @@ app.get('*', (req, res) => {
 })
 
 const main = async () => {
-    let lib = await import('./utils/mongoose_connection.js')
-    if(await lib.default){
-        app.listen(port, () => console.log(`server listening on ${host}:${port}`))
+    try{
+        let lib = await import('./utils/mongoose_connection.js')
+        if(await lib.default){
+            app.listen(port, () => console.log(`server listening on ${host}:${port}`))
+        }
+    }catch(err){
+        logger.error(err.message)
     }
 }
 
