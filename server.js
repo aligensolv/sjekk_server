@@ -33,6 +33,7 @@ import UserRoute from './routes/api/user_route.js'
 import AuthRoute from './routes/api/auth_route.js'
 import PlaceRoute from './routes/api/place_route.js'
 import ViolationApi from './routes/api/violation_route.js'
+import ShiftApi from './routes/api/shift_route.js'
 
 
 // public routes
@@ -47,7 +48,8 @@ app.use(
     // ValidateApiToken,
     UserRoute,
     PlaceRoute,
-    ViolationApi
+    ViolationApi,
+    ShiftApi
 )
 
 import AuthUi from './routes/ui/auth_route.js'

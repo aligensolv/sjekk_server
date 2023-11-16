@@ -6,16 +6,21 @@ import {
     deleteViolation,
     deleteAllViolations,
     getCompletedViolations,
-    getSavedViolations
+    getSavedViolations,
+    getAllPlaceviolations
 } from '../../controllers/violation_controller.js'
 
 const router = Router()
 
 router.get('/violations', getAllviolations)
-router.get('/violations/:id', getViolation)
+router.get('/violations/place/:id', getAllPlaceviolations)
 
 router.get('/violations/completed', getCompletedViolations)
 router.get('/violations/saved', getSavedViolations)
+
+
+router.get('/violations/:id', getViolation)
+
 
 
 router.post('/violations', createViolation)

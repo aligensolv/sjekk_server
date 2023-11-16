@@ -2,12 +2,22 @@ import { NOT_FOUND } from "../constants/status_codes.js";
 import CustomError from "../interfaces/custom_error_class.js";
 import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
 import Violation from "../models/Violation.js";
+import moment from "moment";
 
 class ViolationRepository{
     static getAllViolations(){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
                 let violations = await Violation.find()
+                return resolve(violations)
+            }
+        ))
+    }
+
+    static getAllPlaceViolations(place){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let violations = await Violation.find({ place: place})
                 return resolve(violations)
             }
         ))
@@ -48,7 +58,12 @@ class ViolationRepository{
     static createViolation(data){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let newViolation = await Violation.create(data)
+                let created_at = moment().format('YYYY-MM-DD HH:mm:ss')
+
+                let newViolation = await Violation.create({
+                    ...data,
+                    created_at: created_at
+                })
                 return resolve(newViolation)
             }
         ))
