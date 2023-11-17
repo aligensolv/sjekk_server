@@ -6,6 +6,26 @@ const BoardSchema = new mongoose.Schema({
         required: true,
     },
 
+    registeration_type:{
+        type: String,
+        required: true,
+    },
+
+    brand:{
+        type: String,
+        required: true,
+    },
+
+    start_date:{
+        type: String,
+        required: true,
+    },
+
+    end_date:{
+        type: String,
+        required: true,
+    },
+
     name:{
         type: String,
         required: true,
@@ -13,6 +33,7 @@ const BoardSchema = new mongoose.Schema({
 
     created_at:{
         type: String,
+        required: true,
     }
 })
 

@@ -1,8 +1,9 @@
-import { jwt_secret_key } from "../config.js"
+import { jwt_secret_key, static_absolute_files_host } from "../config.js"
 import { OK } from "../constants/status_codes.js"
 import asyncWrapper from "../middlewares/async_wrapper.js"
 import ViolationRepository from "../repositories/Violation.js"
 import jwt from 'jsonwebtoken'
+import logger from "../utils/logger.js"
 
 export const getAllviolations = asyncWrapper(
     async (req,res) =>{
@@ -46,12 +47,24 @@ export const createViolation = asyncWrapper(
     async (req,res) =>{
         let data = req.body
         let { token } = req.headers
+        
 
         let decoded = jwt.verify(token, jwt_secret_key)
 
+        const images = [];
+
+        for (const image of req.files) {
+            images.push(static_absolute_files_host + image.path);
+        }
+
+        console.log(data);
+        console.log(data.rules[0]);
+
         let violation = await ViolationRepository.createViolation({
             ...data,
-            user_identifier: decoded._id
+            publisher_identifier: decoded.id,
+            rules: JSON.parse(data.rules),
+            images: images
         })
         return res.status(OK).json(violation)
     }

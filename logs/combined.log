@@ -50,3 +50,27 @@
 {"level":"error","message":"Cast to ObjectId failed for value \"saved\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-15 11:58:51"}
 {"level":"error","message":"Cast to ObjectId failed for value \"completed\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-15 15:28:45"}
 {"level":"error","message":"Cast to ObjectId failed for value \"completed\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-15 15:29:23"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\rules\\read.ejs:71\n    69|                                 </thead>\r\n    70|                                 <tbody>\r\n >> 71|                                     <% rule.forEach(rule => { %>\r\n    72|                                         <tr>\r\n    73|                                             <td><%= rule.name %></td>\r\n    74|                                             <td><%= rule.identifier %></td>\r\n\nrule is not defined","timestamp":"2023-11-16 11:47:19"}
+{"level":"error","message":"Rule validation failed: created_at: Path `created_at` is required.","timestamp":"2023-11-16 11:48:48"}
+{"level":"error","message":"Rule validation failed: created_at: Path `created_at` is required.","timestamp":"2023-11-16 11:49:46"}
+{"level":"error","message":"Request failed with status code 401","timestamp":"2023-11-16 12:05:48"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'ClientRequest'\n    |     property 'socket' -> object with constructor 'TLSSocket'\n    --- property '_httpMessage' closes the circle","timestamp":"2023-11-16 12:07:17"}
+{"level":"error","message":"connect ECONNREFUSED 192.168.1.1:27017","timestamp":"2023-11-16 14:16:19"}
+{"level":"error","message":"jwt malformed","timestamp":"2023-11-16 17:56:27"}
+{"level":"error","message":"jwt malformed","timestamp":"2023-11-16 17:57:34"}
+{"level":"error","message":"decoded is not defined","timestamp":"2023-11-16 18:02:57"}
+{"level":"error","message":"Shift validation failed: user_identifier: Path `user_identifier` is required.","timestamp":"2023-11-16 18:03:15"}
+{"level":"error","message":"Shift validation failed: user_identifier: Path `user_identifier` is required.","timestamp":"2023-11-16 18:03:39"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'nasjonaltGodkjenningsAr')","timestamp":"2023-11-17 10:00:04"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'merke')","timestamp":"2023-11-17 10:00:45"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'D:\\workspace\\sjekk_kontroll\\sjekk_server\\public\\images\\cars\\2023-11-17_a3de1f0f-79c1-4951-a9ed-d4e6ea02de7c4201048101717972212.jpg'","timestamp":"2023-11-17 13:32:25"}
+{"level":"error","message":"Cannot convert object to primitive value","timestamp":"2023-11-17 13:32:55"}
+{"level":"error","message":"Violation validation failed: publisher_identifier: Path `publisher_identifier` is required.","timestamp":"2023-11-17 13:33:59"}
+{"level":"error","message":"Violation validation failed: publisher_identifier: Path `publisher_identifier` is required.","timestamp":"2023-11-17 13:34:37"}
+{"level":"error","message":"Violation validation failed: publisher_identifier: Path `publisher_identifier` is required.","timestamp":"2023-11-17 13:35:01"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-17 13:42:54"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-11-17 13:43:36"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-11-17 13:43:54"}
+{"level":"error","message":"Cast to ObjectId failed for value \"SchemaObjectId {\n  path: '65531fcd2eefbb5ad0d327e6',\n  instance: 'ObjectId',\n  validators: [],\n  getters: [],\n  setters: [],\n  _presplitPath: [ '65531fcd2eefbb5ad0d327e6' ],\n  options: SchemaObjectIdOptions {},\n  _index: null,\n  [Symbol(mongoose#schemaType)]: true\n}\" (type SchemaObjectId) at path \"place\" for model \"Violation\"","timestamp":"2023-11-17 15:27:14"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\boards\\read.ejs:71\n    69|                                 </thead>\r\n    70|                                 <tbody>\r\n >> 71|                                     <% rules.forEach(rule => { %>\r\n    72|                                         <tr>\r\n    73|                                             <td><%= rule.name %></td>\r\n    74|                                             <td><%= rule.charge %></td>\r\n\nrules is not defined","timestamp":"2023-11-17 16:07:30"}
+{"level":"error","message":"D:\\workspace\\sjekk_kontroll\\sjekk_server\\views\\boards\\read.ejs:71\n    69|                                 </thead>\r\n    70|                                 <tbody>\r\n >> 71|                                     <% rules.forEach(rule => { %>\r\n    72|                                         <tr>\r\n    73|                                             <td><%= rule.name %></td>\r\n    74|                                             <td><%= rule.charge %></td>\r\n\nrules is not defined","timestamp":"2023-11-17 16:07:56"}

@@ -2,22 +2,35 @@ import * as mongoose from "mongoose";
 
 const ViolationSchema = new mongoose.Schema({
     publisher_identifier:{
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
         required: true
+    },
+
+    comments:{
+        type: String,
+        default: ''
+    },
+
+    images:{
+        type: [String],
+        default: []
     },
 
     place:{
         type: String,
+        ref: 'Place',
         required: true
     },
 
     locked:{
         type: Boolean,
-        false: false
+        default: false
     },
 
-    rule:{
-        type: String,
+    rules:{
+        type: [mongoose.Schema.Types.ObjectId],
+        ref:'Rule',
         required: true
     },
 
@@ -27,21 +40,29 @@ const ViolationSchema = new mongoose.Schema({
         enum: ['saved','completed']
     },
 
-    car_data:{
-        brand: {
-            type: String,
-            required: true
-        },
+    brand:{
+        type: String,
+        required: true
+    },
 
-        color:{
-            type: String,
-            required: true
-        },
+    plate:{
+        type: String,
+        required: true
+    },
 
-        board_number:{
-            type: String,
-            required: true
-        }
+    year:{
+        type: String,
+        required: true
+    },
+
+    description:{
+        type: String,
+        required: true
+    },
+
+    type:{
+        type: String,
+        required: true
     },
 
     created_at:{

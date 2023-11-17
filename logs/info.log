@@ -39,3 +39,64 @@
 [31merror[39m: Cast to ObjectId failed for value "saved" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 11:58:51"}
 [31merror[39m: Cast to ObjectId failed for value "completed" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 15:28:45"}
 [31merror[39m: Cast to ObjectId failed for value "completed" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-15 15:29:23"}
+[31merror[39m: D:\workspace\sjekk_kontroll\sjekk_server\views\rules\read.ejs:71
+    69|                                 </thead>
+    70|                                 <tbody>
+ >> 71|                                     <% rule.forEach(rule => { %>
+    72|                                         <tr>
+    73|                                             <td><%= rule.name %></td>
+    74|                                             <td><%= rule.identifier %></td>
+
+rule is not defined {"timestamp":"2023-11-16 11:47:19"}
+[31merror[39m: Rule validation failed: created_at: Path `created_at` is required. {"timestamp":"2023-11-16 11:48:48"}
+[31merror[39m: Rule validation failed: created_at: Path `created_at` is required. {"timestamp":"2023-11-16 11:49:46"}
+[31merror[39m: Request failed with status code 401 {"timestamp":"2023-11-16 12:05:48"}
+[31merror[39m: Converting circular structure to JSON
+    --> starting at object with constructor 'ClientRequest'
+    |     property 'socket' -> object with constructor 'TLSSocket'
+    --- property '_httpMessage' closes the circle {"timestamp":"2023-11-16 12:07:17"}
+[31merror[39m: connect ECONNREFUSED 192.168.1.1:27017 {"timestamp":"2023-11-16 14:16:19"}
+[31merror[39m: jwt malformed {"timestamp":"2023-11-16 17:56:27"}
+[31merror[39m: jwt malformed {"timestamp":"2023-11-16 17:57:34"}
+[31merror[39m: decoded is not defined {"timestamp":"2023-11-16 18:02:57"}
+[31merror[39m: Shift validation failed: user_identifier: Path `user_identifier` is required. {"timestamp":"2023-11-16 18:03:15"}
+[31merror[39m: Shift validation failed: user_identifier: Path `user_identifier` is required. {"timestamp":"2023-11-16 18:03:39"}
+[31merror[39m: Cannot read properties of undefined (reading 'nasjonaltGodkjenningsAr') {"timestamp":"2023-11-17 10:00:04"}
+[31merror[39m: Cannot read properties of undefined (reading 'merke') {"timestamp":"2023-11-17 10:00:45"}
+[31merror[39m: ENOENT: no such file or directory, open 'D:\workspace\sjekk_kontroll\sjekk_server\public\images\cars\2023-11-17_a3de1f0f-79c1-4951-a9ed-d4e6ea02de7c4201048101717972212.jpg' {"timestamp":"2023-11-17 13:32:25"}
+[31merror[39m: Cannot convert object to primitive value {"timestamp":"2023-11-17 13:32:55"}
+[31merror[39m: Violation validation failed: publisher_identifier: Path `publisher_identifier` is required. {"timestamp":"2023-11-17 13:33:59"}
+[31merror[39m: Violation validation failed: publisher_identifier: Path `publisher_identifier` is required. {"timestamp":"2023-11-17 13:34:37"}
+[31merror[39m: Violation validation failed: publisher_identifier: Path `publisher_identifier` is required. {"timestamp":"2023-11-17 13:35:01"}
+[31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2023-11-17 13:42:54"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-11-17 13:43:36"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-11-17 13:43:54"}
+[31merror[39m: Cast to ObjectId failed for value "SchemaObjectId {
+  path: '65531fcd2eefbb5ad0d327e6',
+  instance: 'ObjectId',
+  validators: [],
+  getters: [],
+  setters: [],
+  _presplitPath: [ '65531fcd2eefbb5ad0d327e6' ],
+  options: SchemaObjectIdOptions {},
+  _index: null,
+  [Symbol(mongoose#schemaType)]: true
+}" (type SchemaObjectId) at path "place" for model "Violation" {"timestamp":"2023-11-17 15:27:14"}
+[31merror[39m: D:\workspace\sjekk_kontroll\sjekk_server\views\boards\read.ejs:71
+    69|                                 </thead>
+    70|                                 <tbody>
+ >> 71|                                     <% rules.forEach(rule => { %>
+    72|                                         <tr>
+    73|                                             <td><%= rule.name %></td>
+    74|                                             <td><%= rule.charge %></td>
+
+rules is not defined {"timestamp":"2023-11-17 16:07:30"}
+[31merror[39m: D:\workspace\sjekk_kontroll\sjekk_server\views\boards\read.ejs:71
+    69|                                 </thead>
+    70|                                 <tbody>
+ >> 71|                                     <% rules.forEach(rule => { %>
+    72|                                         <tr>
+    73|                                             <td><%= rule.name %></td>
+    74|                                             <td><%= rule.charge %></td>
+
+rules is not defined {"timestamp":"2023-11-17 16:07:56"}

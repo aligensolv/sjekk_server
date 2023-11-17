@@ -14,10 +14,26 @@ class ViolationRepository{
         ))
     }
 
-    static getAllPlaceViolations(place){
+    static getAllPlaceViolations(id){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({ place: place})
+                let violations = await Violation.find({place: id}).populate([
+                    {
+                        path: 'publisher_identifier',
+                        ref: 'User'
+                    },
+
+                    {
+                        path: 'rules',
+                        ref: 'Rule'
+                    },
+
+                    {
+                        path: 'place',
+                        ref: 'Place'
+                    }
+                ])
+                console.log(violations);
                 return resolve(violations)
             }
         ))
@@ -40,7 +56,23 @@ class ViolationRepository{
     static getCompletedViolations(){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({ status: 'completed' })
+                let violations = await Violation.find({ status: 'completed' }).populate([
+                    {
+                        path: 'publisher_identifier',
+                        ref: 'User'
+                    },
+
+                    {
+                        path: 'rules',
+                        ref: 'Rule'
+                    },
+
+                    {
+                        path: 'place',
+                        ref: 'Place'
+                    }
+                ])
+
                 return resolve(violations)
             }
         ))
@@ -49,7 +81,22 @@ class ViolationRepository{
     static getSavedViolations(){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({ status: 'saved' })
+                let violations = await Violation.find({ status: 'saved' }).populate([
+                    {
+                        path: 'publisher_identifier',
+                        ref: 'User'
+                    },
+
+                    {
+                        path: 'rules',
+                        ref: 'Rule'
+                    },
+
+                    {
+                        path: 'place',
+                        ref: 'Place'
+                    }
+                ])
                 return resolve(violations)
             }
         ))

@@ -23,7 +23,7 @@ app.use(
 )
 
 app.use(compression())
-app.use(express.static(path.join(__dirname, './public')))
+app.use('/public',express.static(path.join(__dirname, './public')))
 
 
 app.set('view engine', 'ejs')
@@ -34,6 +34,9 @@ import AuthRoute from './routes/api/auth_route.js'
 import PlaceRoute from './routes/api/place_route.js'
 import ViolationApi from './routes/api/violation_route.js'
 import ShiftApi from './routes/api/shift_route.js'
+import RuleApi from './routes/api/rule_route.js'
+import AutosysApi from './routes/api/autosys_route.js'
+import BoardApi from './routes/api/board_route.js'
 
 
 // public routes
@@ -49,17 +52,24 @@ app.use(
     UserRoute,
     PlaceRoute,
     ViolationApi,
-    ShiftApi
+    ShiftApi,
+    RuleApi,
+    AutosysApi,
+    BoardApi
 )
 
 import AuthUi from './routes/ui/auth_route.js'
 import UserUi from './routes/ui/user_route.js'
-import PlaceUi from './routes/ui/place_ui.js'
+import PlaceUi from './routes/ui/place_route.js'
+import RuleUi from './routes/ui/rule_route.js'
+import BoardUi from './routes/ui/board_route.js'
 
 app.use(
     AuthUi,
     UserUi,
     PlaceUi,
+    RuleUi,
+    BoardUi
 )
 
 

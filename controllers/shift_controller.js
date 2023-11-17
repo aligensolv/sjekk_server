@@ -38,8 +38,10 @@ export const createShift = asyncWrapper(
     async (req,res) =>{
         let { token } = req.headers
         let decoded = jwt.verify(token,jwt_secret_key)
+        console.log('shift is');
+        console.log(decoded);
         
-        let shift = await ShiftRepository.createShift(decoded._id)
+        let shift = await ShiftRepository.createShift(decoded.id)
         return res.status(OK).json(shift)
     }
 )
