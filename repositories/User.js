@@ -21,7 +21,7 @@ class UserRepository{
             let created_at = moment().format('YYYY-MM-DD HH:mm:ss')  
 
             let user = await UserCollection.create({
-                ...userInterface.json(),
+                ...data,
                 password: hashed,
                 created_at: created_at
             })

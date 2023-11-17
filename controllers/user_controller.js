@@ -14,7 +14,7 @@ export const getAllUsers = asyncWrapper(
 )
 
 export const registerUser = asyncWrapper(async (req, res) => {
-    let data = UserInterface.from(req.body)
+    let data = req.body
     let registeredUser = await UserRepository.createUser(data)
     
     if(registeredUser){
