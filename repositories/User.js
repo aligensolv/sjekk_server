@@ -9,11 +9,10 @@ import { ALREADY_EXISTS } from "../constants/status_codes.js"
 class UserRepository{
     static createUser(data){         
         return new Promise(promiseAsyncWrapepr(async (resolve,reject) => {
-            let userInterface = UserInterface.from(data)
-            let existingUser = await this.getUserByIdentifier(userInterface.user_identifier)
+            let existingUser = await this.getUserByIdentifier(data.user_identifier)
 
             if(existingUser != null){
-                let identifier_already_existing = new CustomError(`Identifier ${userInterface.user_identifier} already exists`, ALREADY_EXISTS)
+                let identifier_already_existing = new CustomError(`Identifier ${data.user_identifier} already exists`, ALREADY_EXISTS)
                 return reject(identifier_already_existing)
             }
 
