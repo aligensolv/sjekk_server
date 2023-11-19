@@ -106,3 +106,17 @@ rules is not defined {"timestamp":"2023-11-17 16:07:30"}
     74|                                             <td><%= rule.charge %></td>
 
 rules is not defined {"timestamp":"2023-11-17 16:07:56"}
+[31merror[39m: D:\workspace\sjekk_kontroll\sjekk_server\views\cars\create.ejs:17
+    15|     <div class="wrapper">
+    16|         <%- include('../components/navbar') %>
+ >> 17|         <% if(isAdmin){ %>
+    18|             <%- include('../components/sidebar') %> 
+    19|         <% } else{%>
+    20|             <%- include('../components/manager_sidebar', { permissions }) %> 
+
+isAdmin is not defined {"timestamp":"2023-11-19 03:47:09"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-11-19 04:18:32"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-11-19 04:18:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-19 05:00:37"}
+[31merror[39m: id is not defined {"timestamp":"2023-11-19 11:46:09"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-19 11:51:53"}

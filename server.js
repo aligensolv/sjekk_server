@@ -36,7 +36,7 @@ import ViolationApi from './routes/api/violation_route.js'
 import ShiftApi from './routes/api/shift_route.js'
 import RuleApi from './routes/api/rule_route.js'
 import AutosysApi from './routes/api/autosys_route.js'
-import BoardApi from './routes/api/board_route.js'
+import CarApi from './routes/api/car_route.js'
 
 
 // public routes
@@ -55,21 +55,21 @@ app.use(
     ShiftApi,
     RuleApi,
     AutosysApi,
-    BoardApi
+    CarApi
 )
 
 import AuthUi from './routes/ui/auth_route.js'
 import UserUi from './routes/ui/user_route.js'
 import PlaceUi from './routes/ui/place_route.js'
 import RuleUi from './routes/ui/rule_route.js'
-import BoardUi from './routes/ui/board_route.js'
+import CarUi from './routes/ui/car_route.js'
 
 app.use(
     AuthUi,
     UserUi,
     PlaceUi,
     RuleUi,
-    BoardUi
+    CarUi
 )
 
 

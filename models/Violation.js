@@ -7,7 +7,12 @@ const ViolationSchema = new mongoose.Schema({
         required: true
     },
 
-    comments:{
+    paper_comment:{
+        type: String,
+        default: ''
+    },
+
+    out_comment:{
         type: String,
         default: ''
     },
