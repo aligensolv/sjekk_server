@@ -27,7 +27,11 @@ class CarRepository{
     static getCarByPlate(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let car = await Car.findOne({ plate_number: id })
+                let cars = await Car.find()
+                let car = cars.filter(c => {
+                    return c.plate_number.toLowerCase().replace(/' '/g, '') == id.toLowerCase().replace(/''/g,'')
+                })[0]
+                
                 if(!car){
                     let not_found_error = new CustomError('Could not find car', NOT_FOUND)
                     return reject(not_found_error)
