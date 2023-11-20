@@ -53,10 +53,10 @@ class ViolationRepository{
         ))
     }
 
-    static getCompletedViolations(){
+    static getCompletedViolations(id){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({ status: 'completed' }).populate([
+                let violations = await Violation.find({ publisher_identifier: id,status: 'completed' }).populate([
                     {
                         path: 'publisher_identifier',
                         ref: 'User'
@@ -78,10 +78,10 @@ class ViolationRepository{
         ))
     }
 
-    static getSavedViolations(){
+    static getSavedViolations(id){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({ status: 'saved' }).populate([
+                let violations = await Violation.find({ publisher_identifier:id,status: 'saved' }).populate([
                     {
                         path: 'publisher_identifier',
                         ref: 'User'

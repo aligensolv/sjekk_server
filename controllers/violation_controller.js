@@ -31,14 +31,18 @@ export const getViolation = asyncWrapper(
 
 export const getCompletedViolations = asyncWrapper(
     async (req,res) =>{
-        let completedViolations = await ViolationRepository.getCompletedViolations()
+        const {token} = req.headers
+        let decoded = jwt.verify(token, jwt_secret_key)
+        let completedViolations = await ViolationRepository.getCompletedViolations(decoded.id)
         return res.status(OK).json(completedViolations)
     }
 )
 
 export const getSavedViolations = asyncWrapper(
     async (req,res) =>{
-        let savedViolations = await ViolationRepository.getSavedViolations()
+        const {token} = req.headers
+        let decoded = jwt.verify(token, jwt_secret_key)
+        let savedViolations = await ViolationRepository.getSavedViolations(decoded.id)
         return res.status(OK).json(savedViolations)
     }
 )

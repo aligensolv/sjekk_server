@@ -120,3 +120,15 @@ isAdmin is not defined {"timestamp":"2023-11-19 03:47:09"}
 [31merror[39m: Could not find car {"timestamp":"2023-11-19 05:00:37"}
 [31merror[39m: id is not defined {"timestamp":"2023-11-19 11:46:09"}
 [31merror[39m: Could not find car {"timestamp":"2023-11-19 11:51:53"}
+[31merror[39m: xxx {"timestamp":"2023-11-20 01:19:11"}
+[31merror[39m: xxx {"timestamp":"2023-11-20 01:19:17"}
+[31merror[39m: xxx {"timestamp":"2023-11-20 01:19:57"}
+[31merror[39m: xxx {"timestamp":"2023-11-20 01:20:08"}
+[31merror[39m: xxx {"timestamp":"2023-11-20 01:27:56"}
+[31merror[39m: xxx {"timestamp":"2023-11-20 01:27:59"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-20 07:19:40"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-20 07:35:53"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-20 07:37:29"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-20 07:45:13"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-20 08:01:59"}
+[31merror[39m: Could not find car {"timestamp":"2023-11-20 08:39:40"}
