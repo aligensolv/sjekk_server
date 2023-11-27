@@ -51,9 +51,15 @@
                                             <form id="createPlaceForm">
                                                 <div class="input-group form-group mb-3">
                                                     <div class="input-group-prepend">
-                                                      <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                      <span class="input-group-text"><i class="fa fa-location-arrow"></i></span>
                                                     </div>
                                                     <input type="text" class="form-control" placeholder="Location" name="location" id="location">
+                                                  </div>
+                                                <div class="input-group form-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text"><i class="fa fa-hashtag"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Code" name="code" id="code">
                                                   </div>
                                                 <div class="input-group form-group mb-3">
                                                     <div class="input-group-prepend">
@@ -134,12 +140,14 @@
         if($('#createPlaceForm').valid()){
           let location = document.querySelector('#location')
           let policy = document.querySelector('#policy')
+          let code = document.querySelector('#code')
 
         fetch('/api/places', {
             method: 'POST',
             body: JSON.stringify({
                 location: location.value,
                 policy: policy.value,
+                code: code.value
             }),
             headers:{
                 'Content-Type':'application/json'

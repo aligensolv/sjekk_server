@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
 import Rule from "../models/Rule.js";
 import moment from "moment";
@@ -15,7 +16,7 @@ class RuleRepository{
     static getRule(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let rule = await Rule.findOne({ _id: id })
+                let rule = await Rule.findById(id);
                 return resolve(rule)
             }
         ))

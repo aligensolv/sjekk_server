@@ -54,7 +54,7 @@
                                                     <div class="input-group-prepend">
                                                       <span class="input-group-text"><i class="fa fa-car"></i></span>
                                                     </div>
-                                                    <input type="text" class="form-control" placeholder="Styrenummer" name="boardNumber" id="boardNumber">
+                                                    <input type="text" class="form-control" placeholder="Board Number" name="boardNumber" id="boardNumber">
                                                   </div>
 
                                                   <div class="d-flex justify-content-between align-items-center">
@@ -81,7 +81,12 @@
                                                     <div class="input-group-prepend">
                                                       <span class="input-group-text"><i class="fa fa-registered"></i></span>
                                                     </div>
-                                                    <input type="text" class="form-control" placeholder="Styrenummer" name="registeration" id="registeration">
+                                                    <input type="text" class="form-control" placeholder="Registeration Type" name="registeration" id="registeration">
+                                                  </div>
+                                                  <div class="input-group form-group mb-3">
+                                                    <select class="form-control" placeholder="Places" name="places" id="places">
+
+                                                    </select>
                                                   </div>
 
                                                   <div class="btn-group d-flex justify-content-center align-items-center">
@@ -117,6 +122,8 @@
 
 
     <script>
+
+        $('#places').select2()
 
 $('#reservationdatetime').datetimepicker({
         format: 'L'
@@ -165,19 +172,21 @@ $('#toreservationdatetime').datetimepicker({
   });
         
         async function createCar(){
-
             if($('#createCarForm').valid()){
                 const boardNumber = document.getElementById('boardNumber').value;
                 const startDate = $('#reservationdatetime').find('input').val();
                 const endDate = $('#toreservationdatetime').find('input').val();
                 const registeration = document.getElementById('registeration').value;
+                let places_dropdown = document.getElementById('places')
+                let place = places_dropdown.value
 
 
         const formData = {
             plate_number: boardNumber,
             start_date: startDate,
             end_date: endDate,
-            registeration_type: registeration
+            registeration_type: registeration,
+            place: place
         };
 
         console.log(formData);
@@ -208,6 +217,25 @@ $('#toreservationdatetime').datetimepicker({
         }
             }
         }
+
+        async function initializePlaces(){
+            let response = await fetch('/api/places')
+            let places = await response.json()
+            console.log(places);
+            let places_dropdown = document.getElementById('places')
+
+            for(let place of places){
+                let option = document.createElement('option')
+                option.value = place._id
+                option.textContent = place.location
+                places_dropdown.appendChild(option)
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', async (event) => {
+            await initializePlaces();
+        }) 
     </script>
 
 </body>

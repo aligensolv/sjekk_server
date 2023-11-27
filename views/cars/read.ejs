@@ -69,6 +69,7 @@
                                     <th>Description</th>
                                     <th>Start</th>
                                     <th>End</th>
+                                    <th>Place</th>
                                     <th>Handlinger</th>
                                 </tr>
                                 </thead>
@@ -82,6 +83,7 @@
                                             <td><%= car.description %></td>
                                             <td><%= car.start_date %></td>
                                             <td><%= car.end_date %></td>
+                                            <td><%= car.place.location %></td>
                                             <td class="controls">
                                                 <a href="/cars/<%= car._id %>/update" class="btn btn-primary btn-sm me-1">
                                                     <i class="fa fa-edit"></i>

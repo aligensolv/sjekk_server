@@ -9,6 +9,15 @@ export const getAllCars = asyncWrapper(
     }
 )
 
+export const getAllCarsByPlace = asyncWrapper(
+    async (req,res) => {
+        const {id} = req.params
+
+        let cars = await CarRepository.getAllCarsByPlace(id);
+        return res.status(OK).json(cars);
+    }
+)
+
 export const getCar = asyncWrapper(
     async (req,res) => {
         const {id} = req.params

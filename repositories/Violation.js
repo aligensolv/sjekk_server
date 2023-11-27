@@ -3,6 +3,7 @@ import CustomError from "../interfaces/custom_error_class.js";
 import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
 import Violation from "../models/Violation.js";
 import moment from "moment";
+import RuleRepository from "./Rule.js";
 
 class ViolationRepository{
     static getAllViolations(){
@@ -10,6 +11,29 @@ class ViolationRepository{
             async(resolve, reject) =>{
                 let violations = await Violation.find()
                 return resolve(violations)
+            }
+        ))
+    }
+
+    static completeViolation(id){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let result = await Violation.updateOne({_id: id}, {
+                    status: 'completed',
+                    completed_at: moment().format('YYYY-MM-DD HH:mm:ss')
+                })
+
+                return resolve(result.modifiedCount)
+            }
+        ))
+    }
+
+    static updateViolation(id, data){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let result = await Violation.updateOne({_id: id}, data)
+
+                return resolve(result.modifiedCount)
             }
         ))
     }
@@ -119,11 +143,13 @@ class ViolationRepository{
     static deleteViolation(id){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violationExists = await Violation.findOne({ _id: id })
+                let violationExists = await Violation.findById(id)
                 if(!violationExists){
                     let not_found_error = new CustomError('violation not found', NOT_FOUND)
                     return reject(not_found_error)
                 }
+
+                await Violation.deleteOne({ _id: id })
 
                 return resolve(true)
             }
@@ -135,6 +161,53 @@ class ViolationRepository{
             async(resolve, reject) =>{
                 await Violation.deleteMany({})
                 return resolve(true)
+            }
+        ))
+    }
+
+    static addImage(id,image){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let violation = await Violation.findOne({ _id: id })
+                violation.images.push(image)
+                await violation.save()
+                return resolve(image)
+            }
+        ))
+    }
+
+    static addRule(id,rule){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let violation = await Violation.findOne({ _id: id })
+                violation.rules.push(rule)
+                await violation.save()
+
+                let rule_data = await RuleRepository.getRule(rule)
+                console.log(rule_data);
+                return resolve(rule_data)
+            }
+        ))
+    }
+    static updateInnerComment(id,comment){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let violation = await Violation.findOne({ _id: id })
+                violation.paper_comment = comment
+                await violation.save()
+
+                return resolve(comment)
+            }
+        ))
+    }
+    static updateOutterComment(id,comment){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let violation = await Violation.findOne({ _id: id })
+                violation.out_comment = comment
+                await violation.save()
+
+                return resolve(comment)
             }
         ))
     }

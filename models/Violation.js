@@ -45,35 +45,52 @@ const ViolationSchema = new mongoose.Schema({
         enum: ['saved','completed']
     },
 
-    brand:{
-        type: String,
-        required: true
+    plate_info: {
+        brand:{
+            type: String,
+            required: true
+        },
+
+        plate:{
+            type: String,
+            required: true
+        },
+
+        year:{
+            type: String,
+            required: true
+        },
+
+        description:{
+            type: String,
+            required: true
+        },
+
+        type:{
+            type: String,
+            required: true
+        },
     },
 
-    plate:{
-        type: String,
+    is_car_registered: {
+        type: Boolean,
         required: true
     },
-
-    year:{
-        type: String,
-        required: true
-    },
-
-    description:{
-        type: String,
-        required: true
-    },
-
-    type:{
-        type: String,
-        required: true
+    
+    registered_car_info:{
+        type: mongoose.Schema.Types.Map,
+        default: null
     },
 
     created_at:{
         type: String,
         required: true,
     },
+
+    completed_at: {
+        type: String,
+        default: null
+    }
 })
 
 const ViolationModel = mongoose.model('Violation', ViolationSchema)

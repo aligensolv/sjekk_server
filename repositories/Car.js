@@ -4,12 +4,25 @@ import Car from "../models/Car.js";
 import CustomError from "../interfaces/custom_error_class.js";
 import { NOT_FOUND } from "../constants/status_codes.js";
 import AutosysRepository from "./Autosys.js";
+import logger from '../utils/logger.js'
 
 class CarRepository{
     static getAllCars(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let cars = await Car.find()
+                let cars = await Car.find().populate({
+                    path: 'place',
+                    ref: 'Place'
+                })
+                return resolve(cars)
+            }
+        ))
+    }
+
+    static getAllCarsByPlace(id){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve, reject) =>{
+                let cars = await Car.find({ place: id })
                 return resolve(cars)
             }
         ))
@@ -29,7 +42,9 @@ class CarRepository{
             async (resolve, reject) =>{
                 let cars = await Car.find()
                 let car = cars.filter(c => {
-                    return c.plate_number.toLowerCase().replace(/' '/g, '') == id.toLowerCase().replace(/''/g,'')
+                    logger.info(c.plate_number.toLowerCase().replace(/\s/g, ''))
+                    logger.info(id.toLowerCase().replace(/\s/g,''))
+                    return c.plate_number.toLowerCase().replace(/\s/g, '') == id.toLowerCase().replace(/\s/g,'')
                 })[0]
                 
                 if(!car){

@@ -92,3 +92,92 @@
 {"level":"error","message":"Could not find car","timestamp":"2023-11-20 07:45:13"}
 {"level":"error","message":"Could not find car","timestamp":"2023-11-20 08:01:59"}
 {"level":"error","message":"Could not find car","timestamp":"2023-11-20 08:39:40"}
+{"level":"error","message":"Connection Error: connect ECONNREFUSED ::1:27017","timestamp":"2023-11-21 18:31:46"}
+{"level":"error","message":"Connection Error: connect ECONNREFUSED ::1:27017","timestamp":"2023-11-21 18:32:49"}
+{"level":"error","message":"Connection Error: connect ECONNREFUSED ::1:27017","timestamp":"2023-11-21 18:35:20"}
+{"level":"error","message":"User '123' does not exist","timestamp":"2023-11-21 18:38:17"}
+{"level":"error","message":"User '123' does not exist","timestamp":"2023-11-21 18:43:11"}
+{"level":"error","message":"User '123' does not exist","timestamp":"2023-11-21 18:44:37"}
+{"level":"error","message":"User '123' does not exist","timestamp":"2023-11-21 18:48:28"}
+{"level":"error","message":"User '123456' does not exist","timestamp":"2023-11-21 18:49:08"}
+{"level":"error","message":"User '7167' does not exist","timestamp":"2023-11-21 19:00:21"}
+{"level":"error","message":"User '4176' does not exist","timestamp":"2023-11-21 19:01:25"}
+{"level":"error","message":"User '4176' does not exist","timestamp":"2023-11-21 19:02:18"}
+{"level":"error","message":"User '4176' does not exist","timestamp":"2023-11-21 19:02:23"}
+{"level":"error","message":"User '4176' does not exist","timestamp":"2023-11-21 19:02:24"}
+{"level":"error","message":"User '4176' does not exist","timestamp":"2023-11-21 19:02:25"}
+{"level":"error","message":"User '4176' does not exist","timestamp":"2023-11-21 19:02:26"}
+{"level":"error","message":"User 'gsf' does not exist","timestamp":"2023-11-21 19:04:07"}
+{"level":"error","message":"User 'gsf' does not exist","timestamp":"2023-11-21 19:04:37"}
+{"level":"error","message":"User 'gsf' does not exist","timestamp":"2023-11-21 19:04:41"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 19:13:00"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 19:45:59"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 20:54:51"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 21:01:40"}
+{"level":"info","message":"CV8 9558","timestamp":"2023-11-21 21:04:15"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 21:04:15"}
+{"level":"info","message":"CV8 9558","timestamp":"2023-11-21 21:06:19"}
+{"level":"info","message":"orig CV89558","timestamp":"2023-11-21 21:06:19"}
+{"level":"info","message":"orig_low cv89558","timestamp":"2023-11-21 21:06:19"}
+{"level":"info","message":"orig_lo2_rep cv89558","timestamp":"2023-11-21 21:06:19"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 21:06:19"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 21:07:13"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-21 21:08:15"}
+{"level":"info","message":"cv8 9558","timestamp":"2023-11-21 21:08:15"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-21 21:08:15"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-21 21:10:22"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-21 21:10:22"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-22 03:18:32"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-22 03:18:32"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-23 23:34:25"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-23 23:34:25"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-24 09:10:13"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-24 09:10:13"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-25 10:47:04"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-25 10:47:04"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-26 09:36:42"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-26 09:36:42"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-26 22:10:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-26 22:10:36"}
+{"level":"error","message":"Invalid status code: 1","timestamp":"2023-11-26 22:43:18"}
+{"level":"error","message":"User '123' does not exist","timestamp":"2023-11-27 07:55:56"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 08:10:46"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 08:10:46"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 10:26:53"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 10:28:31"}
+{"level":"error","message":"RuleRepository.findOne is not a function","timestamp":"2023-11-27 10:41:23"}
+{"level":"error","message":"this.splitPath is not a function","timestamp":"2023-11-27 10:46:37"}
+{"level":"error","message":"Class constructor ObjectId cannot be invoked without 'new'","timestamp":"2023-11-27 10:46:59"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 11:24:42"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 11:24:42"}
+{"level":"error","message":"Violation validation failed: is_car_registered: Path `is_car_registered` is required., plate_info.type: Path `plate_info.type` is required., plate_info.description: Path `plate_info.description` is required., plate_info.year: Path `plate_info.year` is required., plate_info.plate: Path `plate_info.plate` is required., plate_info.brand: Path `plate_info.brand` is required.","timestamp":"2023-11-27 11:25:02"}
+{"level":"error","message":"Violation validation failed: is_car_registered: Path `is_car_registered` is required., plate_info.type: Path `plate_info.type` is required., plate_info.description: Path `plate_info.description` is required., plate_info.year: Path `plate_info.year` is required., plate_info.plate: Path `plate_info.plate` is required., plate_info.brand: Path `plate_info.brand` is required.","timestamp":"2023-11-27 11:25:05"}
+{"level":"error","message":"Violation validation failed: is_car_registered: Path `is_car_registered` is required., plate_info.type: Path `plate_info.type` is required., plate_info.description: Path `plate_info.description` is required., plate_info.year: Path `plate_info.year` is required., plate_info.plate: Path `plate_info.plate` is required., plate_info.brand: Path `plate_info.brand` is required.","timestamp":"2023-11-27 11:32:49"}
+{"level":"error","message":"Violation validation failed: plate_info.type: Path `plate_info.type` is required., plate_info.description: Path `plate_info.description` is required., plate_info.year: Path `plate_info.year` is required., plate_info.plate: Path `plate_info.plate` is required., plate_info.brand: Path `plate_info.brand` is required.","timestamp":"2023-11-27 11:33:14"}
+{"level":"error","message":"Violation validation failed: plate_info.type: Path `plate_info.type` is required., plate_info.description: Path `plate_info.description` is required., plate_info.year: Path `plate_info.year` is required., plate_info.plate: Path `plate_info.plate` is required., plate_info.brand: Path `plate_info.brand` is required.","timestamp":"2023-11-27 11:34:21"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:36:33"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:37:04"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:38:20"}
+{"level":"error","message":"Cannot access 'data' before initialization","timestamp":"2023-11-27 11:39:28"}
+{"level":"error","message":"Cannot access 'data' before initialization","timestamp":"2023-11-27 11:39:36"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:39:49"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:40:13"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:40:56"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:41:18"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:41:54"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:42:00"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2023-11-27 11:42:16"}
+{"level":"error","message":"Unexpected end of JSON input","timestamp":"2023-11-27 11:42:31"}
+{"level":"error","message":"Unexpected end of JSON input","timestamp":"2023-11-27 11:42:47"}
+{"level":"error","message":"Unexpected end of JSON input","timestamp":"2023-11-27 11:42:57"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 11:48:13"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 11:48:13"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 14:21:50"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-27 14:21:50"}
+{"level":"error","message":"Invalid status code: 1","timestamp":"2023-11-27 14:51:54"}
+{"level":"error","message":"violation not found","timestamp":"2023-11-27 14:59:49"}
+{"level":"error","message":"violation not found","timestamp":"2023-11-27 15:36:20"}
+{"level":"error","message":"violation not found","timestamp":"2023-11-27 15:37:44"}
+{"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2023-11-27 17:28:23"}
+{"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2023-11-27 17:29:28"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2023-11-27 17:52:25"}

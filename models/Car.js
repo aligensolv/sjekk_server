@@ -1,6 +1,30 @@
 import * as mongoose from "mongoose";
 
 const CarSchema = new mongoose.Schema({
+
+    //TODO Implement zone later
+    place:{
+        type: String,
+        ref : 'Place',
+        default: null
+        // required: true,
+    },
+
+    brand:{
+        type: String,
+        required: true,
+    },
+
+    type:{
+        type: String,
+        required: true,
+    },
+
+    description: {
+        type: String,
+        required: true,
+    },
+
     plate_number:{
         type: String,
         required: true,
@@ -9,31 +33,6 @@ const CarSchema = new mongoose.Schema({
     registeration_type:{
         type: String,
         required: true,
-    },
-
-    brand:{
-        type: String,
-        required: true
-    },
-
-    plate:{
-        type: String,
-        required: true
-    },
-
-    year:{
-        type: String,
-        required: true
-    },
-
-    description:{
-        type: String,
-        required: true
-    },
-
-    type:{
-        type: String,
-        required: true
     },
 
     start_date:{

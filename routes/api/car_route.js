@@ -1,9 +1,10 @@
 import { Router } from "express";
-import { createCar,getAllCars,getCar,updateCar,deleteCar,deleteAllCars, getCarByPlate } from "../../controllers/car_controller.js";
+import { createCar,getAllCars,getCar,updateCar,deleteCar,deleteAllCars, getCarByPlate, getAllCarsByPlace } from "../../controllers/car_controller.js";
 
 const router = Router()
 
 router.get('/cars', getAllCars)
+router.get('/cars/place/:id', getAllCarsByPlace)
 router.get('/cars/:id', getCar)
 router.get('/cars/plate/:id', getCarByPlate)
 

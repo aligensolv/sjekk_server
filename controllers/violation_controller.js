@@ -49,8 +49,24 @@ export const getSavedViolations = asyncWrapper(
 
 export const createViolation = asyncWrapper(
     async (req,res) =>{
-        let data = req.body
+        let pre_data = req.body
         let { token } = req.headers
+
+
+        let plate_info = JSON.parse(pre_data.plate_info)
+        let registered_car_info = JSON.parse(pre_data.registered_car_info)
+        let rules = JSON.parse(pre_data.rules)
+        let is_car_registered = pre_data.is_car_registered == "true"
+
+        const data = {
+            ...pre_data,
+            plate_info,
+            registered_car_info,
+            rules,
+            is_car_registered
+        }
+
+        console.log(data);
         
 
         let decoded = jwt.verify(token, jwt_secret_key)
@@ -61,13 +77,10 @@ export const createViolation = asyncWrapper(
             images.push(static_absolute_files_host + image.path);
         }
 
-        console.log(data);
-        console.log(data.rules[0]);
-
         let violation = await ViolationRepository.createViolation({
             ...data,
             publisher_identifier: decoded.id,
-            rules: JSON.parse(data.rules),
+            rules: data.rules,
             images: images
         })
         return res.status(OK).json(violation)
@@ -77,7 +90,7 @@ export const createViolation = asyncWrapper(
 export const deleteViolation = asyncWrapper(
     async (req,res) =>{
         const {id} = req.params
-        let isDeleted = await ViolationRepository.deleteViolation()
+        let isDeleted = await ViolationRepository.deleteViolation(id)
         return res.status(OK).send(isDeleted)
     }
 )
@@ -85,6 +98,65 @@ export const deleteViolation = asyncWrapper(
 export const deleteAllViolations = asyncWrapper(
     async (req,res) =>{
         let response = await ViolationRepository.deleteAllViolations()
+        return res.status(OK).send(response)
+    }
+)
+
+export const completeViolation = asyncWrapper(
+    async (req,res) =>{
+        const {id} = req.params
+
+        let response = await ViolationRepository.completeViolation(id)
+        return res.status(OK).send(response)
+    }
+)
+
+export const updateViolation = asyncWrapper(
+    async (req,res) =>{
+        const {id} = req.params
+        const data = req.body
+
+        let response = await ViolationRepository.updateViolation(id,data)
+        return res.status(OK).send(response)
+    }
+)
+
+export const addImage = asyncWrapper(
+    async (req, res) =>{
+        const {id} = req.params
+        const image = static_absolute_files_host + req.file.path
+        let response = await ViolationRepository.addImage(id, image)
+        return res.status(OK).send(response)
+    }
+)
+
+export const addRule = asyncWrapper(
+    async (req, res) =>{
+        const {id} = req.params
+        const {rule} = req.body
+
+
+        let response = await ViolationRepository.addRule(id, rule)
+        return res.status(OK).json(response)
+    }
+)
+export const updateInnerComment = asyncWrapper(
+    async (req, res) =>{
+        const {id} = req.params
+        const {comment} = req.body
+
+
+        let response = await ViolationRepository.updateInnerComment(id, comment)
+        return res.status(OK).send(response)
+    }
+)
+export const updateOutterComment = asyncWrapper(
+    async (req, res) =>{
+        const {id} = req.params
+        const {comment} = req.body
+
+
+        let response = await ViolationRepository.updateOutterComment(id, comment)
         return res.status(OK).send(response)
     }
 )

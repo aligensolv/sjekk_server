@@ -63,6 +63,7 @@
                                 <thead>
                                 <tr>
                                     <th>Location</th>
+                                    <th>Code</th>
                                     <th>Policy</th>
                                     <th>Handlinger</th>
                                 </tr>
@@ -71,6 +72,7 @@
                                     <% places.forEach(place => { %>
                                         <tr>
                                             <td><%= place.location %></td>
+                                            <td><%= place.code %></td>
                                             <td><%= place.policy %></td>
                                             <td class="controls">
                                                 <a href="/places/<%= place._id %>/update" class="btn btn-primary btn-sm me-1">

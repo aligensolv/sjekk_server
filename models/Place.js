@@ -9,6 +9,11 @@ const PlaceSchema = new mongoose.Schema({
     policy:{
         type: String,
         required: true
+    },
+
+    code:{
+        type: String,
+        required: true
     }
 })
 
