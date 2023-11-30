@@ -181,3 +181,25 @@
 {"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2023-11-27 17:28:23"}
 {"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2023-11-27 17:29:28"}
 {"level":"error","message":"Request failed with status code 400","timestamp":"2023-11-27 17:52:25"}
+{"level":"info","message":"bd31012","timestamp":"2023-11-28 13:21:32"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-28 13:21:32"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-28 13:21:32"}
+{"level":"info","message":"bd31012","timestamp":"2023-11-28 13:25:32"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-28 13:25:32"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-28 13:25:32"}
+{"level":"info","message":"bd31012","timestamp":"2023-11-29 11:47:38"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-29 11:47:38"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-29 11:47:38"}
+{"level":"info","message":"bd31012","timestamp":"2023-11-29 12:06:25"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-29 12:06:25"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-29 12:06:25"}
+{"level":"info","message":"bd31012","timestamp":"2023-11-29 12:09:12"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-29 12:09:12"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-29 12:09:12"}
+{"level":"info","message":"bd31012","timestamp":"2023-11-29 12:17:45"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-29 12:17:45"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-29 12:17:45"}
+{"level":"info","message":"bd31012","timestamp":"2023-11-29 12:21:02"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-29 12:21:02"}
+{"level":"error","message":"Could not find car","timestamp":"2023-11-29 12:21:02"}
+{"level":"error","message":"Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.uyhqfof.mongodb.net","timestamp":"2023-11-29 14:06:45"}

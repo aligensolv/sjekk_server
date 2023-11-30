@@ -16,8 +16,7 @@ export const host = process.env.HOST.trim()
 export const node_env = process.env.NODE_ENV.trim()
 export const is_development = node_env == 'development'
 
-export const mongodb_connection_string = is_development ? process.env.MONGODB_DEV_CONNECTION : process.env.MONGODB_PROD_CONNECTION
-export const static_files_host = is_development ? process.env.DEV_STATIC_FILES_HOST : process.env.PROD_STATIC_FILES_HOST
-export const static_absolute_files_host = is_development ? process.env.DEV_ABSOLUTE_STATIC_FILES_HOST : process.env.PROD_ABSOLUTE_STATIC_FILES_HOST
-export const mongodb_local_connection = process.env.MONGODB_LOCAL_CONNECTION
+export const mongodb_connection_string = process.env.MONGODB_CONNECTION
+export const static_files_host = process.env.DEV_STATIC_FILES_HOST
+export const static_absolute_files_host = process.env.ABSOLUTE_STATIC_FILES_HOST
 export const autosys_api_key = process.env.AUTOSYS_API_KEY

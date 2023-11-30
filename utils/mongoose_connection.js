@@ -1,5 +1,5 @@
 import { connect } from 'mongoose';
-import { mongodb_connection_string, mongodb_local_connection } from '../config.js';
+import { mongodb_connection_string } from '../config.js';
 
 
 export default new Promise(async (resolve, reject) => {
