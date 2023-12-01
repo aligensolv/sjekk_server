@@ -15,6 +15,15 @@ class ViolationRepository{
         ))
     }
 
+    static getViolationsCount(){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let count = await Violation.countDocuments()
+                return resolve(count.toString())
+            }
+        ))
+    }
+
     static completeViolation(id){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
@@ -23,7 +32,7 @@ class ViolationRepository{
                     completed_at: moment().format('YYYY-MM-DD HH:mm:ss')
                 })
 
-                return resolve(result.modifiedCount)
+                return resolve(result.modifiedCount > 0)
             }
         ))
     }
@@ -135,7 +144,23 @@ class ViolationRepository{
                     ...data,
                     created_at: created_at
                 })
-                return resolve(newViolation)
+
+                return resolve(newViolation.populate([
+                    {
+                        path: 'publisher_identifier',
+                        ref: 'User'
+                    },
+
+                    {
+                        path: 'rules',
+                        ref: 'Rule'
+                    },
+
+                    {
+                        path: 'place',
+                        ref: 'Place'
+                    }
+                ]))
             }
         ))
     }

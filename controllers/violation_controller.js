@@ -12,6 +12,13 @@ export const getAllviolations = asyncWrapper(
     }
 )
 
+export const getViolationsCount = asyncWrapper(
+    async (req,res) =>{
+        let count = await ViolationRepository.getViolationsCount()
+        return res.status(OK).send(count)
+    }
+)
+
 export const getAllPlaceviolations = asyncWrapper(
     async (req,res) =>{
         const {id} = req.params

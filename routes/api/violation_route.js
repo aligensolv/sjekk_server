@@ -13,7 +13,8 @@ import {
     addImage,
     addRule,
     updateInnerComment,
-    updateOutterComment
+    updateOutterComment,
+    getViolationsCount
 } from '../../controllers/violation_controller.js'
 
 import multer from 'multer'
@@ -35,6 +36,7 @@ const upload = multer({ storage: storage });
 const router = Router()
 
 router.get('/violations', getAllviolations)
+router.get('/violations/count', getViolationsCount)
 router.get('/violations/place/:id', getAllPlaceviolations)
 
 router.get('/violations/completed', getCompletedViolations)

@@ -6,8 +6,7 @@ const CarSchema = new mongoose.Schema({
     place:{
         type: String,
         ref : 'Place',
-        default: null
-        // required: true,
+        required: true,
     },
 
     brand:{

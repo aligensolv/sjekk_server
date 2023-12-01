@@ -30,4 +30,14 @@ router.get('/cars/:id/update', uiAsyncWrapper(
     }
 ))
 
+router.get('/cars/:id/view', uiAsyncWrapper(
+    async (req, res) => {
+        const {id} = req.params
+        let car = await CarRepository.getCar(id)
+        return res.status(OK).render('cars/car_details', {
+            car: car
+        })
+    }
+))
+
 export default router

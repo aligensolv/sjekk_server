@@ -37,6 +37,15 @@ class UserRepository{
         ))
     }
 
+    static getUsersCount(){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve) => {
+                let count = await UserCollection.countDocuments()
+                return resolve(count.toString())
+            }
+        ))
+    }
+
     static getUser(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve) => {

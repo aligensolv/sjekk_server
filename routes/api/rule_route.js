@@ -5,12 +5,14 @@ import {
     deleteRule,
     getAllRules,
     getRule, 
+    getRulesCount, 
     updateRule
 } from "../../controllers/rule_controller.js";
 
 const router = Router();
 
 router.get('/rules', getAllRules)
+router.get('/rules/count', getRulesCount)
 router.get('/rules/:id',getRule)
 
 router.post('/rules',createRule)

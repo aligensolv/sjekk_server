@@ -6,6 +6,12 @@ export const getAllPlaces = asyncWrapper(async (req, res, next) => {
     let places = await PlaceRepository.getAllPlaces()
     return res.status(OK).json(places)
 })
+
+export const getPlacesCount = asyncWrapper(async (req, res, next) => {
+    let count = await PlaceRepository.getPlacesCount()
+    return res.status(OK).send(count)
+})
+
 export const getPlace = async (req, res) => {
     try{
         const { id } = req.params

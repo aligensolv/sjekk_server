@@ -63,13 +63,15 @@ import UserUi from './routes/ui/user_route.js'
 import PlaceUi from './routes/ui/place_route.js'
 import RuleUi from './routes/ui/rule_route.js'
 import CarUi from './routes/ui/car_route.js'
+import ViolationUi from './routes/ui/violation_route.js'
 
 app.use(
     AuthUi,
     UserUi,
     PlaceUi,
     RuleUi,
-    CarUi
+    CarUi,
+    ViolationUi
 )
 
 

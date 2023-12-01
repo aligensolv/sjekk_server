@@ -58,6 +58,12 @@
                                                   </div>
                                                 <div class="input-group form-group mb-3">
                                                     <div class="input-group-prepend">
+                                                      <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Code" name="code" id="code" value="<%= place.code %>">
+                                                  </div>
+                                                <div class="input-group form-group mb-3">
+                                                    <div class="input-group-prepend">
                                                       <span class="input-group-text"><i class="fa fa-id-card"></i></span>
                                                     </div>
                                                     <input type="text" class="form-control" placeholder="Policy" name="policy" id="policy" value="<%= place.policy %>">
@@ -106,6 +112,9 @@ var Toast = Swal.mixin({
       location: {
         required: true,
       },
+      code: {
+        required: true,
+      },
       policy: {
         required: true,
       },
@@ -113,6 +122,9 @@ var Toast = Swal.mixin({
     messages: {
       location: {
         required: "Enter location",
+      },
+      code: {
+        required: "Enter code",
       },
       policy: {
         required: "Enter policy",
@@ -135,6 +147,7 @@ var Toast = Swal.mixin({
   function updatePlace() {
         if($('#updatePlaceForm').valid()){
             const location = document.getElementById("location");
+            const code = document.getElementById("code");
         const policy = document.getElementById("policy");
 
         const place_id = "<%= place._id %>";
@@ -143,6 +156,7 @@ var Toast = Swal.mixin({
             method: 'PUT',
             body: JSON.stringify({
                 location: location.value,
+                code: code.value,
                 policy: policy.value,
             }),
             headers:{

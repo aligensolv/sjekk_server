@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <%- include('./components/headers') %>
-
+    <link rel="stylesheet" href="/public/styles/home/info_box.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -34,7 +34,76 @@
             <!-- /.content-header -->
 
             <div class="content">
-
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="info-box" id="users-box">
+                            <span class="info-box-icon bg-primary elevation-1"><i class="fa-solid fa-user"></i></span>
+              
+                            <div class="info-box-content">
+                              <span class="info-box-text">Users</span>
+                              <span class="info-box-number" id="users-holder">
+                                -
+                              </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="info-box" id="cars-box">
+                            <span class="info-box-icon bg-info elevation-1"><i class="fa-solid fa-car-alt"></i></span>
+              
+                            <div class="info-box-content">
+                              <span class="info-box-text">Cars</span>
+                              <span class="info-box-number" id="cars-holder">
+                                -
+                              </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="info-box" id="rules-box">
+                            <span class="info-box-icon bg-primary elevation-1"><i class="fa-solid fa-list"></i></span>
+              
+                            <div class="info-box-content">
+                              <span class="info-box-text">Rules</span>
+                              <span class="info-box-number" id="rules-holder">
+                                -
+                              </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="info-box" id="places-box">
+                            <span class="info-box-icon bg-yellow elevation-1"><i class="fa-solid fa-location-arrow"></i></span>
+              
+                            <div class="info-box-content">
+                              <span class="info-box-text">Places</span>
+                              <span class="info-box-number" id="places-holder">
+                                -
+                              </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-sm-3">
+                        <div class="info-box" id="vl-box">
+                            <span class="info-box-icon bg-red elevation-1"><i class="fa-solid fa-triangle-exclamation"></i></span>
+              
+                            <div class="info-box-content">
+                              <span class="info-box-text">VL</span>
+                              <span class="info-box-number" id="vl-holder">
+                                -
+                              </span>
+                            </div>
+                            <!-- /.info-box-content -->
+                          </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -42,6 +111,8 @@
     </div>
 
     <%- include('./components/scripts.ejs') %>
+    <script src="/public/scripts/home/counters.js"></script>
+    <script src="/public/scripts/home/boxes_interaction.js"></script>
 </body>
 
 </html>

@@ -19,6 +19,15 @@ class CarRepository{
         ))
     }
 
+    static getCarsCount(){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve, reject) =>{
+                let count = await Car.find().countDocuments()
+                return resolve(count.toString())
+            }
+        ))
+    }
+
     static getAllCarsByPlace(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
@@ -31,7 +40,10 @@ class CarRepository{
     static getCar(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let car = await Car.findOne({ _id:id })
+                let car = await Car.findOne({ _id:id }).populate({
+                    path: 'place',
+                    ref: 'Place'
+                })
                 return resolve(car)
             }
         ))

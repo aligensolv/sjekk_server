@@ -203,3 +203,56 @@
 {"level":"info","message":"cv89558","timestamp":"2023-11-29 12:21:02"}
 {"level":"error","message":"Could not find car","timestamp":"2023-11-29 12:21:02"}
 {"level":"error","message":"Connection Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.uyhqfof.mongodb.net","timestamp":"2023-11-29 14:06:45"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-30 09:21:37"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-30 09:21:37"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:47:28"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:47:50"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:49:32"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:49:33"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:49:34"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:49:45"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:50:48"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:51:20"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:51:21"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:51:48"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:51:56"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:54:11"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"User\"","timestamp":"2023-11-30 10:54:51"}
+{"level":"error","message":"UserCollection.count is not a function","timestamp":"2023-11-30 10:55:51"}
+{"level":"error","message":"UserCollection.count is not a function","timestamp":"2023-11-30 10:55:58"}
+{"level":"error","message":"Invalid status code: 1","timestamp":"2023-11-30 10:57:17"}
+{"level":"error","message":"Class constructor Response cannot be invoked without 'new'","timestamp":"2023-11-30 10:59:10"}
+{"level":"error","message":"The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received function text","timestamp":"2023-11-30 10:59:33"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'get')","timestamp":"2023-11-30 11:03:10"}
+{"level":"error","message":"Assignment to constant variable.","timestamp":"2023-11-30 11:04:06"}
+{"level":"error","message":"Invalid status code: 1","timestamp":"2023-11-30 11:04:54"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Rule\"","timestamp":"2023-11-30 11:29:30"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:29:30"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Car\"","timestamp":"2023-11-30 11:29:30"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Rule\"","timestamp":"2023-11-30 11:31:42"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:31:42"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Rule\"","timestamp":"2023-11-30 11:31:43"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:31:43"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Rule\"","timestamp":"2023-11-30 11:32:33"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:32:33"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:34:08"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:35:25"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:35:26"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:35:26"}
+{"level":"error","message":"Cast to ObjectId failed for value \"count\" (type string) at path \"_id\" for model \"Violation\"","timestamp":"2023-11-30 11:35:41"}
+{"level":"error","message":"Invalid status code: 4","timestamp":"2023-11-30 11:37:16"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-30 13:09:46"}
+{"level":"info","message":"cv89558","timestamp":"2023-11-30 13:09:46"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:26:58"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:26:58"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:28:25"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:28:25"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:29:55"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:29:55"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:32:30"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:32:30"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:35:56"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:35:56"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:38:47"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-01 18:38:47"}
+{"level":"error","message":"Invalid status code: 1","timestamp":"2023-12-01 19:02:32"}

@@ -9,6 +9,13 @@ export const getAllRules = asyncWrapper(
     }
 )
 
+export const getRulesCount = asyncWrapper(
+    async (req,res) => {
+        let count = await RuleRepository.getRulesCount();
+        return res.status(OK).send(count);
+    }
+)
+
 export const getRule = asyncWrapper(
     async (req,res) => {
         const {id} = req.params

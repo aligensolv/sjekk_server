@@ -83,6 +83,9 @@
                                             <td><%= car.end_date %></td>
                                             <td><%= car.place.location %></td>
                                             <td class="controls">
+                                                <a href="/cars/<%= car._id %>/view" class="btn btn-secondary btn-sm me-1">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
                                                 <a href="/cars/<%= car._id %>/update" class="btn btn-primary btn-sm me-1">
                                                     <i class="fa fa-edit"></i>
                                                 </a>

@@ -13,6 +13,15 @@ class RuleRepository{
         ))
     }
 
+    static getRulesCount(){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve, reject) => {
+                let count = await Rule.countDocuments()
+                return resolve(count.toString())
+            }
+        ))
+    }
+
     static getRule(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {

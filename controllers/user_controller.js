@@ -13,6 +13,14 @@ export const getAllUsers = asyncWrapper(
     
 )
 
+export const getUsersCount = asyncWrapper(
+    async (req, res) => {
+        let count = await UserRepository.getUsersCount()
+        return res.status(OK).send(count)
+    }
+    
+)
+
 export const registerUser = asyncWrapper(async (req, res) => {
     let data = req.body
     let registeredUser = await UserRepository.createUser(data)

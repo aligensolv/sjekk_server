@@ -95,95 +95,10 @@
     <script src="/public/plugins/sweetalert2/sweetalert2.min.js"></script>
     <!-- Toastr -->
 <script src="/public/plugins/toastr/toastr.min.js"></script>
-
-
-
-    <script>
-        var Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000
-        });
-
-        $('#createUserForm').validate({
-    rules: {
-      name: {
-        required: true,
-      },
-      identifier: {
-        required: true,
-      },
-      password  : {
-        required: true
-      },
-    },
-    messages: {
-      name: {
-        required: "Skriv inn brukernavn",
-      },
-      identifier: {
-        required: "please enter identifier",
-      },
-      password: {
-        required: "Skriv passord"
-      },
-    },
-    errorElement: 'span',
-    errorPlacement: function (error, element) {
-      error.addClass('invalid-feedback');
-      element.closest('.form-group').append(error);
-    },
-    highlight: function (element, errorClass, validClass) {
-      $(element).addClass('is-invalid');
-    },
-    unhighlight: function (element, errorClass, validClass) {
-      $(element).removeClass('is-invalid');
-    }
-  });
-
-  function createUser() {
-        if($('#createUserForm').valid()){
-          let name = document.querySelector('#name')
-          let accountId = document.querySelector('#identifier')
-          let password = document.querySelector('#password')
-
-        fetch('/api/users/register', {
-            method: 'POST',
-            body: JSON.stringify({
-                name: name.value,
-                user_identifier: identifier.value,
-                password: password.value
-            }),
-            headers:{
-                'Content-Type':'application/json'
-            }
-        })
-            .then(async response => {
-                if (response.status == 200) {
-                    Toast.fire({
-                        icon: 'success',
-                        title: 'Brukeren ble opprettet',
-                    })
-                    setTimeout(() =>{
-                        window.location.href = '/users';
-                    },3000)
-                } else {
-                    Toast.fire({
-                        icon: 'error',
-                        title: (await response.json()).toString(),
-                    })
-                }
-            })
-            .catch(error => {
-                Toast.fire({
-                    icon: 'error',
-                    title: error.message
-                })
-            });
-        }
-    }
-    </script>
+  
+<!-- My Scripts -->
+<script src="/public/scripts/users/validate_create_form.js"></script>
+<script src="/public/scripts/users/create_user.js"></script>
 
 </body>
 </html>

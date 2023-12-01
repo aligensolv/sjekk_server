@@ -9,6 +9,13 @@ export const getAllCars = asyncWrapper(
     }
 )
 
+export const getCarsCount = asyncWrapper(
+    async (req,res) => {
+        let count = await CarRepository.getCarsCount();
+        return res.status(OK).send(count);
+    }
+)
+
 export const getAllCarsByPlace = asyncWrapper(
     async (req,res) => {
         const {id} = req.params

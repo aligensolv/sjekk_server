@@ -11,6 +11,15 @@ class PlaceRepository{
         ))
     }
 
+    static getPlacesCount(){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve) =>{
+                let count = await PlaceCollection.countDocuments()
+                return resolve(count.toString())
+            }
+        ))
+    }
+
     static getPlace(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve) =>{
