@@ -28,6 +28,11 @@ const ViolationSchema = new mongoose.Schema({
         required: true
     },
 
+    print_paper:{
+        type: String,
+        default: null
+    },
+
     locked:{
         type: Boolean,
         default: false

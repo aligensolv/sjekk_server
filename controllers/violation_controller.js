@@ -70,7 +70,7 @@ export const createViolation = asyncWrapper(
             plate_info,
             registered_car_info,
             rules,
-            is_car_registered
+            is_car_registered,
         }
 
         console.log(data);

@@ -237,3 +237,7 @@ isAdmin is not defined {"timestamp":"2023-11-19 03:47:09"}
 [31merror[39m: Cast to ObjectId failed for value "count" (type string) at path "_id" for model "Violation" {"timestamp":"2023-11-30 11:35:41"}
 [31merror[39m: Invalid status code: 4 {"timestamp":"2023-11-30 11:37:16"}
 [31merror[39m: Invalid status code: 1 {"timestamp":"2023-12-01 19:02:32"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-04 12:07:00"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-04 12:07:48"}
+[31merror[39m: User 'al' does not exist {"timestamp":"2023-12-04 18:34:30"}
+[31merror[39m: Password mismatch {"timestamp":"2023-12-04 18:34:37"}
