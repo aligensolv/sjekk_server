@@ -89,6 +89,14 @@
                                                     </select>
                                                   </div>
 
+                                                  <div class="input-group form-group mb-3">
+                                                    <select class="form-control" placeholder="Rank" name="rank" id="rank">
+                                                        <option value="normal">Normal</option>
+                                                        <option value="vip">VIP</option>
+                                                        <option value="owner">Owmer</option>
+                                                    </select>
+                                                  </div>
+
                                                   <div class="btn-group d-flex justify-content-center align-items-center">
                                                     <button type="button" onclick="createCar()" class="btn btn-info">Legge til</button>
                                                     <a href="/cars" class="btn btn-secondary" >Avbryt</a>
@@ -121,122 +129,10 @@
 
 
 
-    <script>
-
-        $('#places').select2()
-
-$('#reservationdatetime').datetimepicker({
-        format: 'L'
-    });;
-$('#toreservationdatetime').datetimepicker({
-        format: 'L'
-    });;
-
-        var Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000
-        });
-
-        $('#createCarForm').validate({
-    rules: {
-      boardNumber: {
-        required: true,
-      },
-
-      registeration: {
-        required: true,
-      }
-    },
-    messages: {
-      boardNumber: {
-        required: "skriv inn et tavlenummer",
-      },
-
-      registeration: {
-        required: "Enter registration"
-      }
-    },
-    errorElement: 'span',
-    errorPlacement: function (error, element) {
-      error.addClass('invalid-feedback');
-      element.closest('.form-group').append(error);
-    },
-    highlight: function (element, errorClass, validClass) {
-      $(element).addClass('is-invalid');
-    },
-    unhighlight: function (element, errorClass, validClass) {
-      $(element).removeClass('is-invalid');
-    }
-  });
-        
-        async function createCar(){
-            if($('#createCarForm').valid()){
-                const boardNumber = document.getElementById('boardNumber').value;
-                const startDate = $('#reservationdatetime').find('input').val();
-                const endDate = $('#toreservationdatetime').find('input').val();
-                const registeration = document.getElementById('registeration').value;
-                let places_dropdown = document.getElementById('places')
-                let place = places_dropdown.value
-
-
-        const formData = {
-            plate_number: boardNumber,
-            start_date: startDate,
-            end_date: endDate,
-            registeration_type: registeration,
-            place: place
-        };
-
-        console.log(formData);
-        
-
-        let response = await fetch('/api/cars', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-
-        if (response.status == 200) {
-            // Car created successfully, show success message and navigate back after 3 seconds
-            Toast.fire({
-                    icon: 'success',
-                    title: 'Bil opprettet vellykket!'
-                })
-            setTimeout(() => {
-                window.location.href = '/cars'; // Redirect to the car list page
-            }, 3000);
-        } else {
-            Toast.fire({
-                    icon: 'error',
-                    title: response.json().toString()
-                })
-        }
-            }
-        }
-
-        async function initializePlaces(){
-            let response = await fetch('/api/places')
-            let places = await response.json()
-            console.log(places);
-            let places_dropdown = document.getElementById('places')
-
-            for(let place of places){
-                let option = document.createElement('option')
-                option.value = place._id
-                option.textContent = place.location
-                places_dropdown.appendChild(option)
-            }
-        }
-
-
-        document.addEventListener('DOMContentLoaded', async (event) => {
-            await initializePlaces();
-        }) 
-    </script>
+    <script src="/public/scripts/cars/initialize_fields.js"></script>
+    <script src="/public/scripts/cars/create_car_validator.js"></script>
+    <script src="/public/scripts/cars/initialize_places.js"></script>
+    <script src="/public/scripts/cars/create_car_logic.js"></script>
 
 </body>
 </html>

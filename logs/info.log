@@ -378,3 +378,20 @@ isAdmin is not defined {"timestamp":"2023-11-19 03:47:09"}
 [32minfo[39m: cv89558 {"timestamp":"2023-12-05 13:16:57"}
 [32minfo[39m: cv89558 {"timestamp":"2023-12-05 19:48:56"}
 [32minfo[39m: cv89558 {"timestamp":"2023-12-05 19:48:56"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-05 22:08:49"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-05 22:08:49"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-06 08:48:07"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-06 08:48:07"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 08:48:07"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-06 08:54:22"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-06 08:54:22"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 08:54:22"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-06 09:25:51"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-06 09:25:51"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 09:25:51"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-06 09:26:00"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-06 09:26:00"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 09:26:00"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-06 09:33:08"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-06 09:33:08"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 09:33:08"}

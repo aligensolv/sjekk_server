@@ -1,12 +1,16 @@
 import * as mongoose from "mongoose";
 
 const CarSchema = new mongoose.Schema({
-
-    //TODO Implement zone later
     place:{
         type: String,
         ref : 'Place',
         required: true,
+    },
+
+    rank:{
+        type: String,
+        enum: ['normal','vip','owner'],
+        required: true
     },
 
     brand:{

@@ -241,3 +241,8 @@ isAdmin is not defined {"timestamp":"2023-11-19 03:47:09"}
 [31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-04 12:07:48"}
 [31merror[39m: User 'al' does not exist {"timestamp":"2023-12-04 18:34:30"}
 [31merror[39m: Password mismatch {"timestamp":"2023-12-04 18:34:37"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 08:48:07"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 08:54:22"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 09:25:51"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 09:26:00"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-06 09:33:08"}
