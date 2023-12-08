@@ -31,7 +31,9 @@ class UserRepository{
     static getAllUsers(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve) => {
-                let users = await UserCollection.find({},{__v: false})
+                let users = await UserCollection.find({},{__v: false}).sort({
+                    created_at: 'desc'
+                })
                 return resolve(users)
             }
         ))

@@ -9,7 +9,9 @@ class ShiftRepository{
     static getAllShifts(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let shifts = await Shift.find()
+                let shifts = await Shift.find().sort({
+                    created_at: 'desc'
+                })
                 return resolve(shifts)
             }
         ))
@@ -19,7 +21,9 @@ class ShiftRepository{
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
                 let current_date = moment('YYYY-MM-DD')
-                let shifts = await Shift.find()
+                let shifts = await Shift.find().sort({
+                    created_at: 'desc'
+                })
                 shifts = shifts.filter((shift) => {
                     let start_date = moment(moment(shift.start_date).format('YYYY-MM-DD'))
                     return moment(start_date).isSame(current_date)
@@ -33,7 +37,9 @@ class ShiftRepository{
     static getUserShifts(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let user = await UserRepository.getUserByIdentifier(id)
+                let user = await UserRepository.getUserByIdentifier(id).sort({
+                    created_at: 'desc'
+                })
                 if(!user){
                     let not_exist_error = new CustomError('User not found', NOT_FOUND)
                     return reject(not_exist_error)
@@ -48,7 +54,9 @@ class ShiftRepository{
     static getShiftsByDate(date){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let shifts = await Shift.find({ start_date: date })
+                let shifts = await Shift.find({ start_date: date }).sort({
+                    created_at: 'desc'
+                })
                 return resolve(shifts)
             }
         ))
@@ -62,6 +70,7 @@ class ShiftRepository{
                 let shift = await Shift.create({
                     start_date: current_date,
                     user_identifier: user_id,
+                    created_at: moment().format('YYYY-MM-DD HH:mm:ss')
                 })
 
                 return resolve(shift)

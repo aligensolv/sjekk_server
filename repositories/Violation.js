@@ -65,7 +65,9 @@ class ViolationRepository{
                         path: 'place',
                         ref: 'Place'
                     }
-                ])
+                ]).sort({
+                    created_at: 'desc'
+                })
                 console.log(violations);
                 return resolve(violations)
             }
@@ -104,7 +106,9 @@ class ViolationRepository{
                         path: 'place',
                         ref: 'Place'
                     }
-                ])
+                ]).sort({
+                    created_at: 'desc'
+                })
 
                 return resolve(violations)
             }
@@ -129,7 +133,10 @@ class ViolationRepository{
                         path: 'place',
                         ref: 'Place'
                     }
-                ])
+                ]).sort({
+                    created_at: 'desc'
+                })
+                
                 return resolve(violations)
             }
         ))

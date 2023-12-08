@@ -1,0 +1,70 @@
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-08 01:25:10"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 01:25:10"}
+[32minfo[39m: rr37466 {"timestamp":"2023-12-08 01:25:10"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 01:25:10"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 01:52:41"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 01:52:41"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 01:52:41"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 02:50:06"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 02:50:06"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 02:50:06"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 03:04:01"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 03:04:01"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 03:04:01"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 03:05:31"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 03:05:31"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 03:05:31"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 18:40:08"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 18:40:08"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 18:40:08"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 18:41:37"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 18:41:37"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 18:41:37"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 18:42:01"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 18:42:01"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 18:42:01"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 19:09:45"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 19:09:45"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 19:09:45"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 19:12:46"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 19:12:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 19:12:46"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 19:39:46"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 19:39:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 19:39:46"}
+[31merror[39m: (intermediate value).sort is not a function {"timestamp":"2023-12-08 19:40:04"}
+[31merror[39m: (intermediate value).sort is not a function {"timestamp":"2023-12-08 19:40:32"}
+[31merror[39m: (intermediate value).sort is not a function {"timestamp":"2023-12-08 19:40:35"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:08:57"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:08:57"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:08:57"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:17:53"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:17:53"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:17:53"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:19:59"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:19:59"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:19:59"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:21:25"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:21:25"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:21:25"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:25:45"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:25:45"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:25:45"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:25:50"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:25:50"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:25:50"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:26:02"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:26:02"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:26:02"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:30:38"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:30:38"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:30:38"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:31:32"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:31:32"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:31:32"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:41:04"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:41:04"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:41:04"}
+[32minfo[39m: cv89557 {"timestamp":"2023-12-08 20:41:24"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-08 20:41:24"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-08 20:41:24"}

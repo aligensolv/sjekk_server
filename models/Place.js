@@ -14,6 +14,11 @@ const PlaceSchema = new mongoose.Schema({
     code:{
         type: String,
         required: true
+    },
+
+    created_at:{
+        type: String,
+        required: true
     }
 })
 

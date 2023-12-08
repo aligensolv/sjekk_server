@@ -13,6 +13,8 @@ class CarRepository{
                 let cars = await Car.find().populate({
                     path: 'place',
                     ref: 'Place'
+                }).sort({
+                    created_at: 'desc'
                 })
                 return resolve(cars)
             }
@@ -31,7 +33,9 @@ class CarRepository{
     static getAllCarsByPlace(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let cars = await Car.find({ place: id })
+                let cars = await Car.find({ place: id }).sort({
+                    created_at: 'desc'
+                })
                 return resolve(cars)
             }
         ))

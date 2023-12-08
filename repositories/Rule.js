@@ -7,7 +7,9 @@ class RuleRepository{
     static getAllRules(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let rules = await Rule.find()
+                let rules = await Rule.find().sort({
+                    created_at: 'desc'
+                })
                 return resolve(rules)
             }
         ))

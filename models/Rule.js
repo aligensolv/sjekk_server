@@ -11,6 +11,11 @@ const RuleSchema = new mongoose.Schema({
         required: true
     },
 
+    policy_time:{
+        type: Number,
+        required: true
+    },
+
     created_at:{
         type: String,
         required: true,

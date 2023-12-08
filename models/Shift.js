@@ -19,6 +19,11 @@ const ShiftSchema = new mongoose.Schema({
     total_completed_violations:{
         type: Number,
         default: null
+    },
+
+    created_at:{
+        type: String,
+        required: true
     }
 })
 

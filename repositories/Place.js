@@ -1,11 +1,14 @@
 import PlaceCollection from "../models/Place.js"
 import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
+import moment from "moment";
 
 class PlaceRepository{
     static getAllPlaces(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve) =>{
-                let places = await PlaceCollection.find()
+                let places = await PlaceCollection.find().sort({
+                    created_at: 'desc'
+                })
                 return resolve(places)
             }
         ))
@@ -35,7 +38,10 @@ class PlaceRepository{
     static createPlace(data){
         return new Promise(promiseAsyncWrapepr(
             async (resolve) =>{
-                let place = await PlaceCollection.create(data)
+                let place = await PlaceCollection.create({
+                    ...data,
+                    created_at: moment().format('YYYY-MM-DD HH:mm:ss')
+                })
                 return resolve(place)
             }
         ))
