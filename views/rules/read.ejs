@@ -62,6 +62,7 @@
                                 <thead>
                                 <tr>
                                     <th>Name</th>
+                                    <th>Time Policy</th>
                                     <th>Charge</th>
                                     <th>Created At</th>
                                     <th>Handlinger</th>
@@ -71,6 +72,7 @@
                                     <% rules.forEach(rule => { %>
                                         <tr>
                                             <td><%= rule.name %></td>
+                                            <td><%= rule.policy_time %></td>
                                             <td><%= rule.charge %></td>
                                             <td><%= rule.created_at %></td>
                                             <td class="controls">

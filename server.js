@@ -3,17 +3,44 @@ import path from 'path'
 import compression from 'compression'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-import { port, host } from './config.js'
+import { port, host, socket_port } from './config.js'
 import { OK } from './constants/status_codes.js'
 import ErrorHandlerMiddleware from './middlewares/error_handler.js'
 import { fileURLToPath } from 'url'
 import logger from './utils/logger.js'
 
+import { Server } from 'socket.io'
+import http from 'http'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const app = express()
+
+const server = http.createServer(app)
+const io = new Server(server)
+
+app.set('io', io)
+/*
+    How to use socket in any route
+
+    let io = req.app.get('io');
+    io.emit('notification', {
+        notification: {
+            title: 'now in flutter',
+            body: 'some body for notification',
+        }
+    })
+*/
+
+io.on('connection', (socket) => {
+    console.log(`a new connection and count is: ${socket.client.conn.server.clientsCount}`)
+
+    socket.on('disconnect', () => {
+        console.log(`User disconnected and count is: ${socket.client.conn.server.clientsCount}`);
+    });
+})
+
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -91,11 +118,11 @@ const main = async () => {
         let lib = await import('./utils/mongoose_connection.js')
         if(await lib.default){
             app.listen(port, () => console.log(`server listening on ${host}:${port}`))
+            // server.listen(socket_port, () => console.log(`server listening on ${host}:${socket_port}`)) 
         }
     }catch(err){
         logger.error(err.message)
     }
 }
-
 main()
 

@@ -24,3 +24,98 @@
 [31merror[39m: Could not find car {"timestamp":"2023-12-08 20:31:32"}
 [31merror[39m: Could not find car {"timestamp":"2023-12-08 20:41:04"}
 [31merror[39m: Could not find car {"timestamp":"2023-12-08 20:41:24"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 00:37:46"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 00:52:49"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 00:52:49"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:02:42"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:02:58"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:18:38"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:19:34"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:21:48"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:35:14"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:40:06"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:41:14"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 01:46:57"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 02:48:48"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:09:12"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:13:04"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:14:28"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:26:54"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:27:47"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:39:40"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:40:52"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:42:49"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:43:34"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:44:38"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:47:39"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:49:06"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:50:35"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:55:03"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:55:40"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:56:00"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 03:57:01"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 04:01:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 04:05:58"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 04:11:37"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 04:12:40"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 04:20:27"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:14:35"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:15:36"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:16:19"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:16:41"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:18:45"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:19:27"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:37:28"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 05:48:47"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:23:39"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:25:17"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 06:39:30"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:39:30"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 06:43:10"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:43:10"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 06:43:36"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:43:36"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 06:46:15"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:46:15"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 06:50:04"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:50:04"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 06:50:15"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:50:15"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2023-12-09 06:50:20"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:50:20"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 06:50:43"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 15:44:51"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 16:21:54"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 16:24:02"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 17:09:34"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-09 17:09:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 17:10:03"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-09 17:10:32"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 02:37:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 03:00:26"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 03:02:25"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 03:04:27"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 03:15:30"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 03:18:43"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 03:20:53"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 14:47:30"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 15:09:30"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 15:35:45"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2023-12-10 15:54:25"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 15:54:36"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-10 16:45:43"}
+[31merror[39m: Rule validation failed: policy_time: Path `policy_time` is required. {"timestamp":"2023-12-10 23:07:48"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 05:14:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 05:22:50"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-11 05:24:17"}
+[31merror[39m: a is not defined {"timestamp":"2023-12-11 06:27:09"}
+[31merror[39m: s is not defined {"timestamp":"2023-12-11 06:27:20"}
+[31merror[39m: c is not defined {"timestamp":"2023-12-11 06:27:22"}
+[31merror[39m: Cannot read properties of undefined (reading 'listeners') {"timestamp":"2023-12-11 06:30:23"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 16:08:52"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 18:36:06"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 18:38:45"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 18:39:06"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 18:45:24"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 18:47:34"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-11 18:54:57"}

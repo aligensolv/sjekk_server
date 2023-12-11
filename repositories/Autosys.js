@@ -22,6 +22,7 @@ class AutosysRepository{
                     year: data.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.kjoretoyklassifisering.nasjonalGodkjenning.nasjonaltGodkjenningsAr,
                     description: data.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.kjoretoyklassifisering.beskrivelse,
                     brand: data.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.generelt.merke[0].merke,
+                    color: data.kjoretoydataListe[0].godkjenning.tekniskGodkjenning.tekniskeData.karosseriOgLasteplan.rFarge[0].kodeNavn
                 })
             }
         ))

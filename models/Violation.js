@@ -75,6 +75,11 @@ const ViolationSchema = new mongoose.Schema({
             type: String,
             required: true
         },
+
+        color: {
+            type: String,
+            required: true
+        }
     },
 
     is_car_registered: {

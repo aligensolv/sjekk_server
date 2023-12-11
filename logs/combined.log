@@ -68,3 +68,256 @@
 {"level":"info","message":"cv89557","timestamp":"2023-12-08 20:41:24"}
 {"level":"info","message":"cv89558","timestamp":"2023-12-08 20:41:24"}
 {"level":"error","message":"Could not find car","timestamp":"2023-12-08 20:41:24"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 00:37:46"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 00:37:46"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 00:37:46"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 00:52:49"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 00:52:49"}
+{"level":"info","message":"bb11111","timestamp":"2023-12-09 00:52:49"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 00:52:49"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:02:42"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:02:42"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:02:42"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:02:58"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:02:58"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:02:58"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:18:38"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:18:38"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:18:38"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:19:34"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:19:34"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:19:34"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:21:48"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:21:48"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:21:48"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:35:14"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:35:14"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:35:14"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:40:06"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:40:06"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:40:06"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:41:14"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:41:14"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:41:14"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 01:46:57"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 01:46:57"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 01:46:57"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 02:48:48"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 02:48:48"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 02:48:48"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:09:12"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:09:12"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:09:12"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:13:04"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:13:04"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:13:04"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:14:28"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:14:28"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:14:28"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:26:54"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:26:54"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:26:54"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:27:47"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:27:47"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:27:47"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:39:40"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:39:40"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:39:40"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:40:52"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:40:52"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:40:52"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:42:49"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:42:49"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:42:49"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:43:34"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:43:34"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:43:34"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:44:38"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:44:38"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:44:38"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:47:39"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:47:39"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:47:39"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:49:06"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:49:06"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:49:06"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:50:35"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:50:35"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:50:35"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:55:03"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:55:03"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:55:03"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:55:40"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:55:40"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:55:40"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:56:00"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:56:00"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:56:00"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 03:57:01"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 03:57:01"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 03:57:01"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 04:01:46"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 04:01:46"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 04:01:46"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 04:05:58"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 04:05:58"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 04:05:58"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 04:11:37"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 04:11:37"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 04:11:37"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 04:12:40"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 04:12:40"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 04:12:40"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 04:20:27"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 04:20:27"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 04:20:27"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:14:35"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:14:35"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:14:35"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:15:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:15:36"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:15:36"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:16:19"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:16:19"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:16:19"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:16:41"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:16:41"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:16:41"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:18:45"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:18:45"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:18:45"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:19:27"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:19:27"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:19:27"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:37:28"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:37:28"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:37:28"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 05:48:47"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 05:48:47"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 05:48:47"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:23:39"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 06:23:39"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:23:39"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:25:17"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 06:25:17"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:25:17"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 06:39:30"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:39:30"}
+{"level":"info","message":"cc2","timestamp":"2023-12-09 06:39:30"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:39:30"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 06:43:10"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:43:10"}
+{"level":"info","message":"cc2","timestamp":"2023-12-09 06:43:10"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:43:10"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 06:43:36"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:43:36"}
+{"level":"info","message":"ååwwwww","timestamp":"2023-12-09 06:43:36"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:43:36"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 06:46:15"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:46:15"}
+{"level":"info","message":"ks","timestamp":"2023-12-09 06:46:15"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:46:15"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 06:50:04"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:50:04"}
+{"level":"info","message":"ii55555","timestamp":"2023-12-09 06:50:04"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:50:04"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 06:50:15"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:50:15"}
+{"level":"info","message":"cc11111","timestamp":"2023-12-09 06:50:15"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:50:15"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2023-12-09 06:50:20"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:50:20"}
+{"level":"info","message":"cc111111","timestamp":"2023-12-09 06:50:20"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:50:20"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 06:50:43"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 06:50:43"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 06:50:43"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 15:44:51"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 15:44:51"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 15:44:51"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 16:21:54"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 16:21:54"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 16:21:54"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 16:24:02"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 16:24:02"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 16:24:02"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 17:09:34"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-09 17:09:46"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 17:10:03"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 17:10:03"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 17:10:03"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-09 17:10:32"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-09 17:10:32"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-09 17:10:32"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 02:37:46"}
+{"level":"info","message":"eb56625","timestamp":"2023-12-10 02:37:46"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 02:37:46"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 03:00:26"}
+{"level":"info","message":"eb56625","timestamp":"2023-12-10 03:00:26"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 03:00:26"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 03:02:25"}
+{"level":"info","message":"eb56625","timestamp":"2023-12-10 03:02:25"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 03:02:25"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 03:04:27"}
+{"level":"info","message":"eb56625","timestamp":"2023-12-10 03:04:27"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 03:04:27"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 03:15:30"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-10 03:15:30"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 03:15:30"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 03:18:43"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-10 03:18:43"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 03:18:43"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 03:20:53"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-10 03:20:53"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 03:20:53"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 14:47:30"}
+{"level":"info","message":"eb56625","timestamp":"2023-12-10 14:47:30"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 14:47:30"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 15:09:30"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-10 15:09:30"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 15:09:30"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 15:35:45"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-10 15:35:45"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 15:35:45"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2023-12-10 15:54:25"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 15:54:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-10 15:54:36"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 15:54:36"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-10 16:45:43"}
+{"level":"info","message":"ed79446","timestamp":"2023-12-10 16:45:43"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-10 16:45:43"}
+{"level":"error","message":"Rule validation failed: policy_time: Path `policy_time` is required.","timestamp":"2023-12-10 23:07:48"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 05:14:46"}
+{"level":"info","message":"eb56625","timestamp":"2023-12-11 05:14:46"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 05:14:46"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 05:22:50"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 05:22:50"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 05:22:50"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2023-12-11 05:24:17"}
+{"level":"error","message":"a is not defined","timestamp":"2023-12-11 06:27:09"}
+{"level":"error","message":"s is not defined","timestamp":"2023-12-11 06:27:20"}
+{"level":"error","message":"c is not defined","timestamp":"2023-12-11 06:27:22"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'listeners')","timestamp":"2023-12-11 06:30:23"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 16:08:52"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 16:08:52"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 16:08:52"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 18:36:06"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 18:36:06"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 18:36:06"}
+{"level":"warn","message":{"brand":"PEUGEOT","color":"Grå","description":"Varebil kl 2","plate":"CV 89558","type":"KJORETOY","year":"2018"},"timestamp":"2023-12-11 18:38:45"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 18:38:45"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 18:38:45"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 18:38:45"}
+{"level":"warn","message":"Grå","timestamp":"2023-12-11 18:39:06"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 18:39:06"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 18:39:06"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 18:39:06"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 18:45:24"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 18:45:24"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 18:45:24"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 18:47:34"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 18:47:34"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 18:47:34"}
+{"level":"info","message":"cv89557","timestamp":"2023-12-11 18:54:57"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-11 18:54:57"}
+{"level":"error","message":"Could not find car","timestamp":"2023-12-11 18:54:57"}
