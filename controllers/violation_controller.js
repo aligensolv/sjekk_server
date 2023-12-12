@@ -54,6 +54,15 @@ export const getSavedViolations = asyncWrapper(
     }
 )
 
+export const searchExistingSavedViolation = asyncWrapper(
+    async (req,res) =>{
+        const { id } = req.params
+
+        let searchedSavedViolation = await ViolationRepository.searchExistingSavedViolation(id)
+        return res.status(OK).json(searchedSavedViolation)
+    }
+)
+
 export const createViolation = asyncWrapper(
     async (req,res) =>{
         let pre_data = req.body

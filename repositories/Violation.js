@@ -142,6 +142,42 @@ class ViolationRepository{
         ))
     }
 
+    static searchExistingSavedViolation(plate){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                let violations = await Violation.find({ status: 'saved' }).populate([
+                    {
+                        path: 'publisher_identifier',
+                        ref: 'User'
+                    },
+
+                    {
+                        path: 'rules',
+                        ref: 'Rule'
+                    },
+
+                    {
+                        path: 'place',
+                        ref: 'Place'
+                    }
+                ]).sort({
+                    created_at: 'desc'
+                })
+                violations = violations.filter(violation => {
+                    return violation.plate_info.plate.toLowerCase().replace(/\s/g, '') == plate.toLowerCase().replace(/\s/g, '')
+                })
+
+                if(violations.length == 0) {
+                    let not_found_error = new CustomError('No violation was found', NOT_FOUND)
+                    return reject(not_found_error)
+                }
+                
+                console.log(violations[0]);
+                return resolve(violations[0])
+            }
+        ))
+    }
+
     static createViolation(data){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{

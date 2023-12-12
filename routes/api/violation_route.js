@@ -14,7 +14,8 @@ import {
     addRule,
     updateInnerComment,
     updateOutterComment,
-    getViolationsCount
+    getViolationsCount,
+    searchExistingSavedViolation
 } from '../../controllers/violation_controller.js'
 
 import multer from 'multer'
@@ -41,6 +42,8 @@ router.get('/violations/place/:id', getAllPlaceviolations)
 
 router.get('/violations/completed', getCompletedViolations)
 router.get('/violations/saved', getSavedViolations)
+
+router.get('/violations/plate/:id', searchExistingSavedViolation);
 
 
 router.get('/violations/:id', getViolation)
