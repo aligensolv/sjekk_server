@@ -190,7 +190,7 @@ class ViolationRepository{
                     completedAt: completed_at
                 })
 
-                return resolve(newViolation.populate([
+                let populated = await newViolation.populate([
                     {
                         path: 'publisher_identifier',
                         ref: 'User'
@@ -205,7 +205,11 @@ class ViolationRepository{
                         path: 'place',
                         ref: 'Place'
                     }
-                ]))
+                ])
+
+                console.log(populated);
+
+                return resolve(populated)
             }
         ))
     }

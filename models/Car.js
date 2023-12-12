@@ -2,9 +2,9 @@ import * as mongoose from "mongoose";
 
 const CarSchema = new mongoose.Schema({
     place:{
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         ref : 'Place',
-        required: true,
+        // required: true,
     },
 
     rank:{

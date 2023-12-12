@@ -33,7 +33,10 @@ class CarRepository{
     static getAllCarsByPlace(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let cars = await Car.find({ place: id }).sort({
+                let cars = await Car.find({ place: id }).populate({
+                    path: 'place',
+                    ref: 'Place'
+                }).sort({
                     created_at: 'desc'
                 })
                 return resolve(cars)
@@ -56,7 +59,10 @@ class CarRepository{
     static getCarByPlate(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let cars = await Car.find()
+                let cars = await Car.find().populate({
+                    path: 'place',
+                    ref: 'Place'
+                })
                 let car = cars.filter(c => {
                     logger.info(c.plate_number.toLowerCase().replace(/\s/g, ''))
                     logger.info(id.toLowerCase().replace(/\s/g,''))
