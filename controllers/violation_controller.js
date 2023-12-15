@@ -82,7 +82,6 @@ export const createViolation = asyncWrapper(
             is_car_registered,
         }
 
-        console.log(data);
         
 
         let decoded = jwt.verify(token, jwt_secret_key)

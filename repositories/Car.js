@@ -39,6 +39,8 @@ class CarRepository{
                 }).sort({
                     created_at: 'desc'
                 })
+
+                console.log(cars);
                 return resolve(cars)
             }
         ))

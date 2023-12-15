@@ -2,7 +2,7 @@ import * as mongoose from "mongoose";
 
 const CarSchema = new mongoose.Schema({
     place:{
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref : 'Place',
         // required: true,
     },

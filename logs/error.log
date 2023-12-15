@@ -127,3 +127,98 @@
 [31merror[39m: No violation was found {"timestamp":"2023-12-12 16:48:56"}
 [31merror[39m: No violation was found {"timestamp":"2023-12-12 16:49:26"}
 [31merror[39m: No violation was found {"timestamp":"2023-12-12 16:50:15"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-14 12:40:58"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-14 13:18:13"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-14 13:18:37"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-14 13:18:37"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-14 13:19:08"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-14 13:19:08"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2023-12-14 13:19:16"}
+[31merror[39m: Cannot read properties of undefined (reading 'nasjonaltGodkjenningsAr') {"timestamp":"2023-12-14 13:19:23"}
+[31merror[39m: Cannot read properties of undefined (reading 'nasjonaltGodkjenningsAr') {"timestamp":"2023-12-14 13:21:33"}
+[31merror[39m: Cannot read properties of undefined (reading 'nasjonaltGodkjenningsAr') {"timestamp":"2023-12-14 13:21:40"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 13:21:46"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 13:26:34"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 13:26:39"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-14 13:26:52"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-14 13:26:52"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-14 13:32:38"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-14 13:32:38"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 13:36:18"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 13:36:24"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 13:49:30"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-14 13:49:30"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-14 13:49:30"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 13:59:59"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-14 13:59:59"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-14 13:59:59"}
+[31merror[39m: result.status is not a function {"timestamp":"2023-12-14 14:35:51"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-14 17:14:54"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-14 17:14:54"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-14 17:14:54"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 17:15:02"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 17:15:02"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 17:19:33"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 17:19:33"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 17:21:50"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 17:21:50"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 17:37:58"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 17:37:58"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 17:38:52"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 17:38:52"}
+[31merror[39m: Violation validation failed: plate_info.color: Path `plate_info.color` is required., plate_info.type: Path `plate_info.type` is required., plate_info.description: Path `plate_info.description` is required., plate_info.year: Path `plate_info.year` is required., plate_info.plate: Path `plate_info.plate` is required., plate_info.brand: Path `plate_info.brand` is required. {"timestamp":"2023-12-14 17:44:16"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 18:06:42"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 18:06:42"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 18:35:29"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 18:35:29"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 18:35:52"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Violation" {"timestamp":"2023-12-14 18:35:52"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 22:08:57"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 22:56:56"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 23:15:37"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 23:18:31"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 23:19:59"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 23:22:36"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-14 23:38:10"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 01:47:43"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 02:06:39"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 02:10:11"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 02:11:28"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 04:51:25"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 05:32:31"}
+[31merror[39m: Violation validation failed: rules.0: Cast to [ObjectId] failed for value "[\n' +
+  '  {\n' +
+  `    name: "2 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",\n` +
+  '    charge: 100,\n' +
+  '    id: null,\n' +
+  '    time_policy: 30\n' +
+  '  }\n' +
+  ']" (type string) at path "rules.0" because of "CastError" {"timestamp":"2023-12-15 08:27:19"}
+[31merror[39m: Violation validation failed: rules.0.policy_time: Path `policy_time` is required. {"timestamp":"2023-12-15 08:29:31"}
+[31merror[39m: Cast to [undefined] failed for value "[ new ObjectId('657bf3020ae1a6c090d27922') ]" (type string) at path "rules.0" because of "TypeError" {"timestamp":"2023-12-15 08:32:34"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 08:37:02"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 09:48:31"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 10:01:11"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 10:01:59"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 10:03:43"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 10:04:04"}
+[31merror[39m: this.splitPath is not a function {"timestamp":"2023-12-15 10:12:36"}
+[31merror[39m: Class constructor ObjectId cannot be invoked without 'new' {"timestamp":"2023-12-15 10:12:56"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 10:58:09"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 18:46:44"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 18:49:22"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 18:55:17"}
+[31merror[39m: Autosys server error {"timestamp":"2023-12-15 19:02:05"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-15 19:02:05"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 19:02:05"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 19:03:27"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 19:13:00"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 19:31:02"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 19:35:20"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 19:41:44"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 19:47:54"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 19:49:02"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 19:50:25"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 20:03:13"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 20:09:34"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 20:09:46"}

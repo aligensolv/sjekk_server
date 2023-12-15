@@ -1,4 +1,5 @@
 import * as mongoose from "mongoose";
+import RuleModel from "./Rule.js";
 
 const ViolationSchema = new mongoose.Schema({
     publisher_identifier:{
@@ -38,11 +39,22 @@ const ViolationSchema = new mongoose.Schema({
         default: false
     },
 
-    rules:{
-        type: [mongoose.Schema.Types.ObjectId],
-        ref:'Rule',
-        required: true
-    },
+    rules:[{
+        name:{
+            type: String,
+            required: true
+        },
+    
+        charge:{
+            type: Number,
+            required: true
+        },
+    
+        policy_time:{
+            type: Number,
+            required: true
+        },
+    }],
 
     status:{
         type: String,
@@ -53,32 +65,32 @@ const ViolationSchema = new mongoose.Schema({
     plate_info: {
         brand:{
             type: String,
-            required: true
+            default: null
         },
 
         plate:{
             type: String,
-            required: true
+            default: null
         },
 
         year:{
             type: String,
-            required: true
+            default: null
         },
 
         description:{
             type: String,
-            required: true
+            default: null
         },
 
         type:{
             type: String,
-            required: true
+            default: null
         },
 
         color: {
             type: String,
-            required: true
+            default: null
         }
     },
 

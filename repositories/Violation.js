@@ -181,12 +181,10 @@ class ViolationRepository{
     static createViolation(data){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let created_at = moment(data.created_at).format('YYYY-MM-DD HH:mm:ss')
                 let completed_at = moment(data.completed_at).format('YYYY-MM-DD HH:mm:ss')
 
                 let newViolation = await Violation.create({
                     ...data,
-                    createdAt: created_at,
                     completedAt: completed_at
                 })
 

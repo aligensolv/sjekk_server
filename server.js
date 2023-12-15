@@ -64,6 +64,9 @@ import ShiftApi from './routes/api/shift_route.js'
 import RuleApi from './routes/api/rule_route.js'
 import AutosysApi from './routes/api/autosys_route.js'
 import CarApi from './routes/api/car_route.js'
+import ColorApi from './routes/api/color_route.js'
+import TypeApi from './routes/api/type_route.js'
+import BrandApi from './routes/api/brand_route.js'
 
 
 // public routes
@@ -82,7 +85,10 @@ app.use(
     ShiftApi,
     RuleApi,
     AutosysApi,
-    CarApi
+    CarApi,
+    ColorApi,
+    TypeApi,
+    BrandApi
 )
 
 import AuthUi from './routes/ui/auth_route.js'
