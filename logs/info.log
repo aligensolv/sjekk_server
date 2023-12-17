@@ -512,3 +512,150 @@
 [32minfo[39m: cv89558 {"timestamp":"2023-12-15 20:09:34"}
 [31merror[39m: No violation was found {"timestamp":"2023-12-15 20:09:34"}
 [31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 20:09:46"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:15:52"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 21:18:03"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 21:18:03"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:22:05"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:22:22"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:54:24"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:55:27"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:55:38"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 21:56:17"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 21:56:17"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 21:56:17"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:56:23"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:56:34"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:58:49"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 21:59:06"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 21:59:06"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-15 21:59:06"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 21:59:15"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 23:39:49"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:08"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:08"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:09"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:09"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:14"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:14"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:20"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:20"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:36"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:40:36"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 23:41:04"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:41:57"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-15 23:41:57"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 23:43:09"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-15 23:46:03"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:09:50"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:15:16"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:20:33"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:25:10"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:25:32"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:25:32"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:26:12"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:26:12"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:28:20"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:28:20"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:31:05"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:31:14"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:31:14"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:32:11"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:35:33"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:36:50"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 00:36:50"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-16 00:36:50"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 00:37:16"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 01:06:05"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 01:07:15"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 01:07:15"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 01:08:11"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 01:08:52"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 01:08:52"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 01:10:20"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 01:34:08"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 08:28:22"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:29:02"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:29:02"}
+[31merror[39m: No violation was found {"timestamp":"2023-12-16 08:29:02"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 08:29:39"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:35:03"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:35:03"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:39:08"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:39:08"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:39:19"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:39:19"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:39:39"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:39:39"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 08:39:46"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 08:42:46"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 08:49:38"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:54:33"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 08:54:33"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:07:39"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:10:51"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:11:05"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:11:05"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:15:13"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:15:20"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:17:36"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:17:52"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:17:52"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:17:57"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:18:51"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:19:23"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:19:27"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:19:41"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:19:41"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:19:45"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:29:00"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:29:11"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 09:29:11"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 09:30:27"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 11:31:54"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:40:53"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:40:53"}
+[31merror[39m: Violation validation failed: rules.0.policy_time: Path `policy_time` is required. {"timestamp":"2023-12-16 11:43:29"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 11:43:59"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:44:17"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:44:17"}
+[31merror[39m: Violation validation failed: rules.0.policy_time: Path `policy_time` is required. {"timestamp":"2023-12-16 11:44:53"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 11:46:09"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:47:34"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:47:34"}
+[31merror[39m: Violation validation failed: rules.0.policy_time: Path `policy_time` is required. {"timestamp":"2023-12-16 11:47:59"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 11:51:30"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:51:54"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 11:51:54"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 12:04:03"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 12:15:37"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 12:15:37"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 21:50:26"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 21:52:56"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 22:03:34"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 22:07:03"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 22:15:24"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-16 22:15:44"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 23:17:03"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-16 23:17:03"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-17 08:15:28"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-17 08:16:25"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 08:22:14"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 08:22:14"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-17 12:02:22"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-17 12:03:40"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-17 12:11:52"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:13:01"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:13:01"}
+[31merror[39m: Cast to ObjectId failed for value "plate" (type string) at path "_id" for model "Car" {"timestamp":"2023-12-17 12:13:09"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:16:48"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:16:48"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:16:50"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:16:50"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:17:09"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:17:09"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:17:28"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:17:28"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:25:44"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:25:44"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:31:50"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-17 12:31:50"}

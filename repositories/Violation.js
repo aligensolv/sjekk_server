@@ -47,7 +47,7 @@ class ViolationRepository{
         ))
     }
 
-    static getAllPlaceViolations(id){
+    static getAllPlaceViolations(id,date){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
                 let violations = await Violation.find({place: id}).populate([
@@ -68,6 +68,12 @@ class ViolationRepository{
                 ]).sort({
                     created_at: 'desc'
                 })
+                violations = violations.filter(e => {
+                    return !moment(e.completed_at).isBefore(
+                        moment(date)
+                    )
+                })
+                
                 console.log(violations);
                 return resolve(violations)
             }
@@ -88,7 +94,7 @@ class ViolationRepository{
         ))
     }
 
-    static getCompletedViolations(id){
+    static getCompletedViolations(id,date){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
                 let violations = await Violation.find({ publisher_identifier: id,status: 'completed' }).populate([
@@ -108,6 +114,12 @@ class ViolationRepository{
                     }
                 ]).sort({
                     created_at: 'desc'
+                })
+
+                violations = violations.filter(e => {
+                    return !moment(e.completed_at).isBefore(
+                        moment(date)
+                    )
                 })
 
                 return resolve(violations)
@@ -185,7 +197,7 @@ class ViolationRepository{
 
                 let newViolation = await Violation.create({
                     ...data,
-                    completedAt: completed_at
+                    completed_at: completed_at
                 })
 
                 let populated = await newViolation.populate([

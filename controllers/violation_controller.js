@@ -22,8 +22,9 @@ export const getViolationsCount = asyncWrapper(
 export const getAllPlaceviolations = asyncWrapper(
     async (req,res) =>{
         const {id} = req.params
+        const {date} = req.headers
 
-        let violations = await ViolationRepository.getAllPlaceViolations(id)
+        let violations = await ViolationRepository.getAllPlaceViolations(id, date)
         return res.status(OK).json(violations)
     }
 )
@@ -38,9 +39,10 @@ export const getViolation = asyncWrapper(
 
 export const getCompletedViolations = asyncWrapper(
     async (req,res) =>{
-        const {token} = req.headers
+        const {token, date} = req.headers
+        console.log(date);
         let decoded = jwt.verify(token, jwt_secret_key)
-        let completedViolations = await ViolationRepository.getCompletedViolations(decoded.id)
+        let completedViolations = await ViolationRepository.getCompletedViolations(decoded.id, date)
         return res.status(OK).json(completedViolations)
     }
 )
