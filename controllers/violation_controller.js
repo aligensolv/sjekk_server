@@ -27,7 +27,7 @@ export const getAllPlaceviolations = asyncWrapper(
         let violations = await ViolationRepository.getAllPlaceViolations(id, date)
         return res.status(OK).json(violations)
     }
-)
+)   
 
 export const getViolation = asyncWrapper(
     async (req,res) =>{
@@ -70,6 +70,8 @@ export const createViolation = asyncWrapper(
         let pre_data = req.body
         let { token } = req.headers
 
+        console.log(pre_data.images);
+
 
         let plate_info = JSON.parse(pre_data.plate_info)
         let registered_car_info = JSON.parse(pre_data.registered_car_info)
@@ -90,8 +92,25 @@ export const createViolation = asyncWrapper(
 
         const images = [];
 
+        // for(const image of JSON.parse(pre_data.images)){
+        //     const link = static_absolute_files_host + 'cars/' + image.path
+
+        //     images.push({
+        //         path: link,
+        //         date: image.date
+        //     })
+        // }
+
+        
+
         for (const image of req.files) {
-            images.push(static_absolute_files_host + image.path);
+            const link = static_absolute_files_host + image.path
+            console.log(link);
+            console.log(image.fieldname);
+            images.push({
+                path: link,
+                date: image.fieldname
+            });
         }
 
         let violation = await ViolationRepository.createViolation({

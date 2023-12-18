@@ -60,4 +60,5 @@ router.post('/violations',upload.any(),createViolation)
 router.delete('/violations/:id', deleteViolation)
 router.delete('/violations', deleteAllViolations)
 
+
 export default router

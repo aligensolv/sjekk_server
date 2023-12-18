@@ -19,7 +19,17 @@ const ViolationSchema = new mongoose.Schema({
     },
 
     images:{
-        type: [String],
+        type: [{
+            path: {
+                type: String,
+                required: true
+            },
+
+            date: {
+                type: String,
+                required: true
+            }
+        }],
         default: []
     },
 
