@@ -34,7 +34,8 @@ class ShiftHelper{
                         location: logins[0].place,
                         start_date: start_date,
                         end_date: end_date,
-                        report_creation_date: moment().format('YYYY.MM.DD HH:mm')
+                        report_creation_date: moment().format('YYYY.MM.DD HH:mm'),
+                        host: static_files_host
                     }
                 
                     let compiled = Handlebars.compile(template)

@@ -74,7 +74,8 @@ class ViolationHelperRepository{
                 
                     const templateData = {
                         ...data,
-                        qrcode_image: qrcode_image
+                        qrcode_image: qrcode_image,
+                        host: static_files_host
                     }
                 
                     let compiled = Handlebars.compile(template)
