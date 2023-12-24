@@ -37,40 +37,11 @@ export const getViolation = asyncWrapper(
     }
 )
 
-export const getCompletedViolations = asyncWrapper(
-    async (req,res) =>{
-        const {token, date} = req.headers
-        console.log(date);
-        let decoded = jwt.verify(token, jwt_secret_key)
-        let completedViolations = await ViolationRepository.getCompletedViolations(decoded.id, date)
-        return res.status(OK).json(completedViolations)
-    }
-)
-
-export const getSavedViolations = asyncWrapper(
-    async (req,res) =>{
-        const {token} = req.headers
-        let decoded = jwt.verify(token, jwt_secret_key)
-        let savedViolations = await ViolationRepository.getSavedViolations(decoded.id)
-        return res.status(OK).json(savedViolations)
-    }
-)
-
-export const searchExistingSavedViolation = asyncWrapper(
-    async (req,res) =>{
-        const { id } = req.params
-
-        let searchedSavedViolation = await ViolationRepository.searchExistingSavedViolation(id)
-        return res.status(OK).json(searchedSavedViolation)
-    }
-)
 
 export const createViolation = asyncWrapper(
     async (req,res) =>{
         let pre_data = req.body
         let { token } = req.headers
-
-        console.log(pre_data.images);
 
 
         let plate_info = JSON.parse(pre_data.plate_info)
@@ -92,21 +63,8 @@ export const createViolation = asyncWrapper(
 
         const images = [];
 
-        // for(const image of JSON.parse(pre_data.images)){
-        //     const link = static_absolute_files_host + 'cars/' + image.path
-
-        //     images.push({
-        //         path: link,
-        //         date: image.date
-        //     })
-        // }
-
-        
-
         for (const image of req.files) {
             const link = static_absolute_files_host + image.path
-            console.log(link);
-            console.log(image.fieldname);
             images.push({
                 path: link,
                 date: image.fieldname
@@ -138,61 +96,22 @@ export const deleteAllViolations = asyncWrapper(
     }
 )
 
-export const completeViolation = asyncWrapper(
-    async (req,res) =>{
-        const {id} = req.params
 
-        let response = await ViolationRepository.completeViolation(id)
-        return res.status(OK).send(response)
-    }
-)
+// export const updateViolation = asyncWrapper(
+//     async (req,res) =>{
+//         const {id} = req.params
+//         const data = req.body
 
-export const updateViolation = asyncWrapper(
-    async (req,res) =>{
-        const {id} = req.params
-        const data = req.body
-
-        let response = await ViolationRepository.updateViolation(id,data)
-        return res.status(OK).send(response)
-    }
-)
+//         let response = await ViolationRepository.updateViolation(id,data)
+//         return res.status(OK).send(response)
+//     }
+// )
 
 export const addImage = asyncWrapper(
     async (req, res) =>{
         const {id} = req.params
         const image = static_absolute_files_host + req.file.path
         let response = await ViolationRepository.addImage(id, image)
-        return res.status(OK).send(response)
-    }
-)
-
-export const addRule = asyncWrapper(
-    async (req, res) =>{
-        const {id} = req.params
-        const {rule} = req.body
-
-
-        let response = await ViolationRepository.addRule(id, rule)
-        return res.status(OK).json(response)
-    }
-)
-export const updateInnerComment = asyncWrapper(
-    async (req, res) =>{
-        const {id} = req.params
-        const {comment} = req.body
-
-
-        let response = await ViolationRepository.updateInnerComment(id, comment)
-        return res.status(OK).send(response)
-    }
-)
-export const updateOutterComment = asyncWrapper(
-    async (req, res) =>{
-        const {id} = req.params
-        const {comment} = req.body
-
-
-        let response = await ViolationRepository.updateOutterComment(id, comment)
         return res.status(OK).send(response)
     }
 )

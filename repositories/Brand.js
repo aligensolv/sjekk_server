@@ -16,7 +16,7 @@ class BrandRepository{
     static createBrand(brand){
         return new Promise(
             promiseAsyncWrapepr(
-                async (resolve, reject) => {
+                async (resolve) => {
                     const newBrand = await Brand.create({
                         value: brand
                     })

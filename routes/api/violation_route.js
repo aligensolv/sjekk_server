@@ -5,17 +5,9 @@ import {
     createViolation,
     deleteViolation,
     deleteAllViolations,
-    getCompletedViolations,
-    getSavedViolations,
     getAllPlaceviolations,
-    completeViolation,
-    updateViolation,
     addImage,
-    addRule,
-    updateInnerComment,
-    updateOutterComment,
     getViolationsCount,
-    searchExistingSavedViolation
 } from '../../controllers/violation_controller.js'
 
 import multer from 'multer'
@@ -40,21 +32,12 @@ router.get('/violations', getAllviolations)
 router.get('/violations/count', getViolationsCount)
 router.get('/violations/place/:id', getAllPlaceviolations)
 
-router.get('/violations/completed', getCompletedViolations)
-router.get('/violations/saved', getSavedViolations)
-
-router.get('/violations/plate/:id', searchExistingSavedViolation);
 
 
 router.get('/violations/:id', getViolation)
 
-router.put('/violations/:id/complete', completeViolation)
-router.put('/violations/:id', updateViolation)
 
 router.put('/violations/:id/images',upload.single('image'), addImage)
-router.put('/violations/:id/rules', addRule)
-router.put('/violations/:id/innerComment', updateInnerComment)
-router.put('/violations/:id/outterComment', updateOutterComment)
 
 router.post('/violations',upload.any(),createViolation)
 router.delete('/violations/:id', deleteViolation)

@@ -26,9 +26,12 @@ class PlaceRepository{
     static getPlace(id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve) =>{
+                console.log(id);
                 let place = await PlaceCollection.findOne({
                     _id: id
                 })
+
+                console.log(place);
 
                 return resolve(place)
             }

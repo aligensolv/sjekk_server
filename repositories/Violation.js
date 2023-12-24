@@ -4,12 +4,33 @@ import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
 import Violation from "../models/Violation.js";
 import moment from "moment";
 import RuleRepository from "./Rule.js";
+import ViolationHelperRepository from "./ViolationHelper.js";
+import UserRepository from "./User.js";
+import PlaceRepository from "./Place.js";
+import { account_number, iban_numner, kid_number, swift_code } from "../config.js";
 
 class ViolationRepository{
     static getAllViolations(){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find()
+                let violations = await Violation.find().populate([
+                    {
+                        path: 'publisher_identifier',
+                        ref: 'User'
+                    },
+
+                    {
+                        path: 'rules',
+                        ref: 'Rule'
+                    },
+
+                    {
+                        path: 'place',
+                        ref: 'Place'
+                    }
+                ]).sort({
+                    created_at: 'desc'
+                })
                 return resolve(violations)
             }
         ))
@@ -24,28 +45,16 @@ class ViolationRepository{
         ))
     }
 
-    static completeViolation(id){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let result = await Violation.updateOne({_id: id}, {
-                    status: 'completed',
-                    completed_at: moment().format('YYYY-MM-DD HH:mm:ss')
-                })
 
-                return resolve(result.modifiedCount > 0)
-            }
-        ))
-    }
+    // static updateViolation(id, data){
+    //     return new Promise(promiseAsyncWrapepr(
+    //         async(resolve, reject) =>{
+    //             let result = await Violation.updateOne({_id: id}, data)
 
-    static updateViolation(id, data){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let result = await Violation.updateOne({_id: id}, data)
-
-                return resolve(result.modifiedCount)
-            }
-        ))
-    }
+    //             return resolve(result.modifiedCount)
+    //         }
+    //     ))
+    // }
 
     static getAllPlaceViolations(id,date){
         return new Promise(promiseAsyncWrapepr(
@@ -94,132 +103,57 @@ class ViolationRepository{
         ))
     }
 
-    static getCompletedViolations(id,date){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let violations = await Violation.find({ publisher_identifier: id,status: 'completed' }).populate([
-                    {
-                        path: 'publisher_identifier',
-                        ref: 'User'
-                    },
-
-                    {
-                        path: 'rules',
-                        ref: 'Rule'
-                    },
-
-                    {
-                        path: 'place',
-                        ref: 'Place'
-                    }
-                ]).sort({
-                    created_at: 'desc'
-                })
-
-                violations = violations.filter(e => {
-                    return !moment(e.completed_at).isBefore(
-                        moment(date)
-                    )
-                })
-
-                return resolve(violations)
-            }
-        ))
-    }
-
-    static getSavedViolations(id){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let violations = await Violation.find({ publisher_identifier:id,status: 'saved' }).populate([
-                    {
-                        path: 'publisher_identifier',
-                        ref: 'User'
-                    },
-
-                    {
-                        path: 'rules',
-                        ref: 'Rule'
-                    },
-
-                    {
-                        path: 'place',
-                        ref: 'Place'
-                    }
-                ]).sort({
-                    created_at: 'desc'
-                })
-                
-                return resolve(violations)
-            }
-        ))
-    }
-
-    static searchExistingSavedViolation(plate){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let violations = await Violation.find({ status: 'saved' }).populate([
-                    {
-                        path: 'publisher_identifier',
-                        ref: 'User'
-                    },
-
-                    {
-                        path: 'rules',
-                        ref: 'Rule'
-                    },
-
-                    {
-                        path: 'place',
-                        ref: 'Place'
-                    }
-                ]).sort({
-                    created_at: 'desc'
-                })
-                violations = violations.filter(violation => {
-                    return violation.plate_info.plate.toLowerCase().replace(/\s/g, '') == plate.toLowerCase().replace(/\s/g, '')
-                })
-
-                if(violations.length == 0) {
-                    let not_found_error = new CustomError('No violation was found', NOT_FOUND)
-                    return reject(not_found_error)
-                }
-                
-                console.log(violations[0]);
-                return resolve(violations[0])
-            }
-        ))
-    }
-
     static createViolation(data){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
                 let completed_at = moment(data.completed_at).format('YYYY-MM-DD HH:mm:ss')
 
-                let newViolation = await Violation.create({
-                    ...data,
-                    completed_at: completed_at
+                let ticketNumber = ViolationHelperRepository.generateTicketNumber()
+                let publisher_identifier = data.publisher_identifier
+                let user = await UserRepository.getUser(publisher_identifier)
+                let place = await PlaceRepository.getPlace(data.place)
+
+                let total = 0;
+                for(let i = 0; i < data.rules.length; i++){
+                    total += +data.rules[i].charge
+                }
+
+                console.log(total);
+
+                let ticketImage = await ViolationHelperRepository.generateTicketImage(ticketNumber,{
+                    ticket_number: ticketNumber,
+                    rules: data.rules,
+                    from_date: moment(data.created_at).format('MM.DD HH:mm'),
+                    to_date: moment(completed_at).format('MM.DD HH:mm'),
+                    user_identifier: user.user_identifier,
+                    car_info:{
+                        land: 'Norge',
+                        plate_number: data.plate_info.plate,
+                        type: data.plate_info.type,
+                        brand: data.plate_info.brand,
+                        color: data.plate_info.color
+                    },
+                    location: place.location,
+                    ticket_info:{
+                        total_charge: total,
+                        paid_to: 'Sjekk Kontroll',
+                        account_number: account_number,
+                        kid_number: kid_number,
+                        swift_code: swift_code,
+                        iban_number: iban_numner,
+                        payment_date: completed_at,
+                    }
                 })
 
-                let populated = await newViolation.populate([
-                    {
-                        path: 'publisher_identifier',
-                        ref: 'User'
-                    },
 
-                    {
-                        path: 'rules',
-                        ref: 'Rule'
-                    },
+                let newViolation = await Violation.create({
+                    ...data,
+                    completed_at: completed_at,
+                    ticket_number: ticketNumber,
+                    print_paper: ticketImage
+                })
 
-                    {
-                        path: 'place',
-                        ref: 'Place'
-                    }
-                ])
-
-                console.log(populated);
-
-                return resolve(populated)
+                return resolve(true)
             }
         ))
     }
@@ -256,42 +190,6 @@ class ViolationRepository{
                 violation.images.push(image)
                 await violation.save()
                 return resolve(image)
-            }
-        ))
-    }
-
-    static addRule(id,rule){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let violation = await Violation.findOne({ _id: id })
-                violation.rules.push(rule)
-                await violation.save()
-
-                let rule_data = await RuleRepository.getRule(rule)
-                console.log(rule_data);
-                return resolve(rule_data)
-            }
-        ))
-    }
-    static updateInnerComment(id,comment){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let violation = await Violation.findOne({ _id: id })
-                violation.paper_comment = comment
-                await violation.save()
-
-                return resolve(comment)
-            }
-        ))
-    }
-    static updateOutterComment(id,comment){
-        return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let violation = await Violation.findOne({ _id: id })
-                violation.out_comment = comment
-                await violation.save()
-
-                return resolve(comment)
             }
         ))
     }

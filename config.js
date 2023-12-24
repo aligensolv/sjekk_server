@@ -18,6 +18,12 @@ export const node_env = process.env.NODE_ENV.trim()
 export const is_development = node_env == 'development'
 
 export const mongodb_connection_string = process.env.MONGODB_CONNECTION
-export const static_files_host = process.env.DEV_STATIC_FILES_HOST
+export const static_files_host = process.env.STATIC_FILES_HOST
 export const static_absolute_files_host = process.env.ABSOLUTE_STATIC_FILES_HOST
 export const autosys_api_key = process.env.AUTOSYS_API_KEY
+
+
+export const account_number = process.env.ACCOUNT_NUMBER
+export const swift_code = process.env.SWIFT_CODE
+export const iban_numner = process.env.IBAN_NUMBER
+export const kid_number = process.env.KID_NUMBER

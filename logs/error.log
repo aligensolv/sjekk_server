@@ -300,3 +300,13 @@
 [31merror[39m: Could not find car {"timestamp":"2023-12-18 07:43:20"}
 [31merror[39m: pre_data.images is not iterable {"timestamp":"2023-12-18 07:43:46"}
 [31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2023-12-18 07:45:36"}
+[31merror[39m: ENOENT: no such file or directory, open '../app_templates/violation.html' {"timestamp":"2023-12-21 16:44:25"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2023-12-23 16:56:36"}
+[31merror[39m: Parse error on line 26:
+...                {{/#each}}           
+----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' {"timestamp":"2023-12-23 22:40:15"}
+[31merror[39m: static_files_host is not defined {"timestamp":"2023-12-23 22:40:54"}
+[31merror[39m: ENOENT: no such file or directory, open 'E:\workspace\sjekk_kontroll\sjekk_server\http:\10.0.2.2:3000\public\reports\Fde1C9xAXL_232023.12.23 22:41.pdf' {"timestamp":"2023-12-23 22:41:22"}
+[31merror[39m: ENOENT: no such file or directory, open 'E:\public\reports\OwGH83Iwsq_232023.12.23 22:43.pdf' {"timestamp":"2023-12-23 22:43:21"}
+[31merror[39m: ENOENT: no such file or directory, open 'E:\workspace\sjekk_kontroll\public\reports\h8hq7CpjeM_232023.12.23 22:43.pdf' {"timestamp":"2023-12-23 22:43:43"}

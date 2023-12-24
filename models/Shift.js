@@ -16,6 +16,13 @@ const ShiftSchema = new mongoose.Schema({
         required: true
     },
 
+    logins: [{
+        place_name: String,
+        login_time: String,
+        logout_time: String,
+        place_id: String
+    }],
+
     total_completed_violations:{
         type: Number,
         default: null

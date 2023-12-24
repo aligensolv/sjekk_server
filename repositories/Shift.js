@@ -78,14 +78,15 @@ class ShiftRepository{
         ))
     }
 
-    static endShift(shift_id){
+    static endShift(shift_id, logins){
         return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) => {
+            async (resolve) => {
                 let end_date = moment().format('YYYY-MM-DD HH:mm:ss')
 
                 await Shift.updateOne({ _id: shift_id },{
                     end_date: end_date,
                     total_completed_violations: 0,
+                    logins: logins
                 })
 
                 return resolve(true)

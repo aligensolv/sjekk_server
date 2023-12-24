@@ -703,3 +703,34 @@
 {"level":"info","message":"cv89558","timestamp":"2023-12-18 08:04:46"}
 {"level":"info","message":"cv89558","timestamp":"2023-12-18 08:13:23"}
 {"level":"info","message":"cv89558","timestamp":"2023-12-18 08:13:23"}
+{"level":"error","message":"ENOENT: no such file or directory, open '../app_templates/violation.html'","timestamp":"2023-12-21 16:44:25"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 16:30:40"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 16:30:40"}
+{"level":"error","message":"Client network socket disconnected before secure TLS connection was established","timestamp":"2023-12-23 16:56:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 16:56:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 16:56:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:04:59"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:04:59"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:17:29"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:17:29"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:20:01"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:20:01"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:21:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:21:36"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:23:51"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:23:51"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:27:39"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:27:39"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:30:18"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-23 17:30:18"}
+{"level":"error","message":"Parse error on line 26:\n...                {{/#each}}\r           \n----------------------^\nExpecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID'","timestamp":"2023-12-23 22:40:15"}
+{"level":"error","message":"static_files_host is not defined","timestamp":"2023-12-23 22:40:54"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'E:\\workspace\\sjekk_kontroll\\sjekk_server\\http:\\10.0.2.2:3000\\public\\reports\\Fde1C9xAXL_232023.12.23 22:41.pdf'","timestamp":"2023-12-23 22:41:22"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'E:\\public\\reports\\OwGH83Iwsq_232023.12.23 22:43.pdf'","timestamp":"2023-12-23 22:43:21"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'E:\\workspace\\sjekk_kontroll\\public\\reports\\h8hq7CpjeM_232023.12.23 22:43.pdf'","timestamp":"2023-12-23 22:43:43"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-24 03:19:01"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-24 03:19:01"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-24 03:28:48"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-24 03:28:48"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-24 03:30:02"}
+{"level":"info","message":"cv89558","timestamp":"2023-12-24 03:30:02"}

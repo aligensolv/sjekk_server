@@ -20,6 +20,7 @@ const app = express()
 const server = http.createServer(app)
 const io = new Server(server)
 
+
 app.set('io', io)
 /*
     How to use socket in any route
@@ -36,6 +37,7 @@ app.set('io', io)
 io.on('connection', (socket) => {
     console.log(`a new connection and count is: ${socket.client.conn.server.clientsCount}`)
 
+    
     socket.on('disconnect', () => {
         console.log(`User disconnected and count is: ${socket.client.conn.server.clientsCount}`);
     });

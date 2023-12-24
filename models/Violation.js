@@ -1,5 +1,4 @@
 import * as mongoose from "mongoose";
-import RuleModel from "./Rule.js";
 
 const ViolationSchema = new mongoose.Schema({
     publisher_identifier:{
@@ -120,6 +119,11 @@ const ViolationSchema = new mongoose.Schema({
     },
 
     completed_at: {
+        type: String,
+        default: null
+    },
+
+    ticket_number: {
         type: String,
         default: null
     }
