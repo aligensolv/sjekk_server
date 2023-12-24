@@ -42,7 +42,7 @@ class ViolationHelperRepository{
                             console.log(`QR Code saved as ${filename}`);
                         });
 
-                        return resolve('/' + filePath)
+                        return resolve(`qrcodes/${filename}`)
                     }catch(err){
                         reject(err.message)
                     }
