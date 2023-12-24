@@ -30,7 +30,7 @@ class ViolationHelperRepository{
                     try{
                         const data = 'https://klage.gensolv.no' // URL or any data you want to encode
                         const qrCode = qr.image(data, { type: 'png' });
-                        let randomstring = generateRandomString()
+                        let randomstring = this.generateRandomString()
                 
                         // Generate a unique filename
                         const filename = `${randomstring}_${moment().format('YYYY.MM.DD')}.png`;
@@ -68,7 +68,7 @@ class ViolationHelperRepository{
             
                     let template = fs.readFileSync('app_templates/violation.html', 'utf-8')
 
-                    let qrcode_image = await generateTicketQRCode()
+                    let qrcode_image = await this.generateTicketQRCode()
                     
                 
                 
