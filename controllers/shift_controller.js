@@ -31,8 +31,8 @@ export const getShiftsByDate = asyncWrapper(
 
 export const searchLogins = asyncWrapper(
     async (req,res) =>{
-        let { start_date, end_date, place } = req.headers
-        console.log(req.headers);
+        let { start_date, end_date, place } = req.body
+        console.log(req.body);
         let shifts = await ShiftRepository.getAllShifts()
         let result = []
 
@@ -46,9 +46,6 @@ export const searchLogins = asyncWrapper(
 
                 let isBetween = login_time.isAfter(start) && logout_time.isBefore(end)
 
-                console.log(placeLogin.place_id == place);
-                console.log(place);
-                console.log(placeLogin);
                 if(isBetween && placeLogin.place_id == place){
                     let user = await UserRepository.getUser(shift.user_identifier)
                     result.push({

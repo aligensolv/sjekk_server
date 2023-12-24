@@ -183,12 +183,15 @@
       }
 
       let response = await fetch('/api/shifts/search',{
-        method: 'GET',
+        method: 'POST',
         headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+        },
+        body: JSON.stringify({
           start_date: startDate,
           end_date: endDate,
           place: places_dropdown.value
-        }
+        })
       })
 
       if(response.status == 200){
