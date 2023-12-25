@@ -70,7 +70,6 @@
                                 <th>Login Time</th>
                                 <th>Logout Time</th>
                                 <th>User</th>
-                                <th>Place</th>
                             </tr>
                             </thead>
                             <tbody id="search-body">
@@ -205,17 +204,14 @@
           let loginTimeCell = document.createElement('td')
           let logoutTimeCell = document.createElement('td')
           let userCell = document.createElement('td')
-          let placeCell = document.createElement('td')
 
           loginTimeCell.textContent = result.login_time
           logoutTimeCell.textContent = result.logout_time
           userCell.textContent = result.user
-          placeCell.textContent = result.place
 
           row.appendChild(loginTimeCell)
           row.appendChild(logoutTimeCell)
           row.appendChild(userCell)
-          row.appendChild(placeCell)
 
           searchBody.appendChild(row)
         }
