@@ -744,3 +744,131 @@ Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 
 [32minfo[39m: cv89558 {"timestamp":"2023-12-24 03:28:48"}
 [32minfo[39m: cv89558 {"timestamp":"2023-12-24 03:30:02"}
 [32minfo[39m: cv89558 {"timestamp":"2023-12-24 03:30:02"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\read.ejs:70
+    68|                                 </thead>
+    69|                                 <tbody>
+ >> 70|                                     <% users.forEach(user => { %>
+    71|                                         <tr>
+    72|                                             <td><%= user.name %></td>
+    73|                                             <td><%= user.user_identifier %></td>
+
+users is not defined {"timestamp":"2023-12-26 11:42:03"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\read.ejs:68
+    66|                                 </thead>
+    67|                                 <tbody>
+ >> 68|                                     <% violations.forEach(violation => { %>
+    69|                                         <tr>
+    70|                                             <td><%= violation.name %></td>
+    71|                                             <td class="controls">
+
+violations is not defined {"timestamp":"2023-12-26 11:57:24"}
+[31merror[39m: Unexpected token ')' in E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option. {"timestamp":"2023-12-26 12:05:18"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:32
+    30| 
+    31|                         <h3 class="title">KID number</h3>
+ >> 32|                         <div><%= kid_number %></div>
+    33|                     </div>
+    34|                 </div>
+    35|             </div>
+
+kid_number is not defined {"timestamp":"2023-12-26 13:08:50"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:32
+    30| 
+    31|                         <h3 class="title">KID number</h3>
+ >> 32|                         <div><%= kid_number %></div>
+    33|                     </div>
+    34|                 </div>
+    35|             </div>
+
+kid_number is not defined {"timestamp":"2023-12-26 13:08:51"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:32
+    30| 
+    31|                         <h3 class="title">KID number</h3>
+ >> 32|                         <div><%= kid_number %></div>
+    33|                     </div>
+    34|                 </div>
+    35|             </div>
+
+kid_number is not defined {"timestamp":"2023-12-26 13:08:51"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:32
+    30| 
+    31|                         <h3 class="title">KID number</h3>
+ >> 32|                         <div><%= kid_number %></div>
+    33|                     </div>
+    34|                 </div>
+    35|             </div>
+
+kid_number is not defined {"timestamp":"2023-12-26 13:09:01"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:32
+    30| 
+    31|                         <h3 class="title">KID number</h3>
+ >> 32|                         <div><%= kid_number %></div>
+    33|                     </div>
+    34|                 </div>
+    35|             </div>
+
+kid_number is not defined {"timestamp":"2023-12-26 13:09:05"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:58
+    56|                                 <div class="info-block">
+    57|                                     <h3 class="title">Fra</h3>
+ >> 58|                                     <div><%= from_date %></div>
+    59|                                 </div>
+    60|                             </div>
+    61|                             <div class="col-lg-6">
+
+from_date is not defined {"timestamp":"2023-12-26 13:22:54"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:58
+    56|                                 <div class="info-block">
+    57|                                     <h3 class="title">Fra</h3>
+ >> 58|                                     <div><%= from_date %></div>
+    59|                                 </div>
+    60|                             </div>
+    61|                             <div class="col-lg-6">
+
+from_date is not defined {"timestamp":"2023-12-26 13:22:54"}
+[31merror[39m: E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs:58
+    56|                                 <div class="info-block">
+    57|                                     <h3 class="title">Fra</h3>
+ >> 58|                                     <div><%= from_date %></div>
+    59|                                 </div>
+    60|                             </div>
+    61|                             <div class="col-lg-6">
+
+from_date is not defined {"timestamp":"2023-12-26 13:22:54"}
+[31merror[39m: Unexpected token ')' in E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option. {"timestamp":"2023-12-26 13:42:23"}
+[31merror[39m: Unexpected token ')' in E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option. {"timestamp":"2023-12-26 13:42:24"}
+[31merror[39m: Unexpected token ')' in E:\workspace\sjekk_kontroll\sjekk_server\views\violations\view_violation.ejs while compiling ejs
+
+If the above error is not helpful, you may want to try EJS-Lint:
+https://github.com/RyanZim/EJS-Lint
+Or, if you meant to create an async function, pass `async: true` as an option. {"timestamp":"2023-12-26 13:42:28"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 14:55:07"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 14:55:07"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 15:59:57"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 15:59:57"}
+[31merror[39m: undefined {"timestamp":"2023-12-26 16:02:12"}
+[31merror[39m: undefined {"timestamp":"2023-12-26 16:03:12"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 16:03:56"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 16:03:56"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 16:05:08"}
+[32minfo[39m: cv89558 {"timestamp":"2023-12-26 16:05:08"}
+[31merror[39m: undefined {"timestamp":"2023-12-26 16:05:21"}
+[31merror[39m: ENOENT: no such file or directory, open 'E:\workspace\sjekk_kontroll\sjekk_server\public\images\temp_cars\1703595288803_117025211.png' {"timestamp":"2023-12-26 16:23:45"}
+[31merror[39m: Violation validation failed: images.0.path: Path `path` is required., images.1.path: Path `path` is required., images.2.path: Path `path` is required. {"timestamp":"2023-12-26 16:24:36"}
+[31merror[39m: Violation validation failed: images.0.path: Path `path` is required., images.1.path: Path `path` is required., images.2.path: Path `path` is required., images.3.path: Path `path` is required. {"timestamp":"2023-12-26 16:25:31"}
+[31merror[39m: Violation validation failed: images.0.path: Path `path` is required., images.1.path: Path `path` is required., images.2.path: Path `path` is required., images.3.path: Path `path` is required., images.4.path: Path `path` is required. {"timestamp":"2023-12-26 16:26:36"}
+[31merror[39m: Violation validation failed: images.0.path: Path `path` is required., images.1.path: Path `path` is required., images.2.path: Path `path` is required., images.3.path: Path `path` is required., images.4.path: Path `path` is required., images.5.path: Path `path` is required. {"timestamp":"2023-12-26 16:28:52"}
+[31merror[39m: r.name.split(...)[1].join is not a function {"timestamp":"2023-12-26 21:35:54"}
+[31merror[39m: r.name.split(...)[1].join is not a function {"timestamp":"2023-12-26 21:36:38"}

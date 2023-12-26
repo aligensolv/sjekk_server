@@ -7,7 +7,7 @@ import RuleRepository from "./Rule.js";
 import ViolationHelperRepository from "./ViolationHelper.js";
 import UserRepository from "./User.js";
 import PlaceRepository from "./Place.js";
-import { account_number, iban_numner, kid_number, swift_code } from "../config.js";
+import { account_number, iban_numner, kid_number, static_files_host, swift_code } from "../config.js";
 
 class ViolationRepository{
     static getAllViolations(){
@@ -92,7 +92,10 @@ class ViolationRepository{
     static getViolation(id){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violation = await Violation.findOne({ _id: id })
+                let violation = await Violation.findOne({ _id: id }).populate({
+                    path : 'publisher_identifier',
+                    ref: 'User'
+                })
                 if(!violation){
                     let not_found_error = new CustomError('Violation not found',NOT_FOUND)
                     return reject(not_found_error)
@@ -125,6 +128,7 @@ class ViolationRepository{
                     rules: data.rules,
                     from_date: moment(data.created_at).format('MM.DD HH:mm'),
                     to_date: moment(completed_at).format('MM.DD HH:mm'),
+                    print_option: data.print_option,
                     user_identifier: user.user_identifier,
                     car_info:{
                         land: 'Norge',
@@ -145,10 +149,12 @@ class ViolationRepository{
                     }
                 })
 
+                console.log(data.images);
 
                 let newViolation = await Violation.create({
                     ...data,
-                    completed_at: completed_at,
+                    created_at: moment(data.created_at).format('YYYY.MM.DD HH:mm'),
+                    completed_at: moment(completed_at).format('YYYY.MM.DD HH:mm'),
                     ticket_number: ticketNumber,
                     print_paper: ticketImage
                 })

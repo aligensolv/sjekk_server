@@ -68,6 +68,17 @@
         .question{
             font-size: 14px;
         }
+
+        .ticket-row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .pay-status{
+            font-size: 30px;
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -98,7 +109,7 @@
         <div class="info">
             <div><span class="question">Fra</span>: {{from_date}}</div>
             <div><span class="question">Til</span>: {{to_date}}</div>
-            <div><span class="question">Levert</span>: Festet pa kjoretoy</div>
+            <div><span class="question">Levert</span>: {{print_option}}</div>
             <div><span class="question">Betijent</span>: {{user_identifier}}</div>
         </div>
 
@@ -117,8 +128,15 @@
         </div>
 
         <div class="ticket-info">
-            <h2>Ticket Info</h2>
-            <div><span class="question">total</span>: {{ticket_info.total_charge}}</div>
+            <div class="row ticket-row">
+                <div class="col-lg-6">
+                    <h2>Ticket Info</h2>
+                </div>
+                <div class="col-lg-6 pay-status">
+                    +
+                </div>
+            </div>
+            <div><span class="question">total</span>: {{ticket_info.total_charge}} Kr</div>
             <div><span class="question">paid to</span>: {{ticket_info.paid_to}}</div>
             <div><span class="question">account</span>: {{ticket_info.account_number}}</div>
             <div><span class="question">KID</span>: {{ticket_info.kid_number}}</div>

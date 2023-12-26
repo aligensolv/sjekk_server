@@ -17,10 +17,10 @@ import moment from 'moment';
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         // Set the destination folder where files will be saved
-        cb(null, 'public/images/cars/'); // Create a folder named 'uploads' in your project root
+        cb(null, 'public/images/temp_cars/'); // Create a folder named 'uploads' in your project root
     },
     filename: function (req, file, cb) {
-        cb(null, moment().format('YYYY-MM-DD') + '_' + file.originalname);
+        cb(null,file.originalname);
     }
 });
 

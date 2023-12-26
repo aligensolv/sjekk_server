@@ -2,6 +2,9 @@ import * as dotenv from 'dotenv'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
 
+import fs from 'fs'
+import Handlebars from 'handlebars'
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -22,8 +25,22 @@ export const static_files_host = process.env.STATIC_FILES_HOST
 export const static_absolute_files_host = process.env.ABSOLUTE_STATIC_FILES_HOST
 export const autosys_api_key = process.env.AUTOSYS_API_KEY
 
-
+// payment data
 export const account_number = process.env.ACCOUNT_NUMBER
 export const swift_code = process.env.SWIFT_CODE
 export const iban_numner = process.env.IBAN_NUMBER
 export const kid_number = process.env.KID_NUMBER
+
+// precompiled templates
+
+// Read the template file synchronously
+const violationTemplateSource = fs.readFileSync('app_templates/violation.html', 'utf-8');
+
+// Precompile the template
+export const compiledViolationTemplate = Handlebars.compile(violationTemplateSource);
+
+// Read the template file synchronously
+const reportTemplateSource = fs.readFileSync('app_templates/violation.html', 'utf-8');
+
+// Precompile the template
+export const compiledReportTemplate = Handlebars.compile(reportTemplateSource);

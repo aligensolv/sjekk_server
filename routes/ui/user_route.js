@@ -14,11 +14,6 @@ router.get('/users',uiAsyncWrapper(
     }
 ))
 
-router.get('/users/report', uiAsyncWrapper(
-    async (req, res) => {
-        return res.status(OK).render('users/report')
-    }
-))
 
 router.get('/users/:id/update', uiAsyncWrapper(
     async (req, res) => {

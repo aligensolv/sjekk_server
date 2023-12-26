@@ -1,9 +1,10 @@
-import { jwt_secret_key, static_absolute_files_host } from "../config.js"
+import { jwt_secret_key, static_absolute_files_host, static_files_host } from "../config.js"
 import { OK } from "../constants/status_codes.js"
 import asyncWrapper from "../middlewares/async_wrapper.js"
 import ViolationRepository from "../repositories/Violation.js"
 import jwt from 'jsonwebtoken'
 import logger from "../utils/logger.js"
+import ViolationHelperRepository from "../repositories/ViolationHelper.js"
 
 export const getAllviolations = asyncWrapper(
     async (req,res) =>{
@@ -64,10 +65,17 @@ export const createViolation = asyncWrapper(
         const images = [];
 
         for (const image of req.files) {
-            const link = static_absolute_files_host + image.path
+            const proccessed_image = await ViolationHelperRepository.addDateWatermarkToImage(
+                './public/images/temp_cars/' + image.originalname,
+                image.originalname,
+                image.fieldname
+            )
+
             images.push({
-                path: link,
-                date: image.fieldname
+                path: static_files_host + proccessed_image,
+                date: image.fieldname,
+                localPath: './public/images/temp_cars/' + image.originalname,
+                originalName: image.originalname
             });
         }
 
