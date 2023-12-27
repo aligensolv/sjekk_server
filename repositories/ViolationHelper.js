@@ -83,7 +83,14 @@ class ViolationHelperRepository{
                         qrcode_image: qrcode_image,
                         host: static_files_host,
                         rules: data.rules.map(r => {
-                            r.name = r.name.split('-')[1];
+                            if(r.name.includes('-') && r.name.length == 1){
+                                r.name = r.name.split('-')[1];
+                            }else if(r.name.includes('.')){
+                                let parts = r.name.split('.')
+                                parts.shift()
+                                r.name = parts.join('')
+                            }
+
                             return r
                         })
                     }
