@@ -430,3 +430,6 @@ Or, if you meant to create an async function, pass `async: true` as an option. {
 [31merror[39m: Violation validation failed: images.0.path: Path `path` is required., images.1.path: Path `path` is required., images.2.path: Path `path` is required., images.3.path: Path `path` is required., images.4.path: Path `path` is required., images.5.path: Path `path` is required. {"timestamp":"2023-12-26 16:28:52"}
 [31merror[39m: r.name.split(...)[1].join is not a function {"timestamp":"2023-12-26 21:35:54"}
 [31merror[39m: r.name.split(...)[1].join is not a function {"timestamp":"2023-12-26 21:36:38"}
+[31merror[39m: Navigation timeout of 30000 ms exceeded {"timestamp":"2023-12-27 12:36:24"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-27 12:38:46"}
+[31merror[39m: Could not find car {"timestamp":"2023-12-27 12:40:53"}

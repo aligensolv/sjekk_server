@@ -54,6 +54,11 @@
     transition: transform 0.3s ease-in-out;
 }
 
+.pay-status{
+            font-size: 50px;
+            color: green;
+        }
+
         </style>
 
     </head>
@@ -91,9 +96,18 @@
                 <div class="box">
                     <h2>Kontrolsanksjon</h2>
                     <div class="p-2">
-                        <div class="info-block">
-                            <h3 class="title">Ticket id</h3>
-                            <div><%= violation.ticket_number %></div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="info-block">
+                                    <h3 class="title">Ticket id</h3>
+                                    <div><%= violation.ticket_number %></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="pay-status">
+                                    +
+                                </div>
+                            </div>
                         </div>
 
                         <div class="info-block">
@@ -140,6 +154,20 @@
                         <div class="info-block">
                             <h3 class="title">Registered by</h3>
                             <div><%= violation.publisher_identifier.user_identifier %></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h2>Comments</h2>
+                    <div class="p-2">
+                        <div class="info-block">
+                            <h3 class="title">Inner Comment</h3>
+                            <div><%= violation.paper_comment %></div>
+                        </div>
+                        <div class="info-block">
+                            <h3 class="title">Outter Comment</h3>
+                            <div><%= violation.out_comment %></div>
                         </div>
                     </div>
                 </div>

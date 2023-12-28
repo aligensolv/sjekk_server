@@ -43,7 +43,7 @@ class PlaceRepository{
             async (resolve) =>{
                 let place = await PlaceCollection.create({
                     ...data,
-                    created_at: moment().format('YYYY-MM-DD HH:mm:ss')
+                    created_at: moment().format('DD.MM.YY HH:mm')
                 })
                 return resolve(place)
             }

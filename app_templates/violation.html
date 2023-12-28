@@ -75,10 +75,10 @@
             justify-content: space-between;
         }
 
-        .pay-status{
-            font-size: 30px;
-            color: green;
+        .comment p{
+            color: rgb(187, 10, 10);
         }
+
     </style>
 </head>
 <body>
@@ -94,6 +94,12 @@
             <hr>
         </div>
         <p><span class="question">Blankettnr</span>: {{ticket_number}}</p>
+        <div class="comment">
+            <h2>Note</h2>
+            <p>
+                {{data.paper_comment}}
+            </p>
+        </div>
         {{#if rules.length}}
             <div class="rules">
                 {{#each rules}}
@@ -115,7 +121,7 @@
 
         <div class="car-info">
             <h2>Car Info</h2>
-            <div><span class="question">land</span>: {{car_info.land}}</div>
+            <div><span class="question">land</span>: {{car_info.land.country}} - {{car_info.land.code}}</div>
             <div><span class="question">brand</span>: {{car_info.brand}}</div>
             <div><span class="question">plate</span>: {{car_info.plate_number}}</div>
             <div><span class="question">type</span>: {{car_info.type}}</div>
@@ -128,14 +134,7 @@
         </div>
 
         <div class="ticket-info">
-            <div class="row ticket-row">
-                <div class="col-lg-6">
-                    <h2>Ticket Info</h2>
-                </div>
-                <div class="col-lg-6 pay-status">
-                    +
-                </div>
-            </div>
+            <h2>Ticket Info</h2>
             <div><span class="question">total</span>: {{ticket_info.total_charge}} Kr</div>
             <div><span class="question">paid to</span>: {{ticket_info.paid_to}}</div>
             <div><span class="question">account</span>: {{ticket_info.account_number}}</div>

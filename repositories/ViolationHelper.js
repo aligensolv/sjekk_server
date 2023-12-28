@@ -42,7 +42,7 @@ class ViolationHelperRepository{
                         let randomstring = this.generateRandomString()
                 
                         // Generate a unique filename
-                        const filename = `${randomstring}_${moment().format('YYYY.MM.DD')}.png`;
+                        const filename = `${randomstring}_${moment().format('DD.MM.YY')}.png`;
                         const filePath = `public/qrcodes/${filename}`;
                 
                         const qrStream = qrCode.pipe(fs.createWriteStream(filePath));
@@ -98,16 +98,14 @@ class ViolationHelperRepository{
                     let parsed = compiledViolationTemplate(templateData)
                 
                     await page.waitForNetworkIdle()
-                    // await page.setRequestInterception(true)
-                    // page.on('request', (request) => {
-                    // if (request.resourceType() === 'image' && !request.url().includes(
-                    //     static_files_host
-                    // )) {
-                    //     console.log(request.url());
-                    //     request.abort()
-                    // }
-                    // else request.continue()
-                    // })
+                    await page.setRequestInterception(true)
+                    page.on('request', (request) => {
+                    if (request.resourceType() === 'image') {
+                        console.log(request.url());
+                        request.abort()
+                    }
+                    else request.continue()
+                    })
                     await page.setContent(parsed)
                     const container = await page.$('.container')
 
@@ -154,7 +152,7 @@ class ViolationHelperRepository{
                     ctx.fillStyle = 'white';
             
                     // Format the date as a string
-                    const dateString = moment(date).format('YYYY.MM.DD HH:mm');
+                    const dateString = moment(date).format('DD.MM.YY HH:mm');
             
                     // Measure the width of the text to determine the box size
                     const textWidth = ctx.measureText(dateString).width;

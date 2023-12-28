@@ -49,8 +49,8 @@ export const searchLogins = asyncWrapper(
                 if(isBetween && placeLogin.place_id == place){
                     let user = await UserRepository.getUser(shift.user_identifier)
                     result.push({
-                        login_time: login_time.format('YYYY.MM.DD HH:mm'),
-                        logout_time: logout_time.format('YYYY.MM.DD HH:mm'),
+                        login_time: login_time.format('DD.MM.YY HH:mm'),
+                        logout_time: logout_time.format('DD.MM.YY HH:mm'),
                         place: placeLogin.place_name,
                         user: user.user_identifier
                     })
@@ -64,8 +64,8 @@ export const searchLogins = asyncWrapper(
 export const createReport = asyncWrapper(
     async (req,res) => {
         const {results, start_date, end_date} = req.body
-        let link = await ShiftHelper.generateReport(results, start_date, end_date)
-        return res.status(OK).send(link)
+        let result = await ShiftHelper.generateReport(results, start_date, end_date)
+        return res.status(OK).json(result)
     }
 )
 

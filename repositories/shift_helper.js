@@ -34,7 +34,7 @@ class ShiftHelper{
                         location: logins[0].place,
                         start_date: start_date,
                         end_date: end_date,
-                        report_creation_date: moment().format('YYYY.MM.DD HH:mm'),
+                        report_creation_date: moment().format('DD.MM.YY HH:mm'),
                         host: static_files_host
                     }
                 
@@ -58,7 +58,10 @@ class ShiftHelper{
                     await browser.close();
 
 
-                    return resolve(path)
+                    return resolve({
+                        path: path,
+                        name: `${name}_${date}.pdf`
+                    })
                 }catch(error){
                     await browser.close()
                     let generate_logins_report_error = new CustomError(

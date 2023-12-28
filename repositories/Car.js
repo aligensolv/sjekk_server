@@ -84,7 +84,7 @@ class CarRepository{
     static createCar(data){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let created_at = moment().format('YYYY-MM-DD HH:mm:ss')
+                let created_at = moment().format('DD.MM.YY HH:mm')
                 let autosys_car_data = await AutosysRepository.getPlateInformation(data.plate_number)
 
                 if(!autosys_car_data){

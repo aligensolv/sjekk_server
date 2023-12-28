@@ -17,7 +17,7 @@ class UserRepository{
             }
 
             let hashed = await AuthRepository.encryptPassword(data.password)
-            let created_at = moment().format('YYYY-MM-DD HH:mm:ss')  
+            let created_at = moment().format('DD.MM.YY HH:mm')  
 
             let user = await UserCollection.create({
                 ...data,

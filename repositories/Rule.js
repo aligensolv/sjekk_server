@@ -36,7 +36,7 @@ class RuleRepository{
     static createRule(data){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let created_at = moment().format('YYYY-MM-DD HH:mm:ss')
+                let created_at = moment().format('DD.MM.YY HH:mm')
                 let rule = await Rule.create({
                     ...data,
                     created_at: created_at

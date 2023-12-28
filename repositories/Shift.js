@@ -65,12 +65,12 @@ class ShiftRepository{
     static createShift(user_id){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let current_date = moment().format('YYYY-MM-DD HH:mm:ss')
+                let current_date = moment().format('DD.MM.YY HH:mm')
 
                 let shift = await Shift.create({
                     start_date: current_date,
                     user_identifier: user_id,
-                    created_at: moment().format('YYYY-MM-DD HH:mm:ss')
+                    created_at: moment().format('DD.MM.YY HH:mm')
                 })
 
                 return resolve(shift)
@@ -81,7 +81,7 @@ class ShiftRepository{
     static endShift(shift_id, logins){
         return new Promise(promiseAsyncWrapepr(
             async (resolve) => {
-                let end_date = moment().format('YYYY-MM-DD HH:mm:ss')
+                let end_date = moment().format('DD.MM.YY HH:mm')
 
                 await Shift.updateOne({ _id: shift_id },{
                     end_date: end_date,

@@ -1,7 +1,7 @@
 // start date date picker
 $('#startdatetime').datetimepicker({
     useCurrent: false,
-    format: 'yyyy-MM-DD HH:mm:ss'
+    format: 'DD.MM.yy HH:mm'
 })
 
 $('#startdatetime').on('change.datetimepicker', (event) => {
@@ -11,7 +11,7 @@ $('#startdatetime').on('change.datetimepicker', (event) => {
 // start date date picker
 $('#enddatetime').datetimepicker({
     useCurrent: false,
-    format: 'yyyy-MM-DD HH:mm:ss',
+    format: 'DD.MM.yy HH:mm',
 })
 
 $('#enddatetime').on('change.datetimepicker', (event) => {

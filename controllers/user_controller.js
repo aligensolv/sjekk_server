@@ -90,7 +90,7 @@ export const deleteUser = asyncWrapper(
 
         await UserRepository.deleteUser(id)
 
-        let deleted_at = moment().format('YYYY-MM-DD HH:mm:ss')
+        let deleted_at = moment().format('DD.MM.YY HH:mm')
 
         return res.status(OK).json({
             success: true,

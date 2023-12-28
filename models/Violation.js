@@ -100,6 +100,11 @@ const ViolationSchema = new mongoose.Schema({
         color: {
             type: String,
             default: null
+        },
+
+        land: {
+            code: String,
+            country: String,
         }
     },
 
