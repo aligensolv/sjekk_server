@@ -109,7 +109,7 @@ class ViolationRepository{
     static createViolation(data){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let completed_at = moment(data.completed_at).format('DD.MM.YY HH:mm')
+                let completed_at = moment().format('DD.MM.YY HH:mm')
 
                 let ticketNumber = ViolationHelperRepository.generateTicketNumber()
                 let publisher_identifier = data.publisher_identifier
@@ -126,6 +126,7 @@ class ViolationRepository{
                 let ticketImage = await ViolationHelperRepository.generateTicketImage(ticketNumber,{
                     ticket_number: ticketNumber,
                     rules: data.rules,
+                    paper_comment: data.paper_comment,
                     from_date: moment(data.created_at).format('DD.MM.YY HH:mm'),
                     to_date: completed_at,
                     print_option: data.print_option,
@@ -154,7 +155,7 @@ class ViolationRepository{
                 let newViolation = await Violation.create({
                     ...data,
                     created_at: moment(data.created_at).format('DD.MM.YY HH:mm'),
-                    completed_at: moment(completed_at).format('DD.MM.YY HH:mm'),
+                    completed_at: completed_at,
                     ticket_number: ticketNumber,
                     print_paper: ticketImage
                 })
