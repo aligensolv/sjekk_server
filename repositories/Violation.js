@@ -92,10 +92,17 @@ class ViolationRepository{
     static getViolation(id){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violation = await Violation.findOne({ _id: id }).populate({
-                    path : 'publisher_identifier',
-                    ref: 'User'
-                })
+                let violation = await Violation.findOne({ _id: id }).populate([
+                    {
+                        path : 'publisher_identifier',
+                        ref: 'User'
+                    },
+
+                    {
+                        path : 'place',
+                        ref: 'Place'
+                    }
+                ])
                 if(!violation){
                     let not_found_error = new CustomError('Violation not found',NOT_FOUND)
                     return reject(not_found_error)
