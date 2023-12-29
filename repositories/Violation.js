@@ -157,7 +157,8 @@ class ViolationRepository{
                     created_at: moment(data.created_at).format('DD.MM.YY HH:mm'),
                     completed_at: completed_at,
                     ticket_number: ticketNumber,
-                    print_paper: ticketImage
+                    print_paper: ticketImage,
+                    print_option: data.print_option
                 })
 
                 return resolve(true)

@@ -131,6 +131,16 @@ const ViolationSchema = new mongoose.Schema({
     ticket_number: {
         type: String,
         default: null
+    },
+
+    print_option: {
+        type: String,
+        default: null
+    },
+
+    payment_date: {
+        type: String,
+        default: null
     }
 })
 
