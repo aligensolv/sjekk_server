@@ -118,8 +118,20 @@ export const deleteAllViolations = asyncWrapper(
 export const addImage = asyncWrapper(
     async (req, res) =>{
         const {id} = req.params
-        const image = static_absolute_files_host + req.file.path
-        let response = await ViolationRepository.addImage(id, image)
-        return res.status(OK).send(response)
+        console.log(req.file);
+        const proccessed_image = await ViolationHelperRepository.addDateWatermarkToImage(
+            './public/images/temp_cars/' + req.file.originalname,
+            req.file.originalname,
+            moment()
+        )
+
+        const image = {
+            path: static_files_host + proccessed_image,
+            date: moment(),
+            localPath: './public/images/temp_cars/' + req.file.originalname,
+            originalName: req.file.originalname
+        }
+        await ViolationRepository.addImage(id, image)
+        return res.status(OK).send(static_files_host + proccessed_image)
     }
 )
