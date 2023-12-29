@@ -98,14 +98,6 @@ class ViolationHelperRepository{
                     let parsed = compiledViolationTemplate(templateData)
                 
                     await page.waitForNetworkIdle()
-                    await page.setRequestInterception(true)
-                    page.on('request', (request) => {
-                    if (request.resourceType() === 'image') {
-                        console.log(request.url());
-                        request.abort()
-                    }
-                    else request.continue()
-                    })
                     await page.setContent(parsed)
                     const container = await page.$('.container')
 
