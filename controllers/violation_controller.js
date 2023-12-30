@@ -5,6 +5,7 @@ import ViolationRepository from "../repositories/Violation.js"
 import jwt from 'jsonwebtoken'
 import logger from "../utils/logger.js"
 import ViolationHelperRepository from "../repositories/ViolationHelper.js"
+import moment from "moment"
 
 export const getAllviolations = asyncWrapper(
     async (req,res) =>{

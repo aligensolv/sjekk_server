@@ -134,7 +134,7 @@ class ViolationRepository{
                     ticket_number: ticketNumber,
                     rules: data.rules,
                     paper_comment: data.paper_comment,
-                    from_date: moment(data.created_at).format('DD.MM.YY HH:mm'),
+                    from_date: data.created_at,
                     to_date: completed_at,
                     print_option: data.print_option,
                     user_identifier: user.user_identifier,
@@ -161,7 +161,7 @@ class ViolationRepository{
 
                 let newViolation = await Violation.create({
                     ...data,
-                    created_at: moment(data.created_at).format('DD.MM.YY HH:mm'),
+                    created_at: data.created_at,
                     completed_at: completed_at,
                     ticket_number: ticketNumber,
                     print_paper: ticketImage,
