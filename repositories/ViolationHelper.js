@@ -76,11 +76,11 @@ class ViolationHelperRepository{
         return `VL-${uniqueIdentifier}-${signature}`;
       }
 
-    static generateTicketBarcode(options = {}, width = 4, height = 200){
+    static generateTicketBarcode(value,options = {}, width = 4, height = 200){
         return new Promise(promiseAsyncWrapper(async (resolve, reject) => {
             const canvas = createCanvas(width * 100, height * 100);
       const ctx = canvas.getContext('2d');
-      const value = this.generateRealSerialNumber()
+      
 
       // Generate a barcode with JsBarcode
       JsBarcode(canvas, value, {
@@ -107,7 +107,7 @@ class ViolationHelperRepository{
         }))
     }
 
-    static generateTicketImage(name, data = {}){
+    static generateTicketImage(name,barcode_image ,data = {}){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) => {
                 const browser = await puppeteer.launch({
@@ -122,7 +122,7 @@ class ViolationHelperRepository{
                 try{
                     const page = await browser.newPage();
                     let qrcode_image = await this.generateTicketQRCode(data.ticket_number)
-                    let barcode_image = await this.generateTicketBarcode()
+                    
                     
                     console.log(data.rules);
                 

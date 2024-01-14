@@ -118,7 +118,7 @@ class ViolationRepository{
             async(resolve, reject) =>{
                 let completed_at = moment().format('DD.MM.YY HH:mm')
 
-                let ticketNumber = ViolationHelperRepository.generateTicketNumber()
+                let ticketNumber = ViolationHelperRepository.generateTicketNumber() 
                 let publisher_identifier = data.publisher_identifier
                 let user = await UserRepository.getUser(publisher_identifier)
                 let place = await PlaceRepository.getPlace(data.place)
@@ -129,8 +129,9 @@ class ViolationRepository{
                 }
 
                 console.log(total);
-
-                let ticketImage = await ViolationHelperRepository.generateTicketImage(ticketNumber,{
+                const value = ViolationHelperRepository.generateRealSerialNumber()
+                let barcode_image = await ViolationHelperRepository.generateTicketBarcode(value)
+                let ticketImage = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
                     ticket_number: ticketNumber,
                     rules: data.rules,
                     paper_comment: data.paper_comment,
@@ -165,7 +166,9 @@ class ViolationRepository{
                     completed_at: completed_at,
                     ticket_number: ticketNumber,
                     print_paper: ticketImage,
-                    print_option: data.print_option
+                    print_option: data.print_option,
+                    barcode_image: barcode_image,
+                    serial_number: value
                 })
 
                 return resolve(true)
