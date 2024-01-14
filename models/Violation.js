@@ -141,6 +141,16 @@ const ViolationSchema = new mongoose.Schema({
     payment_date: {
         type: String,
         default: null
+    },
+
+    barcode_image:{
+        type: String,
+        required: true
+    },
+
+    serial_number: {
+        type: String,
+        required: true
     }
 })
 

@@ -12,16 +12,17 @@ import logger from './utils/logger.js'
 import { Server } from 'socket.io'
 import http from 'http'
 
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const app = express()
 
-const server = http.createServer(app)
-const io = new Server(server)
+    const server = http.createServer(app)
+    const io = new Server(server)
 
 
-app.set('io', io)
+    app.set('io', io)
 /*
     How to use socket in any route
 
@@ -33,6 +34,10 @@ app.set('io', io)
         }
     })
 */
+
+io.on('tst', () => {
+    console.log('was tested good');
+})
 
 io.on('connection', (socket) => {
     console.log(`a new connection and count is: ${socket.client.conn.server.clientsCount}`)

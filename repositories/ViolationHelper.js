@@ -9,6 +9,8 @@ import { INTERNAL_SERVER } from "../constants/status_codes.js";
 import moment from "moment";
 import path from "path"
 import { fileURLToPath } from 'url'
+import JsBarcode from 'jsbarcode';
+
 
 
 const __filename = fileURLToPath(import.meta.url)
@@ -17,7 +19,7 @@ const __dirname = path.dirname(__filename)
 import { createCanvas, loadImage } from 'canvas'
 
 
-import { compiledViolationTemplate, static_files_host } from "../config.js";
+import { compiledViolationTemplate, static_absolute_files_host, static_files_host } from "../config.js";
 
 class ViolationHelperRepository{
     static generateTicketNumber(){
@@ -32,12 +34,12 @@ class ViolationHelperRepository{
         return randomstring.generate(12)
     }
 
-    static generateTicketQRCode(){
+    static generateTicketQRCode(ticket_number){
         return new Promise(
             promiseAsyncWrapper(
                 async (resolve, reject) => {
                     try{
-                        const data = 'https://klage.gensolv.no' // URL or any data you want to encode
+                        const data = `https://client.gensolv.no/ticket/${ticket_number}` // URL or any data you want to encode
                         const qrCode = qr.image(data, { type: 'png' });
                         let randomstring = this.generateRandomString()
                 
@@ -60,6 +62,51 @@ class ViolationHelperRepository{
         )
     }
 
+    static generateRealSerialNumber(length = 10) {
+        const generateRandomNumber = (min, max) => Math.floor(min + Math.random() * (max - min + 1));
+        const generateUniqueSignature = () => Math.random().toString(36).substr(2, 5).toUpperCase(); // You can adjust the length as needed
+      
+        // Generating a simple unique identifier consisting only of numbers
+        const uniqueIdentifier = Array.from({ length }, () => generateRandomNumber(0, 9)).join('');
+      
+        // Generate a unique signature
+        const signature = generateUniqueSignature();
+      
+        // Concatenate product type, unique identifier, and signature
+        return `VL-${uniqueIdentifier}-${signature}`;
+      }
+
+    static generateTicketBarcode(options = {}, width = 4, height = 200){
+        return new Promise(promiseAsyncWrapper(async (resolve, reject) => {
+            const canvas = createCanvas(width * 100, height * 100);
+      const ctx = canvas.getContext('2d');
+      const value = this.generateRealSerialNumber()
+
+      // Generate a barcode with JsBarcode
+      JsBarcode(canvas, value, {
+        format: options.format || 'CODE128',
+        width: options.width || 4,
+        height: options.height || 200,
+        displayValue: options.displayValue || true,
+        background: '#ffffff00'
+      });
+
+      // Generate a unique filename for the barcode image
+      const fileName = `${value}.png`;
+      const filePath = `public/barcodes/${fileName}`;
+
+      // Save the canvas to a file
+      const out = fs.createWriteStream(filePath);
+      const stream = canvas.createPNGStream();
+      stream.pipe(out);
+
+      out.on('finish', () => {
+        console.log(`Barcode created: ${filePath}`);
+        resolve(static_absolute_files_host + filePath);
+    });
+        }))
+    }
+
     static generateTicketImage(name, data = {}){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) => {
@@ -74,13 +121,15 @@ class ViolationHelperRepository{
                 });
                 try{
                     const page = await browser.newPage();
-                    let qrcode_image = await this.generateTicketQRCode()
+                    let qrcode_image = await this.generateTicketQRCode(data.ticket_number)
+                    let barcode_image = await this.generateTicketBarcode()
                     
                     console.log(data.rules);
                 
                     const templateData = {
                         ...data,
                         qrcode_image: qrcode_image,
+                        barcode_image: barcode_image,
                         host: static_files_host,
                         rules: data.rules.map(r => {
                             if(r.name.includes('-') && r.name.length == 1){
