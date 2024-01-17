@@ -34,12 +34,12 @@ class ViolationHelperRepository{
         return randomstring.generate(12)
     }
 
-    static generateTicketQRCode(ticket_number){
+    static generateTicketQRCode(ticket_number, plate_number){
         return new Promise(
             promiseAsyncWrapper(
                 async (resolve, reject) => {
                     try{
-                        const data = `https://client.gensolv.no/ticket/${ticket_number}` // URL or any data you want to encode
+                        const data = `https://client.gensolv.no/ticket?plate_number=${plate_number}&ticket_number=${ticket_number}` // URL or any data you want to encode
                         const qrCode = qr.image(data, { type: 'png' });
                         let randomstring = this.generateRandomString()
                 
@@ -121,7 +121,7 @@ class ViolationHelperRepository{
                 });
                 try{
                     const page = await browser.newPage();
-                    let qrcode_image = await this.generateTicketQRCode(data.ticket_number)
+                    let qrcode_image = await this.generateTicketQRCode(data.ticket_number, data.car_info.plate)
                     
                     
                     console.log(data.rules);
