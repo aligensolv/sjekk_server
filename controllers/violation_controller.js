@@ -3,7 +3,6 @@ import { OK } from "../constants/status_codes.js"
 import asyncWrapper from "../middlewares/async_wrapper.js"
 import ViolationRepository from "../repositories/Violation.js"
 import jwt from 'jsonwebtoken'
-import logger from "../utils/logger.js"
 import ViolationHelperRepository from "../repositories/ViolationHelper.js"
 import moment from "moment"
 

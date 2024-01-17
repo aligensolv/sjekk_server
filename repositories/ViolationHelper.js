@@ -131,17 +131,6 @@ class ViolationHelperRepository{
                         qrcode_image: qrcode_image,
                         barcode_image: barcode_image,
                         host: static_files_host,
-                        rules: data.rules.map(r => {
-                            if(r.name.includes('-') && r.name.length == 1){
-                                r.name = r.name.split('-')[1];
-                            }else if(r.name.includes('.')){
-                                let parts = r.name.split('.')
-                                parts.shift()
-                                r.name = parts.join('')
-                            }
-
-                            return r
-                        })
                     }
                 
                     let parsed = compiledViolationTemplate(templateData)

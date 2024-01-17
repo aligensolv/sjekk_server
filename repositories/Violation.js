@@ -13,7 +13,9 @@ class ViolationRepository{
     static getAllViolations(){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find().populate([
+                let violations = await Violation.find({
+                    locked: false
+                }).populate([
                     {
                         path: 'publisher_identifier',
                         ref: 'User'
