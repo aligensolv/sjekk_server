@@ -18,7 +18,6 @@ class AutosysRepository{
                     })
     
                     let data = response.data
-                    console.log(data);
 
                     if(response.status != 200){
                         let status_error = new CustomError('Autosys server error', response.status)

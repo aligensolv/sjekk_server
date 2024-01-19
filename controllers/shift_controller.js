@@ -32,7 +32,6 @@ export const getShiftsByDate = asyncWrapper(
 export const searchLogins = asyncWrapper(
     async (req,res) =>{
         let { start_date, end_date, place } = req.body
-        console.log(req.body);
         let shifts = await ShiftRepository.getAllShifts()
         let result = []
 
@@ -81,8 +80,6 @@ export const createShift = asyncWrapper(
     async (req,res) =>{
         let { token } = req.headers
         let decoded = jwt.verify(token,jwt_secret_key)
-        console.log('shift is');
-        console.log(decoded);
         
         let shift = await ShiftRepository.createShift(decoded.id)
         return res.status(OK).json(shift)
@@ -93,11 +90,6 @@ export const endShift = asyncWrapper(
     async (req,res) =>{
         const { id } = req.params
         const {logins} = req.body
-
-        console.log(logins);
-        console.log(JSON.parse(logins));
-
-
 
         await ShiftRepository.endShift(id, JSON.parse(logins))
         return res.status(OK).json({

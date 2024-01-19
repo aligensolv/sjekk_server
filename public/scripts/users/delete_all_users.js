@@ -14,7 +14,6 @@ async function deleteAllUsers(){
             },
         });
 
-        console.log(response.status)
 
         if (response.status === 200) {
             Toast.fire({

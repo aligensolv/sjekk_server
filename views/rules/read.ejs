@@ -65,6 +65,7 @@
                                     <th>Time Policy</th>
                                     <th>Charge</th>
                                     <th>Created At</th>
+                                    <th>Extras</th>
                                     <th>Handlinger</th>
                                 </tr>
                                 </thead>
@@ -75,6 +76,24 @@
                                             <td><%= rule.policy_time %></td>
                                             <td><%= rule.charge %></td>
                                             <td><%= rule.created_at %></td>
+                                            <td>
+                                                <% if (rule.extras && (rule.extras.meter_receipt_number || rule.extras.meter_number || rule.extras.expiry_date || rule.extras.paid_date)) { %>
+                                                    <div class="extras-column">
+                                                        <% if (rule.extras.meter_receipt_number) { %>
+                                                            <span class="badge badge-info">Meter Receipt Number</span>
+                                                        <% } %>
+                                                        <% if (rule.extras.meter_number) { %>
+                                                            <span class="badge badge-info">Meter Number</span>
+                                                        <% } %>
+                                                        <% if (rule.extras.expiry_date) { %>
+                                                            <span class="badge badge-info">Expiry Date</span>
+                                                        <% } %>
+                                                        <% if (rule.extras.paid_date) { %>
+                                                            <span class="badge badge-info">Paid Date</span>
+                                                        <% } %>
+                                                    </div>
+                                                <% } %>
+                                            </td>
                                             <td class="controls">
                                                 <a href="/rules/<%= rule._id %>/update" class="btn btn-primary btn-sm me-1">
                                                     <i class="fa fa-edit"></i>
@@ -185,7 +204,6 @@
                 },
             });
 
-            console.log(response.status)
 
             if (response.status === 200) {
                 Toast.fire({

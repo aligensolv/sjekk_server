@@ -40,7 +40,6 @@ class CarRepository{
                     created_at: 'desc'
                 })
 
-                console.log(cars);
                 return resolve(cars)
             }
         ))

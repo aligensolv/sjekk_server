@@ -85,7 +85,7 @@ class ViolationRepository{
                     )
                 })
                 
-                console.log(violations);
+                console.log(violations.at(0).rules);
                 return resolve(violations)
             }
         ))
@@ -130,7 +130,6 @@ class ViolationRepository{
                     total += +data.rules[i].charge
                 }
 
-                console.log(total);
                 const value = ViolationHelperRepository.generateRealSerialNumber()
                 let barcode_image = await ViolationHelperRepository.generateTicketBarcode(value)
                 let ticketImage = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
@@ -160,7 +159,6 @@ class ViolationRepository{
                     }
                 })
 
-                console.log(data.images);
 
                 let newViolation = await Violation.create({
                     ...data,

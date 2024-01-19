@@ -19,7 +19,6 @@ export const login = asyncWrapper(
             password: password
         }
         let success_login_result = await AuthRepository.login(credentials)   
-        console.log(success_login_result);     
     
         return res.status(OK).json(success_login_result)
     }

@@ -16,6 +16,25 @@ const RuleSchema = new mongoose.Schema({
         required: true
     },
 
+    extras: {
+        meter_receipt_number: {
+            type: Boolean,
+            default: false
+        },
+        meter_number:{
+            type: Boolean,
+            default: false
+        },
+        expiry_date: {
+            type: Boolean,
+            default: false
+        },
+        paid_amount: {
+            type: Boolean,
+            default: false
+        }
+    },
+
     created_at:{
         type: String,
         required: true,

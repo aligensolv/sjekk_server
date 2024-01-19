@@ -968,3 +968,27 @@ Or, if you meant to create an async function, pass `async: true` as an option. {
 [31merror[39m: Please provide identifier and password {"timestamp":"2024-01-18 11:14:25"}
 [31merror[39m: Please provide identifier and password {"timestamp":"2024-01-18 11:14:59"}
 [31merror[39m: Please provide identifier and password {"timestamp":"2024-01-18 11:15:03"}
+[31merror[39m: Rule validation failed: extras.meter_receipt_number: Tried to set nested object field `extras.$*` to primitive value `123`, extras.meter_number: Tried to set nested object field `extras.$*` to primitive value `456`, extras.expiry_date: Tried to set nested object field `extras.$*` to primitive value `1705657483066`, extras.paid_date: Tried to set nested object field `extras.$*` to primitive value `123` {"timestamp":"2024-01-19 11:44:43"}
+[31merror[39m: Rule validation failed: extras.meter_receipt_number: Tried to set nested object field `extras.$*` to primitive value `123`, extras.meter_number: Tried to set nested object field `extras.$*` to primitive value `456`, extras.expiry_date: Tried to set nested object field `extras.$*` to primitive value `1705657500145`, extras.paid_date: Tried to set nested object field `extras.$*` to primitive value `now` {"timestamp":"2024-01-19 11:45:00"}
+[31merror[39m: Rule validation failed: extras.meter_receipt_number: Cast to Boolean failed for value "123" (type string) at path "extras.meter_receipt_number" because of "CastError", extras.meter_number: Cast to Boolean failed for value "456" (type string) at path "extras.meter_number" because of "CastError", extras.expiry_date: Cast to Boolean failed for value "1705659105494" (type string) at path "extras.expiry_date" because of "CastError", extras.paid_date: Cast to Boolean failed for value "now" (type string) at path "extras.paid_date" because of "CastError" {"timestamp":"2024-01-19 12:11:45"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 13:48:21"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 13:48:21"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 14:37:27"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 14:37:27"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 14:42:15"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 14:42:15"}
+[31merror[39m: getaddrinfo ENOTFOUND www.vegvesen.no {"timestamp":"2024-01-19 15:21:39"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:21:40"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:21:40"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:29:23"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:29:23"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:29:32"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:29:32"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:34:33"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:34:33"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:36:16"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 15:36:16"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 16:12:24"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 16:12:24"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 17:31:51"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-19 17:31:51"}

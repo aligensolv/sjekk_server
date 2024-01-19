@@ -9,9 +9,6 @@ $('#reservationdatetime').datetimepicker({
     useCurrent: false
 })
 
-$('#reservationdatetime').on('change.datetimepicker', (event) => {
-    console.log(event.date._d);
-})
 
 // end date date picker
 $('#toreservationdatetime').datetimepicker({

@@ -6,7 +6,6 @@ const promiseAsyncWrapepr = (fn) =>{
         try{
             await fn(resolve,reject);
         }catch(error){            
-            console.log(error);
             
             let custom_error = new CustomError(error.message, INTERNAL_SERVER)
             return reject(custom_error);

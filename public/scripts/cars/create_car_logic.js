@@ -28,7 +28,6 @@ const formData = {
     rank: rank,
 };
 
-console.log(formData);
 
 
 let response = await fetch('/api/cars', {

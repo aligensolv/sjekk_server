@@ -36,9 +36,7 @@ const app = express()
     })
 */
 
-io.on('tst', () => {
-    console.log('was tested good');
-})
+
 
 io.on('connection', (socket) => {
     console.log(`a new connection and count is: ${socket.client.conn.server.clientsCount}`)

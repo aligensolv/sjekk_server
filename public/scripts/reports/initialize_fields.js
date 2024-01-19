@@ -5,7 +5,6 @@ $('#startdatetime').datetimepicker({
 })
 
 $('#startdatetime').on('change.datetimepicker', (event) => {
-    console.log(event.date._d);
 })
 
 // start date date picker
@@ -15,7 +14,6 @@ $('#enddatetime').datetimepicker({
 })
 
 $('#enddatetime').on('change.datetimepicker', (event) => {
-    console.log(event.date._d);
 })
 
 $('#places').select2()

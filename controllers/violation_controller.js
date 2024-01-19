@@ -118,7 +118,6 @@ export const deleteAllViolations = asyncWrapper(
 export const addImage = asyncWrapper(
     async (req, res) =>{
         const {id} = req.params
-        console.log(req.file);
         const proccessed_image = await ViolationHelperRepository.addDateWatermarkToImage(
             './public/images/temp_cars/' + req.file.originalname,
             req.file.originalname,
