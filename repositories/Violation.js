@@ -85,7 +85,6 @@ class ViolationRepository{
                     )
                 })
                 
-                console.log(violations.at(0).rules);
                 return resolve(violations)
             }
         ))

@@ -992,3 +992,19 @@ Or, if you meant to create an async function, pass `async: true` as an option. {
 [32minfo[39m: cv89558 {"timestamp":"2024-01-19 16:12:24"}
 [32minfo[39m: cv89558 {"timestamp":"2024-01-19 17:31:51"}
 [32minfo[39m: cv89558 {"timestamp":"2024-01-19 17:31:51"}
+[31merror[39m: getaddrinfo EAI_AGAIN www.vegvesen.no {"timestamp":"2024-01-20 12:51:38"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 12:51:38"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 12:51:38"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 12:52:26"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 12:52:26"}
+[31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 12:53:24"}
+[31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:17:22"}
+[31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:17:26"}
+[31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:18:08"}
+[31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:18:45"}
+[31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:18:54"}
+[31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:19:54"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 21:21:16"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 21:21:16"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 22:21:30"}
+[32minfo[39m: cv89558 {"timestamp":"2024-01-20 22:21:30"}
