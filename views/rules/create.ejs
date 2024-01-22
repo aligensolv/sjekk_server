@@ -68,39 +68,41 @@
                                                     </div>
                                                     <input type="number" class="form-control" placeholder="Time Policy" name="policy" id="policy">
                                                   </div>
+
+                                                  <div class="form-group mb-3">
+                                                    <label for="extras">Extras:</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="meter_receipt_number" id="meterReceiptNumber" name="extras_meter_receipt_number">
+                                                        <label class="form-check-label" for="meterReceiptNumber">
+                                                            Meter Receipt Number
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="meter_number" id="meterNumber" name="extras_meter_number">
+                                                        <label class="form-check-label" for="meterNumber">
+                                                            Meter Number
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="expiry_date" id="expiryDate" name="extras_expiry_date">
+                                                        <label class="form-check-label" for="expiryDate">
+                                                            Expiry Date
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="paid_amount" id="paidAmount" name="extras_paid_amount">
+                                                        <label class="form-check-label" for="paidAmount">
+                                                            Paid Amount
+                                                        </label>
+                                                    </div>
+                                                </div>
                                                 <div class="d-flex justify-content-center btn-group">
                                                     <button type="button" class="btn btn-info" onclick="createRule()">Opprett</button>
                                         
                                                     <a href="/rules" class="btn btn-secondary">Avbryt</a>
                                                 </div>
 
-                                                <div class="form-group mb-3">
-                                                  <label for="extras">Extras:</label>
-                                                  <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="meter_receipt_number" id="meterReceiptNumber" name="extras_meter_receipt_number">
-                                                      <label class="form-check-label" for="meterReceiptNumber">
-                                                          Meter Receipt Number
-                                                      </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="meter_number" id="meterNumber" name="extras_meter_number">
-                                                      <label class="form-check-label" for="meterNumber">
-                                                          Meter Number
-                                                      </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="expiry_date" id="expiryDate" name="extras_expiry_date">
-                                                      <label class="form-check-label" for="expiryDate">
-                                                          Expiry Date
-                                                      </label>
-                                                  </div>
-                                                  <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" value="paid_date" id="paidDate" name="extras_paid_date">
-                                                      <label class="form-check-label" for="paidDate">
-                                                          Paid Date
-                                                      </label>
-                                                  </div>
-                                              </div>
+                                                
                                             </form>
                                         </div>
                                     </div>
@@ -179,7 +181,7 @@
           let extras_meter_receipt_number = document.querySelector('#meterReceiptNumber').checked;
           let extras_meter_number = document.querySelector('#meterNumber').checked;
           let extras_expiry_date = document.querySelector('#expiryDate').checked;
-          let extras_paid_date = document.querySelector('#paidDate').checked;
+          let extras_paid_amount = document.querySelector('#paidAmount').checked;
 
 
         fetch('/api/rules', {
@@ -192,7 +194,7 @@
                   meter_receipt_number: extras_meter_receipt_number,
                   meter_number: extras_meter_number,
                   expiry_date: extras_expiry_date,
-                  paid_date: extras_paid_date
+                  paid_amount: extras_paid_amount
                 }
             }),
             headers:{
