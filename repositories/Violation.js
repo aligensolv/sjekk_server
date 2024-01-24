@@ -13,9 +13,7 @@ class ViolationRepository{
     static getAllViolations(){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({
-                    locked: false
-                }).populate([
+                let violations = await Violation.find().populate([
                     {
                         path: 'publisher_identifier',
                         ref: 'User'
@@ -61,7 +59,7 @@ class ViolationRepository{
     static getAllPlaceViolations(id,date){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({place: id}).populate([
+                let violations = await Violation.find({place: id, locked: false}).populate([
                     {
                         path: 'publisher_identifier',
                         ref: 'User'
