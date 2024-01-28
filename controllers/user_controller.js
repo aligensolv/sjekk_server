@@ -23,6 +23,7 @@ export const getUsersCount = asyncWrapper(
 
 export const registerUser = asyncWrapper(async (req, res) => {
     let data = req.body
+    console.log(data);
     let registeredUser = await UserRepository.createUser(data)
     
     if(registeredUser){
@@ -48,8 +49,8 @@ export const getUser = asyncWrapper(
     }
 )
 
-export const updateUser = async (req, res) => {
-    try{
+export const updateUser = asyncWrapper(
+    async (req, res) => {
         const { id } = req.params
         const data = req.body
 
@@ -74,10 +75,8 @@ export const updateUser = async (req, res) => {
             success: false,
             message: 'no user was updated'
         })
-    }catch(error){
-        return res.status(INTERNAL_SERVER).send(error)
     }
-}
+)
 export const deleteUser = asyncWrapper(
     async (req, res, next) => {
         const { id } = req.params

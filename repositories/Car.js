@@ -94,6 +94,8 @@ class CarRepository{
                 let car = await Car.create({
                     ...data,
                     ...autosys_car_data,
+                    start_date: moment(data.start_date).format('DD.MM.YY HH:mm'),
+                    end_date: moment(data.end_date).format('DD.MM.YY HH:mm'),
                     created_at: created_at
                 })
 
@@ -105,7 +107,11 @@ class CarRepository{
     static updateCar(id,data){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let update_result = await Car.updateOne({_id:id},data)
+                let update_result = await Car.updateOne({_id:id},{
+                    ...data,
+                    start_date: moment(data.start_date).format('DD.MM.YY HH:mm'),
+                    end_date: moment(data.end_date).format('DD.MM.YY HH:mm')
+                })
                 return resolve(update_result.modifiedCount > 0)
             }
         ))

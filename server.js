@@ -73,6 +73,7 @@ import CarApi from './routes/api/car_route.js'
 import ColorApi from './routes/api/color_route.js'
 import TypeApi from './routes/api/type_route.js'
 import BrandApi from './routes/api/brand_route.js'
+import StatisticsApi from './routes/api/statistics_route.js'
 
 
 // public routes
@@ -94,7 +95,8 @@ app.use(
     CarApi,
     ColorApi,
     TypeApi,
-    BrandApi
+    BrandApi,
+    StatisticsApi
 )
 
 import AuthUi from './routes/ui/auth_route.js'

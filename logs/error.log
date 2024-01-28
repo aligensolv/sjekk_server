@@ -452,3 +452,89 @@ Or, if you meant to create an async function, pass `async: true` as an option. {
 [31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:18:45"}
 [31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:18:54"}
 [31merror[39m: Cannot read properties of undefined (reading 'rules') {"timestamp":"2024-01-20 21:19:54"}
+[31merror[39m: Cast to ObjectId failed for value "xc" (type string) at path "_id" for model "Place" {"timestamp":"2024-01-26 03:58:57"}
+[31merror[39m: Cast to ObjectId failed for value "xc" (type string) at path "_id" for model "Place" {"timestamp":"2024-01-26 03:58:57"}
+[31merror[39m: Rule validation failed: charge: Cast to Number failed for value "x" (type string) at path "charge", policy_time: Cast to Number failed for value "x" (type string) at path "policy_time" {"timestamp":"2024-01-26 19:26:51"}
+[31merror[39m: Rule validation failed: charge: Cast to Number failed for value "x" (type string) at path "charge", policy_time: Cast to Number failed for value "x" (type string) at path "policy_time" {"timestamp":"2024-01-26 19:26:51"}
+[31merror[39m: Rule validation failed: charge: Cast to Number failed for value "x" (type string) at path "charge", policy_time: Cast to Number failed for value "x" (type string) at path "policy_time" {"timestamp":"2024-01-26 19:27:22"}
+[31merror[39m: Rule validation failed: charge: Cast to Number failed for value "x" (type string) at path "charge", policy_time: Cast to Number failed for value "x" (type string) at path "policy_time" {"timestamp":"2024-01-26 19:27:22"}
+[31merror[39m: Rule validation failed: policy_time: Cast to Number failed for value "x" (type string) at path "policy_time" {"timestamp":"2024-01-26 19:28:06"}
+[31merror[39m: Rule validation failed: policy_time: Cast to Number failed for value "x" (type string) at path "policy_time" {"timestamp":"2024-01-26 19:28:06"}
+[31merror[39m: Autosys server error {"timestamp":"2024-01-27 01:22:12"}
+[31merror[39m: Autosys server error {"timestamp":"2024-01-27 01:22:12"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-01-27 02:05:13"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-01-27 02:05:13"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 02:59:06"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 02:59:06"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 02:59:36"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 02:59:36"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:05"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:05"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:09"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:09"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:14"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:14"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:17"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:17"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:18"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:18"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:19"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-27 16:23:19"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:54"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:54"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:54"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:54"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:57"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:57"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:57"}
+[31merror[39m: FORBIDDEN is not defined {"timestamp":"2024-01-28 05:10:57"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:19"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:19"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:39"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:39"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:41"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:41"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:43"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:43"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:49"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:11:49"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:04"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:12"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:28"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:28"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:54"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:54"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:57"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:12:57"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:30"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:30"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:35"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:35"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:38"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:38"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:49"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:49"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:54"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:13:54"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:00"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:00"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:14"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:14"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:19"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:19"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:28"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:14:28"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:15:03"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:15:03"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:15:22"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:15:25"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:15:35"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:15:42"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:17:14"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:17:32"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:17:39"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:20:35"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:21:55"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:22:19"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:23:52"}
+[31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:25:07"}

@@ -1,4 +1,4 @@
-import { BAD_REQUEST, NOT_AUTHORIZED } from "../constants/status_codes.js"
+import { FORBIDDEN } from "../constants/status_codes.js"
 
 import { jwt_secret_key } from "../config.js"
 import jwt from 'jsonwebtoken'
@@ -9,7 +9,7 @@ const ValidateApiToken = asyncWrapepr(async (req, res, next) =>{
     const { token } = req.headers
 
     if(!token){
-        let missing_token_error = new CustomError('Please provide api token',BAD_REQUEST)
+        let missing_token_error = new CustomError('Please provide api token',FORBIDDEN)
         return next(missing_token_error)
     }
     
@@ -17,7 +17,7 @@ const ValidateApiToken = asyncWrapepr(async (req, res, next) =>{
 
     jwt.verify(token, jwt_secret_key,{},(error,decoded) =>{
         if(error){
-            let not_authorized_error = new CustomError('Invalid API token, Unauthorized',NOT_AUTHORIZED)
+            let FORBIDDEN_error = new CustomError('Invalid API token, Unauthorized',NOT_AUTHORIZED)
             return next(not_authorized_error)
         }
 
