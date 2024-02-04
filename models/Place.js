@@ -19,6 +19,16 @@ const PlaceSchema = new mongoose.Schema({
     created_at:{
         type: String,
         required: true
+    },
+
+    profile_image: {
+        type: String,
+        default: null
+    },
+
+    profile_link: {
+        type: String,
+        default: null
     }
 })
 

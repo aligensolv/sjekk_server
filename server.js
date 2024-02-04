@@ -59,21 +59,20 @@ app.use(compression())
 app.use('/public',express.static(path.join(__dirname, './public')))
 
 
-app.set('view engine', 'ejs')
 
 import ValidateApiToken from './middlewares/validate_api_token.js'
-import UserRoute from './routes/api/user_route.js'
-import AuthRoute from './routes/api/auth_route.js'
-import PlaceRoute from './routes/api/place_route.js'
-import ViolationApi from './routes/api/violation_route.js'
-import ShiftApi from './routes/api/shift_route.js'
-import RuleApi from './routes/api/rule_route.js'
-import AutosysApi from './routes/api/autosys_route.js'
-import CarApi from './routes/api/car_route.js'
-import ColorApi from './routes/api/color_route.js'
-import TypeApi from './routes/api/type_route.js'
-import BrandApi from './routes/api/brand_route.js'
-import StatisticsApi from './routes/api/statistics_route.js'
+import UserRoute from './routes/user_route.js'
+import AuthRoute from './routes/auth_route.js'
+import PlaceRoute from './routes/place_route.js'
+import ViolationApi from './routes/violation_route.js'
+import ShiftApi from './routes/shift_route.js'
+import RuleApi from './routes/rule_route.js'
+import AutosysApi from './routes/autosys_route.js'
+import CarApi from './routes/car_route.js'
+import ColorApi from './routes/color_route.js'
+import TypeApi from './routes/type_route.js'
+import BrandApi from './routes/brand_route.js'
+import StatisticsApi from './routes/statistics_route.js'
 
 
 // public routes
@@ -99,26 +98,6 @@ app.use(
     StatisticsApi
 )
 
-import AuthUi from './routes/ui/auth_route.js'
-import UserUi from './routes/ui/user_route.js'
-import PlaceUi from './routes/ui/place_route.js'
-import RuleUi from './routes/ui/rule_route.js'
-import CarUi from './routes/ui/car_route.js'
-import ViolationUi from './routes/ui/violation_route.js'
-
-app.use(
-    AuthUi,
-    UserUi,
-    PlaceUi,
-    RuleUi,
-    CarUi,
-    ViolationUi
-)
-
-
-app.get('/',(req, res) => {
-    return res.status(OK).render('index')
-})
 
 app.use(ErrorHandlerMiddleware)
 

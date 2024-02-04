@@ -68,3 +68,9 @@ export const deleteAllPlaces = asyncWrapper(
         })
     }
 )
+
+export const createPlaceLink = asyncWrapper(
+    async (req, res) => {
+        
+    }
+)

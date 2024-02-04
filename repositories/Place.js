@@ -80,6 +80,14 @@ class PlaceRepository{
             }
         ))
     }
+
+    static createPlaceLink(){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve) =>{
+                
+            }
+        ))
+    }
 }
 
 
