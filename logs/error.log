@@ -538,3 +538,19 @@ Or, if you meant to create an async function, pass `async: true` as an option. {
 [31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:22:19"}
 [31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:23:52"}
 [31merror[39m: Please provide api token {"timestamp":"2024-01-28 05:25:07"}
+[31merror[39m: result is not defined {"timestamp":"2024-02-06 08:15:26"}
+[31merror[39m: result is not defined {"timestamp":"2024-02-06 08:15:26"}
+[31merror[39m: PlaceProfile validation failed: updated_at: Path `updated_at` is required., created_at: Path `created_at` is required. {"timestamp":"2024-02-06 08:16:57"}
+[31merror[39m: PlaceProfile validation failed: updated_at: Path `updated_at` is required., created_at: Path `created_at` is required. {"timestamp":"2024-02-06 08:16:57"}
+[31merror[39m: Cast to ObjectId failed for value ":client" (type string) at path "_id" for model "PlaceProfile" {"timestamp":"2024-02-06 10:49:04"}
+[31merror[39m: Cast to ObjectId failed for value ":client" (type string) at path "_id" for model "PlaceProfile" {"timestamp":"2024-02-06 10:49:04"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-02-06 11:55:19"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-02-06 11:55:19"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-02-06 12:03:06"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-02-06 12:03:06"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-02-06 12:03:39"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-02-06 12:03:39"}
+[31merror[39m: getaddrinfo ENOTFOUND www.vegvesen.no {"timestamp":"2024-02-06 12:07:25"}
+[31merror[39m: getaddrinfo ENOTFOUND www.vegvesen.no {"timestamp":"2024-02-06 12:07:25"}
+[31merror[39m: getaddrinfo ENOTFOUND www.vegvesen.no {"timestamp":"2024-02-06 12:07:51"}
+[31merror[39m: getaddrinfo ENOTFOUND www.vegvesen.no {"timestamp":"2024-02-06 12:07:51"}

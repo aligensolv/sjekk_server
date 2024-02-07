@@ -21,6 +21,12 @@ const PlaceSchema = new mongoose.Schema({
         required: true
     },
 
+    parking_provider: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'ParkingProvider',
+        required: true
+    },
+
     profile_image: {
         type: String,
         default: null

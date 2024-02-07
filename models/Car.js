@@ -4,13 +4,6 @@ const CarSchema = new mongoose.Schema({
     place:{
         type: String,
         ref : 'Place',
-        // required: true,
-    },
-
-    rank:{
-        type: String,
-        enum: ['normal','vip','owner'],
-        required: true
     },
 
     brand:{
@@ -36,6 +29,20 @@ const CarSchema = new mongoose.Schema({
     registeration_type:{
         type: String,
         required: true,
+    },
+
+    registeration_source:{
+        type: String,
+        required: true,
+    },
+
+    registeration_source_id:{
+        type: String
+    },
+
+    free_parking_time:{
+        type: Number,
+        default: null
     },
 
     start_date:{

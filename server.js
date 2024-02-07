@@ -73,6 +73,7 @@ import ColorApi from './routes/color_route.js'
 import TypeApi from './routes/type_route.js'
 import BrandApi from './routes/brand_route.js'
 import StatisticsApi from './routes/statistics_route.js'
+import ParkingProviderApi from './routes/parking_provider_route.js'
 
 
 // public routes
@@ -95,7 +96,8 @@ app.use(
     ColorApi,
     TypeApi,
     BrandApi,
-    StatisticsApi
+    StatisticsApi,
+    ParkingProviderApi
 )
 
 

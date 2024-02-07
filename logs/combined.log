@@ -988,3 +988,27 @@
 {"level":"error","message":"Please provide api token","timestamp":"2024-01-28 05:22:19"}
 {"level":"error","message":"Please provide api token","timestamp":"2024-01-28 05:23:52"}
 {"level":"error","message":"Please provide api token","timestamp":"2024-01-28 05:25:07"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-05 09:47:48"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-05 09:47:48"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-05 09:47:48"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-05 09:47:48"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-05 09:47:48"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-05 09:47:48"}
+{"level":"error","message":"result is not defined","timestamp":"2024-02-06 08:15:26"}
+{"level":"error","message":"result is not defined","timestamp":"2024-02-06 08:15:26"}
+{"level":"error","message":"PlaceProfile validation failed: updated_at: Path `updated_at` is required., created_at: Path `created_at` is required.","timestamp":"2024-02-06 08:16:57"}
+{"level":"error","message":"PlaceProfile validation failed: updated_at: Path `updated_at` is required., created_at: Path `created_at` is required.","timestamp":"2024-02-06 08:16:57"}
+{"level":"error","message":"Cast to ObjectId failed for value \":client\" (type string) at path \"_id\" for model \"PlaceProfile\"","timestamp":"2024-02-06 10:49:04"}
+{"level":"error","message":"Cast to ObjectId failed for value \":client\" (type string) at path \"_id\" for model \"PlaceProfile\"","timestamp":"2024-02-06 10:49:04"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2024-02-06 11:55:19"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2024-02-06 11:55:19"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2024-02-06 12:03:06"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2024-02-06 12:03:06"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2024-02-06 12:03:39"}
+{"level":"error","message":"Request failed with status code 400","timestamp":"2024-02-06 12:03:39"}
+{"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2024-02-06 12:07:25"}
+{"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2024-02-06 12:07:25"}
+{"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2024-02-06 12:07:51"}
+{"level":"error","message":"getaddrinfo ENOTFOUND www.vegvesen.no","timestamp":"2024-02-06 12:07:51"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-07 12:55:23"}
+{"level":"info","message":"cv89558","timestamp":"2024-02-07 12:55:23"}

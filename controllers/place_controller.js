@@ -71,6 +71,48 @@ export const deleteAllPlaces = asyncWrapper(
 
 export const createPlaceLink = asyncWrapper(
     async (req, res) => {
-        
+        let data = req.body
+        const {id} = req.params
+
+        let result = await PlaceRepository.createPlaceLink(id,data)
+
+        return res.status(OK).json(result)
+    }
+)
+
+export const getAllPlaceProfiles = asyncWrapper(
+    async (req, res) => {
+        const {id} = req.params
+
+        let result = await PlaceRepository.getAllPlaceProfiles(id)
+
+        return res.status(OK).json(result)
+    }
+)
+
+export const getPlaceProfile = asyncWrapper(
+    async (req, res) => {
+        const {client} = req.params
+
+        let result = await PlaceRepository.getPlaceProfile(client)
+
+        return res.status(OK).json(result)
+    }
+)
+
+export const createCarFromPlaceDashboard = asyncWrapper(
+    async (req, res) => {
+        const {client} = req.params
+        const {
+            plate_number
+        } = req.body
+
+        let result = await PlaceRepository.createCarFromPlaceDashboard(plate_number,{
+            registeration_source: 'some client',
+            registeration_source_id: client,
+            free_parking_time: 2
+        })
+
+        return res.status(OK).json(result)
     }
 )
