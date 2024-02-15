@@ -2,7 +2,8 @@ import Agenda from 'agenda'
 import CarModel from '../models/Car.js';
 import CarLogModel from '../models/CarLogs.js';
 import moment from 'moment';
-const mongoConnectionString = "mongodb://127.0.0.1:27017/agenda";
+import { mongodb_connection_string } from '../config.js';
+const mongoConnectionString = mongodb_connection_string;
 const agenda = new Agenda({ db: { address: mongoConnectionString } });
 
 await agenda.start(); // Start agenda to initiate the connection with the database
