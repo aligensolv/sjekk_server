@@ -57,18 +57,16 @@ class CarRepository{
         ))
     }
 
-    static getCarByPlate(id){
+    static getCarByPlate(plate_number){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let cars = await Car.find().populate({
+                let car = await Car.findOne({
+                    plate_number: plate_number.toUpperCase().replace(/\s/g, '')
+                }).populate({
                     path: 'place',
                     ref: 'Place'
                 })
-                let car = cars.filter(c => {
-                    logger.info(c.plate_number.toLowerCase().replace(/\s/g, ''))
-                    logger.info(id.toLowerCase().replace(/\s/g,''))
-                    return c.plate_number.toLowerCase().replace(/\s/g, '') == id.toLowerCase().replace(/\s/g,'')
-                })[0]
+
                 
                 if(!car){
                     let not_found_error = new CustomError('Could not find car', NOT_FOUND)
@@ -84,7 +82,7 @@ class CarRepository{
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
                 let created_at = moment().format('DD.MM.YY HH:mm')
-                let autosys_car_data = await AutosysRepository.getPlateInformation(data.plate_number)
+                let autosys_car_data = await AutosysRepository.getPlateInformation(data.plate_number.toUpperCase().replace(/\s/g, ''))
 
                 if(!autosys_car_data){
                     let not_found_error = new CustomError('Could not find car data', NOT_FOUND)

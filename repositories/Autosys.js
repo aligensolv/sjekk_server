@@ -26,7 +26,7 @@ class AutosysRepository{
                     
                     return resolve({
                         type: data?.kjoretoydataListe[0]?.kjennemerke[0]?.kjennemerkekategori,
-                        plate: data?.kjoretoydataListe[0]?.kjoretoyId?.kjennemerke,
+                        plate: data?.kjoretoydataListe[0]?.kjoretoyId?.kjennemerke.toUpperCase().replace(/\s/g, ''),
                         year: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.kjoretoyklassifisering?.nasjonalGodkjenning?.nasjonaltGodkjenningsAr,
                         description: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.kjoretoyklassifisering?.beskrivelse,
                         brand: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.tekniskeData?.generelt?.merke[0]?.merke,

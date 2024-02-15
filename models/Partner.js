@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 
-const ParkingProviderSchema = new Schema({
+const PartnerSchema = new Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     city: { type: String, required: true },
@@ -11,12 +11,18 @@ const ParkingProviderSchema = new Schema({
     phone_number: { type: String, required: true },
     created_at: { type: String, required: true },
     updated_at: { type: String, default: null },
+    access_link: {
+        type: String,
+    },
+    access_code: {
+        type: String,
+    },
     owned_places: [{
         type: Schema.Types.ObjectId,
         ref: 'Place'
     }]
 });
 
-const ParkingProviderModel = mongoose.model('ParkingProvider', ParkingProviderSchema);
+const PartnerModel = mongoose.model('Partner', PartnerSchema);
 
-export default ParkingProviderModel;
+export default PartnerModel;

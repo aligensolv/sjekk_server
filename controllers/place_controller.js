@@ -1,6 +1,7 @@
 import PlaceRepository from "../repositories/Place.js"
-import { INTERNAL_SERVER, OK } from "../constants/status_codes.js"
+import { BAD_REQUEST, INTERNAL_SERVER, OK } from "../constants/status_codes.js"
 import asyncWrapper from "../middlewares/async_wrapper.js"
+import CustomError from "../interfaces/custom_error_class.js"
 
 export const getAllPlaces = asyncWrapper(async (req, res, next) => {
     let places = await PlaceRepository.getAllPlaces()
@@ -103,16 +104,41 @@ export const getPlaceProfile = asyncWrapper(
 export const createCarFromPlaceDashboard = asyncWrapper(
     async (req, res) => {
         const {client} = req.params
+        console.log(req.body);
         const {
             plate_number
         } = req.body
 
         let result = await PlaceRepository.createCarFromPlaceDashboard(plate_number,{
-            registeration_source: 'some client',
             registeration_source_id: client,
-            free_parking_time: 2
+            client: client
         })
 
+        return res.status(OK).json(result)
+    }
+)
+
+export const getAllCarsRegisteredByPlaceDashboard = asyncWrapper(
+    async (req, res) => {
+        const {client} = req.params
+
+        let result = await PlaceRepository.getAllCarsRegisteredByPlaceDashboard(client)
+
+        return res.status(OK).json(result)
+    }
+)
+
+export const loginPlace = asyncWrapper(
+    async (req,res,next) => {
+        const {id} = req.params
+        const {access_code} = req.body
+
+        if(!access_code){
+            let access_code_not_provided = new CustomError('Access code not provided', BAD_REQUEST)
+            return next(access_code_not_provided)
+        }
+
+        let result = await PlaceRepository.loginPlace(id,access_code)
         return res.status(OK).json(result)
     }
 )

@@ -4,7 +4,7 @@ import compression from 'compression'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import { port, host, socket_port } from './config.js'
-import { OK } from './constants/status_codes.js'
+import { NOT_FOUND, OK } from './constants/status_codes.js'
 import ErrorHandlerMiddleware from './middlewares/error_handler.js'
 import { fileURLToPath } from 'url'
 import logger from './utils/logger.js'
@@ -20,7 +20,11 @@ const __dirname = path.dirname(__filename)
 const app = express()
 
     const server = http.createServer(app)
-    const io = new Server(server)
+    const io = new Server(server,{
+        cors: {
+            origin: '*'
+        }
+    })
 
 
     app.set('io', io)
@@ -52,7 +56,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(
-    cors({ origin: '*' })
+    cors()
 )
 
 app.use(compression())
@@ -73,7 +77,8 @@ import ColorApi from './routes/color_route.js'
 import TypeApi from './routes/type_route.js'
 import BrandApi from './routes/brand_route.js'
 import StatisticsApi from './routes/statistics_route.js'
-import ParkingProviderApi from './routes/parking_provider_route.js'
+import PartnerApi from './routes/partner_route.js'
+import CarLogApi from './routes/car_log_route.js'
 
 
 // public routes
@@ -97,7 +102,8 @@ app.use(
     TypeApi,
     BrandApi,
     StatisticsApi,
-    ParkingProviderApi
+    PartnerApi,
+    CarLogApi
 )
 
 
@@ -105,7 +111,10 @@ app.use(ErrorHandlerMiddleware)
 
 
 app.get('*', (req, res) => {
-    return res.status(OK).render('errors/404')
+    return res.status(NOT_FOUND).json({
+        error: '404 Not Found',
+        url: req.url
+    })
 })
 
 const main = async () => {
@@ -113,7 +122,7 @@ const main = async () => {
         let lib = await import('./utils/mongoose_connection.js')
         if(await lib.default){
             app.listen(port, () => console.log(`server listening on ${host}:${port}`))
-            // server.listen(socket_port, () => console.log(`server listening on ${host}:${socket_port}`)) 
+            server.listen(socket_port, () => console.log(`server listening on ${host}:${socket_port}`)) 
         }
     }catch(err){
         logger.error(err.message)

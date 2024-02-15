@@ -4,10 +4,11 @@ import RuleModel from "../models/Rule.js";
 import PlaceModel from "../models/Place.js";
 import BrandModel from "../models/Brand.js";
 import ColorModel from "../models/Color.js";
-import CarModel from "../models/Color.js";
-import TypeModel from "../models/Color.js";
+import CarModel from "../models/Car.js";
+import TypeModel from "../models/Type.js";
 import { OK } from "../constants/status_codes.js";
 import ViolationModel from "../models/Violation.js";
+import PartnerModel from "../models/Partner.js";
 
 export const getAllStatistics = asyncWrapper(
     async (req,res) => {
@@ -19,6 +20,7 @@ export const getAllStatistics = asyncWrapper(
         const carsCount = await CarModel.countDocuments()
         const typesCount = await TypeModel.countDocuments()
         const violationsCount = await ViolationModel.countDocuments()
+        const partnersCount = await PartnerModel.countDocuments()
 
         const data = {
             usersCount,
@@ -28,7 +30,8 @@ export const getAllStatistics = asyncWrapper(
             colorsCount,
             carsCount,
             typesCount,
-            violationsCount
+            violationsCount,
+            partnersCount
         }
 
         console.log(data);

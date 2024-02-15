@@ -21,21 +21,11 @@ const PlaceSchema = new mongoose.Schema({
         required: true
     },
 
-    parking_provider: {
+    partner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'ParkingProvider',
+        ref: 'Partner',
         required: true
     },
-
-    profile_image: {
-        type: String,
-        default: null
-    },
-
-    profile_link: {
-        type: String,
-        default: null
-    }
 })
 
 const PlaceModel = mongoose.model('Place', PlaceSchema)
