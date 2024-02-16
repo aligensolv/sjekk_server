@@ -105,7 +105,7 @@ class PlaceRepository{
                 })
 
                 // let generated_link = `https://reg.gensolv.no/clients/${place_profile._id}`
-                let generated_link = `http://localhost:5000/clients/${place_profile._id}`
+                let generated_link = `https://reg.gensolv.no/clients/${place_profile._id}`
                 place_profile.access_link = generated_link
 
                 await place_profile.save()
