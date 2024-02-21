@@ -2,6 +2,7 @@ import PlaceRepository from "../repositories/Place.js"
 import { BAD_REQUEST, INTERNAL_SERVER, OK } from "../constants/status_codes.js"
 import asyncWrapper from "../middlewares/async_wrapper.js"
 import CustomError from "../interfaces/custom_error_class.js"
+import PlaceProfileModel from "../models/PlaceProfile.js"
 
 export const getAllPlaces = asyncWrapper(async (req, res, next) => {
     let places = await PlaceRepository.getAllPlaces()
@@ -51,6 +52,21 @@ export const deletePlace = asyncWrapper(
     async (req, res) => {
         const { id } = req.params
         let deleted = await PlaceRepository.deletePlace(id)
+    
+        return res.status(OK).json({ 
+            success: deleted,
+            message: 'Place was deleted successfully'
+        })
+    }
+)
+
+export const deletePlaceProfile = asyncWrapper(
+    async (req, res) => {
+        const { id, profile_id } = req.params
+        let deleted = await PlaceProfileModel.deleteOne({
+            place: id,
+            _id: profile_id
+        })
     
         return res.status(OK).json({ 
             success: deleted,
