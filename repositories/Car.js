@@ -91,6 +91,7 @@ class CarRepository{
 
                 let car = await Car.create({
                     ...data,
+                    plate_number: data.plate_number.toUpperCase().replace(/\s/g, ''),
                     ...autosys_car_data,
                     start_date: moment(data.start_date).format('DD.MM.YY HH:mm'),
                     end_date: moment(data.end_date).format('DD.MM.YY HH:mm'),

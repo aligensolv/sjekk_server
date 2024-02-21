@@ -79,6 +79,7 @@ import BrandApi from './routes/brand_route.js'
 import StatisticsApi from './routes/statistics_route.js'
 import PartnerApi from './routes/partner_route.js'
 import CarLogApi from './routes/car_log_route.js'
+import RequestApi from './routes/requests.js'
 
 
 // public routes
@@ -103,7 +104,8 @@ app.use(
     BrandApi,
     StatisticsApi,
     PartnerApi,
-    CarLogApi
+    CarLogApi,
+    RequestApi
 )
 
 
