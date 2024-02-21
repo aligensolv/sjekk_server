@@ -5,6 +5,7 @@ import {
     createPlaceLink, 
     deleteAllPlaces, 
     deletePlace, 
+    deletePlaceProfile, 
     getAllCarsRegisteredByPlaceDashboard, 
     getAllPlaceProfiles, 
     getAllPlaces, 
@@ -30,7 +31,7 @@ router.get('/places/clients/:client', getPlaceProfile)
 router.post('/places/clients/:client/cars', createCarFromPlaceDashboard)
 router.get('/places/clients/:client/cars', getAllCarsRegisteredByPlaceDashboard)
 
-router.delete('/places/:id/profiles/:profile_id', deletePlace)
+router.delete('/places/:id/profiles/:profile_id', deletePlaceProfile)
 router.delete('/places/:id', deletePlace)
 router.delete('/places', deleteAllPlaces)
 
