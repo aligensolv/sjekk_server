@@ -3,11 +3,18 @@ import moment from "moment"
 import { INTERNAL_SERVER, NOT_CHANGED, NOT_FOUND, OK } from "../constants/status_codes.js"
 import asyncWrapper from "../middlewares/async_wrapper.js"
 import CustomError from "../interfaces/custom_error_class.js"
-import UserInterface from "../interfaces/user_interface.js"
 
 export const getAllUsers = asyncWrapper(
     async (req, res) => {
-        let users = await UserRepository.getAllUsers()
+        const users = await UserRepository.getAllUsers()
+        return res.status(OK).json(users)
+    }
+    
+)
+
+export const getAllDeletedUsers = asyncWrapper(
+    async (req, res) => {
+        const users = await UserRepository.getAllDeletedUsers()
         return res.status(OK).json(users)
     }
     
@@ -15,35 +22,27 @@ export const getAllUsers = asyncWrapper(
 
 export const getUsersCount = asyncWrapper(
     async (req, res) => {
-        let count = await UserRepository.getUsersCount()
+        const count = await UserRepository.getUsersCount()
         return res.status(OK).send(count)
     }
     
 )
 
-export const registerUser = asyncWrapper(async (req, res) => {
-    let data = req.body
-    console.log(data);
-    let registeredUser = await UserRepository.createUser(data)
-    
-    if(registeredUser){
-        return res.status(OK).json(registeredUser)
-    }
+export const createUser = asyncWrapper(
+    async (req, res) => {
+        const { name, pnid, password } = req.body
+        const registered = await UserRepository.createUser({ name, pnid, password })
 
-    return res.status(OK).json(54545454)
-})
+        return res.status(OK).json(registered)
+    }
+)
 
 
 export const getUser = asyncWrapper(
-    async (req, res, next) => {
-        const { id } = req.params
+    async (req, res) => {
+        const { id: user_id } = req.params
     
-        let user = await UserRepository.getUser(id)
-    
-        if(user == null){
-            let not_found_error = new CustomError('User not found', NOT_FOUND)
-            return next(not_found_error)
-        }
+        const user = await UserRepository.getUser({ user_id })
     
         return res.status(OK).json(user)
     }
@@ -51,61 +50,34 @@ export const getUser = asyncWrapper(
 
 export const updateUser = asyncWrapper(
     async (req, res) => {
-        const { id } = req.params
-        const data = req.body
+        const { id: user_id } = req.params
+        const { name, pnid, password } = req.body
 
-        let user = await UserRepository.getUser(id)
 
-        if(user == null){
-            return res.status(NOT_FOUND).json({
-                success: false,
-                message: 'User not found'
-            })
-        }
 
-        let isUpdated = await UserRepository.updateUser(id, data)
-        if(isUpdated){
-            return res.status(OK).json({
-                success: true,
-                updated: data
-            })
-        }
+        const updated = await UserRepository.updateUser({ user_id, name, pnid, password })
 
-        return res.status(NOT_CHANGED).json({
-            success: false,
-            message: 'no user was updated'
-        })
+        return res.status(OK).json(updated)
     }
 )
 export const deleteUser = asyncWrapper(
-    async (req, res, next) => {
-        const { id } = req.params
-        let user = await UserRepository.getUser(id)
+    async (req, res) => {
+        const { id: user_id } = req.params
 
-        if(user == null){
-            let not_found_error = new CustomError('User not found', NOT_FOUND)
-            return next(not_found_error)
-        }
+        console.log(req.params);
 
-        await UserRepository.deleteUser(id)
+        const result = await UserRepository.deleteUser({ user_id })
 
-        let deleted_at = moment().format('DD.MM.YY HH:mm')
-
-        return res.status(OK).json({
-            success: true,
-            deleted_at: deleted_at
+        return res.status(OK).json(result)
+    }
+)
+export const deleteAllUsers = asyncWrapper(
+    async (req, res) => {
+        const count = await UserRepository.deleteAllUsers()
+    
+        return res.status(OK).json({ 
+            count: count,
+            message: 'All users were deleted successfully'
         })
     }
 )
-export const deleteAllUsers = async (req, res) => {
-    try{
-        let total = await UserRepository.deleteAllUsers()
-
-        return res.status(OK).json({
-            success: true,
-            total: total
-        });
-    }catch(error){
-        return res.status(INTERNAL_SERVER).send(error)
-    }
-}

@@ -1,35 +1,28 @@
 import { NOT_FOUND } from "../constants/status_codes.js";
 import CustomError from "../interfaces/custom_error_class.js";
 import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
-import Violation from "../models/Violation.js";
 import moment from "moment";
-import RuleRepository from "./Rule.js";
 import ViolationHelperRepository from "./ViolationHelper.js";
 import UserRepository from "./User.js";
 import PlaceRepository from "./Place.js";
-import { account_number, iban_numner, kid_number, static_files_host, swift_code } from "../config.js";
+import { account_number, iban_numner, kid_number, swift_code } from "../config.js";
+import PrismaClientService from "../utils/prisma_client.js";
+import TimeRepository from "./Time.js";
 
 class ViolationRepository{
+    static prisma = PrismaClientService.instance
+
     static getAllViolations(){
         return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let violations = await Violation.find().populate([
-                    {
-                        path: 'publisher_identifier',
-                        ref: 'User'
+            async(resolve) =>{
+                const violations = await this.prisma.violation.findMany({
+                    orderBy: {
+                        created_at: 'desc'
                     },
-
-                    {
-                        path: 'rules',
-                        ref: 'Rule'
-                    },
-
-                    {
-                        path: 'place',
-                        ref: 'Place'
+                    include: {
+                        place: true,
+                        creaated_by: true
                     }
-                ]).sort({
-                    created_at: 'desc'
                 })
                 return resolve(violations)
             }
@@ -39,8 +32,8 @@ class ViolationRepository{
     static getViolationsCount(){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let count = await Violation.countDocuments()
-                return resolve(count.toString())
+                const count = await this.prisma.violation.count()
+                return resolve(count)
             }
         ))
     }
@@ -56,116 +49,187 @@ class ViolationRepository{
     //     ))
     // }
 
-    static getAllPlaceViolations(id,date){
+    static getAllPlaceViolations({ place_id }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violations = await Violation.find({place: id, locked: false}).populate([
-                    {
-                        path: 'publisher_identifier',
-                        ref: 'User'
+                const violations = await this.prisma.violation.findMany({
+                    where: {
+                        place_id: +place_id
                     },
-
-                    {
-                        path: 'rules',
-                        ref: 'Rule'
+                    orderBy: {
+                        created_at: 'desc'
                     },
-
-                    {
-                        path: 'place',
-                        ref: 'Place'
+                    include: {
+                        place: true,
+                        created_by: true,
+                        registered_car: true,
+                        rules: {
+                            include: {
+                                extras_values: true
+                            }
+                        },
+                        plate_info: true,
+                        ticket_info: true
                     }
-                ]).sort({
-                    created_at: 'desc'
                 })
-                violations = violations.filter(e => {
-                    return !moment(e.completed_at).isBefore(
-                        moment(date)
-                    )
-                })
+
+                console.log(violations);
                 
                 return resolve(violations)
             }
         ))
     }
 
-    static getViolation(id){
+    static getAllUserViolations({ user_id }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violation = await Violation.findOne({ _id: id }).populate([
-                    {
-                        path : 'publisher_identifier',
-                        ref: 'User'
+                const violations = await this.prisma.violation.findMany({
+                    where: {
+                        user_id: +user_id
                     },
-
-                    {
-                        path : 'place',
-                        ref: 'Place'
+                    orderBy: {
+                        created_at: 'desc'
+                    },
+                    include: {
+                        place: true,
+                        created_by: true,
+                        registered_car: true,
+                        rules: {
+                            include: {
+                                extras_values: true
+                            }
+                        },
+                        images: true,
+                        plate_info: true,
+                        ticket_info: true
                     }
-                ])
-                if(!violation){
-                    let not_found_error = new CustomError('Violation not found',NOT_FOUND)
-                    return reject(not_found_error)
-                }
+                })
+
+                console.log(violations);
+                
+                return resolve(violations)
+            }
+        ))
+    }
+
+    static getViolation({ violation_id }){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                const violation = await this.prisma.violation.findUnique({
+                    where: {
+                        id: +violation_id
+                    },
+                    include: {
+                        place: true,
+                        created_by: true
+                    }
+                })
 
                 return resolve(violation)
             }
         ))
     }
 
-    static createViolation(data){
+    static createViolation({
+        user_id, pnid, ticket_comment, system_comment, place, rules, session_id,
+        images, plate_info, is_car_registered, registered_car_id
+    }){
         return new Promise(promiseAsyncWrapepr(
-            async(resolve, reject) =>{
-                let completed_at = moment().format('DD.MM.YY HH:mm')
+            async(resolve) =>{
+                let created_at = await TimeRepository.getCurrentTime()
+                let ticketNumber = ViolationHelperRepository.generateTicketNumber()
+                
+                const total_charge = rules.reduce((acc,val) => acc + val.charge, 0)
 
-                let ticketNumber = ViolationHelperRepository.generateTicketNumber() 
-                let publisher_identifier = data.publisher_identifier
-                let user = await UserRepository.getUser(publisher_identifier)
-                let place = await PlaceRepository.getPlace(data.place)
+                const serial_number = ViolationHelperRepository.generateRealSerialNumber()
+                let barcode_image = await ViolationHelperRepository.generateTicketBarcode(serial_number)
 
-                let total = 0;
-                for(let i = 0; i < data.rules.length; i++){
-                    total += +data.rules[i].charge
-                }
+                const { car_model, plate_number, manufacture_year, car_description, car_type, car_color, country_name, country_code   } = plate_info
+                const { location, code, policy, id: place_id } = place
 
-                const value = ViolationHelperRepository.generateRealSerialNumber()
-                let barcode_image = await ViolationHelperRepository.generateTicketBarcode(value)
-                let ticketImage = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
+                let ticket_image = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
                     ticket_number: ticketNumber,
-                    rules: data.rules,
-                    paper_comment: data.paper_comment,
-                    from_date: data.created_at,
-                    to_date: completed_at,
-                    print_option: data.print_option,
-                    user_identifier: user.user_identifier,
+                    rules: rules,
+                    ticket_comment: ticket_comment,
+                    from_date: created_at,
+                    to_date: created_at,
+                    pnid: pnid,
                     car_info:{
-                        land: data.plate_info.land,
-                        plate_number: data.plate_info.plate,
-                        type: data.plate_info.type,
-                        brand: data.plate_info.brand,
-                        color: data.plate_info.color
+                        car_model,
+                        plate_number,
+                        manufacture_year,
+                        car_description,
+                        car_type,
+                        car_color,
+                        country_name,
+                        country_code
                     },
-                    location: place.location,
+                    location: location,
                     ticket_info:{
-                        total_charge: total,
+                        total_charge: total_charge,
                         paid_to: 'Sjekk Kontroll',
                         account_number: account_number,
                         kid_number: kid_number,
                         swift_code: swift_code,
                         iban_number: iban_numner,
-                        payment_date: completed_at,
+                        payment_date: created_at,
                     }
                 })
 
 
-                let newViolation = await Violation.create({
-                    ...data,
-                    created_at: data.created_at,
-                    completed_at: completed_at,
-                    ticket_number: ticketNumber,
-                    print_paper: ticketImage,
-                    print_option: data.print_option,
-                    barcode_image: barcode_image,
-                    serial_number: value
+                const created = await this.prisma.violation.create({
+                    data: {
+                        user_id: +user_id,
+                        ticket_comment,
+                        system_comment,
+                        place_id: +place_id,
+                        images: {
+                            create: images.map(image => ({
+                                path: image.path,
+                                date: image.date
+                            }))
+                        },
+                        created_at,
+                        total_charge,
+                        ticket_info: {
+                            create: {
+                                ticket_number: ticketNumber,
+                                ticket_image,
+                                print_option: 'hand',
+                                barcode_image,
+                                serial_number,
+                                created_at
+                            }
+                        },
+                        registered_car: undefined,
+                        rules: {
+                            create: [
+                                ...rules.map(rule => ({
+                                    ...rule,
+                                    extras_values: {
+                                        create: rule.extras_values
+                                    },
+                                    extras: undefined,
+                                    id: undefined
+                                }))
+                            ]
+                        },
+                        plate_info: {
+                            create: {
+                                car_model,
+                                plate_number,
+                                manufacture_year,
+                                car_description,
+                                car_type,
+                                car_color,
+                                country_name,
+                                country_code
+                            }
+                        },
+                        is_car_registered,
+                        registered_car_id: +registered_car_id,
+                        session_id: JSON.parse(session_id),
+                    }
                 })
 
                 return resolve(true)
@@ -173,16 +237,18 @@ class ViolationRepository{
         ))
     }
 
-    static deleteViolation(id){
+    static deleteViolation({ violation_id }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violationExists = await Violation.findById(id)
-                if(!violationExists){
-                    let not_found_error = new CustomError('violation not found', NOT_FOUND)
-                    return reject(not_found_error)
-                }
-
-                await Violation.deleteOne({ _id: id })
+                const deleted_at = await TimeRepository.getCurrentTime()
+                const deleted = await this.prisma.violation.update({
+                    where: {
+                        id: +violation_id
+                    },
+                    data: {
+                        deleted_at
+                    }
+                })
 
                 return resolve(true)
             }
@@ -198,12 +264,22 @@ class ViolationRepository{
         ))
     }
 
-    static addImage(id,image){
+    static addImage({ violation_id, image}){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
-                let violation = await Violation.findOne({ _id: id })
-                violation.images.push(image)
-                await violation.save()
+                await this.prisma.violation.update({
+                    where: {
+                        id: +violation_id
+                    },
+                    data: {
+                        images: {
+                            create: {
+                                path: image.path,
+                                date: image.date
+                            }
+                        }
+                    }
+                })
                 return resolve(image)
             }
         ))

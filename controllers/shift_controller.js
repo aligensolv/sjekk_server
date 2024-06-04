@@ -3,9 +3,10 @@ import { jwt_secret_key } from "../config.js";
 import { OK } from "../constants/status_codes.js";
 import asyncWrapper from "../middlewares/async_wrapper.js";
 import ShiftRepository from "../repositories/Shift.js";
-import ShiftHelper from "../repositories/shift_helper.js";
+import ShiftHelper from "../repositories/ShiftHelper.js";
 import jwt from 'jsonwebtoken'
 import UserRepository from "../repositories/User.js";
+import Auth from "../repositories/Auth.js";
 
 export const getAllShifts = asyncWrapper(
     async (req,res) =>{
@@ -78,10 +79,10 @@ export const getUserShifts = asyncWrapper(
 
 export const createShift = asyncWrapper(
     async (req,res) =>{
-        let { token } = req.headers
-        let decoded = jwt.verify(token,jwt_secret_key)
+        const { token } = req.headers
+        const decoded = await Auth.verifyToken(token)
         
-        let shift = await ShiftRepository.createShift(decoded.id)
+        const shift = await ShiftRepository.createShift(decoded.id)
         return res.status(OK).json(shift)
     }
 )

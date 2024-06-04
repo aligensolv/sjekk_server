@@ -5,8 +5,8 @@ import logger from "../utils/logger.js";
 
 const getPlateInformation = asyncWrapper(
     async (req,res) => {
-        const {id} = req.params
-        let result = await AutosysRepository.getPlateInformation(id)
+        const {id: plate_number} = req.params
+        let result = await AutosysRepository.getPlateInformation({ plate_number })
 
         return res.status(OK).json(result)
     }

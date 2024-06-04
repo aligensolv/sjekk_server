@@ -6,11 +6,12 @@ import CustomError from "../interfaces/custom_error_class.js"
 import { INTERNAL_SERVER } from "../constants/status_codes.js"
 
 class AutosysRepository{
-    static getPlateInformation(plate){
+    static getPlateInformation({ plate_number }){
+        console.log(plate_number);
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
                 try{
-                    const apiUrl = `https://www.vegvesen.no/ws/no/vegvesen/kjoretoy/felles/datautlevering/enkeltoppslag/kjoretoydata?kjennemerke=${plate}`
+                    const apiUrl = `https://www.vegvesen.no/ws/no/vegvesen/kjoretoy/felles/datautlevering/enkeltoppslag/kjoretoydata?kjennemerke=${plate_number}`
                     let response = await axios.get(apiUrl, {
                         headers:{
                             'SVV-Authorization': `Apikey ${autosys_api_key}`
@@ -25,12 +26,12 @@ class AutosysRepository{
                     }
                     
                     return resolve({
-                        type: data?.kjoretoydataListe[0]?.kjennemerke[0]?.kjennemerkekategori,
-                        plate: data?.kjoretoydataListe[0]?.kjoretoyId?.kjennemerke.toUpperCase().replace(/\s/g, ''),
-                        year: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.kjoretoyklassifisering?.nasjonalGodkjenning?.nasjonaltGodkjenningsAr,
-                        description: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.kjoretoyklassifisering?.beskrivelse,
-                        brand: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.tekniskeData?.generelt?.merke[0]?.merke,
-                        color: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.tekniskeData?.karosseriOgLasteplan?.rFarge[0]?.kodeNavn
+                        car_type: data?.kjoretoydataListe[0]?.kjennemerke[0]?.kjennemerkekategori,
+                        plate_number: data?.kjoretoydataListe[0]?.kjoretoyId?.kjennemerke.toUpperCase().replace(/\s/g, ''),
+                        manufacture_year: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.kjoretoyklassifisering?.nasjonalGodkjenning?.nasjonaltGodkjenningsAr,
+                        car_description: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.kjoretoyklassifisering?.beskrivelse,
+                        car_model: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.tekniskeData?.generelt?.merke[0]?.merke,
+                        car_color: data?.kjoretoydataListe[0]?.godkjenning?.tekniskGodkjenning?.tekniskeData?.karosseriOgLasteplan?.rFarge[0]?.kodeNavn
                     })
                 }catch(error){
                     let autosys_server_error = new CustomError(error.message, INTERNAL_SERVER)

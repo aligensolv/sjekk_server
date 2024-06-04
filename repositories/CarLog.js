@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer"
-import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js"
+import promiseAsyncWrapper from "../middlewares/promise_async_wrapper.js"
 import CarLogModel from "../models/CarLogs.js"
 import { INTERNAL_SERVER } from "../constants/status_codes.js"
 import CustomError from "../interfaces/custom_error_class.js"
@@ -9,36 +9,46 @@ import moment from "moment"
 import { static_absolute_files_host } from "../config.js"
 import ReportModel from "../models/Report.js"
 
+import { PrismaClient } from "@prisma/client"
+
 class CarLogRepository{
+    static prisma = new PrismaClient()
     static getAllLogs(){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) =>{
-                let logs = await CarLogModel.find().sort({
-                    created_at: 'desc'
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) =>{
+                const logs = await this.prisma.carLog.findMany({
+                    orderBy: {
+                        created_at: 'desc'
+                    }
                 })
                 return resolve(logs)
             }
         ))
     }
 
-    static getAllPlaceLogs(place_id){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) =>{
-                let logs = await CarLogModel.find({
-                    "registeration_data.place_id": place_id
-                }).sort({
-                    created_at: 'desc'
+    static getAllPlaceLogs({ place_id }){
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) =>{
+                const logs = await this.prisma.carLog.findMany({
+                    where: {
+                        place_id: +place_id
+                    },
+                    orderBy: {
+                        created_at: 'desc'
+                    }
                 })
                 return resolve(logs)
             }
         ))
     }
 
-    static getAllPlaceCarLogsCount(place_id){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) =>{
-                let logs = await CarLogModel.countDocuments({
-                    "registeration_data.place_id": place_id
+    static getAllPlaceCarLogsCount({ place_id }){
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) =>{
+                const logs = await this.prisma.carLog.count({
+                    where: {
+                        place_id: +place_id
+                    }
                 })
                 return resolve(logs)
             }
@@ -46,10 +56,16 @@ class CarLogRepository{
     }
 
     static getAllPlaceCarLogsAvgTime(place_id){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let logs = await CarLogModel.find({
-                    "registeration_data.place_id": place_id
+                const logs = await this.prisma.carLog.aggregate({
+                    where: {
+                        place_id: +place_id
+                    },
+
+                    _avg: {
+                        
+                    }
                 })
                 
                 return resolve(logs)
@@ -58,7 +74,7 @@ class CarLogRepository{
     }
 
     static generateCarLogsReport(logs){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
                 let parsed_logs = [...logs]
                 const browser = await puppeteer.launch({
@@ -206,9 +222,9 @@ class CarLogRepository{
 
     
     static getAllCarLogsReports(){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let reports = await ReportModel.find({})
+                let reports = await this.prisma.carLogReport.findMany()
                 
                 return resolve(reports)
             }

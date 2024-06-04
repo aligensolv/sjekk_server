@@ -1,7 +1,7 @@
 import CustomError from "../interfaces/custom_error_class.js";
 import { INTERNAL_SERVER } from "../constants/status_codes.js";
 
-const promiseAsyncWrapepr = (fn) =>{
+const promiseAsyncWrapper = (fn) =>{
     return async (resolve, reject) =>{
         try{
             await fn(resolve,reject);
@@ -13,4 +13,4 @@ const promiseAsyncWrapepr = (fn) =>{
     }
 }
 
-export default promiseAsyncWrapepr
+export default promiseAsyncWrapper

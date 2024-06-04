@@ -3,8 +3,8 @@ import path from 'path'
 import compression from 'compression'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-import { port, host, socket_port } from './config.js'
-import { NOT_FOUND, OK } from './constants/status_codes.js'
+import { port, host } from './config.js'
+import { NOT_FOUND } from './constants/status_codes.js'
 import ErrorHandlerMiddleware from './middlewares/error_handler.js'
 import { fileURLToPath } from 'url'
 import logger from './utils/logger.js'
@@ -19,27 +19,15 @@ const __dirname = path.dirname(__filename)
 
 const app = express()
 
-    const server = http.createServer(app)
-    const io = new Server(server,{
-        cors: {
-            origin: '*'
-        }
-    })
+const server = http.createServer(app)
+const io = new Server(server,{
+    cors: {
+        origin: '*'
+    }
+})
 
 
-    app.set('io', io)
-/*
-    How to use socket in any route
-
-    let io = req.app.get('io');
-    io.emit('notification', {
-        notification: {
-            title: 'now in flutter',
-            body: 'some body for notification',
-        }
-    })
-*/
-
+app.set('io', io)
 
 
 io.on('connection', (socket) => {
@@ -74,12 +62,11 @@ import RuleApi from './routes/rule_route.js'
 import AutosysApi from './routes/autosys_route.js'
 import CarApi from './routes/car_route.js'
 import ColorApi from './routes/color_route.js'
-import TypeApi from './routes/type_route.js'
 import BrandApi from './routes/brand_route.js'
 import StatisticsApi from './routes/statistics_route.js'
 import PartnerApi from './routes/partner_route.js'
 import CarLogApi from './routes/car_log_route.js'
-import RequestApi from './routes/requests.js'
+import RequestApi from './routes/place_requests.js'
 
 
 // public routes
@@ -100,7 +87,6 @@ app.use(
     AutosysApi,
     CarApi,
     ColorApi,
-    TypeApi,
     BrandApi,
     StatisticsApi,
     PartnerApi,
@@ -121,14 +107,11 @@ app.get('*', (req, res) => {
 
 const main = async () => {
     try{
-        let lib = await import('./utils/mongoose_connection.js')
-        if(await lib.default){
-            app.listen(port, () => console.log(`server listening on ${host}:${port}`))
-            server.listen(socket_port, () => console.log(`server listening on ${host}:${socket_port}`)) 
-        }
+        server.listen(port, () => console.log(`[server] listening on ${port}`))
     }catch(err){
         logger.error(err.message)
     }
 }
+
 main()
 

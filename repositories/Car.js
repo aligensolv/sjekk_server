@@ -1,20 +1,25 @@
 import moment from "moment";
-import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
-import Car from "../models/Car.js";
+import promiseAsyncWrapper from "../middlewares/promise_async_wrapper.js";
 import CustomError from "../interfaces/custom_error_class.js";
 import { NOT_FOUND } from "../constants/status_codes.js";
 import AutosysRepository from "./Autosys.js";
-import logger from '../utils/logger.js'
+
+import { PrismaClient } from "@prisma/client"
+import TimeRepository from "./Time.js";
 
 class CarRepository{
+    static prisma = new PrismaClient()
+
     static getAllCars(){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let cars = await Car.find().populate({
-                    path: 'place',
-                    ref: 'Place'
-                }).sort({
-                    created_at: 'desc'
+                const cars = await this.prisma.car.findMany({
+                    orderBy: {
+                        created_at: 'desc'
+                    },
+                    include: {
+                        place: true
+                    }
                 })
                 return resolve(cars)
             }
@@ -22,22 +27,24 @@ class CarRepository{
     }
 
     static getCarsCount(){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let count = await Car.find().countDocuments()
-                return resolve(count.toString())
+                const count = await this.prisma.car.count()
+                return resolve(count)
             }
         ))
     }
 
-    static getAllCarsByPlace(id){
-        return new Promise(promiseAsyncWrapepr(
+    static getAllCarsByPlace({ place_id }) {
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let cars = await Car.find({ place: id }).populate({
-                    path: 'place',
-                    ref: 'Place'
-                }).sort({
-                    created_at: 'desc'
+                const cars = await this.prisma.car.findMany({
+                    where: {
+                        place_id: +place_id
+                    },
+                    orderBy: {
+                        created_at: 'desc'
+                    }
                 })
 
                 return resolve(cars)
@@ -45,26 +52,32 @@ class CarRepository{
         ))
     }
 
-    static getCar(id){
-        return new Promise(promiseAsyncWrapepr(
+    static getCar({ car_id }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let car = await Car.findOne({ _id:id }).populate({
-                    path: 'place',
-                    ref: 'Place'
+                const car = await this.prisma.car.findFirst({
+                    where: {
+                        id: +car_id
+                    },
+                    include: {
+                        place: true
+                    }
                 })
                 return resolve(car)
             }
         ))
     }
 
-    static getCarByPlate(plate_number){
-        return new Promise(promiseAsyncWrapepr(
+    static getCarByPlate({ plate_number }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let car = await Car.findOne({
-                    plate_number: plate_number.toUpperCase().replace(/\s/g, '')
-                }).populate({
-                    path: 'place',
-                    ref: 'Place'
+                const car = await this.prisma.car.findFirst({
+                    where: {
+                        plate_number: plate_number.toUpperCase().replace(/\s/g, '')
+                    },
+                    include: {
+                        place: true
+                    }
                 })
 
                 
@@ -78,63 +91,104 @@ class CarRepository{
         ))
     }
 
-    static createCar(data){
-        return new Promise(promiseAsyncWrapepr(
+    static createCar({ plate_number, start_date, end_date, registration_type, place_id }) {
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let created_at = moment().format('DD.MM.YY HH:mm')
-                let autosys_car_data = await AutosysRepository.getPlateInformation(data.plate_number.toUpperCase().replace(/\s/g, ''))
+                let created_at = await TimeRepository.getCurrentTime()
+                let autosys_car_data = await AutosysRepository.getPlateInformation({
+                    plate_number: plate_number.toUpperCase().replace(/\s/g, '')
+                })
 
+                console.log(autosys_car_data);
                 if(!autosys_car_data){
                     let not_found_error = new CustomError('Could not find car data', NOT_FOUND)
                     return reject(not_found_error)
                 }
 
-                let car = await Car.create({
-                    ...data,
-                    plate_number: data.plate_number.toUpperCase().replace(/\s/g, ''),
-                    ...autosys_car_data,
-                    start_date: moment(data.start_date).format('DD.MM.YY HH:mm'),
-                    end_date: moment(data.end_date).format('DD.MM.YY HH:mm'),
-                    created_at: created_at
+                const car = await this.prisma.car.create({
+                    data: {
+                        plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                        manufactur_year: autosys_car_data.manufactur_year,
+                        car_model: autosys_car_data.car_model,
+                        car_description: autosys_car_data.description,
+                        car_color: autosys_car_data.car_color,
+                        car_type: autosys_car_data.car_type,
+
+                        place_id: +place_id,
+                        registration_source: 'system',
+                        start_date, end_date, created_at,
+                        registration_type,
+
+                    }
                 })
+
+                if(car){
+                    const place = await this.prisma.place.findUnique({
+                        where: {
+                            id: +place_id
+                        }
+                    })
+
+                    await this.prisma.carLog.create({
+                        data: {
+                            start_date,
+                            end_date,
+                            created_at,
+                            registration_source: 'system',
+                            registered_by: 'system',
+                            place_location: place.location,
+                            place_code: place.code,
+                            place_policy: place.policy,
+                            plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                            car_model: autosys_car_data.car_model,
+                            car_color: autosys_car_data.car_color,
+                            car_type: autosys_car_data.car_type,
+                            car_description: autosys_car_data.description,
+                            place_id: +place_id
+                        }
+                    })
+                }
 
                 return resolve(car)
             }
         ))
     }
 
-    static updateCar(id,data){
-        return new Promise(promiseAsyncWrapepr(
+    static updateCar({ car_id, start_date, end_date, plate_number }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let update_result = await Car.updateOne({_id:id},{
-                    ...data,
-                    start_date: moment(data.start_date).format('DD.MM.YY HH:mm'),
-                    end_date: moment(data.end_date).format('DD.MM.YY HH:mm')
+                const updated = await this.prisma.car.update({
+                    where: {
+                        id: +car_id
+                    },
+                    data: {
+                        start_date, end_date, plate_number
+                    }
                 })
-                return resolve(update_result.modifiedCount > 0)
+                return resolve(updated)
             }
         ))
     }
 
-    static deleteCar(id){
-        return new Promise(promiseAsyncWrapepr(
+    static deleteCar({ car_id }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
 
-                let delete_result = await Car.deleteOne({ _id: id })
-                return resolve(delete_result.deletedCount > 0)
+                const deleted = await this.prisma.car.delete({
+                    where: {
+                        id: +car_id
+                    }
+                })
+                return resolve(deleted)
             }
         ))
     }
 
     static deleteAllCars(){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                return new Promise(promiseAsyncWrapepr(
-                    async (resolve, reject) =>{
-                        await Car.deleteMany()
-                        return resolve(true)
-                    }
-                ))   
+                await this.prisma.car.deleteMany({})
+                return resolve(true)
             }
         ))
     }

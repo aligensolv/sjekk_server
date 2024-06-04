@@ -111,8 +111,8 @@ class ViolationHelperRepository{
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) => {
                 const browser = await puppeteer.launch({
-                    headless: 'true',
-                    args:['--no-sandbox'],
+                    // headless: 'true',
+                    // args:['--no-sandbox'],
                     defaultViewport:{
                         width: 800,
                         height: 600,
@@ -182,10 +182,9 @@ class ViolationHelperRepository{
                     ctx.fillStyle = 'white';
             
                     // Format the date as a string
-                    const dateString = moment(date).format('DD.MM.YY HH:mm');
             
                     // Measure the width of the text to determine the box size
-                    const textWidth = ctx.measureText(dateString).width;
+                    const textWidth = ctx.measureText(date).width;
                     const boxPadding = 10;
             
                     // Draw a gray box at the bottom right corner
@@ -194,7 +193,7 @@ class ViolationHelperRepository{
             
                     // Draw the timestamp inside the box
                     ctx.fillStyle = 'white';
-                    ctx.fillText(dateString, image.width - textWidth - boxPadding, image.height - boxPadding);
+                    ctx.fillText(date, image.width - textWidth - boxPadding, image.height - boxPadding);
             
                     // Save the modified image
                     const modifiedImagePath = path.join(__dirname, '../','public', 'images', 'cars', originalName)

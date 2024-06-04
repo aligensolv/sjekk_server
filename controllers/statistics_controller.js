@@ -1,26 +1,20 @@
 import asyncWrapper from "../middlewares/async_wrapper.js";
-import UserModel from "../models/User.js";
-import RuleModel from "../models/Rule.js";
-import PlaceModel from "../models/Place.js";
-import BrandModel from "../models/Brand.js";
-import ColorModel from "../models/Color.js";
-import CarModel from "../models/Car.js";
-import TypeModel from "../models/Type.js";
 import { OK } from "../constants/status_codes.js";
-import ViolationModel from "../models/Violation.js";
-import PartnerModel from "../models/Partner.js";
+import { PrismaClient } from "@prisma/client"
+
+const prisma = new PrismaClient()
 
 export const getAllStatistics = asyncWrapper(
     async (req,res) => {
-        const usersCount = await UserModel.countDocuments()
-        const rulesCount = await RuleModel.countDocuments()
-        const placesCount = await PlaceModel.countDocuments()
-        const brandsCount = await BrandModel.countDocuments()
-        const colorsCount = await ColorModel.countDocuments()
-        const carsCount = await CarModel.countDocuments()
-        const typesCount = await TypeModel.countDocuments()
-        const violationsCount = await ViolationModel.countDocuments()
-        const partnersCount = await PartnerModel.countDocuments()
+
+        const usersCount = await prisma.user.count()
+        const rulesCount = await prisma.rule.count()
+        const placesCount = await prisma.place.count()
+        const brandsCount = await prisma.brand.count()
+        const colorsCount = await prisma.color.count()
+        const carsCount = await prisma.car.count()
+        const violationsCount = await prisma.violation.count()
+        const partnersCount = await prisma.partner.count()
 
         const data = {
             usersCount,
@@ -29,12 +23,10 @@ export const getAllStatistics = asyncWrapper(
             brandsCount,
             colorsCount,
             carsCount,
-            typesCount,
             violationsCount,
             partnersCount
         }
 
-        console.log(data);
 
         return res.status(OK).json(data)
     }

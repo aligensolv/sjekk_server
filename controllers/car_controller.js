@@ -11,58 +11,59 @@ export const getAllCars = asyncWrapper(
 
 export const getCarsCount = asyncWrapper(
     async (req,res) => {
-        let count = await CarRepository.getCarsCount();
+        const count = await CarRepository.getCarsCount();
         return res.status(OK).send(count);
     }
 )
 
 export const getAllCarsByPlace = asyncWrapper(
     async (req,res) => {
-        const {id} = req.params
+        const {id: place_id} = req.params
 
-        let cars = await CarRepository.getAllCarsByPlace(id);
+        const cars = await CarRepository.getAllCarsByPlace({ place_id });
         return res.status(OK).json(cars);
     }
 )
 
 export const getCar = asyncWrapper(
     async (req,res) => {
-        const {id} = req.params
-        let car = await CarRepository.getCar(id)
+        const {id: car_id} = req.params
+        const car = await CarRepository.getCar({ car_id })
         return res.status(OK).json(car)
     }
 )
 
 export const getCarByPlate = asyncWrapper(
     async (req,res) => {
-        const {id} = req.params
-        let car = await CarRepository.getCarByPlate(id)
+        const {id: plate_number} = req.params
+        const car = await CarRepository.getCarByPlate({ plate_number })
         return res.status(OK).json(car)
     }
 )
 
 export const createCar = asyncWrapper(
     async (req,res) => {
-        const data = req.body
-        let car = await CarRepository.createCar(data)
+        const { plate_number, start_date, end_date, registration_type, place_id } = req.body
+        console.log(req.body);
+        const car = await CarRepository.createCar({ plate_number, start_date, end_date, registration_type, place_id })
         return res.status(OK).json(car)
     }
 )
 
 export const updateCar = asyncWrapper(
     async (req,res) => {
-        const {id} = req.params
-        const data = req.body
+        const {id: car_id} = req.params
+        const { start_date, end_date, plate_number } = req.body
 
-        let update_result = await CarRepository.updateCar(id, data)
-        return res.status(OK).json(update_result)
+        let updated = await CarRepository.updateCar({ car_id, start_date, end_date, plate_number })
+        return res.status(OK).json(updated)
     }
 )
 
 export const deleteCar = asyncWrapper(
     async (req,res) => {
-        const {id} = req.params
-        let delete_result = await CarRepository.deleteCar(id)
+        const {id: car_id} = req.params
+        let delete_result = await CarRepository.deleteCar({ car_id })
         return res.status(OK).json(delete_result)
     }
 )

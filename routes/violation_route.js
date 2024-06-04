@@ -11,7 +11,6 @@ import {
 } from '../controllers/violation_controller.js'
 
 import multer from 'multer'
-import moment from 'moment';
 
 // Set up multer
 const storage = multer.diskStorage({

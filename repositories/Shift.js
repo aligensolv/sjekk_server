@@ -1,28 +1,29 @@
-import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js"
+import promiseAsyncWrapper from "../middlewares/promise_async_wrapper.js"
 import Shift from "../models/Shift.js"
-import moment from "moment"
-import UserRepository from "./User.js"
-import CustomError from "../interfaces/custom_error_class.js"
-import { NOT_FOUND } from "../constants/status_codes.js"
+import { PrismaClient } from "@prisma/client"
+import TimeRepository from "./Time.js"
 
 class ShiftRepository{
+    static prisma = new PrismaClient()
     static getAllShifts(){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) => {
-                let shifts = await Shift.find().sort({
-                    created_at: 'desc'
-                })
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) => {
+                const shifts = await this.prisma.shift.findMany({})
                 return resolve(shifts)
             }
         ))
     }
 
     static getAllTodayShifts(){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) => {
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) => {
                 let current_date = moment('YYYY-MM-DD')
-                let shifts = await Shift.find().sort({
-                    created_at: 'desc'
+                let shifts = await this.prisma.shift.findMany({
+                    where: {
+                        start_date: {
+                            lte: current_date
+                        }
+                    }
                 })
                 shifts = shifts.filter((shift) => {
                     let start_date = moment(moment(shift.start_date).format('YYYY-MM-DD'))
@@ -34,25 +35,22 @@ class ShiftRepository{
         ))
     }
 
-    static getUserShifts(id){
-        return new Promise(promiseAsyncWrapepr(
+    static getUserShifts({ user_id }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) => {
-                let user = await UserRepository.getUserByIdentifier(id).sort({
-                    created_at: 'desc'
-                })
-                if(!user){
-                    let not_exist_error = new CustomError('User not found', NOT_FOUND)
-                    return reject(not_exist_error)
-                }
 
-                let shifts = await Shift.find({ user_identifier: id })
+                const shifts = await this.prisma.shift.findMany({
+                    where: {
+                        user_id: +user_id
+                    }
+                })
                 return resolve(shifts)
             }
         ))
     }
 
     static getShiftsByDate(date){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve, reject) => {
                 let shifts = await Shift.find({ start_date: date }).sort({
                     created_at: 'desc'
@@ -62,15 +60,22 @@ class ShiftRepository{
         ))
     }
 
-    static createShift(user_id){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) => {
-                let current_date = moment().format('DD.MM.YY HH:mm')
-
-                let shift = await Shift.create({
-                    start_date: current_date,
-                    user_identifier: user_id,
-                    created_at: moment().format('DD.MM.YY HH:mm')
+    static createShift({ user_id }){
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) => {
+                let current_date = await TimeRepository.getCurrentTime()
+                const user = await this.prisma.user.findUnique({
+                    where: {
+                        id: +user_id
+                    }
+                })
+                const shift = await this.prisma.shift.create({
+                    data: {
+                        start_date: current_date,
+                        created_at: current_date,
+                        pnid: user.pnid,
+                        user_id: user.id
+                    }
                 })
 
                 return resolve(shift)
@@ -79,17 +84,28 @@ class ShiftRepository{
     }
 
     static endShift(shift_id, logins){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let end_date = moment().format('DD.MM.YY HH:mm')
-
-                await Shift.updateOne({ _id: shift_id },{
-                    end_date: end_date,
-                    total_completed_violations: 0,
-                    logins: logins
+                const updated = await this.prisma.shift.update({
+                    where: {
+                        id: +shift_id
+                    },
+                    data: {
+                        end_date: await TimeRepository.getCurrentTime(),
+                        logins: {
+                            create: [
+                                ...logins.map((login) => {
+                                    return {
+                                        login_time: login.login_time,
+                                        logout_time: login.logout_time,
+                                        place_id: login.place_id
+                                    }
+                                })
+                            ]
+                        }
+                    }
                 })
-
-                return resolve(true)
+                return resolve(updated)
             }
         ))
     }

@@ -1,94 +1,124 @@
-import UserCollection from "../models/User.js"
 import AuthRepository from "./Auth.js"
-import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js"
+import promiseAsyncWrapper from "../middlewares/promise_async_wrapper.js"
 import moment from "moment"
-import UserInterface from "../interfaces/user_interface.js"
 import CustomError from "../interfaces/custom_error_class.js"
 import { ALREADY_EXISTS } from "../constants/status_codes.js"
 
+import { PrismaClient } from "@prisma/client"
+import TimeRepository from "./Time.js"
+
 class UserRepository{
-    static createUser(data){         
-        return new Promise(promiseAsyncWrapepr(async (resolve,reject) => {
-            let existingUser = await this.getUserByIdentifier(data.user_identifier)
-
-            if(existingUser != null){
-                let identifier_already_existing = new CustomError(`Identifier ${data.user_identifier} already exists`, ALREADY_EXISTS)
-                return reject(identifier_already_existing)
-            }
-
-            let hashed = await AuthRepository.encryptPassword(data.password)
-            let created_at = moment().format('DD.MM.YY HH:mm')  
-
-            let user = await UserCollection.create({
-                ...data,
-                password: hashed,
-                created_at: created_at
+    static prisma = new PrismaClient()
+    static async createUser({ name, pnid, password }){
+        return new Promise(
+            promiseAsyncWrapper(async (resolve,reject) => {
+                const encrypted_password = await AuthRepository.encryptPassword(password)
+                const created_at = await TimeRepository.getCurrentTime()  
+    
+                const user = await this.prisma.user.create({
+                    data: {
+                        name,
+                        pnid,
+                        password: encrypted_password,
+                        created_at
+                    }
+                })
+                return resolve(user)
             })
-            return resolve(user)
-        }))
+        )
     }
 
-    static getAllUsers(){
-        return new Promise(promiseAsyncWrapepr(
+    static async getAllUsers(){
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let users = await UserCollection.find({},{__v: false}).sort({
-                    created_at: 'desc'
+                const users = await this.prisma.user.findMany({
+                    where: { deleted_at: null }
                 })
+
+                return resolve(users)
+            }
+        ))
+    }
+
+    static async getAllDeletedUsers(){
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) => {
+                const users = await this.prisma.user.findMany({
+                    where: { deleted_at: { not: null } }
+                })
+
                 return resolve(users)
             }
         ))
     }
 
     static getUsersCount(){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let count = await UserCollection.countDocuments()
-                return resolve(count.toString())
+                const count = await this.prisma.user.count()
+                return resolve(count)
             }
         ))
     }
 
-    static getUser(id){
-        return new Promise(promiseAsyncWrapepr(
+    static getUser({ user_id }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let user = await UserCollection.findOne({ _id: id }, { __v: false })
+                const user = await this.prisma.user.findUnique({ where: { id: +user_id } })
                 return resolve(user)
             }
         ))
     }
 
-    static getUserByIdentifier(identifier){
-        return new Promise(promiseAsyncWrapepr(
+    static getUserByPnid({ pnid }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let user = await UserCollection.findOne({ user_identifier: identifier }, { __v: false })
+                const user = await this.prisma.user.findUnique({ where: { pnid } })
                 return resolve(user)
             }
         ))
     }
 
-    static updateUser(id, data){
-        return new Promise(promiseAsyncWrapepr(
+    static updateUser({ user_id, name, pnid, password }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let userUpdated = await UserCollection.updateOne({ _id: id}, data)
-                resolve(userUpdated != null)
+                const updated_at = await TimeRepository.getCurrentTime()
+
+                const encrypted_password = password != undefined ? await AuthRepository.encryptPassword(password) : undefined
+
+                const updated = await this.prisma.user.update({
+                    where: { id: +user_id },
+                    data: { name, pnid, password: encrypted_password, updated_at }
+                })
+                resolve(updated)
             }
         ))
     }
 
-    static deleteUser(id){
-        return new Promise(promiseAsyncWrapepr(
+    static deleteUser({ user_id }){
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let userDeleted = await UserCollection.deleteOne({ _id: id })
+                const deleted_at = await TimeRepository.getCurrentTime()
+
+                const result = await this.prisma.user.update({
+                    where: { id: +user_id },
+                    data: { deleted_at }
+                })
+
                 return resolve(true)
             }
         ))
     }
 
     static deleteAllUsers(){
-        return new Promise(promiseAsyncWrapepr(
+        return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let result = await UserCollection.deleteMany()
-                return resolve(result.deletedCount)
+                const deleted_at = await TimeRepository.getCurrentTime()
+                const result = await this.prisma.user.updateMany({
+                    where: { deleted_at: null },
+                    data: { deleted_at: deleted_at }
+                })
+                return resolve(result.count)
             }
         ))
     }

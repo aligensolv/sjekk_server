@@ -1,14 +1,19 @@
-import mongoose from "mongoose";
 import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js";
-import Rule from "../models/Rule.js";
 import moment from "moment";
 
+import { PrismaClient } from "@prisma/client"
+import TimeRepository from "./Time.js";
+
 class RuleRepository{
+    static prisma = new PrismaClient()
     static getAllRules(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let rules = await Rule.find().sort({
-                    created_at: 'desc'
+                const rules = await this.prisma.rule.findMany({
+                    where: { deleted_at: null },
+                    include: {
+                        extras: true
+                    }
                 })
                 return resolve(rules)
             }
@@ -18,48 +23,81 @@ class RuleRepository{
     static getRulesCount(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let count = await Rule.countDocuments()
-                return resolve(count.toString())
+                const count = await this.prisma.rule.count()
+                return resolve(count)
             }
         ))
     }
 
-    static getRule(id){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) => {
-                let rule = await Rule.findById(id);
-                return resolve(rule)
-            }
-        ))
+    static getRule({ rule_id }){
+        return new Promise(
+            promiseAsyncWrapepr(
+                async (resolve, reject) => {
+                    const rule = await this.prisma.rule.findFirst({ 
+                        where: { id: +rule_id }
+                    })
+                    return resolve(rule)
+                }
+            )
+        )
     }
 
-    static createRule(data){
+    static createRule({ name, charge, policy_time, extras }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let created_at = moment().format('DD.MM.YY HH:mm')
-                let rule = await Rule.create({
-                    ...data,
-                    created_at: created_at
+                let created_at = await TimeRepository.getCurrentTime()
+                const rule = await this.prisma.rule.create({
+                    data: {
+                        name, charge: +charge, policy_time: +policy_time, created_at
+                    }
+                })
+
+                await this.prisma.extras.create({
+                    data: {
+                        rule_id: rule.id, 
+                        ...extras
+                    }
                 })
                 return resolve(rule)
             }
         ))
     }
 
-    static updateRule(id,data){
+    static updateRule({ rule_id, name, charge, policy_time, extras }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let response = await Rule.updateOne({ _id:id },data);
-                return resolve(response.modifiedCount > 0)
+                const updated_at = await TimeRepository.getCurrentTime()
+                const rule = await this.prisma.rule.update({
+                    where: { id: +rule_id },
+                    data: {
+                        name, 
+                        charge: +charge, 
+                        policy_time: +policy_time, 
+                        updated_at
+                    }
+                })
+
+                await this.prisma.extras.update({
+                    where: { rule_id: +rule_id },
+                    data: {
+                        ...extras
+                    }
+                })
+                return resolve(rule)
             }
         ))
     }
 
-    static deleteRule(id){
+    static deleteRule({ rule_id }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                let response = await Rule.deleteOne({ _id: id })
-                return resolve(response.deletedCount > 0)
+                const deleted_at = await TimeRepository.getCurrentTime()
+
+                let response = await this.prisma.rule.update({
+                    where: { id: +rule_id },
+                    data: { deleted_at }
+                })
+                return resolve(response != null)
             }
         ))
     }
@@ -67,7 +105,7 @@ class RuleRepository{
     static deleteAllRules(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
-                await Rule.deleteMany({})
+                await this.prisma.rule.deleteMany({})
                 return resolve(true)
             }
         ))

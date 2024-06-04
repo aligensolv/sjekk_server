@@ -660,3 +660,4624 @@ Use mongoose.model(name, schema) {"timestamp":"2024-02-08 00:28:56"}
 [31merror[39m: PartnerPlaceDeletionRequest validation failed: requested_place_id: Path `requested_place_id` is required. {"timestamp":"2024-02-21 11:24:34"}
 [31merror[39m: Request Not Found {"timestamp":"2024-02-21 13:03:10"}
 [31merror[39m: Request Not Found {"timestamp":"2024-02-21 13:03:10"}
+[31merror[39m: lib is not defined {"timestamp":"2024-05-25 14:35:34"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:17:22"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:17:22"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:17:23"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:17:23"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:59:17"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:59:17"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:59:53"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 15:59:53"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:02:13"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:02:13"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:02:59"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:02:59"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:01"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:01"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:03"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:03"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:11"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:11"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:52"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:03:52"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:04:24"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:04:24"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:15:41"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:15:41"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:16:14"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:16:14"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:16:24"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:16:24"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:16:34"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:16:34"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:17:31"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:17:31"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:17:41"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:17:41"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:17:51"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:17:51"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:01"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:01"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:11"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:11"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:14"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:14"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:21"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:21"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:25"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:25"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:30"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:30"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:59"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:18:59"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:02"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:02"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:05"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:05"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:08"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:08"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:12"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:12"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:15"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:15"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:26"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:26"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:36"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:36"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:46"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:46"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:59"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:19:59"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:04"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:04"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:09"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:09"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:12"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:12"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:14"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:14"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:25"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:25"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:59"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:20:59"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:21:09"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:21:09"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:22:32"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:22:32"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:23:22"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:23:22"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:23:25"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:23:25"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:25:32"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:25:32"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:25:40"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:25:40"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:25:43"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:25:43"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:26:32"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:26:32"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:27:07"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:27:07"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:27:49"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:27:49"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:27:59"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:27:59"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:28:22"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:28:22"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:28:24"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:28:24"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:22"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:22"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:24"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:24"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:43"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:43"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:46"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:29:46"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:31:43"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:31:43"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:33:49"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:33:49"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:33:59"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:33:59"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:34:51"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:34:51"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:38:32"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:38:32"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:40:11"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:40:11"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:44:13"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 16:44:13"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:11:41"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:11:41"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:25:48"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:25:48"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:25:58"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:25:58"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:10"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:10"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:14"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:14"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:15"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:15"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:20"}
+[31merror[39m: Operation `users.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:20"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:24"}
+[31merror[39m: Operation `cars.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 18:26:24"}
+[31merror[39m: data is not defined {"timestamp":"2024-05-25 19:26:11"}
+[31merror[39m: data is not defined {"timestamp":"2024-05-25 19:26:11"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "klage",
+    pnid: "ali",
+    password: "$2b$10$iUe.fdguLpBi.atioqwE7e7ijDUTP3AsQ755i2h3/YbDpCDGxE1IO",
+    created_at: "2024-05-25",
++   updated_at: String
+  }
+}
+
+Argument `updated_at` is missing. {"timestamp":"2024-05-25 19:26:27"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    name: "klage",
+    pnid: "ali",
+    password: "$2b$10$iUe.fdguLpBi.atioqwE7e7ijDUTP3AsQ755i2h3/YbDpCDGxE1IO",
+    created_at: "2024-05-25",
++   updated_at: String
+  }
+}
+
+Argument `updated_at` is missing. {"timestamp":"2024-05-25 19:26:27"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:28:27"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:28:27"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:30:17"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:30:17"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:31:05"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:31:05"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:31:35"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 19:31:35"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 22:49:33"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 22:49:33"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 22:50:25"}
+[31merror[39m: 
+Invalid `prisma.user.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "2024-05-25"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-25 22:50:25"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:20:24"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:20:24"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:25:47"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:25:47"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:27:22"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:27:22"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:28:35"}
+[31merror[39m: Operation `rules.find()` buffering timed out after 10000ms {"timestamp":"2024-05-25 23:28:35"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:40:56"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:40:56"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:45:04"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:45:04"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:48:51"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:48:51"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:50:43"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:50:43"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:50:45"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:50:45"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:58:39"}
+[31merror[39m: Operation `users.countDocuments()` buffering timed out after 10000ms {"timestamp":"2024-05-27 01:58:39"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:07"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:07"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:35"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:35"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:45"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:45"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:55"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:05:55"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:01"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:01"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:15"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:15"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:25"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:25"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:35"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:35"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:44"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:44"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:58"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:06:58"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:10"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:10"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:20"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:20"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:30"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:30"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:40"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:40"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:50"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:50"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:56"}
+[31merror[39m: Operation `places.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:07:56"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:48:44"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:48:44"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:07"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:07"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:25"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:25"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:46"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:46"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:56"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:49:56"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:06"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:06"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:16"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:16"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:26"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:26"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:36"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:36"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:46"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:46"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:55"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:55"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:56"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:50:56"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:51:03"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:51:03"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:52:33"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:52:33"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:53:19"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:53:19"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:15"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:15"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:25"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:25"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:37"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:37"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:47"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:47"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:57"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:54:57"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:07"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:07"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:12"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:12"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:17"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:17"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:17"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:17"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:21"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:21"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:27"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:27"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:31"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:31"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:37"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:37"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:47"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:47"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:57"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:55:57"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:07"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:07"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:10"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:10"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:12"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:12"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:14"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:14"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:17"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:17"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:27"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:27"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:54"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 05:56:54"}
+[31merror[39m: 
+Invalid `prisma.partner.create()` invocation:
+
+{
+  name: "Ali Tarek",
+  ~~~~
+  email: "alitarek99944@gmail.com",
+  city: "Alexandria",
+  postal_code: "5310002",
+  address: "N/A",
+  other_address: "N/A",
+  fax_number: undefined,
+  phone_number: "01150421159",
+  created_at: "27.05.2024 06:20",
+? data?: PartnerCreateInput | PartnerUncheckedCreateInput
+}
+
+Unknown argument `name`. Did you mean `data`? Available options are marked with ?. {"timestamp":"2024-05-27 06:20:43"}
+[31merror[39m: 
+Invalid `prisma.partner.create()` invocation:
+
+{
+  name: "Ali Tarek",
+  ~~~~
+  email: "alitarek99944@gmail.com",
+  city: "Alexandria",
+  postal_code: "5310002",
+  address: "N/A",
+  other_address: "N/A",
+  fax_number: undefined,
+  phone_number: "01150421159",
+  created_at: "27.05.2024 06:20",
+? data?: PartnerCreateInput | PartnerUncheckedCreateInput
+}
+
+Unknown argument `name`. Did you mean `data`? Available options are marked with ?. {"timestamp":"2024-05-27 06:20:43"}
+[31merror[39m: 
+Invalid `prisma.partner.create()` invocation:
+
+{
+  data: {
+    name: "Ali Tarek",
+    email: "alitarek99944@gmail.com",
+    city: "Alexandria",
+    postal_code: "5310002",
+    address: "N/A",
+    other_address: "N/A",
+    fax_number: undefined,
+    phone_number: "01150421159",
+    created_at: "27.05.2024 06:21",
++   updated_at: String
+  }
+}
+
+Argument `updated_at` is missing. {"timestamp":"2024-05-27 06:21:21"}
+[31merror[39m: 
+Invalid `prisma.partner.create()` invocation:
+
+{
+  data: {
+    name: "Ali Tarek",
+    email: "alitarek99944@gmail.com",
+    city: "Alexandria",
+    postal_code: "5310002",
+    address: "N/A",
+    other_address: "N/A",
+    fax_number: undefined,
+    phone_number: "01150421159",
+    created_at: "27.05.2024 06:21",
++   updated_at: String
+  }
+}
+
+Argument `updated_at` is missing. {"timestamp":"2024-05-27 06:21:21"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:23:21"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:23:21"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:23:23"}
+[31merror[39m: Operation `partners.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:23:23"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "xc",
+    policy: "x",
+    code: "x",
++   created_at: String
+  }
+}
+
+Argument `created_at` is missing. {"timestamp":"2024-05-27 06:31:40"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "xc",
+    policy: "x",
+    code: "x",
++   created_at: String
+  }
+}
+
+Argument `created_at` is missing. {"timestamp":"2024-05-27 06:31:40"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:38:33"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:38:33"}
+[31merror[39m: Operation `partnerplacedeletionrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:38:33"}
+[31merror[39m: Operation `partnerplacedeletionrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 06:38:33"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:51:09"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:51:09"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:51:50"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:51:50"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:52:00"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:52:00"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:52:05"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 07:52:05"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 07:56:27"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 07:56:27"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 07:57:29"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 07:57:29"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:03:01"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:03:01"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:03:34"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:03:34"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:04:17"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:04:17"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:04:23"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:04:23"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:06:06"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:06:06"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:11:39"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:11:39"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:12:01"}
+[31merror[39m: Request failed with status code 400 {"timestamp":"2024-05-27 08:12:01"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-08T05:03:28.732Z",
+    end_date: "2024-05-31T05:03:30.648Z",
+    created_at: "27.05.2024 08:12",
+    registeration_type: "tttttttt",
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-05-27 08:12:21"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-08T05:03:28.732Z",
+    end_date: "2024-05-31T05:03:30.648Z",
+    created_at: "27.05.2024 08:12",
+    registeration_type: "tttttttt",
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-05-27 08:12:21"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+              ~~~~~~~~~~
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-08T05:03:28.732Z",
+    end_date: "2024-05-31T05:03:30.648Z",
+    created_at: "27.05.2024 08:12",
+    registeration_type: "tttttttt"
+  }
+}
+
+Invalid value for argument `car_type`. Expected CarType. {"timestamp":"2024-05-27 08:12:48"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+              ~~~~~~~~~~
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-08T05:03:28.732Z",
+    end_date: "2024-05-31T05:03:30.648Z",
+    created_at: "27.05.2024 08:12",
+    registeration_type: "tttttttt"
+  }
+}
+
+Invalid value for argument `car_type`. Expected CarType. {"timestamp":"2024-05-27 08:12:48"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    ~~~~~~~~
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-08T05:03:28.732Z",
+    end_date: "2024-05-31T05:03:30.648Z",
+    created_at: "27.05.2024 08:20",
+    registeration_type: "tttttttt",
+?   id?: Int,
+?   source_id?: Int | Null,
+?   free_parking_hours?: Int | Null
+  }
+}
+
+Unknown argument `car_type`. Available options are marked with ?. {"timestamp":"2024-05-27 08:20:23"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    ~~~~~~~~
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-08T05:03:28.732Z",
+    end_date: "2024-05-31T05:03:30.648Z",
+    created_at: "27.05.2024 08:20",
+    registeration_type: "tttttttt",
+?   id?: Int,
+?   source_id?: Int | Null,
+?   free_parking_hours?: Int | Null
+  }
+}
+
+Unknown argument `car_type`. Available options are marked with ?. {"timestamp":"2024-05-27 08:20:23"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-01T05:28:23.057Z",
+    end_date: "2024-05-22T05:28:24.291Z",
+    created_at: "27.05.2024 08:28",
+    registration_type: undefined,
++   registeration_type: String
+  }
+}
+
+Argument `registeration_type` is missing. {"timestamp":"2024-05-27 08:28:28"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-01T05:28:23.057Z",
+    end_date: "2024-05-22T05:28:24.291Z",
+    created_at: "27.05.2024 08:28",
+    registration_type: undefined,
++   registeration_type: String
+  }
+}
+
+Argument `registeration_type` is missing. {"timestamp":"2024-05-27 08:28:28"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-01T05:28:23.057Z",
+    end_date: "2024-05-22T05:28:24.291Z",
+    created_at: "27.05.2024 08:28",
++   registration_type: String
+  }
+}
+
+Argument `registration_type` is missing. {"timestamp":"2024-05-27 08:28:55"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-01T05:28:23.057Z",
+    end_date: "2024-05-22T05:28:24.291Z",
+    created_at: "27.05.2024 08:28",
++   registration_type: String
+  }
+}
+
+Argument `registration_type` is missing. {"timestamp":"2024-05-27 08:28:55"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-01T05:28:23.057Z",
+    end_date: "2024-05-22T05:28:24.291Z",
+    created_at: "27.05.2024 08:29",
+    registration_type: "gfsgsfg",
++   registration_source: RegistrationSource
+  }
+}
+
+Argument `registration_source` is missing. {"timestamp":"2024-05-27 08:29:39"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 1,
+    registeration_source: "system",
+    start_date: "2024-05-01T05:28:23.057Z",
+    end_date: "2024-05-22T05:28:24.291Z",
+    created_at: "27.05.2024 08:29",
+    registration_type: "gfsgsfg",
++   registration_source: RegistrationSource
+  }
+}
+
+Argument `registration_source` is missing. {"timestamp":"2024-05-27 08:29:39"}
+[31merror[39m: Operation `carlogs.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 08:30:41"}
+[31merror[39m: Operation `carlogs.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 08:30:41"}
+[31merror[39m: Operation `carlogs.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 08:30:51"}
+[31merror[39m: Operation `carlogs.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 08:30:51"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 11:10:35"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 11:10:35"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 11:48:22"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 11:48:22"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 14:34:30"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 14:34:30"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 14:38:31"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-27 14:38:31"}
+[31merror[39m: 
+Invalid `prisma.partnerDashboard.create()` invocation:
+
+{
+  data: {
+    access_code: "test",
+    partner_id: 1,
++   access_username: String
+  }
+}
+
+Argument `access_username` is missing. {"timestamp":"2024-05-27 14:39:31"}
+[31merror[39m: 
+Invalid `prisma.partnerDashboard.create()` invocation:
+
+{
+  data: {
+    access_code: "test",
+    partner_id: 1,
++   access_username: String
+  }
+}
+
+Argument `access_username` is missing. {"timestamp":"2024-05-27 14:39:31"}
+[31merror[39m: 
+Invalid `prisma.partnerDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PartnerDashboard_partner_id_key` {"timestamp":"2024-05-27 14:40:37"}
+[31merror[39m: 
+Invalid `prisma.partnerDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PartnerDashboard_partner_id_key` {"timestamp":"2024-05-27 14:40:37"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+{
+  where: {
+    deleted_at: null
+  },
+  include: {
+    partnerDashboard: true,
+    ~~~~~~~~~~~~~~~~
+?   places?: true,
+?   dashboard?: true
+  }
+}
+
+Unknown field `partnerDashboard` for include statement on model `Partner`. Available options are marked with ?. {"timestamp":"2024-05-27 14:46:00"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+{
+  where: {
+    deleted_at: null
+  },
+  include: {
+    partnerDashboard: true,
+    ~~~~~~~~~~~~~~~~
+?   places?: true,
+?   dashboard?: true
+  }
+}
+
+Unknown field `partnerDashboard` for include statement on model `Partner`. Available options are marked with ?. {"timestamp":"2024-05-27 14:46:00"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+{
+  where: {
+    deleted_at: null
+  },
+  include: {
+    partnerDashboard: true,
+    ~~~~~~~~~~~~~~~~
+?   places?: true,
+?   dashboard?: true
+  }
+}
+
+Unknown field `partnerDashboard` for include statement on model `Partner`. Available options are marked with ?. {"timestamp":"2024-05-27 14:46:01"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+{
+  where: {
+    deleted_at: null
+  },
+  include: {
+    partnerDashboard: true,
+    ~~~~~~~~~~~~~~~~
+?   places?: true,
+?   dashboard?: true
+  }
+}
+
+Unknown field `partnerDashboard` for include statement on model `Partner`. Available options are marked with ?. {"timestamp":"2024-05-27 14:46:01"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+{
+  where: {
+    deleted_at: null
+  },
+  include: {
+    partnerDashboard: true,
+    ~~~~~~~~~~~~~~~~
+?   places?: true,
+?   dashboard?: true
+  }
+}
+
+Unknown field `partnerDashboard` for include statement on model `Partner`. Available options are marked with ?. {"timestamp":"2024-05-27 14:46:23"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+{
+  where: {
+    deleted_at: null
+  },
+  include: {
+    partnerDashboard: true,
+    ~~~~~~~~~~~~~~~~
+?   places?: true,
+?   dashboard?: true
+  }
+}
+
+Unknown field `partnerDashboard` for include statement on model `Partner`. Available options are marked with ?. {"timestamp":"2024-05-27 14:46:23"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 11:02:31"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 11:02:31"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 11:02:53"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 11:02:53"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-28 11:02:57"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-28 11:02:57"}
+[31merror[39m: id is not defined {"timestamp":"2024-05-28 11:03:03"}
+[31merror[39m: id is not defined {"timestamp":"2024-05-28 11:03:03"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:03:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:03:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:03:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:03:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:03:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:03:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:10"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:10"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:10"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:10"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:10"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:10"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:05:34"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:05:34"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:36"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:36"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:36"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:36"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:36"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:05:36"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:05:44"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:05:44"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:09:56"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:09:56"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:09:56"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:09:56"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:09:56"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:09:56"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:01"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:01"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:01"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:01"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:01"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:01"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:40"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:40"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:40"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:40"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:40"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:40"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:47"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:47"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:47"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:47"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:47"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:10:47"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:24"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:24"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:24"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:24"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:24"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:24"}
+[31merror[39m: partner is not defined {"timestamp":"2024-05-28 11:13:28"}
+[31merror[39m: partner is not defined {"timestamp":"2024-05-28 11:13:28"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:13:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:48"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:48"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:48"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:48"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:48"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:48"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:14:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:15:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:15:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:15:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:15:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:15:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:15:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:17:18"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:17:18"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:17:20"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:17:20"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:17:28"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:17:28"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:17:38"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:17:38"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:19:03"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:19:03"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:19:03"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:19:03"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:19:03"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:19:03"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:08"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:08"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:19:18"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:19:18"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:38"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:38"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:41"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:41"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:44"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:44"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:19:48"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:19:48"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:50"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:19:53"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:19:58"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:19:58"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:08"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:08"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:14"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:14"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:18"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:18"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:23"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:20:23"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:22"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:22"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:23"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:23"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:32"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:32"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:34"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:34"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:37"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:37"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:42"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:44"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:44"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:46"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:21:46"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:47"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:47"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:57"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:21:57"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:07"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:07"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:23"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:23"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:28"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:28"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:30"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:30"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:22:31"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:33"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:33"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:43"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:43"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:53"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:22:53"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:01"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:01"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:12"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:12"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:15"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:15"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:21"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:21"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:22"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:22"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:23:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:23:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:23:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:23:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:23:31"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "partner" for model "Place" {"timestamp":"2024-05-28 11:23:31"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:32"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:32"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:42"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:42"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:43"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 11:23:43"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:53"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 11:23:53"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 12:47:46"}
+[31merror[39m: Cast to ObjectId failed for value "undefined" (type string) at path "requested_by" for model "PartnerPlaceDeletionRequest" {"timestamp":"2024-05-28 12:47:46"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 12:47:56"}
+[31merror[39m: Operation `partnerplacecreationrequests.find()` buffering timed out after 10000ms {"timestamp":"2024-05-28 12:47:56"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 12:49:35"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 12:49:35"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 12:49:52"}
+[31merror[39m: No partner was found {"timestamp":"2024-05-28 12:49:52"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-28 12:49:56"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-28 12:49:56"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "Oslo",
+    policy: "no policy",
+    code: "ALX",
+    created_at: "28.05.2024 12:50",
++   is_verified: Boolean
+  }
+}
+
+Argument `is_verified` is missing. {"timestamp":"2024-05-28 12:50:39"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "Oslo",
+    policy: "no policy",
+    code: "ALX",
+    created_at: "28.05.2024 12:50",
++   is_verified: Boolean
+  }
+}
+
+Argument `is_verified` is missing. {"timestamp":"2024-05-28 12:50:39"}
+[31merror[39m: 
+Invalid `prisma.placeRequest.create()` invocation:
+
+{
+  data: {
+    request_type: "deletion",
+    location: undefined,
+    policy: undefined,
+    code: undefined,
+    place_id: 2,
+              ~
+    requested_by_id: 2,
+    created_at: "29.05.2024 08:30"
+  }
+}
+
+Argument `place_id`: Invalid value provided. Expected String or Null, provided Int. {"timestamp":"2024-05-29 08:30:51"}
+[31merror[39m: 
+Invalid `prisma.placeRequest.create()` invocation:
+
+{
+  data: {
+    request_type: "deletion",
+    location: undefined,
+    policy: undefined,
+    code: undefined,
+    place_id: 2,
+              ~
+    requested_by_id: 2,
+    created_at: "29.05.2024 08:30"
+  }
+}
+
+Argument `place_id`: Invalid value provided. Expected String or Null, provided Int. {"timestamp":"2024-05-29 08:30:51"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:49:52"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:49:52"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:49:54"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:49:54"}
+[31merror[39m: 
+Invalid `prisma.car.aggregate()` invocation:
+
+{
+  select: {
+    _avg: {
+      select: {
+        duration: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:44"}
+[31merror[39m: 
+Invalid `prisma.car.aggregate()` invocation:
+
+{
+  select: {
+    _avg: {
+      select: {
+        duration: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:44"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:44"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:44"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:45"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:45"}
+[31merror[39m: 
+Invalid `prisma.car.aggregate()` invocation:
+
+{
+  select: {
+    _avg: {
+      select: {
+        duration: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:45"}
+[31merror[39m: 
+Invalid `prisma.car.aggregate()` invocation:
+
+{
+  select: {
+    _avg: {
+      select: {
+        duration: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:45"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:49"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:49"}
+[31merror[39m: 
+Invalid `prisma.car.aggregate()` invocation:
+
+{
+  select: {
+    _avg: {
+      select: {
+        duration: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:49"}
+[31merror[39m: 
+Invalid `prisma.car.aggregate()` invocation:
+
+{
+  select: {
+    _avg: {
+      select: {
+        duration: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:50:49"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:55:48"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:55:48"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:55:48"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:55:48"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:56:06"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:56:06"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2,
+          location: "Oslo",
+          policy: "no policy",
+          code: "ALX",
+          created_at: "28.05.2024 12:51",
+          updated_at: null,
+          deleted_at: null,
+          is_verified: true,
+          partner_id: null
+        }
+      ]
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:56:06"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2,
+          location: "Oslo",
+          policy: "no policy",
+          code: "ALX",
+          created_at: "28.05.2024 12:51",
+          updated_at: null,
+          deleted_at: null,
+          is_verified: true,
+          partner_id: null
+        }
+      ]
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:56:06"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:56:31"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:56:31"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2
+        }
+      ]
+      ~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:56:31"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2
+        }
+      ]
+      ~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:56:31"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:56:53"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:56:53"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:58:59"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:58:59"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2
+        }
+      ]
+      ~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:58:59"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2
+        }
+      ]
+      ~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:58:59"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:59:00"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: {
+        then: [object Function],
+              ~~~~~~~~~~~~~~~~~
+        catch: [object Function],
+        finally: [object Function],
+        requestTransaction: [object Function]
+      }
+    }
+  }
+}
+
+Invalid value for argument `then`: We could not serialize [object Function] value. Serialize the object to JSON or implement a ".toJSON()" method on it. {"timestamp":"2024-05-29 08:59:00"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2
+        }
+      ]
+      ~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:59:00"}
+[31merror[39m: 
+Invalid `prisma.car.count()` invocation:
+
+{
+  select: {
+    _count: {
+      select: {
+        _all: true
+      }
+    }
+  },
+  where: {
+    place_id: {
+      in: [
+        {
+          id: 2
+        }
+      ]
+      ~~~~~~~~~
+    }
+  }
+}
+
+Argument `in`: Invalid value provided. Expected Int, provided Object. {"timestamp":"2024-05-29 08:59:00"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:16:34"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:16:34"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:17:01"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:17:01"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:18:05"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:18:05"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:20:56"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:20:56"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:20:57"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:20:57"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:01"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:01"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:10"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:10"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:22"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:22"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:25"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:25"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:36"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:36"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:45"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:45"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:46"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:46"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:51"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:51"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:53"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:53"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:55"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:21:55"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:22:01"}
+[31merror[39m: PlaceRepository.getAllPlaceProfiles is not a function {"timestamp":"2024-05-29 09:22:01"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+{
+  data: {
+    place_id: "2",
+              ~~~
+    access_code: "kjlh",
+    access_username: "jhkl",
+    place_name: "trw",
+    place_type: "gjjklj",
+    free_parking_hours: 8,
+    created_at: "29.05.2024 09:59"
+  }
+}
+
+Argument `place_id`: Invalid value provided. Expected Int, provided String. {"timestamp":"2024-05-29 09:59:33"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+{
+  data: {
+    place_id: "2",
+              ~~~
+    access_code: "kjlh",
+    access_username: "jhkl",
+    place_name: "trw",
+    place_type: "gjjklj",
+    free_parking_hours: 8,
+    created_at: "29.05.2024 09:59"
+  }
+}
+
+Argument `place_id`: Invalid value provided. Expected Int, provided String. {"timestamp":"2024-05-29 09:59:33"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the constraint: `User_pnid_key` {"timestamp":"2024-05-29 10:27:59"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the constraint: `User_pnid_key` {"timestamp":"2024-05-29 10:27:59"}
+[31merror[39m: [object Object] {"timestamp":"2024-05-29 10:28:36"}
+[31merror[39m: [object Object] {"timestamp":"2024-05-29 10:28:36"}
+[31merror[39m: credentials is not defined {"timestamp":"2024-05-29 10:28:51"}
+[31merror[39m: credentials is not defined {"timestamp":"2024-05-29 10:28:51"}
+[31merror[39m: AuthRepository.login is not a function {"timestamp":"2024-05-29 10:29:39"}
+[31merror[39m: AuthRepository.login is not a function {"timestamp":"2024-05-29 10:29:39"}
+[31merror[39m: Cannot destructure property 'user_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-29 10:29:50"}
+[31merror[39m: Cannot destructure property 'user_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-29 10:29:50"}
+[31merror[39m: rule is not defined {"timestamp":"2024-05-29 12:12:35"}
+[31merror[39m: rule is not defined {"timestamp":"2024-05-29 12:12:35"}
+[31merror[39m: 
+Invalid `prisma.rule.create()` invocation:
+
+{
+  data: {
+    name: "trw",
+    charge: "524",
+            ~~~~~
+    policy_time: "2",
+    created_at: "29.05.2024 12:14",
+    extras: {
+      connect: {
+        meter_receipt_number: true,
+        meter_number: true,
+        expiry_date: false,
+        paid_amount: false
+      }
+    }
+  }
+}
+
+Argument `charge`: Invalid value provided. Expected Float, provided String. {"timestamp":"2024-05-29 12:14:01"}
+[31merror[39m: 
+Invalid `prisma.rule.create()` invocation:
+
+{
+  data: {
+    name: "trw",
+    charge: "524",
+            ~~~~~
+    policy_time: "2",
+    created_at: "29.05.2024 12:14",
+    extras: {
+      connect: {
+        meter_receipt_number: true,
+        meter_number: true,
+        expiry_date: false,
+        paid_amount: false
+      }
+    }
+  }
+}
+
+Argument `charge`: Invalid value provided. Expected Float, provided String. {"timestamp":"2024-05-29 12:14:01"}
+[31merror[39m: 
+Invalid `prisma.rule.create()` invocation:
+
+{
+  data: {
+    name: "trw",
+    charge: 524,
+    policy_time: 2,
+    created_at: "29.05.2024 12:14",
+    extras: {
+      connect: {
+        meter_receipt_number: true,
+        meter_number: true,
+        expiry_date: false,
+        paid_amount: false,
+?       id?: Int,
+?       rule_id?: Int,
+?       AND?: ExtrasWhereInput | ExtrasWhereInput[],
+?       OR?: ExtrasWhereInput[],
+?       NOT?: ExtrasWhereInput | ExtrasWhereInput[],
+?       rule?: RuleNullableRelationFilter | RuleWhereInput | Null
+      }
+    }
+  }
+}
+
+Argument `connect` of type ExtrasWhereUniqueInput needs at least one of `id` or `rule_id` arguments. Available options are marked with ?. {"timestamp":"2024-05-29 12:14:39"}
+[31merror[39m: 
+Invalid `prisma.rule.create()` invocation:
+
+{
+  data: {
+    name: "trw",
+    charge: 524,
+    policy_time: 2,
+    created_at: "29.05.2024 12:14",
+    extras: {
+      connect: {
+        meter_receipt_number: true,
+        meter_number: true,
+        expiry_date: false,
+        paid_amount: false,
+?       id?: Int,
+?       rule_id?: Int,
+?       AND?: ExtrasWhereInput | ExtrasWhereInput[],
+?       OR?: ExtrasWhereInput[],
+?       NOT?: ExtrasWhereInput | ExtrasWhereInput[],
+?       rule?: RuleNullableRelationFilter | RuleWhereInput | Null
+      }
+    }
+  }
+}
+
+Argument `connect` of type ExtrasWhereUniqueInput needs at least one of `id` or `rule_id` arguments. Available options are marked with ?. {"timestamp":"2024-05-29 12:14:39"}
+[31merror[39m: 
+Invalid `prisma.rule.create()` invocation:
+
+{
+  data: {
+    name: "trw",
+    charge: 524,
+    policy_time: 2,
+    created_at: "29.05.2024 12:15",
+    extras: {
+      meter_receipt_number: true,
+      ~~~~~~~~~~~~~~~~~~~~
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false,
+?     create?: ExtrasCreateWithoutRuleInput | ExtrasUncheckedCreateWithoutRuleInput,
+?     connectOrCreate?: ExtrasCreateOrConnectWithoutRuleInput,
+?     connect?: ExtrasWhereUniqueInput
+    }
+  }
+}
+
+Unknown argument `meter_receipt_number`. Available options are marked with ?. {"timestamp":"2024-05-29 12:15:00"}
+[31merror[39m: 
+Invalid `prisma.rule.create()` invocation:
+
+{
+  data: {
+    name: "trw",
+    charge: 524,
+    policy_time: 2,
+    created_at: "29.05.2024 12:15",
+    extras: {
+      meter_receipt_number: true,
+      ~~~~~~~~~~~~~~~~~~~~
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false,
+?     create?: ExtrasCreateWithoutRuleInput | ExtrasUncheckedCreateWithoutRuleInput,
+?     connectOrCreate?: ExtrasCreateOrConnectWithoutRuleInput,
+?     connect?: ExtrasWhereUniqueInput
+    }
+  }
+}
+
+Unknown argument `meter_receipt_number`. Available options are marked with ?. {"timestamp":"2024-05-29 12:15:00"}
+[31merror[39m: 
+Invalid `prisma.extras.create()` invocation:
+
+{
+  data: {
+    rule_id: 1,
+    ~~~~~~~
+    extras: {
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false
+    },
+?   meter_receipt_number?: Boolean,
+?   meter_number?: Boolean,
+?   expiry_date?: Boolean,
+?   paid_amount?: Boolean,
+?   rule?: RuleCreateNestedOneWithoutExtrasInput
+  }
+}
+
+Unknown argument `rule_id`. Did you mean `rule`? Available options are marked with ?. {"timestamp":"2024-05-29 12:16:23"}
+[31merror[39m: 
+Invalid `prisma.extras.create()` invocation:
+
+{
+  data: {
+    rule_id: 1,
+    ~~~~~~~
+    extras: {
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false
+    },
+?   meter_receipt_number?: Boolean,
+?   meter_number?: Boolean,
+?   expiry_date?: Boolean,
+?   paid_amount?: Boolean,
+?   rule?: RuleCreateNestedOneWithoutExtrasInput
+  }
+}
+
+Unknown argument `rule_id`. Did you mean `rule`? Available options are marked with ?. {"timestamp":"2024-05-29 12:16:23"}
+[31merror[39m: 
+Invalid `prisma.extras.create()` invocation:
+
+{
+  data: {
+    extras: {
+    ~~~~~~
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false
+    },
+    rule: {
+      connect: {
+        id: 2
+      }
+    },
+?   meter_receipt_number?: Boolean,
+?   meter_number?: Boolean,
+?   expiry_date?: Boolean,
+?   paid_amount?: Boolean
+  }
+}
+
+Unknown argument `extras`. Available options are marked with ?. {"timestamp":"2024-05-29 12:22:11"}
+[31merror[39m: 
+Invalid `prisma.extras.create()` invocation:
+
+{
+  data: {
+    extras: {
+    ~~~~~~
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false
+    },
+    rule: {
+      connect: {
+        id: 2
+      }
+    },
+?   meter_receipt_number?: Boolean,
+?   meter_number?: Boolean,
+?   expiry_date?: Boolean,
+?   paid_amount?: Boolean
+  }
+}
+
+Unknown argument `extras`. Available options are marked with ?. {"timestamp":"2024-05-29 12:22:11"}
+[31merror[39m: 
+Invalid `prisma.extras.create()` invocation:
+
+{
+  data: {
+    rule_id: 3,
+    ~~~~~~~
+    extras: {
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false
+    },
+?   meter_receipt_number?: Boolean,
+?   meter_number?: Boolean,
+?   expiry_date?: Boolean,
+?   paid_amount?: Boolean,
+?   rule?: RuleCreateNestedOneWithoutExtrasInput
+  }
+}
+
+Unknown argument `rule_id`. Did you mean `rule`? Available options are marked with ?. {"timestamp":"2024-05-29 12:24:11"}
+[31merror[39m: 
+Invalid `prisma.extras.create()` invocation:
+
+{
+  data: {
+    rule_id: 3,
+    ~~~~~~~
+    extras: {
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: false,
+      paid_amount: false
+    },
+?   meter_receipt_number?: Boolean,
+?   meter_number?: Boolean,
+?   expiry_date?: Boolean,
+?   paid_amount?: Boolean,
+?   rule?: RuleCreateNestedOneWithoutExtrasInput
+  }
+}
+
+Unknown argument `rule_id`. Did you mean `rule`? Available options are marked with ?. {"timestamp":"2024-05-29 12:24:11"}
+[31merror[39m: jwt expired {"timestamp":"2024-05-30 09:24:51"}
+[31merror[39m: jwt expired {"timestamp":"2024-05-30 09:24:51"}
+[31merror[39m: Cast to string failed for value "{ place_id: '2' }" (type Object) at path "place" for model "Violation" {"timestamp":"2024-05-30 09:30:07"}
+[31merror[39m: Cast to string failed for value "{ place_id: '2' }" (type Object) at path "place" for model "Violation" {"timestamp":"2024-05-30 09:30:07"}
+[31merror[39m: Cast to string failed for value "{ place_id: '2' }" (type Object) at path "place" for model "Violation" {"timestamp":"2024-05-30 09:31:41"}
+[31merror[39m: Cast to string failed for value "{ place_id: '2' }" (type Object) at path "place" for model "Violation" {"timestamp":"2024-05-30 09:31:41"}
+[31merror[39m: Could not find car {"timestamp":"2024-05-30 09:34:01"}
+[31merror[39m: Could not find car {"timestamp":"2024-05-30 09:34:01"}
+[31merror[39m: Could not find car {"timestamp":"2024-05-30 09:35:12"}
+[31merror[39m: Could not find car {"timestamp":"2024-05-30 09:35:12"}
+[31merror[39m: Could not find car {"timestamp":"2024-05-30 09:36:48"}
+[31merror[39m: Could not find car {"timestamp":"2024-05-30 09:36:48"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 09:44:21"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 09:44:21"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 09:45:54"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 09:45:54"}
+[31merror[39m: 
+Invalid `prisma.rule.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    name: "Gratisparkering - Billett / elektronisk registrering utløpt - skilt 1P/808, pforskr.§24(3)",
+    charge: "690",
+            ~~~~~
+    policy_time: 0,
+    extras: {
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: true,
+      paid_amount: false
+    },
+    updated_at: "30.05.2024 10:08"
+  }
+}
+
+Argument `charge`: Invalid value provided. Expected Float or FloatFieldUpdateOperationsInput, provided String. {"timestamp":"2024-05-30 10:08:31"}
+[31merror[39m: 
+Invalid `prisma.rule.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    name: "Gratisparkering - Billett / elektronisk registrering utløpt - skilt 1P/808, pforskr.§24(3)",
+    charge: "690",
+            ~~~~~
+    policy_time: 0,
+    extras: {
+      meter_receipt_number: true,
+      meter_number: true,
+      expiry_date: true,
+      paid_amount: false
+    },
+    updated_at: "30.05.2024 10:08"
+  }
+}
+
+Argument `charge`: Invalid value provided. Expected Float or FloatFieldUpdateOperationsInput, provided String. {"timestamp":"2024-05-30 10:08:31"}
+[31merror[39m: 
+Invalid `prisma.rule.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    name: "Gratisparkering - Billett / elektronisk registrering utløpt - skilt 1P/808, pforskr.§24(3)",
+    charge: 690,
+    policy_time: 0,
+    extras: {
+      meter_receipt_number: true,
+      ~~~~~~~~~~~~~~~~~~~~
+      meter_number: true,
+      expiry_date: true,
+      paid_amount: false,
+?     create?: ExtrasCreateWithoutRuleInput | ExtrasUncheckedCreateWithoutRuleInput,
+?     connectOrCreate?: ExtrasCreateOrConnectWithoutRuleInput,
+?     upsert?: ExtrasUpsertWithoutRuleInput,
+?     disconnect?: Boolean | ExtrasWhereInput,
+?     delete?: Boolean | ExtrasWhereInput,
+?     connect?: ExtrasWhereUniqueInput,
+?     update?: ExtrasUpdateToOneWithWhereWithoutRuleInput | ExtrasUpdateWithoutRuleInput | ExtrasUncheckedUpdateWithoutRuleInput
+    },
+    updated_at: "30.05.2024 10:10"
+  }
+}
+
+Unknown argument `meter_receipt_number`. Available options are marked with ?. {"timestamp":"2024-05-30 10:10:03"}
+[31merror[39m: 
+Invalid `prisma.rule.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    name: "Gratisparkering - Billett / elektronisk registrering utløpt - skilt 1P/808, pforskr.§24(3)",
+    charge: 690,
+    policy_time: 0,
+    extras: {
+      meter_receipt_number: true,
+      ~~~~~~~~~~~~~~~~~~~~
+      meter_number: true,
+      expiry_date: true,
+      paid_amount: false,
+?     create?: ExtrasCreateWithoutRuleInput | ExtrasUncheckedCreateWithoutRuleInput,
+?     connectOrCreate?: ExtrasCreateOrConnectWithoutRuleInput,
+?     upsert?: ExtrasUpsertWithoutRuleInput,
+?     disconnect?: Boolean | ExtrasWhereInput,
+?     delete?: Boolean | ExtrasWhereInput,
+?     connect?: ExtrasWhereUniqueInput,
+?     update?: ExtrasUpdateToOneWithWhereWithoutRuleInput | ExtrasUpdateWithoutRuleInput | ExtrasUncheckedUpdateWithoutRuleInput
+    },
+    updated_at: "30.05.2024 10:10"
+  }
+}
+
+Unknown argument `meter_receipt_number`. Available options are marked with ?. {"timestamp":"2024-05-30 10:10:03"}
+[31merror[39m: 
+Invalid `prisma.rule.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    name: "Gratisparkering - Billett / elektronisk registrering utløpt - skilt 1P/808, pforskr.§24(3)",
+    charge: 690,
+    policy_time: 0,
+    updated_at: "30.05.2024 10:11"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 10:11:09"}
+[31merror[39m: 
+Invalid `prisma.rule.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    name: "Gratisparkering - Billett / elektronisk registrering utløpt - skilt 1P/808, pforskr.§24(3)",
+    charge: 690,
+    policy_time: 0,
+    updated_at: "30.05.2024 10:11"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 10:11:09"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:17:27"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:17:27"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:18:15"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:18:15"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:21:11"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:21:11"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:26:13"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.create()` invocation:
+
+
+Unique constraint failed on the constraint: `PlaceDashboard_place_id_key` {"timestamp":"2024-05-30 10:26:13"}
+[31merror[39m: 
+Invalid `prisma.placeRequest.create()` invocation:
+
+
+Foreign key constraint failed on the field: `requested_by_id` {"timestamp":"2024-05-30 10:33:51"}
+[31merror[39m: 
+Invalid `prisma.placeRequest.create()` invocation:
+
+
+Foreign key constraint failed on the field: `requested_by_id` {"timestamp":"2024-05-30 10:33:51"}
+[31merror[39m: 
+Invalid `prisma.placeRequest.create()` invocation:
+
+
+Foreign key constraint failed on the field: `requested_by_id` {"timestamp":"2024-05-30 10:34:32"}
+[31merror[39m: 
+Invalid `prisma.placeRequest.create()` invocation:
+
+
+Foreign key constraint failed on the field: `requested_by_id` {"timestamp":"2024-05-30 10:34:32"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 10:35:03"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 10:35:03"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 10:37:02"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 10:37:02"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 10:40:46"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 10:40:46"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:06"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:06:48"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:06"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:06:48"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:06"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:06:52"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:06"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:06:52"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:07"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:07:07"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:07"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:07:07"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:07"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:07:20"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:07"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:07:20"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:09"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:09:44"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:09"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:09:44"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:11"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:11:49"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    deleted_at: "30.05.2024 11:11"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:11:49"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    location: undefined,
+    policy: undefined,
+    code: undefined
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:15:40"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    location: undefined,
+    policy: undefined,
+    code: undefined
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:15:40"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    location: "qwerty",
+    policy: "no policy",
+    code: "qewer"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:16:28"}
+[31merror[39m: 
+Invalid `prisma.place.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    location: "qwerty",
+    policy: "no policy",
+    code: "qewer"
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:16:28"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 11:34:34"}
+[31merror[39m: Operation `violations.find()` buffering timed out after 10000ms {"timestamp":"2024-05-30 11:34:34"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:40:36"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:40:36"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:41:01"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 11:41:01"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.findUnique()` invocation:
+
+{
+  where: {
+    access_username: "trw",
+?   id?: Int,
+?   AND?: PlaceDashboardWhereInput | PlaceDashboardWhereInput[],
+?   OR?: PlaceDashboardWhereInput[],
+?   NOT?: PlaceDashboardWhereInput | PlaceDashboardWhereInput[],
+?   access_code?: StringFilter | String,
+?   profile_image?: StringNullableFilter | String | Null,
+?   free_parking_hours?: IntFilter | Int,
+?   place_name?: StringFilter | String,
+?   place_type?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   deleted_at?: StringNullableFilter | String | Null,
+?   place_id?: IntFilter | Int,
+?   place?: PlaceRelationFilter | PlaceWhereInput,
+?   registered_cars?: CarListRelationFilter
+  },
+  include: {
+    place: true
+  }
+}
+
+Argument `where` of type PlaceDashboardWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?. {"timestamp":"2024-05-30 11:45:00"}
+[31merror[39m: 
+Invalid `prisma.placeDashboard.findUnique()` invocation:
+
+{
+  where: {
+    access_username: "trw",
+?   id?: Int,
+?   AND?: PlaceDashboardWhereInput | PlaceDashboardWhereInput[],
+?   OR?: PlaceDashboardWhereInput[],
+?   NOT?: PlaceDashboardWhereInput | PlaceDashboardWhereInput[],
+?   access_code?: StringFilter | String,
+?   profile_image?: StringNullableFilter | String | Null,
+?   free_parking_hours?: IntFilter | Int,
+?   place_name?: StringFilter | String,
+?   place_type?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   deleted_at?: StringNullableFilter | String | Null,
+?   place_id?: IntFilter | Int,
+?   place?: PlaceRelationFilter | PlaceWhereInput,
+?   registered_cars?: CarListRelationFilter
+  },
+  include: {
+    place: true
+  }
+}
+
+Argument `where` of type PlaceDashboardWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?. {"timestamp":"2024-05-30 11:45:00"}
+[31merror[39m: No place profile was found {"timestamp":"2024-05-30 11:45:59"}
+[31merror[39m: No place profile was found {"timestamp":"2024-05-30 11:45:59"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-05-30 11:46:48"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-05-30 11:46:48"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 11:46:55"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 11:46:55"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 11:46:56"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 11:46:56"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 12:50:16"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 12:50:16"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:00:25"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:00:25"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:00:31"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:00:31"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    manufactur_year: "2002",
+    car_model: "HYUNDAI",
+    car_description: "Personbil",
+    car_color: "Rød",
+    car_type: "KJORETOY",
+    plate_number: "BD31012",
+    start_date: "30.05.2024 13:00",
+    end_date: "30.05.2024 15:00",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 4,
+    free_parking_time: 2,
+    created_at: "30.05.2024 13:00",
++   place: {
++     create: PlaceCreateWithoutCarsInput | PlaceUncheckedCreateWithoutCarsInput,
++     connectOrCreate: PlaceCreateOrConnectWithoutCarsInput,
++     connect: PlaceWhereUniqueInput
++   }
+  }
+}
+
+Argument `place` is missing. {"timestamp":"2024-05-30 13:00:36"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    manufactur_year: "2002",
+    car_model: "HYUNDAI",
+    car_description: "Personbil",
+    car_color: "Rød",
+    car_type: "KJORETOY",
+    plate_number: "BD31012",
+    start_date: "30.05.2024 13:00",
+    end_date: "30.05.2024 15:00",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 4,
+    free_parking_time: 2,
+    created_at: "30.05.2024 13:00",
++   place: {
++     create: PlaceCreateWithoutCarsInput | PlaceUncheckedCreateWithoutCarsInput,
++     connectOrCreate: PlaceCreateOrConnectWithoutCarsInput,
++     connect: PlaceWhereUniqueInput
++   }
+  }
+}
+
+Argument `place` is missing. {"timestamp":"2024-05-30 13:00:36"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    manufactur_year: "2002",
+    car_model: "HYUNDAI",
+    car_description: "Personbil",
+    car_color: "Rød",
+    car_type: "KJORETOY",
+    plate_number: "BD31012",
+    start_date: "30.05.2024 13:02",
+    end_date: "30.05.2024 15:02",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 4,
+    place_id: 1,
+    free_parking_time: 2,
+    ~~~~~~~~~~~~~~~~~
+    created_at: "30.05.2024 13:02",
+?   id?: Int,
+?   free_parking_hours?: Int | Null
+  }
+}
+
+Unknown argument `free_parking_time`. Available options are marked with ?. {"timestamp":"2024-05-30 13:02:06"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    manufactur_year: "2002",
+    car_model: "HYUNDAI",
+    car_description: "Personbil",
+    car_color: "Rød",
+    car_type: "KJORETOY",
+    plate_number: "BD31012",
+    start_date: "30.05.2024 13:02",
+    end_date: "30.05.2024 15:02",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 4,
+    place_id: 1,
+    free_parking_time: 2,
+    ~~~~~~~~~~~~~~~~~
+    created_at: "30.05.2024 13:02",
+?   id?: Int,
+?   free_parking_hours?: Int | Null
+  }
+}
+
+Unknown argument `free_parking_time`. Available options are marked with ?. {"timestamp":"2024-05-30 13:02:06"}
+[31merror[39m: free_parking_time is not defined {"timestamp":"2024-05-30 13:02:42"}
+[31merror[39m: free_parking_time is not defined {"timestamp":"2024-05-30 13:02:42"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:03:42"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:03:42"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:04"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:04"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:28"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:28"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:36"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:36"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:47"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:04:47"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:05:00"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:05:00"}
+[31merror[39m: 
+Invalid `prisma.car.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 13:05:54"}
+[31merror[39m: 
+Invalid `prisma.car.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 13:05:54"}
+[31merror[39m: 
+Invalid `prisma.car.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 13:05:57"}
+[31merror[39m: 
+Invalid `prisma.car.delete()` invocation:
+
+{
+  where: {
++   id: Int
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-05-30 13:05:57"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 13:10:16"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-05-30 13:10:16"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:17:40"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:17:40"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:17:45"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:17:45"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:18:52"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:18:52"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:11"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:11"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:41"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:41"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:43"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:43"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:45"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:45"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:48"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:48"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:50"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:50"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:52"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:19:52"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:07"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:07"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:12"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:12"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:14"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:14"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:15"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:15"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:15"}
+[31merror[39m: Cannot destructure property 'place_dashboard_id' of 'undefined' as it is undefined. {"timestamp":"2024-05-30 13:20:15"}
+[31merror[39m: de is not defined {"timestamp":"2024-05-30 13:20:52"}
+[31merror[39m: de is not defined {"timestamp":"2024-05-30 13:20:52"}
+[31merror[39m: de is not defined {"timestamp":"2024-05-30 13:20:53"}
+[31merror[39m: de is not defined {"timestamp":"2024-05-30 13:20:53"}
+[31merror[39m: Assignment to constant variable. {"timestamp":"2024-05-30 13:21:02"}
+[31merror[39m: Assignment to constant variable. {"timestamp":"2024-05-30 13:21:02"}
+[31merror[39m: Car is already registered {"timestamp":"2024-05-30 14:41:32"}
+[31merror[39m: Car is already registered {"timestamp":"2024-05-30 14:41:32"}
+[31merror[39m: jwt expired {"timestamp":"2024-05-31 14:02:45"}
+[31merror[39m: jwt expired {"timestamp":"2024-05-31 14:02:45"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-01 05:16:25"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-01 05:16:25"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 00:45:14"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 00:45:14"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 00:54:29"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 00:54:29"}
+[31merror[39m: Cast to string failed for value "{ place_id: '6' }" (type Object) at path "place" for model "Violation" {"timestamp":"2024-06-02 01:25:07"}
+[31merror[39m: Cast to string failed for value "{ place_id: '6' }" (type Object) at path "place" for model "Violation" {"timestamp":"2024-06-02 01:25:07"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 04:58:29"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 04:58:29"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: "6"
+              ~~~
+  },
+  orderBy: {
+    created_at: "desc"
+  }
+}
+
+Argument `place_id`: Invalid value provided. Expected IntFilter or Int, provided String. {"timestamp":"2024-06-02 07:08:32"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: "6"
+              ~~~
+  },
+  orderBy: {
+    created_at: "desc"
+  }
+}
+
+Argument `place_id`: Invalid value provided. Expected IntFilter or Int, provided String. {"timestamp":"2024-06-02 07:08:32"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 08:08:24"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-02 08:08:24"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-03 05:41:32"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-03 05:41:32"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 00:47:28"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 00:47:28"}
+[31merror[39m: data is not defined {"timestamp":"2024-06-04 03:06:38"}
+[31merror[39m: data is not defined {"timestamp":"2024-06-04 03:06:38"}
+[31merror[39m: data is not defined {"timestamp":"2024-06-04 03:41:58"}
+[31merror[39m: data is not defined {"timestamp":"2024-06-04 03:41:58"}
+[31merror[39m: place is not defined {"timestamp":"2024-06-04 03:42:33"}
+[31merror[39m: place is not defined {"timestamp":"2024-06-04 03:42:33"}
+[31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2024-06-04 03:45:43"}
+[31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2024-06-04 03:45:43"}
+[31merror[39m: Navigation timeout of 30000 ms exceeded {"timestamp":"2024-06-04 03:48:04"}
+[31merror[39m: Navigation timeout of 30000 ms exceeded {"timestamp":"2024-06-04 03:48:04"}
+[31merror[39m: ticket_number is not defined {"timestamp":"2024-06-04 03:49:53"}
+[31merror[39m: ticket_number is not defined {"timestamp":"2024-06-04 03:49:53"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    shift_id: NaN,
+    ticket_comment: "ttt",
+    system_comment: "SSSS",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717451538354_93678427.png",
+          date: "04.06.2024 00:52",
+          localPath: "./public/images/temp_cars/1717451538354_93678427.png",
+          originalName: "1717451538354_93678427.png"
+        }
+      ]
+    },
+    created_at: "04.06.2024 03:51",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "4786947",
+        ticket_image: "http://localhost:3000/public/tickets/4786947.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-4523357960-ETQMJ.png",
+        serial_number: "VL-4523357960-ETQMJ",
+        created_at: "04.06.2024 03:51"
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: undefined,
+        plate_number: undefined,
+        manufactur_year: undefined,
+        car_description: undefined,
+        car_type: undefined,
+        car_color: undefined,
+        country_name: undefined,
+        country_code: undefined
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "\"session-zwPULaiPh3n2EyHEkztV\"",
++   created_by: {
++     create: UserCreateWithoutViolationsInput | UserUncheckedCreateWithoutViolationsInput,
++     connectOrCreate: UserCreateOrConnectWithoutViolationsInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `created_by` is missing. {"timestamp":"2024-06-04 03:51:48"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    shift_id: NaN,
+    ticket_comment: "ttt",
+    system_comment: "SSSS",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717451538354_93678427.png",
+          date: "04.06.2024 00:52",
+          localPath: "./public/images/temp_cars/1717451538354_93678427.png",
+          originalName: "1717451538354_93678427.png"
+        }
+      ]
+    },
+    created_at: "04.06.2024 03:51",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "4786947",
+        ticket_image: "http://localhost:3000/public/tickets/4786947.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-4523357960-ETQMJ.png",
+        serial_number: "VL-4523357960-ETQMJ",
+        created_at: "04.06.2024 03:51"
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: undefined,
+        plate_number: undefined,
+        manufactur_year: undefined,
+        car_description: undefined,
+        car_type: undefined,
+        car_color: undefined,
+        country_name: undefined,
+        country_code: undefined
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "\"session-zwPULaiPh3n2EyHEkztV\"",
++   created_by: {
++     create: UserCreateWithoutViolationsInput | UserUncheckedCreateWithoutViolationsInput,
++     connectOrCreate: UserCreateOrConnectWithoutViolationsInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `created_by` is missing. {"timestamp":"2024-06-04 03:51:49"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "ttt",
+    system_comment: "SSSS",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717451538354_93678427.png",
+          date: "04.06.2024 00:52",
+          localPath: "./public/images/temp_cars/1717451538354_93678427.png",
+          originalName: "1717451538354_93678427.png"
+        }
+      ]
+    },
+    created_at: "04.06.2024 03:56",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "2983292",
+        ticket_image: "http://localhost:3000/public/tickets/2983292.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-8643370208-VGVK6.png",
+        serial_number: "VL-8643370208-VGVK6",
+        created_at: "04.06.2024 03:56"
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: undefined,
+        plate_number: undefined,
+        manufactur_year: undefined,
+        car_description: undefined,
+        car_type: undefined,
+        car_color: undefined,
+        country_name: undefined,
+        country_code: undefined
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "\"session-zwPULaiPh3n2EyHEkztV\"",
++   created_by: {
++     create: UserCreateWithoutViolationsInput | UserUncheckedCreateWithoutViolationsInput,
++     connectOrCreate: UserCreateOrConnectWithoutViolationsInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `created_by` is missing. {"timestamp":"2024-06-04 03:56:48"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "ttt",
+    system_comment: "SSSS",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717451538354_93678427.png",
+          date: "04.06.2024 00:52",
+          localPath: "./public/images/temp_cars/1717451538354_93678427.png",
+          originalName: "1717451538354_93678427.png"
+        }
+      ]
+    },
+    created_at: "04.06.2024 03:56",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "2983292",
+        ticket_image: "http://localhost:3000/public/tickets/2983292.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-8643370208-VGVK6.png",
+        serial_number: "VL-8643370208-VGVK6",
+        created_at: "04.06.2024 03:56"
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: undefined,
+        plate_number: undefined,
+        manufactur_year: undefined,
+        car_description: undefined,
+        car_type: undefined,
+        car_color: undefined,
+        country_name: undefined,
+        country_code: undefined
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "\"session-zwPULaiPh3n2EyHEkztV\"",
++   created_by: {
++     create: UserCreateWithoutViolationsInput | UserUncheckedCreateWithoutViolationsInput,
++     connectOrCreate: UserCreateOrConnectWithoutViolationsInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `created_by` is missing. {"timestamp":"2024-06-04 03:56:48"}
+[31merror[39m: Navigation timeout of 30000 ms exceeded {"timestamp":"2024-06-04 04:14:12"}
+[31merror[39m: Navigation timeout of 30000 ms exceeded {"timestamp":"2024-06-04 04:14:12"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13",
+          localPath: "./public/images/temp_cars/1717463601552_152367773.png",
+          originalName: "1717463601552_152367773.png"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:15",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6042654",
+        ticket_image: "http://localhost:3000/public/tickets/6042654.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-6337941962-5MV0M.png",
+        serial_number: "VL-6337941962-5MV0M",
+        created_at: "04.06.2024 04:15"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: {
+        0: {
+          name: "x-rule",
+          charge: 630,
+          id: 2,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        }
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `localPath`. Available options are marked with ?. {"timestamp":"2024-06-04 04:16:04"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13",
+          localPath: "./public/images/temp_cars/1717463601552_152367773.png",
+          originalName: "1717463601552_152367773.png"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:15",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6042654",
+        ticket_image: "http://localhost:3000/public/tickets/6042654.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-6337941962-5MV0M.png",
+        serial_number: "VL-6337941962-5MV0M",
+        created_at: "04.06.2024 04:15"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: {
+        0: {
+          name: "x-rule",
+          charge: 630,
+          id: 2,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        }
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `localPath`. Available options are marked with ?. {"timestamp":"2024-06-04 04:16:04"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:17",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "1451408",
+        ticket_image: "http://localhost:3000/public/tickets/1451408.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-8549064699-04DMS.png",
+        serial_number: "VL-8549064699-04DMS",
+        created_at: "04.06.2024 04:17"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: {
+        0: {
+          name: "x-rule",
+          charge: 630,
+          id: 2,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        },
++       name: String
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Argument `name` is missing. {"timestamp":"2024-06-04 04:17:25"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:17",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "1451408",
+        ticket_image: "http://localhost:3000/public/tickets/1451408.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-8549064699-04DMS.png",
+        serial_number: "VL-8549064699-04DMS",
+        created_at: "04.06.2024 04:17"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: {
+        0: {
+          name: "x-rule",
+          charge: 630,
+          id: 2,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        },
++       name: String
+      }
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Argument `name` is missing. {"timestamp":"2024-06-04 04:17:25"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:18",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "4974694",
+        ticket_image: "http://localhost:3000/public/tickets/4974694.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-7973656338-I2WTH.png",
+        serial_number: "VL-7973656338-I2WTH",
+        created_at: "04.06.2024 04:18"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: 2,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `id`. Available options are marked with ?. {"timestamp":"2024-06-04 04:18:35"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:18",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "4974694",
+        ticket_image: "http://localhost:3000/public/tickets/4974694.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-7973656338-I2WTH.png",
+        serial_number: "VL-7973656338-I2WTH",
+        created_at: "04.06.2024 04:18"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: 2,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `id`. Available options are marked with ?. {"timestamp":"2024-06-04 04:18:35"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:19",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6554577",
+        ticket_image: "http://localhost:3000/public/tickets/6554577.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-3370033152-UX8G4.png",
+        serial_number: "VL-3370033152-UX8G4",
+        created_at: "04.06.2024 04:19"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `extras`. Available options are marked with ?. {"timestamp":"2024-06-04 04:20:10"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:19",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6554577",
+        ticket_image: "http://localhost:3000/public/tickets/6554577.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-3370033152-UX8G4.png",
+        serial_number: "VL-3370033152-UX8G4",
+        created_at: "04.06.2024 04:19"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            meter_receipt_number: null,
+            meter_number: null,
+            expiry_date: null,
+            paid_amount: null
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `extras`. Available options are marked with ?. {"timestamp":"2024-06-04 04:20:10"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:27",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6833342",
+        ticket_image: "http://localhost:3000/public/tickets/6833342.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-8658818064-C34LR.png",
+        serial_number: "VL-8658818064-C34LR",
+        created_at: "04.06.2024 04:27"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `extras`. Available options are marked with ?. {"timestamp":"2024-06-04 04:27:58"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:27",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6833342",
+        ticket_image: "http://localhost:3000/public/tickets/6833342.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-8658818064-C34LR.png",
+        serial_number: "VL-8658818064-C34LR",
+        created_at: "04.06.2024 04:27"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: {
+            meter_receipt_number: true,
+            meter_number: true,
+            expiry_date: true,
+            paid_amount: true
+          },
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Unknown argument `extras`. Available options are marked with ?. {"timestamp":"2024-06-04 04:27:58"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:29",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "0197612",
+        ticket_image: "http://localhost:3000/public/tickets/0197612.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-6660151725-I388D.png",
+        serial_number: "VL-6660151725-I388D",
+        created_at: "04.06.2024 04:29"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: undefined,
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Argument `meter_receipt_number` is missing. {"timestamp":"2024-06-04 04:29:51"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:29",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "0197612",
+        ticket_image: "http://localhost:3000/public/tickets/0197612.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-6660151725-I388D.png",
+        serial_number: "VL-6660151725-I388D",
+        created_at: "04.06.2024 04:29"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: undefined,
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: null,
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Argument `meter_receipt_number` is missing. {"timestamp":"2024-06-04 04:29:51"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:30",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6665486",
+        ticket_image: "http://localhost:3000/public/tickets/6665486.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-1786422520-LMN7C.png",
+        serial_number: "VL-1786422520-LMN7C",
+        created_at: "04.06.2024 04:30"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: undefined,
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO",
++       car_model: String
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Argument `car_model` must not be null. {"timestamp":"2024-06-04 04:31:10"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "RRRR",
+    system_comment: "sssss",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://localhost:3000/public/images/cars/1717463601552_152367773.png",
+          date: "04.06.2024 04:13"
+        }
+      ]
+    },
+    created_at: "04.06.2024 04:30",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "6665486",
+        ticket_image: "http://localhost:3000/public/tickets/6665486.jpg",
+        print_option: "hand",
+        barcode_image: "http://localhost:3000/public/barcodes/VL-1786422520-LMN7C.png",
+        serial_number: "VL-1786422520-LMN7C",
+        created_at: "04.06.2024 04:30"
+      }
+    },
+    registered_car: undefined,
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 10,
+          extras: undefined,
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        plate_number: "",
+        manufacture_year: null,
+        car_description: null,
+        car_type: "gfsg",
+        car_color: null,
+        country_name: "Norway",
+        country_code: "NO",
++       car_model: String
+      }
+    },
+    is_car_registered: false,
+    registered_car_id: NaN,
+    session_id: "session-XIvmlePnSZtcrTXnYMFp"
+  }
+}
+
+Argument `car_model` must not be null. {"timestamp":"2024-06-04 04:31:10"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 09:02:50"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 09:02:50"}
+[31merror[39m: moment is not defined {"timestamp":"2024-06-04 17:18:26"}
+[31merror[39m: moment is not defined {"timestamp":"2024-06-04 17:18:26"}
+[31merror[39m: Cannot read properties of undefined (reading 'path') {"timestamp":"2024-06-04 17:19:50"}
+[31merror[39m: Cannot read properties of undefined (reading 'path') {"timestamp":"2024-06-04 17:19:50"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 19:41:02"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 19:41:02"}

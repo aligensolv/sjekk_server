@@ -1,20 +1,25 @@
-import moment from "moment"
-import { BAD_REQUEST, INTERNAL_SERVER, NOT_FOUND } from "../constants/status_codes.js"
+import { INTERNAL_SERVER } from "../constants/status_codes.js"
 import CustomError from "../interfaces/custom_error_class.js"
 import promiseAsyncWrapepr from "../middlewares/promise_async_wrapper.js"
-import PartnerModel from "../models/Partner.js"
 import PlaceModel from "../models/Place.js"
-import jwt from 'jsonwebtoken'
-import { jwt_secret_key } from "../config.js"
 import CarLogModel from "../models/CarLogs.js"
+import TimeRepository from "./Time.js"
+
+import { PrismaClient } from "@prisma/client"
 
 class PartnerRepository{
+    static prisma = new PrismaClient()
+
     static getAllPartners(){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let partners = await PartnerModel.find({}).populate({
-                    path: 'owned_places',
-                    ref: 'Place'
+                const partners = await this.prisma.partner.findMany({
+                    where: {
+                      deleted_at: null  
+                    },
+                    include: {
+                        dashboard: true,
+                    }
                 })
 
                 return resolve(partners)
@@ -22,77 +27,65 @@ class PartnerRepository{
         ))
     }
 
-    static getAllPartnerPlaces(id){
+    static getAllPartnerPlaces({ partner_id }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let places = await PlaceModel.find({
-                    partner: id
+                const places = await this.prisma.place.findMany({
+                    where: {
+                        partner_id: +partner_id,
+                        deleted_at: null
+                    }
                 })
+                console.log(partner_id);
+                console.log(places);
 
                 return resolve(places)
             }
         ))
     }
 
-    static getAllPartnerPlacesCount(id){
+    static getAllPartnerPlacesCount({ partner_id }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let places_count = await PlaceModel.countDocuments({
-                    partner: id
+                const count = await this.prisma.place.count({
+                    where: {
+                        partner_id: +partner_id
+                    }
                 })
 
-                return resolve(places_count)
+                return resolve(count)
             }
         ))
     }
 
-    static loginPartner(id, access_code){
+    static deletePartner({ partner_id }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let partner = await PartnerModel.findOne({
-                    _id: id
+                const deleted_at = await TimeRepository.getCurrentTime()
+                const deleted = await this.prisma.partner.update({
+                    where: {
+                        id: +partner_id
+                    },
+                    data: {
+                        deleted_at
+                    }
                 })
 
-                if(!partner){
-                    let partner_not_found_error = new CustomError('No partner was found', NOT_FOUND)
-                    return reject(partner_not_found_error)
-                }
-
-                if(partner.access_code != access_code){
-                    let access_code_not_match = new CustomError('Access code is incorrect', BAD_REQUEST)
-                    return reject(access_code_not_match)
-                }
-
-                let token = jwt.sign({
-                    access_code: access_code,
-                    id: id
-                }, jwt_secret_key)
-
-                return resolve({
-                    token: token,
-                    partner: partner
-                })
+                return resolve(deleted)
             }
         ))
     }
 
-    static deletePartner(id){
+    static createPartner({ name, email, city, postal_code, address, other_address, fax_number, phone_number }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                await PartnerModel.findByIdAndDelete(id)
+                const created_at = await TimeRepository.getCurrentTime()
 
-                return resolve(true)
-            }
-        ))
-    }
-
-    static createPartner(data){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) =>{
-                let created_partner = await PartnerModel.create({
-                    ...data,
-                    created_at: moment().format('DD.MM.YY HH:mm'),
-                    owned_places: []
+                let created_partner = await this.prisma.partner.create({
+                    data: {
+                        name, email, city, postal_code, address, other_address, fax_number, phone_number,
+                        created_at
+                    }
                 })
                 if(!created_partner){
                     let creating_partner_error = new CustomError('Error Creating parking provider', INTERNAL_SERVER)
@@ -104,64 +97,17 @@ class PartnerRepository{
         ))
     }
 
-    static createPartnerLink(partner_id, access_code){
+    static createPartnerDashboard({ partner_id, access_username, access_code }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                let partner = await PartnerModel.findOne({
-                    _id: partner_id
-                })
-                if(!partner){
-                    let partner_not_found_error = new CustomError('Partner was not found', INTERNAL_SERVER)
-                    return reject(partner_not_found_error)
-                }
-
-                partner.access_code = access_code
-                partner.access_link = `https://partner.gensolv.no/partners/${partner_id}`
-
-                await partner.save()
-
-                return resolve(true)
-            }
-        ))
-    }
-
-    
-    static getControlledPlacesTotalRegisteredCars(partner_id){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) =>{
-                let controlled_places = await PlaceModel.find({
-                    partner: partner_id
+                const updated = await this.prisma.partnerDashboard.create({
+                    data: {
+                        access_username, access_code,
+                        partner_id: +partner_id
+                    }
                 })
 
-                let registered_cars_count = 0
-
-                for(let place of controlled_places){
-                    registered_cars_count += await CarLogModel.countDocuments({
-                        'registeration_data.place_id': place._id
-                    })
-                }
-
-                return resolve(registered_cars_count)
-            }
-        ))
-    }
-    
-    static getControlledPlacesRegisterationAverageTime(partner_id){
-        return new Promise(promiseAsyncWrapepr(
-            async (resolve, reject) =>{
-                let controlled_places = await PlaceModel.find({
-                    partner: partner_id
-                })
-
-                let registered_cars_count = 0
-
-                for(let place of controlled_places){
-                    registered_cars_count += await CarLogModel.countDocuments({
-                        'registeration_data.place_id': place._id
-                    })
-                }
-
-                return resolve(registered_cars_count / controlled_places.length)
+                return resolve(updated)
             }
         ))
     }

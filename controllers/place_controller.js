@@ -16,8 +16,8 @@ export const getPlacesCount = asyncWrapper(async (req, res, next) => {
 
 export const getPlace = async (req, res) => {
     try{
-        const { id } = req.params
-        let place = await PlaceRepository.getPlace(id)
+        const { id: place_id } = req.params
+        const place = await PlaceRepository.getPlace({ place_id })
 
         return res.status(OK).json(place)
     }catch(error){
@@ -36,10 +36,10 @@ export const createPlace = asyncWrapper(
 
 export const updatePlace = asyncWrapper(
     async (req, res) => {
-        const { id } = req.params
-        let data = req.body
+        const { id: place_id } = req.params
+        let { location, policy, code, partner_id } = req.body
     
-        let updated = await PlaceRepository.updatePlace(id,data)
+        let updated = await PlaceRepository.updatePlace({ place_id, location, policy, code, partner_id })
     
         return res.status(OK).json({
             success: updated,
@@ -50,8 +50,8 @@ export const updatePlace = asyncWrapper(
 
 export const deletePlace = asyncWrapper(
     async (req, res) => {
-        const { id } = req.params
-        let deleted = await PlaceRepository.deletePlace(id)
+        const { id: place_id } = req.params
+        let deleted = await PlaceRepository.deletePlace({ place_id })
     
         return res.status(OK).json({ 
             success: deleted,
@@ -60,13 +60,10 @@ export const deletePlace = asyncWrapper(
     }
 )
 
-export const deletePlaceProfile = asyncWrapper(
+export const deletePlaceDashboard = asyncWrapper(
     async (req, res) => {
-        const { id, profile_id } = req.params
-        let deleted = await PlaceProfileModel.deleteOne({
-            place: id,
-            _id: profile_id
-        })
+        const { dashboard_id } = req.params
+        let deleted = await PlaceRepository.deletePlaceDashboard({ dashboard_id })
     
         return res.status(OK).json({ 
             success: deleted,
@@ -86,22 +83,22 @@ export const deleteAllPlaces = asyncWrapper(
     }
 )
 
-export const createPlaceLink = asyncWrapper(
+export const createPlaceDashboard = asyncWrapper(
     async (req, res) => {
-        let data = req.body
-        const {id} = req.params
+        const {id: place_id} = req.params
+        const {access_code, access_username, place_name, place_type, free_parking_hours} = req.body
 
-        let result = await PlaceRepository.createPlaceLink(id,data)
+        let result = await PlaceRepository.createPlaceDashboard({ place_id,  access_code, access_username, place_name, place_type, free_parking_hours })
 
         return res.status(OK).json(result)
     }
 )
 
-export const getAllPlaceProfiles = asyncWrapper(
+export const getAllPlaceDashboards = asyncWrapper(
     async (req, res) => {
-        const {id} = req.params
+        const {id: place_id} = req.params
 
-        let result = await PlaceRepository.getAllPlaceProfiles(id)
+        let result = await PlaceRepository.getAllPlaceDashboards({ place_id })
 
         return res.status(OK).json(result)
     }
@@ -119,16 +116,10 @@ export const getPlaceProfile = asyncWrapper(
 
 export const createCarFromPlaceDashboard = asyncWrapper(
     async (req, res) => {
-        const {client} = req.params
-        console.log(req.body);
-        const {
-            plate_number
-        } = req.body
+        const { id: dashboard_id } = req.params
+        const { plate_number } = req.body
 
-        let result = await PlaceRepository.createCarFromPlaceDashboard(plate_number,{
-            registeration_source_id: client,
-            client: client
-        })
+        const result = await PlaceRepository.createCarFromPlaceDashboard({ plate_number, dashboard_id })
 
         return res.status(OK).json(result)
     }
@@ -136,25 +127,10 @@ export const createCarFromPlaceDashboard = asyncWrapper(
 
 export const getAllCarsRegisteredByPlaceDashboard = asyncWrapper(
     async (req, res) => {
-        const {client} = req.params
+        const {id: place_dashboard_id} = req.params
 
-        let result = await PlaceRepository.getAllCarsRegisteredByPlaceDashboard(client)
+        let result = await PlaceRepository.getAllCarsRegisteredByPlaceDashboard({ place_dashboard_id })
 
-        return res.status(OK).json(result)
-    }
-)
-
-export const loginPlace = asyncWrapper(
-    async (req,res,next) => {
-        const {id} = req.params
-        const {access_code} = req.body
-
-        if(!access_code){
-            let access_code_not_provided = new CustomError('Access code not provided', BAD_REQUEST)
-            return next(access_code_not_provided)
-        }
-
-        let result = await PlaceRepository.loginPlace(id,access_code)
         return res.status(OK).json(result)
     }
 )

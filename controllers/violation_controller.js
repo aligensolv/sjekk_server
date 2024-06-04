@@ -1,39 +1,47 @@
-import { jwt_secret_key, static_absolute_files_host, static_files_host } from "../config.js"
+import { jwt_secret_key, static_files_host } from "../config.js"
 import { OK } from "../constants/status_codes.js"
 import asyncWrapper from "../middlewares/async_wrapper.js"
+import Auth from "../repositories/Auth.js"
+import TimeRepository from "../repositories/Time.js"
 import ViolationRepository from "../repositories/Violation.js"
-import jwt from 'jsonwebtoken'
 import ViolationHelperRepository from "../repositories/ViolationHelper.js"
-import moment from "moment"
 
 export const getAllviolations = asyncWrapper(
     async (req,res) =>{
-        let violations = await ViolationRepository.getAllViolations()
+        const violations = await ViolationRepository.getAllViolations()
         return res.status(OK).json(violations)
     }
 )
 
 export const getViolationsCount = asyncWrapper(
     async (req,res) =>{
-        let count = await ViolationRepository.getViolationsCount()
+        const count = await ViolationRepository.getViolationsCount()
         return res.status(OK).send(count)
     }
 )
 
 export const getAllPlaceviolations = asyncWrapper(
     async (req,res) =>{
-        const {id} = req.params
-        const {date} = req.headers
+        const {id: place_id} = req.params
 
-        let violations = await ViolationRepository.getAllPlaceViolations(id, date)
+        const violations = await ViolationRepository.getAllPlaceViolations({ place_id })
         return res.status(OK).json(violations)
     }
 )   
 
+export const getAllUserViolations = asyncWrapper(
+    async (req,res) =>{
+        const {id: user_id} = req.params
+
+        const violations = await ViolationRepository.getAllUserViolations({ user_id })
+        return res.status(OK).json(violations)
+    }
+)
+
 export const getViolation = asyncWrapper(
     async (req,res) =>{
-        const { id } = req.params
-        let violation = await ViolationRepository.getViolation(id)
+        const { id: violation_id } = req.params
+        const violation = await ViolationRepository.getViolation({ violation_id })
         return res.status(OK).json(violation)
     }
 )
@@ -41,65 +49,68 @@ export const getViolation = asyncWrapper(
 
 export const createViolation = asyncWrapper(
     async (req,res) =>{
-        let pre_data = req.body
-        let { token } = req.headers
-
-
-        let plate_info = JSON.parse(pre_data.plate_info)
-        let registered_car_info = JSON.parse(pre_data.registered_car_info)
-        let rules = JSON.parse(pre_data.rules)
-        let is_car_registered = pre_data.is_car_registered == "true"
-
-        const data = {
-            ...pre_data,
-            plate_info,
-            registered_car_info,
-            rules,
-            is_car_registered,
-        }
-
-        
-
-        let decoded = jwt.verify(token, jwt_secret_key)
+        const { 
+            plate_info, 
+            registered_car, 
+            rules, 
+            is_car_registered, 
+            ticket_comment, 
+            system_comment, 
+            place
+        } = req.body
+        const { session_id, token } = req.headers
 
         const images = [];
 
         for (const image of req.files) {
-            const proccessed_image = await ViolationHelperRepository.addDateWatermarkToImage(
+            const processed_image = await ViolationHelperRepository.addDateWatermarkToImage(
                 './public/images/temp_cars/' + image.originalname,
                 image.originalname,
                 image.fieldname
             )
 
             images.push({
-                path: static_files_host + proccessed_image,
+                path: static_files_host + processed_image,
                 date: image.fieldname,
                 localPath: './public/images/temp_cars/' + image.originalname,
                 originalName: image.originalname
             });
         }
 
-        let violation = await ViolationRepository.createViolation({
-            ...data,
-            publisher_identifier: decoded.id,
-            rules: data.rules,
-            images: images
+        const decoded = await Auth.verifyToken(token)
+
+
+
+        const violation = await ViolationRepository.createViolation({
+            user_id: decoded.id,
+            pnid: decoded.pnid,
+            session_id,
+            plate_info: JSON.parse(plate_info),
+            registered_car,
+            rules: JSON.parse(rules),
+            is_car_registered: is_car_registered === 'true',
+            ticket_comment,
+            system_comment,
+            place: JSON.parse(place),
+            images,
+            created_by: decoded.id
         })
-        return res.status(OK).json(violation)
+
+        return res.status(OK).json(true)
     }
 )
 
 export const deleteViolation = asyncWrapper(
     async (req,res) =>{
-        const {id} = req.params
-        let isDeleted = await ViolationRepository.deleteViolation(id)
-        return res.status(OK).send(isDeleted)
+        const { id: violation_id } = req.params
+        const deleted = await ViolationRepository.deleteViolation({ violation_id })
+        return res.status(OK).send(deleted)
     }
 )
 
 export const deleteAllViolations = asyncWrapper(
     async (req,res) =>{
-        let response = await ViolationRepository.deleteAllViolations()
+        const response = await ViolationRepository.deleteAllViolations()
         return res.status(OK).send(response)
     }
 )
@@ -117,20 +128,20 @@ export const deleteAllViolations = asyncWrapper(
 
 export const addImage = asyncWrapper(
     async (req, res) =>{
-        const {id} = req.params
+        const { id: violation_id } = req.params
         const proccessed_image = await ViolationHelperRepository.addDateWatermarkToImage(
             './public/images/temp_cars/' + req.file.originalname,
             req.file.originalname,
-            moment()
+            TimeRepository.getCurrentTime()
         )
 
         const image = {
             path: static_files_host + proccessed_image,
-            date: moment(),
+            date: TimeRepository.getCurrentTime(),
             localPath: './public/images/temp_cars/' + req.file.originalname,
             originalName: req.file.originalname
         }
-        await ViolationRepository.addImage(id, image)
+        await ViolationRepository.addImage({ violation_id, image })
         return res.status(OK).send(static_files_host + proccessed_image)
     }
 )
