@@ -32,7 +32,7 @@ model Car {
   car_type String
   car_description String
   car_color String
-  manufacture_year String @default("2006")
+  manufacture_year String
   registration_type String
   registration_source RegistrationSource
 
@@ -42,7 +42,7 @@ model Car {
   place_id Int
   place Place @relation(fields: [place_id], references: [id])
 
-  violation Violation?
+  violation Violation[]
 
   free_parking_hours Int?
   start_date String

@@ -94,12 +94,11 @@ class CarRepository{
     static createCar({ plate_number, start_date, end_date, registration_type, place_id }) {
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let created_at = await TimeRepository.getCurrentTime()
+                let created_at = TimeRepository.getCurrentTime()
                 let autosys_car_data = await AutosysRepository.getPlateInformation({
                     plate_number: plate_number.toUpperCase().replace(/\s/g, '')
                 })
 
-                console.log(autosys_car_data);
                 if(!autosys_car_data){
                     let not_found_error = new CustomError('Could not find car data', NOT_FOUND)
                     return reject(not_found_error)
@@ -108,9 +107,9 @@ class CarRepository{
                 const car = await this.prisma.car.create({
                     data: {
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
-                        manufactur_year: autosys_car_data.manufactur_year,
+                        manufacture_year: autosys_car_data.manufacture_year,
                         car_model: autosys_car_data.car_model,
-                        car_description: autosys_car_data.description,
+                        car_description: autosys_car_data.car_description,
                         car_color: autosys_car_data.car_color,
                         car_type: autosys_car_data.car_type,
 
@@ -118,6 +117,7 @@ class CarRepository{
                         registration_source: 'system',
                         start_date, end_date, created_at,
                         registration_type,
+                        source_id: null
 
                     }
                 })
@@ -143,7 +143,7 @@ class CarRepository{
                             car_model: autosys_car_data.car_model,
                             car_color: autosys_car_data.car_color,
                             car_type: autosys_car_data.car_type,
-                            car_description: autosys_car_data.description,
+                            car_description: autosys_car_data.car_description,
                             place_id: +place_id
                         }
                     })

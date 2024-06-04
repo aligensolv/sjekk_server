@@ -5845,3 +5845,321 @@ Argument `car_model` must not be null. {"timestamp":"2024-06-04 04:31:10"}
 [31merror[39m: Cannot read properties of undefined (reading 'path') {"timestamp":"2024-06-04 17:19:50"}
 [31merror[39m: jwt expired {"timestamp":"2024-06-04 19:41:02"}
 [31merror[39m: jwt expired {"timestamp":"2024-06-04 19:41:02"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: undefined,
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
+    registration_source: "system",
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:06",
+    registration_type: "shop",
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:06:33"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    manufactur_year: undefined,
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
+    registration_source: "system",
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:06",
+    registration_type: "shop",
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:06:33"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:07",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:07:42"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:07",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:07:42"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:10",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:10:56"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:10",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:10:56"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:13",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:13:01"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:13",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:13:01"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:15",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:15:46"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:15",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:15:46"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:20",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:20:09"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:20",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:20:09"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:30",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:30:26"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "2024-06-05T19:06:26.052Z",
+    end_date: "2024-06-27T19:06:27.418Z",
+    created_at: "04.06.2024 22:30",
+    registration_source: "system",
+    registered_by: "system",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-04 22:30:26"}
