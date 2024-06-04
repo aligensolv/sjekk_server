@@ -15,7 +15,6 @@ dotenv.config({
 
 export const jwt_secret_key = process.env.JWT_SECRET_KEY.trim()
 export const port = process.env.PORT.trim()
-export const socket_port = process.env.SOCKET_PORT.trim()
 export const host = process.env.HOST.trim()
 export const node_env = process.env.NODE_ENV.trim()
 export const is_development = node_env == 'development'
