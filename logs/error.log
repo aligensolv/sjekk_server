@@ -5599,3 +5599,503 @@ Invalid `prisma.carLog.create()` invocation:
 }
 
 Argument `car_description` is missing. {"timestamp":"2024-06-04 22:30:26"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 23:17:32"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-04 23:17:32"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-05 05:46:42"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-05 05:46:42"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 08:13:28"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 08:13:28"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    car_model: "HARLEY-DAVIDSON",
+    car_description: "Tung motorsykkel",
+    car_color: "Grønn",
+    car_type: "KJORETOY",
+    plate_number: "CV8955",
+    start_date: "05.06.2024 08:13",
+    end_date: "05.06.2024 10:13",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 5,
+    place_id: 6,
+    free_parking_hours: 2,
+    created_at: "05.06.2024 08:13",
++   manufacture_year: String
+  }
+}
+
+Argument `manufacture_year` is missing. {"timestamp":"2024-06-05 08:13:48"}
+[31merror[39m: 
+Invalid `prisma.car.create()` invocation:
+
+{
+  data: {
+    car_model: "HARLEY-DAVIDSON",
+    car_description: "Tung motorsykkel",
+    car_color: "Grønn",
+    car_type: "KJORETOY",
+    plate_number: "CV8955",
+    start_date: "05.06.2024 08:13",
+    end_date: "05.06.2024 10:13",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 5,
+    place_id: 6,
+    free_parking_hours: 2,
+    created_at: "05.06.2024 08:13",
++   manufacture_year: String
+  }
+}
+
+Argument `manufacture_year` is missing. {"timestamp":"2024-06-05 08:13:48"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "05.06.2024 08:15",
+    end_date: "05.06.2024 10:15",
+    created_at: "05.06.2024 08:15",
+    registration_source: "gateway",
+    registered_by: "test",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV8955",
+    car_model: "HARLEY-DAVIDSON",
+    car_color: "Grønn",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-05 08:15:10"}
+[31merror[39m: 
+Invalid `prisma.carLog.create()` invocation:
+
+{
+  data: {
+    start_date: "05.06.2024 08:15",
+    end_date: "05.06.2024 10:15",
+    created_at: "05.06.2024 08:15",
+    registration_source: "gateway",
+    registered_by: "test",
+    place_location: "Oslo",
+    place_code: "ALX",
+    place_policy: "no policy",
+    plate_number: "CV8955",
+    car_model: "HARLEY-DAVIDSON",
+    car_color: "Grønn",
+    car_type: "KJORETOY",
+    place_id: 6,
++   car_description: String
+  }
+}
+
+Argument `car_description` is missing. {"timestamp":"2024-06-05 08:15:10"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 08:16:46"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 08:16:46"}
+[31merror[39m: Autosys server error {"timestamp":"2024-06-05 08:57:36"}
+[31merror[39m: Autosys server error {"timestamp":"2024-06-05 08:57:36"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-05 08:57:36"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-05 08:57:36"}
+[31merror[39m: Autosys server error {"timestamp":"2024-06-05 08:58:39"}
+[31merror[39m: Autosys server error {"timestamp":"2024-06-05 08:58:39"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-05 08:58:39"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-05 08:58:39"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-05 09:05:31"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-05 09:05:31"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:35:16"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:35:16"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:36:09"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:36:09"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:38:24"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:38:24"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:39:14"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:39:14"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:40:00"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  where: {
+    place_id: 6,
++   session_id: {
++     equals: String | StringFieldRefInput,
++     in: String[],
++     notIn: String[],
++     lt: String | StringFieldRefInput,
++     lte: String | StringFieldRefInput,
++     gt: String | StringFieldRefInput,
++     gte: String | StringFieldRefInput,
++     contains: String | StringFieldRefInput,
++     startsWith: String | StringFieldRefInput,
++     endsWith: String | StringFieldRefInput,
++     not: String | NestedStringFilter
++   }
+  },
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    plate_info: true,
+    ticket_info: true,
+    images: true
+  }
+}
+
+Argument `session_id` is missing. {"timestamp":"2024-06-05 09:40:00"}

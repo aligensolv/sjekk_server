@@ -23,8 +23,14 @@ export const getViolationsCount = asyncWrapper(
 export const getAllPlaceviolations = asyncWrapper(
     async (req,res) =>{
         const {id: place_id} = req.params
+        const { session_id } = req.headers
 
-        const violations = await ViolationRepository.getAllPlaceViolations({ place_id })
+        console.log(JSON.parse(session_id));
+
+        const violations = await ViolationRepository.getAllPlaceViolations({
+            place_id, 
+            session_id: JSON.parse(session_id) 
+        })
         return res.status(OK).json(violations)
     }
 )   
@@ -33,7 +39,12 @@ export const getAllUserViolations = asyncWrapper(
     async (req,res) =>{
         const {id: user_id} = req.params
 
-        const violations = await ViolationRepository.getAllUserViolations({ user_id })
+        const { session_id } = req.headers
+
+        const violations = await ViolationRepository.getAllUserViolations({
+            user_id, 
+            session_id: JSON.parse(session_id)
+        })
         return res.status(OK).json(violations)
     }
 )

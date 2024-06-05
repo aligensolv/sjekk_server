@@ -6,7 +6,7 @@ import CustomError from "../interfaces/custom_error_class.js"
 import { INTERNAL_SERVER } from "../constants/status_codes.js"
 
 class AutosysRepository{
-    static getPlateInformation({ plate_number }){
+    static  getPlateInformation({ plate_number }){
         console.log(plate_number);
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {

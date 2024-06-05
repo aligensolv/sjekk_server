@@ -49,12 +49,13 @@ class ViolationRepository{
     //     ))
     // }
 
-    static getAllPlaceViolations({ place_id }){
+    static getAllPlaceViolations({ place_id, session_id }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
                 const violations = await this.prisma.violation.findMany({
                     where: {
-                        place_id: +place_id
+                        place_id: +place_id,
+                        session_id
                     },
                     orderBy: {
                         created_at: 'desc'
@@ -69,7 +70,8 @@ class ViolationRepository{
                             }
                         },
                         plate_info: true,
-                        ticket_info: true
+                        ticket_info: true,
+                        images: true
                     }
                 })
 
@@ -80,12 +82,13 @@ class ViolationRepository{
         ))
     }
 
-    static getAllUserViolations({ user_id }){
+    static getAllUserViolations({ user_id, session_id }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve, reject) =>{
                 const violations = await this.prisma.violation.findMany({
                     where: {
-                        user_id: +user_id
+                        user_id: +user_id,
+                        session_id
                     },
                     orderBy: {
                         created_at: 'desc'
@@ -121,7 +124,16 @@ class ViolationRepository{
                     },
                     include: {
                         place: true,
-                        created_by: true
+                        created_by: true,
+                        registered_car: true,
+                        rules: {
+                            include: {
+                                extras_values: true
+                            }
+                        },
+                        images: true,
+                        plate_info: true,
+                        ticket_info: true
                     }
                 })
 

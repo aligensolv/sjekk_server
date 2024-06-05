@@ -44,6 +44,9 @@ class CarRepository{
                     },
                     orderBy: {
                         created_at: 'desc'
+                    },
+                    include:{
+                        place: true
                     }
                 })
 

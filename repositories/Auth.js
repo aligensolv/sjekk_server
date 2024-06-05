@@ -149,7 +149,7 @@ class Auth{
 
                 const token = await this.generateToken({
                     pnid, id: user.id
-                }, '3h')
+                }, '12h')
 
                 const session_id = `session-${randomstring.generate(20)}`
 

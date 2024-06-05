@@ -204,14 +204,14 @@ class PlaceRepository{
 
                 const car = await this.prisma.car.create({
                     data: {
-                        manufacture_year: autosys_car_data.manufacture_year,
-                        car_model: autosys_car_data.car_model,
-                        car_description: autosys_car_data.car_description,
-                        car_color: autosys_car_data.car_color,
-                        car_type: autosys_car_data.car_type,
+                        manufacture_year: autosys_car_data.manufacture_year ?? 'N/A',
+                        car_model: autosys_car_data.car_model ?? 'N/A',
+                        car_description: autosys_car_data.car_description ?? 'N/A',
+                        car_color: autosys_car_data.car_color ?? 'N/A',
+                        car_type: autosys_car_data.car_type ?? 'N/A',
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
                         start_date,
-                        end_date: await TimeRepository.increaseTimeByHours({
+                        end_date: TimeRepository.increaseTimeByHours({
                             hours: +free_parking_hours,
                             current_time: start_date
                         }),
@@ -238,10 +238,10 @@ class PlaceRepository{
                         place_code: place_dashboard.place.code,
                         place_policy: place_dashboard.place.policy,
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
-                        car_model: autosys_car_data.car_model,
-                        car_color: autosys_car_data.car_color,
-                        car_type: autosys_car_data.car_type,
-                        car_description: autosys_car_data.description,
+                        car_model: autosys_car_data.car_model ?? 'N/A',
+                        car_color: autosys_car_data.car_color ?? 'N/A',
+                        car_type: autosys_car_data.car_type ?? 'N/A',
+                        car_description: autosys_car_data.description ?? 'N/A',
                         place_id: place_dashboard.place_id
                     }
                 })
