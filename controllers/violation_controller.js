@@ -29,7 +29,7 @@ export const getAllPlaceviolations = asyncWrapper(
 
         const violations = await ViolationRepository.getAllPlaceViolations({
             place_id, 
-            session_id: JSON.parse(session_id) 
+            session_id
         })
         return res.status(OK).json(violations)
     }
@@ -43,7 +43,7 @@ export const getAllUserViolations = asyncWrapper(
 
         const violations = await ViolationRepository.getAllUserViolations({
             user_id, 
-            session_id: JSON.parse(session_id)
+            session_id
         })
         return res.status(OK).json(violations)
     }

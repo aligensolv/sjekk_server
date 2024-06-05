@@ -132,6 +132,8 @@ class Auth{
                     }
                 })
 
+                console.log(user);
+
                 if(!user){
                     let user_not_found_error = new CustomError('No user was found', NOT_FOUND)
                     return reject(user_not_found_error)

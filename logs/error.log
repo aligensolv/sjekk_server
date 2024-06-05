@@ -6099,3 +6099,25 @@ Invalid `prisma.violation.findMany()` invocation:
 }
 
 Argument `session_id` is missing. {"timestamp":"2024-06-05 09:40:00"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 10:25:19"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 10:25:19"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 10:25:46"}
+[31merror[39m: Car is already registered {"timestamp":"2024-06-05 10:25:46"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:22:52"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:22:52"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:23:24"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:23:24"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:24:34"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:24:34"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:25:10"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:25:10"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:26:33"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:26:33"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:27:57"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:27:57"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-05 11:28:57"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-05 11:28:57"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:29:02"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:29:02"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:30:45"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-06-05 11:30:45"}

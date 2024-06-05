@@ -6,6 +6,7 @@ import ValidatorRepository from "../repositories/Validator.js";
 export const loginUser = asyncWrapper(
     async (req, res, next) => {
         const { pnid, password } = req.body
+        console.log(req.body);
     
         await ValidatorRepository.validateNotNull({ pnid, password })
 
