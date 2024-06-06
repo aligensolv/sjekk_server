@@ -2051,3 +2051,47 @@
 {"level":"error","message":[{"error":"pnid cannot be null or empty","field":"pnid"},{"error":"password cannot be null or empty","field":"password"}],"timestamp":"2024-06-05 11:29:02"}
 {"level":"error","message":[{"error":"pnid cannot be null or empty","field":"pnid"},{"error":"password cannot be null or empty","field":"password"}],"timestamp":"2024-06-05 11:30:45"}
 {"level":"error","message":[{"error":"pnid cannot be null or empty","field":"pnid"},{"error":"password cannot be null or empty","field":"password"}],"timestamp":"2024-06-05 11:30:45"}
+{"level":"error","message":"rules.reduce is not a function","timestamp":"2024-06-05 22:58:44"}
+{"level":"error","message":"rules.reduce is not a function","timestamp":"2024-06-05 22:58:44"}
+{"level":"error","message":"rules.reduce is not a function","timestamp":"2024-06-05 22:59:00"}
+{"level":"error","message":"rules.reduce is not a function","timestamp":"2024-06-05 22:59:00"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-06-05 23:10:26"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-06-05 23:10:26"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-05 23:29:45"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-05 23:29:45"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 00:09:22"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 00:09:22"}
+{"level":"error","message":"jwt must be provided","timestamp":"2024-06-06 09:02:12"}
+{"level":"error","message":"jwt must be provided","timestamp":"2024-06-06 09:02:12"}
+{"level":"error","message":"jwt must be provided","timestamp":"2024-06-06 09:03:36"}
+{"level":"error","message":"jwt must be provided","timestamp":"2024-06-06 09:03:36"}
+{"level":"error","message":"No user was found","timestamp":"2024-06-06 09:05:41"}
+{"level":"error","message":"No user was found","timestamp":"2024-06-06 09:05:41"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2024-06-06 09:24:44"}
+{"level":"error","message":"Unexpected token u in JSON at position 0","timestamp":"2024-06-06 09:24:44"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 09:45:16"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 09:45:16"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 09:47:24"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 09:47:24"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 09:54:34"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 09:54:34"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:13:50"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:13:50"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-06-06 11:13:58"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-06-06 11:13:58"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:13:58"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:13:58"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:15:15"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:15:15"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:15:36"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:15:36"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:19:12"}
+{"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:19:12"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-06-06 11:19:22"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-06-06 11:19:22"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:19:22"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:19:22"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-06-06 11:19:54"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-06-06 11:19:54"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:19:54"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-06 11:19:54"}

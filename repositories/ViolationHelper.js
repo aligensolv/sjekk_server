@@ -121,7 +121,7 @@ class ViolationHelperRepository{
                 });
                 try{
                     const page = await browser.newPage();
-                    let qrcode_image = await this.generateTicketQRCode(data.ticket_number, data.car_info.plate)
+                    let qrcode_image = await this.generateTicketQRCode(data.ticket_number, data.car_info.plate_number)
                     
                     
                     console.log(data.rules);

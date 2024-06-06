@@ -215,7 +215,7 @@ model Shift {
   logins UserPlaceLogin[]
   total_completed_violations Int @default(0)
   created_at String
-
+  session_id String
   user_id Int
   user User @relation(fields: [user_id], references: [id])
 
@@ -277,6 +277,18 @@ model ViolationExtraValues {
   expiry_date String?
 }
 
+model ViolationExtras {
+  id Int @id @default(autoincrement())
+
+  violation_rule_id Int @unique
+  violation_rule ViolationRule @relation(fields: [violation_rule_id], references: [id])
+
+  meter_receipt_number Boolean @default(false)
+  meter_number Boolean @default(false)
+  paid_amount Boolean @default(false)
+  expiry_date Boolean @default(false)
+}
+
 model ViolationRule {
   id Int @id @default(autoincrement())
 
@@ -286,6 +298,7 @@ model ViolationRule {
   name String
   charge Float
   policy_time Int
+  extras ViolationExtras?
   extras_values ViolationExtraValues?
 }
 

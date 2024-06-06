@@ -88,6 +88,8 @@ export const createViolation = asyncWrapper(
             });
         }
 
+        console.log(images);
+
         const decoded = await Auth.verifyToken(token)
 
 
@@ -127,16 +129,6 @@ export const deleteAllViolations = asyncWrapper(
 )
 
 
-// export const updateViolation = asyncWrapper(
-//     async (req,res) =>{
-//         const {id} = req.params
-//         const data = req.body
-
-//         let response = await ViolationRepository.updateViolation(id,data)
-//         return res.status(OK).send(response)
-//     }
-// )
-
 export const addImage = asyncWrapper(
     async (req, res) =>{
         const { id: violation_id } = req.params
@@ -154,5 +146,34 @@ export const addImage = asyncWrapper(
         }
         await ViolationRepository.addImage({ violation_id, image })
         return res.status(OK).send(static_files_host + proccessed_image)
+    }
+)
+
+export const getTicketPreview = asyncWrapper(
+    async (req,res) =>{
+        const { 
+            plate_info, 
+            rules, 
+            ticket_comment, 
+            place
+        } = req.body
+        const { token } = req.headers
+
+        console.log(req.body);
+
+
+        const decoded = await Auth.verifyToken(token)
+
+
+
+        const ticket_preview = await ViolationRepository.getTicketPreview({
+            pnid: decoded.pnid,
+            plate_info: plate_info,
+            rules: rules,
+            ticket_comment,
+            place: place,
+        })
+
+        return res.status(OK).json(ticket_preview)
     }
 )

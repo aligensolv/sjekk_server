@@ -166,6 +166,7 @@ class ViolationRepository{
                     from_date: created_at,
                     to_date: created_at,
                     pnid: pnid,
+                    print_option: 'hand',
                     car_info:{
                         car_model,
                         plate_number,
@@ -221,7 +222,9 @@ class ViolationRepository{
                                     extras_values: {
                                         create: rule.extras_values
                                     },
-                                    extras: undefined,
+                                    extras: {
+                                        create: rule.extras
+                                    },
                                     id: undefined
                                 }))
                             ]
@@ -240,11 +243,11 @@ class ViolationRepository{
                         },
                         is_car_registered,
                         registered_car_id: +registered_car_id,
-                        session_id: JSON.parse(session_id),
+                        session_id: session_id,
                     }
                 })
 
-                return resolve(true)
+                return resolve(created)
             }
         ))
     }
@@ -293,6 +296,57 @@ class ViolationRepository{
                     }
                 })
                 return resolve(image)
+            }
+        ))
+    }
+
+    static getTicketPreview({
+        pnid, ticket_comment, place, rules, plate_info
+    }){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve) =>{
+                let created_at = TimeRepository.getCurrentTime()
+                let ticketNumber = ViolationHelperRepository.generateTicketNumber()
+                
+                const total_charge = rules.reduce((acc,val) => acc + val.charge, 0)
+
+                const serial_number = ViolationHelperRepository.generateRealSerialNumber()
+                let barcode_image = await ViolationHelperRepository.generateTicketBarcode(serial_number)
+
+                const { car_model, plate_number, manufacture_year, car_description, car_type, car_color, country_name, country_code   } = plate_info
+                const { location, code, policy, id: place_id } = place
+
+                let ticket_image = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
+                    ticket_number: ticketNumber,
+                    rules: rules,
+                    ticket_comment: ticket_comment,
+                    from_date: created_at,
+                    to_date: created_at,
+                    pnid: pnid,
+                    print_option: 'hand',
+                    car_info:{
+                        car_model,
+                        plate_number,
+                        manufacture_year,
+                        car_description,
+                        car_type,
+                        car_color,
+                        country_name,
+                        country_code
+                    },
+                    location: location,
+                    ticket_info:{
+                        total_charge: total_charge,
+                        paid_to: 'Sjekk Kontroll',
+                        account_number: account_number,
+                        kid_number: kid_number,
+                        swift_code: swift_code,
+                        iban_number: iban_numner,
+                        payment_date: created_at,
+                    }
+                })
+
+                return resolve(ticket_image)
             }
         ))
     }

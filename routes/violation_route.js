@@ -8,6 +8,7 @@ import {
     getAllPlaceviolations,
     addImage,
     getViolationsCount,
+    getTicketPreview,
 } from '../controllers/violation_controller.js'
 
 import multer from 'multer'
@@ -30,6 +31,8 @@ const router = Router()
 router.get('/violations', getAllviolations)
 router.get('/violations/count', getViolationsCount)
 router.get('/violations/place/:id', getAllPlaceviolations)
+
+router.post('/violations/ticket-preview', getTicketPreview)
 
 
 

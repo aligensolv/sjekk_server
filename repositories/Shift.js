@@ -60,21 +60,21 @@ class ShiftRepository{
         ))
     }
 
-    static createShift({ user_id }){
+    static createShift({ user_id, session_id, pnid }){
         return new Promise(promiseAsyncWrapper(
             async (resolve) => {
-                let current_date = await TimeRepository.getCurrentTime()
-                const user = await this.prisma.user.findUnique({
-                    where: {
-                        id: +user_id
-                    }
-                })
+                let current_date = TimeRepository.getCurrentTime()
+
                 const shift = await this.prisma.shift.create({
                     data: {
                         start_date: current_date,
                         created_at: current_date,
-                        pnid: user.pnid,
-                        user_id: user.id
+                        pnid,
+                        session_id,
+                        user_id: user_id
+                    },
+                    include: {
+                        logins: true
                     }
                 })
 

@@ -116,16 +116,17 @@
             <div><span class="question">Fra</span>: {{from_date}}</div>
             <div><span class="question">Til</span>: {{to_date}}</div>
             <div><span class="question">Levert</span>: {{print_option}}</div>
-            <div><span class="question">Betijent</span>: {{user_identifier}}</div>
+            <div><span class="question">Betijent</span>: {{pniddev
+            }}</div>
         </div>
 
         <div class="car-info">
             <h2>Car Info</h2>
-            <div><span class="question">land</span>: {{car_info.land.country}} - {{car_info.land.code}}</div>
-            <div><span class="question">brand</span>: {{car_info.brand}}</div>
+            <div><span class="question">land</span>: {{car_info.country_name}} - {{car_info.country_code}}</div>
+            <div><span class="question">brand</span>: {{car_info.car_model}}</div>
             <div><span class="question">plate</span>: {{car_info.plate_number}}</div>
-            <div><span class="question">type</span>: {{car_info.type}}</div>
-            <div><span class="question">color</span>: {{car_info.color}}</div>
+            <div><span class="question">type</span>: {{car_info.car_type}}</div>
+            <div><span class="question">color</span>: {{car_info.car_color}}</div>
         </div>
 
         <div class="location">
