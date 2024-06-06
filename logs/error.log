@@ -6165,3 +6165,9 @@ Argument `session_id` is missing. {"timestamp":"2024-06-05 09:40:00"}
 [31merror[39m: Autosys server error {"timestamp":"2024-06-06 11:19:54"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-06 11:19:54"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-06 11:19:54"}
+[31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:05"}
+[31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:05"}
+[31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:09"}
+[31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:09"}
+[31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:57"}
+[31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:57"}

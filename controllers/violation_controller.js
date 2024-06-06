@@ -25,8 +25,6 @@ export const getAllPlaceviolations = asyncWrapper(
         const {id: place_id} = req.params
         const { session_id } = req.headers
 
-        console.log(JSON.parse(session_id));
-
         const violations = await ViolationRepository.getAllPlaceViolations({
             place_id, 
             session_id
