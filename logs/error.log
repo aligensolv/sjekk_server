@@ -6171,3 +6171,43 @@ Argument `session_id` is missing. {"timestamp":"2024-06-05 09:40:00"}
 [31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:09"}
 [31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:57"}
 [31merror[39m: Unexpected token s in JSON at position 0 {"timestamp":"2024-06-06 11:52:57"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 03:36:59"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 03:36:59"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 06:39:50"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 06:39:50"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 08:31:18"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 08:31:18"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-07 08:31:35"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-07 08:31:35"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 08:31:35"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 08:31:35"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-07 08:31:56"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-07 08:31:56"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 08:31:56"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 08:31:56"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 09:52:06"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-07 09:52:06"}

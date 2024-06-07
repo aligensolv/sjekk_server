@@ -321,6 +321,10 @@ model Violation {
   is_car_registered Boolean
   registered_car_id Int? @unique
   registered_car Car? @relation(fields: [registered_car_id], references: [id])
+  
+  place_login_time String
+  print_option String
+
   created_at String
   deleted_at String?
 

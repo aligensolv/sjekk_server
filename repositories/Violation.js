@@ -144,7 +144,7 @@ class ViolationRepository{
 
     static createViolation({
         user_id, pnid, ticket_comment, system_comment, place, rules, session_id,
-        images, plate_info, is_car_registered, registered_car_id
+        images, plate_info, is_car_registered, registered_car, place_login_time, print_option
     }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve) =>{
@@ -167,6 +167,8 @@ class ViolationRepository{
                     to_date: created_at,
                     pnid: pnid,
                     print_option: 'hand',
+                    print_option,
+                    place_login_time,
                     car_info:{
                         car_model,
                         plate_number,
@@ -203,6 +205,8 @@ class ViolationRepository{
                             }))
                         },
                         created_at,
+                        place_login_time,
+                        print_option,
                         total_charge,
                         ticket_info: {
                             create: {
@@ -214,7 +218,6 @@ class ViolationRepository{
                                 created_at
                             }
                         },
-                        registered_car: undefined,
                         rules: {
                             create: [
                                 ...rules.map(rule => ({
@@ -242,7 +245,7 @@ class ViolationRepository{
                             }
                         },
                         is_car_registered,
-                        registered_car_id: +registered_car_id,
+                        registered_car_id: registered_car.id,
                         session_id: session_id,
                     }
                 })

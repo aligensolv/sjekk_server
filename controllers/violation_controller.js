@@ -22,7 +22,7 @@ export const getViolationsCount = asyncWrapper(
 
 export const getAllPlaceviolations = asyncWrapper(
     async (req,res) =>{
-        const {id: place_id} = req.params
+        const { id: place_id } = req.params
         const { session_id } = req.headers
 
         const violations = await ViolationRepository.getAllPlaceViolations({
@@ -65,7 +65,9 @@ export const createViolation = asyncWrapper(
             is_car_registered, 
             ticket_comment, 
             system_comment, 
-            place
+            place,
+            place_login_time,
+            print_option
         } = req.body
         const { session_id, token } = req.headers
 
@@ -97,14 +99,16 @@ export const createViolation = asyncWrapper(
             pnid: decoded.pnid,
             session_id,
             plate_info: JSON.parse(plate_info),
-            registered_car,
+            registered_car: is_car_registered === 'true' ? JSON.parse(registered_car) : null,
             rules: JSON.parse(rules),
             is_car_registered: is_car_registered === 'true',
             ticket_comment,
             system_comment,
             place: JSON.parse(place),
             images,
-            created_by: decoded.id
+            created_by: decoded.id,
+            print_option,
+            place_login_time
         })
 
         return res.status(OK).json(true)

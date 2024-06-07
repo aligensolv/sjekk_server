@@ -2101,3 +2101,19 @@
 {"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:52:09"}
 {"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:52:57"}
 {"level":"error","message":"Unexpected token s in JSON at position 0","timestamp":"2024-06-06 11:52:57"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 03:36:59"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 03:36:59"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 06:39:50"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 06:39:50"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 08:31:18"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 08:31:18"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-07 08:31:35"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-07 08:31:35"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 08:31:35"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 08:31:35"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-07 08:31:56"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-07 08:31:56"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 08:31:56"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 08:31:56"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 09:52:06"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-07 09:52:06"}
