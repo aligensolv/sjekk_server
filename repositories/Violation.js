@@ -163,10 +163,8 @@ class ViolationRepository{
                     ticket_number: ticketNumber,
                     rules: rules,
                     ticket_comment: ticket_comment,
-                    from_date: created_at,
                     to_date: created_at,
                     pnid: pnid,
-                    print_option: 'hand',
                     print_option,
                     place_login_time,
                     car_info:{
@@ -212,7 +210,7 @@ class ViolationRepository{
                             create: {
                                 ticket_number: ticketNumber,
                                 ticket_image,
-                                print_option: 'hand',
+                                print_option,
                                 barcode_image,
                                 serial_number,
                                 created_at
