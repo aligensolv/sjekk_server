@@ -91,6 +91,7 @@ export const createViolation = asyncWrapper(
         console.log(images);
         console.log(session_id);
         console.log(token);
+        console.log(req.headers);
 
         const decoded = await Auth.verifyToken(token)
 
