@@ -156,7 +156,7 @@ class Auth{
                 const session_id = `session-${randomstring.generate(20)}`
 
 
-                return resolve({ token, user, session_id })
+                return resolve({ token, user, 'x-session-id': session_id })
             }
         ))
     }
