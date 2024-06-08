@@ -79,7 +79,7 @@ export const getUserShifts = asyncWrapper(
 
 export const createShift = asyncWrapper(
     async (req,res) =>{
-        const { token, session_id } = req.headers
+        const { token } = req.headers
         console.log(req.headers);
 
         const decoded = await Auth.verifyToken(token)
@@ -87,7 +87,7 @@ export const createShift = asyncWrapper(
         const shift = await ShiftRepository.createShift({
             user_id: decoded.id,
             pnid: decoded.pnid, 
-            session_id
+            session_id: req.headers['x-session-id']
         })
         return res.status(OK).json(shift)
     }

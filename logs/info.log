@@ -7873,3 +7873,7 @@ Invalid `prisma.violation.findMany()` invocation:
 }
 
 Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:57"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-08 11:53:09"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-08 11:53:09"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-08 11:53:29"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-08 11:53:29"}

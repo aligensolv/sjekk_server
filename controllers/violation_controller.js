@@ -23,11 +23,10 @@ export const getViolationsCount = asyncWrapper(
 export const getAllPlaceviolations = asyncWrapper(
     async (req,res) =>{
         const { id: place_id } = req.params
-        const { session_id } = req.headers
 
         const violations = await ViolationRepository.getAllPlaceViolations({
             place_id, 
-            session_id
+            session_id: req.headers['x-session-id']
         })
         return res.status(OK).json(violations)
     }
@@ -37,11 +36,10 @@ export const getAllUserViolations = asyncWrapper(
     async (req,res) =>{
         const {id: user_id} = req.params
 
-        const { session_id } = req.headers
 
         const violations = await ViolationRepository.getAllUserViolations({
             user_id, 
-            session_id
+            session_id: req.headers['x-session-id']
         })
         return res.status(OK).json(violations)
     }
@@ -69,7 +67,7 @@ export const createViolation = asyncWrapper(
             place_login_time,
             print_option
         } = req.body
-        const { session_id, token } = req.headers
+        const { token } = req.headers
 
         const images = [];
 
@@ -89,7 +87,7 @@ export const createViolation = asyncWrapper(
         }
 
         console.log(images);
-        console.log(session_id);
+        console.log(req.headers['x-session-id']);
         console.log(token);
         console.log(req.headers);
 
@@ -101,7 +99,7 @@ export const createViolation = asyncWrapper(
         const violation = await ViolationRepository.createViolation({
             user_id: decoded.id,
             pnid: decoded.pnid,
-            session_id,
+            session_id: req.headers['x-session-id'],
             plate_info: JSON.parse(plate_info),
             registered_car: is_car_registered === 'true' ? JSON.parse(registered_car) : null,
             rules: JSON.parse(rules),
