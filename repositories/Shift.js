@@ -91,19 +91,21 @@ class ShiftRepository{
                         id: +shift_id
                     },
                     data: {
-                        end_date: await TimeRepository.getCurrentTime(),
-                        logins: {
-                            create: [
-                                ...logins.map((login) => {
-                                    return {
-                                        login_time: login.login_time,
-                                        logout_time: login.logout_time,
-                                        place_id: login.place_id
-                                    }
-                                })
-                            ]
-                        }
+                        end_date: TimeRepository.getCurrentTime(),
                     }
+                })
+
+                await this.prisma.userPlaceLogin.createMany({
+                    data: [
+                        ...logins.map((login) => {
+                            return {
+                                login_time: login.login_time,
+                                logout_time: login.logout_time,
+                                place_name: login.place_name,
+                                shift_id: +shift_id,
+                            }
+                        })
+                    ]
                 })
                 return resolve(updated)
             }

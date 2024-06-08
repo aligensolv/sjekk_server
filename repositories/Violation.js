@@ -21,7 +21,16 @@ class ViolationRepository{
                     },
                     include: {
                         place: true,
-                        creaated_by: true
+                        created_by: true,
+                        images: true,
+                        registered_car: true,
+                        rules: {
+                            include: {
+                                extras_values: true,
+                                extras: true
+                            }
+                        },
+                        plate_info: true,
                     }
                 })
                 return resolve(violations)
@@ -243,7 +252,7 @@ class ViolationRepository{
                             }
                         },
                         is_car_registered,
-                        registered_car_id: registered_car.id,
+                        registered_car_id: registered_car != null ? registered_car.id : null,
                         session_id: session_id,
                     }
                 })

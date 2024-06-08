@@ -6211,3 +6211,1101 @@ Please make sure your database server is running at `localhost:3306`. {"timestam
 [31merror[39m: jwt expired {"timestamp":"2024-06-07 08:31:56"}
 [31merror[39m: jwt expired {"timestamp":"2024-06-07 09:52:06"}
 [31merror[39m: jwt expired {"timestamp":"2024-06-07 09:52:06"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-08 05:04:26"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-08 05:04:26"}
+[31merror[39m: Password is incorrect {"timestamp":"2024-06-08 07:34:39"}
+[31merror[39m: Password is incorrect {"timestamp":"2024-06-08 07:34:39"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 09:30:12"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 09:30:12"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 09:30:25"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 09:30:25"}
+[31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2024-06-08 09:31:31"}
+[31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2024-06-08 09:31:31"}
+[31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2024-06-08 09:32:13"}
+[31merror[39m: Unexpected token u in JSON at position 0 {"timestamp":"2024-06-08 09:32:13"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:36",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: "6"
+        }
+      ]
+    }
+  }
+}
+
+Argument `place_name` is missing. {"timestamp":"2024-06-08 09:36:59"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:36",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: "6"
+        }
+      ]
+    }
+  }
+}
+
+Argument `place_name` is missing. {"timestamp":"2024-06-08 09:36:59"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:43",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: "6",
+          place_name: "Oslo"
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `place_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:43:49"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:43",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: "6",
+          place_name: "Oslo"
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `place_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:43:49"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:44",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: 6,
+          place_name: "Oslo"
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `place_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:44:05"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:44",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: 6,
+          place_name: "Oslo"
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `place_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:44:05"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:45",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: 6,
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `place_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:45:26"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:45",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_id: 6,
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `place_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:45:26"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:46",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:46:51"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:46",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:46:51"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:50",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:50:16"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:50",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:50:16"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:58",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:58:42"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 09:58",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 09:58:42"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 10:01",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 10:01:17"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 10:01",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 10:01:17"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 10:02",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 10:02:26"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 10:02",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 10:02:26"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 10:03",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8,
+          place_id: undefined
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 10:03:45"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+{
+  where: {
+    id: 8
+  },
+  data: {
+    end_date: "08.06.2024 10:03",
+    logins: {
+      create: [
+        {
+          login_time: "2024-06-08 09:10:39.898261",
+          logout_time: "08.06.2024 09:31",
+          place_name: "Oslo",
+          shift_id: 8,
+          place_id: undefined
+        }
+      ]
+    }
+  }
+}
+
+Unknown argument `shift_id`. Available options are marked with ?. {"timestamp":"2024-06-08 10:03:45"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 10:13:04"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 10:13:04"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 10:16:16"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 10:16:16"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 10:26:38"}
+[31merror[39m: jwt must be provided {"timestamp":"2024-06-08 10:26:38"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "",
+    system_comment: "",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://192.168.1.5:3000/public/images/cars/1717830765894_45135068.png",
+          date: "08.06.2024 10:12"
+        },
+        {
+          path: "http://192.168.1.5:3000/public/images/cars/1717830780074_171987045.png",
+          date: "08.06.2024 10:13"
+        },
+        {
+          path: "http://192.168.1.5:3000/public/images/cars/1717830971618_131063874.png",
+          date: "08.06.2024 10:16"
+        }
+      ]
+    },
+    created_at: "08.06.2024 10:30",
+    place_login_time: "٠٨.٠٦.٢٠٢٤ ١٠:٠٩",
+    print_option: "Fastet på kjøretøyet",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "2232188",
+        ticket_image: "http://192.168.1.5:3000/public/tickets/2232188.jpg",
+        print_option: "Fastet på kjøretøyet",
+                      ~~~~~~~~~~~~~~~~~~~~~~
+        barcode_image: "http://192.168.1.5:3000/public/barcodes/VL-2906889456-RP0M5.png",
+        serial_number: "VL-2906889456-RP0M5",
+        created_at: "08.06.2024 10:30"
+      }
+    },
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 1,
+          extras: {
+            create: {
+              meter_receipt_number: true,
+              meter_number: true,
+              expiry_date: true,
+              paid_amount: true
+            }
+          },
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: "PEUGEOT",
+        plate_number: "CV89558",
+        manufacture_year: "2018",
+        car_description: "Varebil kl 2",
+        car_type: "KJORETOY",
+        car_color: "Grå",
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: true,
+    registered_car_id: 11,
+    session_id: "session-DPcmbzOPDCFT7eDg1BDS"
+  }
+}
+
+Invalid value for argument `print_option`. Expected PrintOption. {"timestamp":"2024-06-08 10:30:46"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+{
+  data: {
+    user_id: 1,
+    ticket_comment: "",
+    system_comment: "",
+    place_id: 6,
+    images: {
+      create: [
+        {
+          path: "http://192.168.1.5:3000/public/images/cars/1717830765894_45135068.png",
+          date: "08.06.2024 10:12"
+        },
+        {
+          path: "http://192.168.1.5:3000/public/images/cars/1717830780074_171987045.png",
+          date: "08.06.2024 10:13"
+        },
+        {
+          path: "http://192.168.1.5:3000/public/images/cars/1717830971618_131063874.png",
+          date: "08.06.2024 10:16"
+        }
+      ]
+    },
+    created_at: "08.06.2024 10:30",
+    place_login_time: "٠٨.٠٦.٢٠٢٤ ١٠:٠٩",
+    print_option: "Fastet på kjøretøyet",
+    total_charge: 630,
+    ticket_info: {
+      create: {
+        ticket_number: "2232188",
+        ticket_image: "http://192.168.1.5:3000/public/tickets/2232188.jpg",
+        print_option: "Fastet på kjøretøyet",
+                      ~~~~~~~~~~~~~~~~~~~~~~
+        barcode_image: "http://192.168.1.5:3000/public/barcodes/VL-2906889456-RP0M5.png",
+        serial_number: "VL-2906889456-RP0M5",
+        created_at: "08.06.2024 10:30"
+      }
+    },
+    rules: {
+      create: [
+        {
+          name: "x-rule",
+          charge: 630,
+          id: undefined,
+          policy_time: 1,
+          extras: {
+            create: {
+              meter_receipt_number: true,
+              meter_number: true,
+              expiry_date: true,
+              paid_amount: true
+            }
+          },
+          extras_values: {
+            create: {
+              meter_receipt_number: null,
+              meter_number: null,
+              expiry_date: null,
+              paid_amount: null
+            }
+          }
+        }
+      ]
+    },
+    plate_info: {
+      create: {
+        car_model: "PEUGEOT",
+        plate_number: "CV89558",
+        manufacture_year: "2018",
+        car_description: "Varebil kl 2",
+        car_type: "KJORETOY",
+        car_color: "Grå",
+        country_name: "Norway",
+        country_code: "NO"
+      }
+    },
+    is_car_registered: true,
+    registered_car_id: 11,
+    session_id: "session-DPcmbzOPDCFT7eDg1BDS"
+  }
+}
+
+Invalid value for argument `print_option`. Expected PrintOption. {"timestamp":"2024-06-08 10:30:46"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Unique constraint failed on the constraint: `Violation_registered_car_id_key` {"timestamp":"2024-06-08 10:32:14"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Unique constraint failed on the constraint: `Violation_registered_car_id_key` {"timestamp":"2024-06-08 10:32:14"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Unique constraint failed on the constraint: `Violation_registered_car_id_key` {"timestamp":"2024-06-08 10:35:35"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Unique constraint failed on the constraint: `Violation_registered_car_id_key` {"timestamp":"2024-06-08 10:35:35"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:36:00"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:36:00"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-06-08 10:36:12"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-06-08 10:36:12"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-06-08 10:36:45"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-06-08 10:36:45"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-06-08 10:37:12"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-06-08 10:37:12"}
+[31merror[39m: No user was found {"timestamp":"2024-06-08 10:38:07"}
+[31merror[39m: No user was found {"timestamp":"2024-06-08 10:38:07"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-08 10:39:23"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-08 10:39:23"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-06-08 10:40:19"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-06-08 10:40:19"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-06-08 10:41:10"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-06-08 10:41:10"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-06-08 10:41:34"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-06-08 10:41:34"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:43:59"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:43:59"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:01"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:01"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:02"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:02"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:02"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:02"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:03"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:03"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:04"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:04"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:57"}
+[31merror[39m: 
+Invalid `prisma.violation.findMany()` invocation:
+
+{
+  orderBy: {
+    created_at: "desc"
+  },
+  include: {
+    place: true,
+    creaated_by: true,
+    ~~~~~~~~~~~
+?   created_by?: true,
+?   images?: true,
+?   ticket_info?: true,
+?   plate_info?: true,
+?   registered_car?: true,
+?   rules?: true
+  }
+}
+
+Unknown field `creaated_by` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-06-08 10:44:57"}

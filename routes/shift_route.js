@@ -23,6 +23,6 @@ router.get('/shifts/date', getShiftsByDate)
 
 
 router.post('/shifts', createShift)
-router.post('/shifts/:id/end',endShift)
+router.post('/shifts/:id/submit',endShift)
 
 export default router

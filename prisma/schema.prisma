@@ -245,17 +245,11 @@ model PlateInfo {
   country_code String?
 }
 
-enum PrintOption {
-  hand
-  post
-  email
-}
-
 model TicketInfo {
   id Int @id @default(autoincrement())
   ticket_number String
   ticket_image String
-  print_option PrintOption
+  print_option String
   payment_date String?
   barcode_image String
   serial_number String
@@ -319,7 +313,7 @@ model Violation {
 
   plate_info PlateInfo?
   is_car_registered Boolean
-  registered_car_id Int? @unique
+  registered_car_id Int?
   registered_car Car? @relation(fields: [registered_car_id], references: [id])
   
   place_login_time String
