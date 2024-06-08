@@ -111,8 +111,8 @@ class ViolationHelperRepository{
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) => {
                 const browser = await puppeteer.launch({
-                    // headless: 'true',
-                    // args:['--no-sandbox'],
+                    headless: 'true',
+                    args:['--no-sandbox'],
                     defaultViewport:{
                         width: 800,
                         height: 600,
