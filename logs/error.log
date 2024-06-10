@@ -7313,3 +7313,19 @@ Unknown field `creaated_by` for include statement on model `Violation`. Availabl
 [31merror[39m: Could not find car {"timestamp":"2024-06-08 11:53:09"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-08 11:53:29"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-08 11:53:29"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-09 08:24:36"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-09 08:24:36"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:27:13"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:27:13"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:29:28"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:29:28"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:32:04"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:32:04"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:33:02"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-09 10:33:02"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-10 05:09:40"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-10 05:09:40"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-10 13:40:21"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-10 13:40:21"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-10 13:40:22"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-10 13:40:22"}
