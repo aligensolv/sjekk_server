@@ -1,188 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kontrollsanksjon</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
-        *:not(h3,h2,h1){
-            /* font-family: sans-serif; */
-            font-size: 12px;
-        }
-
-        *{
+        body {
             font-family: 'Kdam Thmor Pro', sans-serif;
-
-        }
-
-        .img{
-            mix-blend-mode: multiply;
-        }
-
-        .container{
-            width: 200px;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding-top: 20px; /* Extra padding to ensure nothing gets cut off at the top */
+        }
+
+        .container {
+            width: 350px;
             background-color: #f2d35c;
-            padding: 12px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #000;
         }
 
-        body{
-            display: grid;
-            place-content: center;
+        header p {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
         }
 
-        hr{
+        h2 {
+            text-align: left;
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 2px solid #000; /* Line under h2 */
+            padding-bottom: 5px;
+        }
+
+        hr {
+            border: 0;
             height: 2px;
             background-color: black;
-            border: 0;
         }
 
-        .rules{
-            word-wrap: break-word;
-            width: 100%;
-            height: 100%;
+        .info-section {
+            margin: 15px 0;
         }
 
-        .car-info{
-            text-align: start !important;
+        .info-section h2 {
+            margin-bottom: 5px;
         }
 
-
-        /* .info > div{
-            display: inline-block;
-        } */
-
-        .info{
-            margin-bottom: 12px;
+        .info-section div {
+            margin-bottom: 8px;
         }
 
-        a{
+        .info-section p {
+            margin: 0;
+        }
+
+        .info-section a {
+            color: #007BFF;
             text-decoration: none;
-            color: rgb(6, 114, 209);
         }
 
-        .question{
-            font-size: 14px;
+        .info-section a:hover {
+            text-decoration: underline;
         }
-
-        .ticket-row{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .comment p{
-            color: rgb(187, 10, 10);
-        }
-
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="{{host}}images/full_kontroll.png" alt="" width="100%" >
-            <img src="{{barcode_image}}" alt="" width="100%" >
-            <p><span class="question">Org. nr</span>: 94646464</p>
+            <p>ParkSync</p>
+            <p><strong>Org. nr:</strong> 933 521 796</p>
         </header>
+        
+        <hr>
 
-        <div class="wrapped-title">
-            <hr>
-            SjekK Control Packet
-            <hr>
+        <h2>Kontrollsanksjon</h2>
+
+        <p><strong>Sanksjonsnummer:</strong> {{ticket_number}}</p>
+
+        <div class="info-section">
+            <h2>Notat</h2>
+            <p>{{paper_comment}}</p>
         </div>
-        <p><span class="question">Blankettnr</span>: {{ticket_number}}</p>
-        <div class="comment">
-            <h2>Note</h2>
-            <p>
-                {{paper_comment}}
-            </p>
-        </div>
-        {{#if rules.length}}
+
+        <div class="info-section">
+            <h2>Overtredelse</h2>
             <div class="rules">
                 {{#each rules}}
-                    <div class="rule">
-                        <p>
-                            {{name}} ({{charge}} Kr)
-                        </p>
-                    </div>
+                    <p>{{name}} ({{charge}} Kr)</p>
                 {{/each}}
-                
             </div>
-        {{/if}}
-        <div class="info">
-            <div><span class="question">Fra</span>: {{place_login_time}}</div>
-            <div><span class="question">Til</span>: {{to_date}}</div>
-            <div><span class="question">Levert</span>: {{print_option}}</div>
-            <div><span class="question">Betijent</span>: {{pniddev}}</div>
         </div>
 
-        <div class="car-info">
-            <h2>Car Info</h2>
-            <div><span class="question">land</span>: {{car_info.country_name}} - {{car_info.country_code}}</div>
-            <div><span class="question">brand</span>: {{car_info.car_model}}</div>
-            <div><span class="question">plate</span>: {{car_info.plate_number}}</div>
-            <div><span class="question">type</span>: {{car_info.car_type}}</div>
-            <div><span class="question">color</span>: {{car_info.car_color}}</div>
+        <div class="info-section">
+            <h2>Kjøretøy</h2>
+            <p><strong>Land:</strong> {{car_info.country_name}} - {{car_info.country_code}}</p>
+            <p><strong>Merke:</strong> {{car_info.car_model}}</p>
+            <p><strong>Skilt:</strong> {{car_info.plate_number}}</p>
+            <p><strong>Type:</strong> {{car_info.car_type}}</p>
+            <p><strong>Farge:</strong> {{car_info.car_color}}</p>
         </div>
 
-        <div class="location">
+        <div class="info-section">
             <h2>Sted</h2>
-            <div>{{location}}</div>
+            <p>{{location}}</p>
         </div>
 
-        <div class="ticket-info">
-            <h2>Ticket Info</h2>
-            <div><span class="question">total</span>: {{ticket_info.total_charge}} Kr</div>
-            <div><span class="question">paid to</span>: {{ticket_info.paid_to}}</div>
-            <div><span class="question">account</span>: {{ticket_info.account_number}}</div>
-            <div><span class="question">KID</span>: {{ticket_info.kid_number}}</div>
-            <div><span class="question">date</span>: {{ticket_info.payment_date}}</div>
-            <br>
-            <div><span class="question">IBAN</span>: {{ticket_info.iban_number}}</div>
-            <div><span class="question">SWIFT</span>: {{ticket_info.swift_code}}</div>
+        <div class="info-section">
+            <h2>Billettinformasjon</h2>
+            <p><strong>Total:</strong> {{ticket_info.total_charge}} Kr</p>
+            <p><strong>Betales til:</strong> {{ticket_info.paid_to}}</p>
+            <p><strong>Konto:</strong> {{ticket_info.account_number}}</p>
+            <p><strong>KID:</strong> {{ticket_info.kid_number}}</p>
+            <p><strong>Dato:</strong> {{ticket_info.payment_date}}</p>
+            <p><strong>IBAN:</strong> {{ticket_info.iban_number}}</p>
+            <p><strong>SWIFT:</strong> {{ticket_info.swift_code}}</p>
         </div>
 
-        <div class="constant-add-later">
-            <h2>NOTIFIKASJON</h2>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur consequuntur veniam sed nostrum dicta placeat corporis
-            </div>
+        <div class="info-section">
+            <h2>Hjemmel for håndheving</h2>
+            <p>Kontrollsanksjoner er utstedt med hjemmel i parkeringsforskriften (p.forskr.) § 36 for parkering i strid med skilt eller forskriftsbestemmelse slik angitt overtredelsessak(e).</p>
         </div>
-        <div class="constant-add-later">
-            <h2>Hjemmel for handheving</h2>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur consequuntur veniam sed nostrum dicta placeat corporis
-            </div>
+
+        <div class="info-section">
+            <h2>Betalingsansvar</h2>
+            <p>Betalingsfristen er 3 uker fra datoen sanksjonen ble utstedt. Både eieren og føreren av kjøretøyet er felles ansvarlige for å betale kontrollsanksjonen, i henhold til Forskrift om vilkårsparkering av 18. mars 2016 nr. 260 § 37. Inndrivelse vil bli gjennomført i samsvar med inkassoloven og lov om tvangsfullbyrdelse.</p>
         </div>
-        <div class="constant-add-later">
-            <h2>Betalingsanavar</h2>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur consequuntur veniam sed nostrum dicta placeat corporis
-            </div>
-        </div>
-        <div class="constant-add-later">
+
+        <div class="info-section">
             <h2>Klage</h2>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A consectetur consequuntur veniam sed nostrum dicta placeat corporis
-            </div>
-        </div>
-        <br>
-        <div class="constant-add-later">
-            <div>
-                For more information, visit <a href="https://client.gensolv.no">https://client.gensolv.no</a>
-            </div>
+            <p>Klagefristen er 3 uker fra datoen sanksjonen ble utstedt. Både eieren og føreren, eller en person med fullmakt fra disse, har rett til å klage på sanksjonen, i henhold til parkeringsforskriften § 44. Klagen må være begrunnet og inneholde navn, adresse, sanksjonsnummer, og registreringsnummer på kjøretøyet.</p>
         </div>
 
-        <img 
-            src="{{host}}{{qrcode_image}}" 
-            alt="qrcode" 
-            class="img"
-            width="100%"
-            height="100%"
-        >
+        <div class="info-section">
+            <p>For mer informasjon om sanksjonen og for å registrere en klage elektronisk, besøk <a href="parksync.no">www.parksync.no  </a>  eller bruk QR-koden nederst.</p> <br> Vakt telefon 21 45 64 56
+        </div>
+
+        <footer>
+            <p>Parksync AS, Jacobine Ryes vei, 0987 Oslo</p>
+            <img src="{{host}}{{qrcode_image}}" alt="QR-kode" class="img">
+        </footer>
     </div>
 </body>
 </html>
