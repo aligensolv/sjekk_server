@@ -9,6 +9,7 @@ import {
     addImage,
     getViolationsCount,
     getTicketPreview,
+    getViolationByTicketNumber,
 } from '../controllers/violation_controller.js'
 
 import multer from 'multer'
@@ -37,6 +38,7 @@ router.post('/violations/ticket-preview', getTicketPreview)
 
 
 router.get('/violations/:id', getViolation)
+router.get('/violations/number/:id', getViolationByTicketNumber)
 
 
 router.put('/violations/:id/images',upload.single('image'), addImage)

@@ -107,7 +107,7 @@ app.get('*', (req, res) => {
 
 const main = async () => {
     try{
-        server.listen(port, '0.0.0.0', () => console.log(`[server] listening on ${port}`))
+        server.listen(port, () => console.log(`[server] listening on ${port}`))
     }catch(err){
         logger.error(err.message)
     }

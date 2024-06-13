@@ -30,6 +30,7 @@ class ViolationRepository{
                                 extras: true
                             }
                         },
+                        ticket_info: true,
                         plate_info: true,
                     }
                 })
@@ -151,52 +152,56 @@ class ViolationRepository{
         ))
     }
 
+    static getViolationByTicketNumber({ ticket_number }){
+        return new Promise(promiseAsyncWrapepr(
+            async(resolve, reject) =>{
+                const ticketInfo = await this.prisma.ticketInfo.findFirst({
+                    where: {
+                        ticket_number
+                    }
+                })
+
+                if(!ticketInfo) return reject(new CustomError('Ticket not found', NOT_FOUND))
+
+                const violation = await this.prisma.violation.findFirst({
+                    where: {
+                        id: ticketInfo.violation_id
+                    },
+                    include: {
+                        place: true,
+                        created_by: true,
+                        registered_car: true,
+                        rules: {
+                            include: {
+                                extras_values: true,
+                                extras: true
+                            }
+                        },
+                        images: true,
+                        plate_info: true,
+                        ticket_info: true
+                    }
+                })
+
+                return resolve(violation)
+            }
+        ))
+    }
+
     static createViolation({
         user_id, pnid, ticket_comment, system_comment, place, rules, session_id,
-        images, plate_info, is_car_registered, registered_car, place_login_time, print_option
+        images, plate_info, is_car_registered, registered_car, place_login_time, print_option,
+        serial_number, barcode_image, ticket_image
     }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve) =>{
                 let created_at = await TimeRepository.getCurrentTime()
-                let ticketNumber = ViolationHelperRepository.generateTicketNumber()
                 
                 const total_charge = rules.reduce((acc,val) => acc + val.charge, 0)
 
-                const serial_number = ViolationHelperRepository.generateRealSerialNumber()
-                let barcode_image = await ViolationHelperRepository.generateTicketBarcode(serial_number)
 
                 const { car_model, plate_number, manufacture_year, car_description, car_type, car_color, country_name, country_code   } = plate_info
                 const { location, code, policy, id: place_id } = place
-
-                let ticket_image = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
-                    ticket_number: ticketNumber,
-                    rules: rules,
-                    ticket_comment: ticket_comment,
-                    to_date: created_at,
-                    pnid: pnid,
-                    print_option,
-                    place_login_time,
-                    car_info:{
-                        car_model,
-                        plate_number,
-                        manufacture_year,
-                        car_description,
-                        car_type,
-                        car_color,
-                        country_name,
-                        country_code
-                    },
-                    location: location,
-                    ticket_info:{
-                        total_charge: total_charge,
-                        paid_to: 'Sjekk Kontroll',
-                        account_number: account_number,
-                        kid_number: kid_number,
-                        swift_code: swift_code,
-                        iban_number: iban_numner,
-                        payment_date: created_at,
-                    }
-                })
 
 
                 const created = await this.prisma.violation.create({
@@ -311,7 +316,7 @@ class ViolationRepository{
     }
 
     static getTicketPreview({
-        pnid, ticket_comment, place, rules, plate_info
+        pnid, ticket_comment, place, rules, plate_info, print_option, place_login_time
     }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve) =>{
@@ -326,14 +331,15 @@ class ViolationRepository{
                 const { car_model, plate_number, manufacture_year, car_description, car_type, car_color, country_name, country_code   } = plate_info
                 const { location, code, policy, id: place_id } = place
 
-                let ticket_image = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
+                let { ticket_link, qrcode_link } = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
                     ticket_number: ticketNumber,
                     rules: rules,
                     ticket_comment: ticket_comment,
                     from_date: created_at,
                     to_date: created_at,
                     pnid: pnid,
-                    print_option: 'hand',
+                    print_option,
+                    place_login_time,
                     car_info:{
                         car_model,
                         plate_number,
@@ -356,7 +362,7 @@ class ViolationRepository{
                     }
                 })
 
-                return resolve(ticket_image)
+                return resolve({ ticket_link, qrcode_link, serial_number, ticket_number: ticketNumber, barcode_link: barcode_image })
             }
         ))
     }

@@ -7373,3 +7373,261 @@ Unknown field `creaated_by` for include statement on model `Violation`. Availabl
 [31merror[39m: Could not find car {"timestamp":"2024-06-11 13:19:58"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-11 13:22:36"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-11 13:22:36"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-12 06:31:56"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-12 06:31:56"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:32:22"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:32:22"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:34:37"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:34:37"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:36:11"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:36:11"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:52:37"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 06:52:37"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:01:38"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:01:38"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:11:00"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:11:00"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:13:53"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:13:53"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:17:40"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:17:40"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:19:19"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 07:19:19"}
+[31merror[39m: 
+Invalid `prisma.violation.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-06-12 09:16:03"}
+[31merror[39m: 
+Invalid `prisma.violation.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-06-12 09:16:03"}
+[31merror[39m: 
+Invalid `prisma.violation.findUnique()` invocation:
+
+{
+  where: {
+    ticket_info: {
+      ticket_number: undefined
+    },
+?   id?: Int,
+?   AND?: ViolationWhereInput | ViolationWhereInput[],
+?   OR?: ViolationWhereInput[],
+?   NOT?: ViolationWhereInput | ViolationWhereInput[],
+?   user_id?: IntFilter | Int,
+?   ticket_comment?: StringFilter | String,
+?   system_comment?: StringFilter | String,
+?   place_id?: IntFilter | Int,
+?   total_charge?: FloatFilter | Float,
+?   is_car_registered?: BoolFilter | Boolean,
+?   registered_car_id?: IntNullableFilter | Int | Null,
+?   place_login_time?: StringFilter | String,
+?   print_option?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   deleted_at?: StringNullableFilter | String | Null,
+?   is_locked?: BoolFilter | Boolean,
+?   session_id?: StringFilter | String,
+?   created_by?: UserRelationFilter | UserWhereInput,
+?   images?: ViolationImageListRelationFilter,
+?   place?: PlaceRelationFilter | PlaceWhereInput,
+?   plate_info?: PlateInfoNullableRelationFilter | PlateInfoWhereInput | Null,
+?   registered_car?: CarNullableRelationFilter | CarWhereInput | Null,
+?   rules?: ViolationRuleListRelationFilter
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Argument `where` of type ViolationWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?. {"timestamp":"2024-06-12 09:16:37"}
+[31merror[39m: 
+Invalid `prisma.violation.findUnique()` invocation:
+
+{
+  where: {
+    ticket_info: {
+      ticket_number: undefined
+    },
+?   id?: Int,
+?   AND?: ViolationWhereInput | ViolationWhereInput[],
+?   OR?: ViolationWhereInput[],
+?   NOT?: ViolationWhereInput | ViolationWhereInput[],
+?   user_id?: IntFilter | Int,
+?   ticket_comment?: StringFilter | String,
+?   system_comment?: StringFilter | String,
+?   place_id?: IntFilter | Int,
+?   total_charge?: FloatFilter | Float,
+?   is_car_registered?: BoolFilter | Boolean,
+?   registered_car_id?: IntNullableFilter | Int | Null,
+?   place_login_time?: StringFilter | String,
+?   print_option?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   deleted_at?: StringNullableFilter | String | Null,
+?   is_locked?: BoolFilter | Boolean,
+?   session_id?: StringFilter | String,
+?   created_by?: UserRelationFilter | UserWhereInput,
+?   images?: ViolationImageListRelationFilter,
+?   place?: PlaceRelationFilter | PlaceWhereInput,
+?   plate_info?: PlateInfoNullableRelationFilter | PlateInfoWhereInput | Null,
+?   registered_car?: CarNullableRelationFilter | CarWhereInput | Null,
+?   rules?: ViolationRuleListRelationFilter
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    rules: {
+      include: {
+        extras_values: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Argument `where` of type ViolationWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?. {"timestamp":"2024-06-12 09:16:37"}
+[31merror[39m: this.prisma.violation.find is not a function {"timestamp":"2024-06-12 09:17:08"}
+[31merror[39m: this.prisma.violation.find is not a function {"timestamp":"2024-06-12 09:17:08"}
+[31merror[39m: 
+Invalid `prisma.ticketInfo.findUnique()` invocation:
+
+{
+  where: {
+    ticket_number: undefined,
+?   id?: Int,
+?   violation_id?: Int,
+?   AND?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   OR?: TicketInfoWhereInput[],
+?   NOT?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   ticket_image?: StringFilter | String,
+?   print_option?: StringFilter | String,
+?   payment_date?: StringNullableFilter | String | Null,
+?   barcode_image?: StringFilter | String,
+?   serial_number?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   violation?: ViolationRelationFilter | ViolationWhereInput
+  }
+}
+
+Argument `where` of type TicketInfoWhereUniqueInput needs at least one of `id`, `ticket_number` or `violation_id` arguments. Available options are marked with ?. {"timestamp":"2024-06-12 09:21:47"}
+[31merror[39m: 
+Invalid `prisma.ticketInfo.findUnique()` invocation:
+
+{
+  where: {
+    ticket_number: undefined,
+?   id?: Int,
+?   violation_id?: Int,
+?   AND?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   OR?: TicketInfoWhereInput[],
+?   NOT?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   ticket_image?: StringFilter | String,
+?   print_option?: StringFilter | String,
+?   payment_date?: StringNullableFilter | String | Null,
+?   barcode_image?: StringFilter | String,
+?   serial_number?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   violation?: ViolationRelationFilter | ViolationWhereInput
+  }
+}
+
+Argument `where` of type TicketInfoWhereUniqueInput needs at least one of `id`, `ticket_number` or `violation_id` arguments. Available options are marked with ?. {"timestamp":"2024-06-12 09:21:47"}
+[31merror[39m: 
+Invalid `prisma.ticketInfo.findUnique()` invocation:
+
+{
+  where: {
+    ticket_number: undefined,
+?   id?: Int,
+?   violation_id?: Int,
+?   AND?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   OR?: TicketInfoWhereInput[],
+?   NOT?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   ticket_image?: StringFilter | String,
+?   print_option?: StringFilter | String,
+?   payment_date?: StringNullableFilter | String | Null,
+?   barcode_image?: StringFilter | String,
+?   serial_number?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   violation?: ViolationRelationFilter | ViolationWhereInput
+  }
+}
+
+Argument `where` of type TicketInfoWhereUniqueInput needs at least one of `id`, `ticket_number` or `violation_id` arguments. Available options are marked with ?. {"timestamp":"2024-06-12 09:22:08"}
+[31merror[39m: 
+Invalid `prisma.ticketInfo.findUnique()` invocation:
+
+{
+  where: {
+    ticket_number: undefined,
+?   id?: Int,
+?   violation_id?: Int,
+?   AND?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   OR?: TicketInfoWhereInput[],
+?   NOT?: TicketInfoWhereInput | TicketInfoWhereInput[],
+?   ticket_image?: StringFilter | String,
+?   print_option?: StringFilter | String,
+?   payment_date?: StringNullableFilter | String | Null,
+?   barcode_image?: StringFilter | String,
+?   serial_number?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   violation?: ViolationRelationFilter | ViolationWhereInput
+  }
+}
+
+Argument `where` of type TicketInfoWhereUniqueInput needs at least one of `id`, `ticket_number` or `violation_id` arguments. Available options are marked with ?. {"timestamp":"2024-06-12 09:22:08"}
+[31merror[39m: this.prisma.ticketInfo.find is not a function {"timestamp":"2024-06-12 09:22:36"}
+[31merror[39m: this.prisma.ticketInfo.find is not a function {"timestamp":"2024-06-12 09:22:36"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 12:07:25"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 12:07:25"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 12:26:48"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-12 12:26:48"}

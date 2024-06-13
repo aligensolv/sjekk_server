@@ -37,10 +37,9 @@
         h2 {
             text-align: left;
             margin: 10px 0;
-            font-size: 16px;
             font-weight: bold;
-            border-bottom: 2px solid #000; /* Line under h2 */
             padding-bottom: 5px;
+            font-size: 40px !important;
         }
 
         hr {
@@ -55,6 +54,7 @@
 
         .info-section h2 {
             margin-bottom: 5px;
+            font-size: 32px !important;
         }
 
         .info-section div {
@@ -63,6 +63,8 @@
 
         .info-section p {
             margin: 0;
+            font-size: 20px;
+            font-weight: bold;
         }
 
         .info-section a {
@@ -73,24 +75,42 @@
         .info-section a:hover {
             text-decoration: underline;
         }
+
+        .rules {
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <p>ParkSync</p>
+            <img src="http://localhost:3000/public/images/parksync.png" alt="" width="100%">
+            <img src="{{barcode_image}}" alt="" width="100%" >
             <p><strong>Org. nr:</strong> 933 521 796</p>
         </header>
         
         <hr>
 
-        <h2>Kontrollsanksjon</h2>
+        <div
+            style="display: flex; justify-content: center;"
+        >
+        <h2 style="font-weight: bold;">Kontrollsanksjon</h2>
+        </div>
+        <hr>
 
         <p><strong>Sanksjonsnummer:</strong> {{ticket_number}}</p>
 
         <div class="info-section">
             <h2>Notat</h2>
             <p>{{paper_comment}}</p>
+        </div>
+
+        <div class="info-section">
+            <h2>Info</h2>
+            <p>Fra: {{place_login_time}}</p>
+            <p>Til: {{to_date}}</p>
+            <p>Levert: {{place_login_time}}</p>
+            <p>Betijent: {{pnid}}</p>
         </div>
 
         <div class="info-section">
@@ -119,7 +139,7 @@
         <div class="info-section">
             <h2>Billettinformasjon</h2>
             <p><strong>Total:</strong> {{ticket_info.total_charge}} Kr</p>
-            <p><strong>Betales til:</strong> {{ticket_info.paid_to}}</p>
+            <p><strong>Betales til:</strong> Parksync AS </p>
             <p><strong>Konto:</strong> {{ticket_info.account_number}}</p>
             <p><strong>KID:</strong> {{ticket_info.kid_number}}</p>
             <p><strong>Dato:</strong> {{ticket_info.payment_date}}</p>
@@ -148,7 +168,9 @@
 
         <footer>
             <p>Parksync AS, Jacobine Ryes vei, 0987 Oslo</p>
-            <img src="{{host}}{{qrcode_image}}" alt="QR-kode" class="img">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="{{host}}{{qrcode_image}}" alt="QR-kode" class="img" height="340" width="340">
+            </div>
         </footer>
     </div>
 </body>

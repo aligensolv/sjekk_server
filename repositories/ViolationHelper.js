@@ -40,7 +40,7 @@ class ViolationHelperRepository{
                 async (resolve, reject) => {
                     try{
                         const data = `https://client.gensolv.no/ticket?plate_number=${plate_number}&ticket_number=${ticket_number}` // URL or any data you want to encode
-                        const qrCode = qr.image(data, { type: 'png' });
+                        const qrCode = qr.image(data, { type: 'png', size: 10 });
                         let randomstring = this.generateRandomString()
                 
                         // Generate a unique filename
@@ -88,7 +88,8 @@ class ViolationHelperRepository{
         width: options.width || 4,
         height: options.height || 200,
         displayValue: options.displayValue || true,
-        background: '#ffffff00'
+        background: '#ffffff00',
+        fontSize: options.fontSize || 20,
       });
 
       // Generate a unique filename for the barcode image
@@ -149,7 +150,10 @@ class ViolationHelperRepository{
                     await browser.close();
                     let path = static_files_host + `tickets/${name}.jpg`
 
-                    return resolve(path)
+                    return resolve({ 
+                        qrcode_link: `https://client.gensolv.no/ticket?auto_login=true&plate_number=${data.car_info.plate_number}&ticket_number=${data.ticket_number}`, 
+                        ticket_link: path
+                    })
                 }catch(error){
                     await browser.close()
                     let generate_ticket_image_error = new CustomError(

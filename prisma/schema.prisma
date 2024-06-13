@@ -247,7 +247,7 @@ model PlateInfo {
 
 model TicketInfo {
   id Int @id @default(autoincrement())
-  ticket_number String
+  ticket_number String @unique
   ticket_image String
   print_option String
   payment_date String?

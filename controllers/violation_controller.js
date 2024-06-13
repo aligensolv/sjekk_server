@@ -53,6 +53,14 @@ export const getViolation = asyncWrapper(
     }
 )
 
+export const getViolationByTicketNumber = asyncWrapper(
+    async (req,res) =>{
+        const { ticket_number } = req.params
+        const violation = await ViolationRepository.getViolationByTicketNumber({ ticket_number })
+        return res.status(OK).json(violation)
+    }
+)
+
 
 export const createViolation = asyncWrapper(
     async (req,res) =>{
@@ -65,7 +73,8 @@ export const createViolation = asyncWrapper(
             system_comment, 
             place,
             place_login_time,
-            print_option
+            print_option,
+            serial_number, barcode_image, ticket_image
         } = req.body
         const { token } = req.headers
 
@@ -110,7 +119,10 @@ export const createViolation = asyncWrapper(
             images,
             created_by: decoded.id,
             print_option,
-            place_login_time
+            place_login_time,
+            serial_number,
+            barcode_image,
+            ticket_image
         })
 
         return res.status(OK).json(true)
@@ -159,7 +171,9 @@ export const getTicketPreview = asyncWrapper(
             plate_info, 
             rules, 
             ticket_comment, 
-            place
+            place,
+            place_login_time,
+            print_option
         } = req.body
         const { token } = req.headers
 
@@ -176,6 +190,8 @@ export const getTicketPreview = asyncWrapper(
             rules: rules,
             ticket_comment,
             place: place,
+            place_login_time,
+            print_option
         })
 
         return res.status(OK).json(ticket_preview)
