@@ -102,7 +102,7 @@ class ViolationHelperRepository{
 
       out.on('finish', () => {
         console.log(`Barcode created: ${filePath}`);
-        resolve(static_files_host + filePath);
+        resolve(static_absolute_files_host + filePath);
     });
         }))
     }
