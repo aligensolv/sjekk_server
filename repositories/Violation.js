@@ -362,7 +362,13 @@ class ViolationRepository{
                     }
                 })
 
-                return resolve({ ticket_link, qrcode_link, serial_number, ticket_number: ticketNumber, barcode_link: barcode_image })
+                return resolve({ 
+                    ticket_link, 
+                    qrcode_link, 
+                    serial_number, 
+                    ticket_number: ticketNumber, 
+                    barcode_link: barcode_image
+                 })
             }
         ))
     }

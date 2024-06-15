@@ -89,7 +89,6 @@ class ViolationHelperRepository{
         height: options.height || 200,
         displayValue: options.displayValue || true,
         background: '#ffffff00',
-        fontSize: options.fontSize || 20,
       });
 
       // Generate a unique filename for the barcode image
@@ -103,7 +102,7 @@ class ViolationHelperRepository{
 
       out.on('finish', () => {
         console.log(`Barcode created: ${filePath}`);
-        resolve(static_absolute_files_host + filePath);
+        resolve(static_files_host + filePath);
     });
         }))
     }
