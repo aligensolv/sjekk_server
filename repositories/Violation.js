@@ -191,7 +191,7 @@ class ViolationRepository{
     static createViolation({
         user_id, pnid, ticket_comment, system_comment, place, rules, session_id,
         images, plate_info, is_car_registered, registered_car, place_login_time, print_option,
-        serial_number, barcode_image, ticket_image
+        serial_number, barcode_image, ticket_image, ticket_number
     }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve) =>{
@@ -222,7 +222,7 @@ class ViolationRepository{
                         total_charge,
                         ticket_info: {
                             create: {
-                                ticket_number: ticketNumber,
+                                ticket_number,
                                 ticket_image,
                                 print_option,
                                 barcode_image,

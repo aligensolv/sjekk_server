@@ -7631,3 +7631,67 @@ Argument `where` of type TicketInfoWhereUniqueInput needs at least one of `id`, 
 [31merror[39m: Could not find car {"timestamp":"2024-06-12 12:07:25"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-12 12:26:48"}
 [31merror[39m: Could not find car {"timestamp":"2024-06-12 12:26:48"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-13 20:49:34"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-13 20:49:34"}
+[31merror[39m: Password is incorrect {"timestamp":"2024-06-13 20:50:08"}
+[31merror[39m: Password is incorrect {"timestamp":"2024-06-13 20:50:08"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-13 20:50:08"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-13 20:50:08"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-13 20:50:31"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-13 20:50:31"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:20"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:20"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:37"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-14 15:34:41"}
+[31merror[39m: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-14 15:34:41"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:41"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-14 15:34:41"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-14 15:35:23"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-14 15:35:23"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-14 15:35:23"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-14 15:35:23"}
+[31merror[39m: ticketNumber is not defined {"timestamp":"2024-06-14 15:36:28"}
+[31merror[39m: ticketNumber is not defined {"timestamp":"2024-06-14 15:36:28"}

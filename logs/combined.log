@@ -2293,3 +2293,31 @@
 {"level":"error","message":"Could not find car","timestamp":"2024-06-12 12:07:25"}
 {"level":"error","message":"Could not find car","timestamp":"2024-06-12 12:26:48"}
 {"level":"error","message":"Could not find car","timestamp":"2024-06-12 12:26:48"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-13 20:49:34"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-13 20:49:34"}
+{"level":"error","message":"Password is incorrect","timestamp":"2024-06-13 20:50:08"}
+{"level":"error","message":"Password is incorrect","timestamp":"2024-06-13 20:50:08"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-13 20:50:08"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-13 20:50:08"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-13 20:50:31"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-13 20:50:31"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:20"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:20"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:37"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-14 15:34:41"}
+{"level":"error","message":"\nInvalid `prisma.user.findUnique()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-06-14 15:34:41"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:41"}
+{"level":"error","message":"jwt expired","timestamp":"2024-06-14 15:34:41"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-14 15:35:23"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-14 15:35:23"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-14 15:35:23"}
+{"level":"error","message":"Could not find car","timestamp":"2024-06-14 15:35:23"}
+{"level":"error","message":"ticketNumber is not defined","timestamp":"2024-06-14 15:36:28"}
+{"level":"error","message":"ticketNumber is not defined","timestamp":"2024-06-14 15:36:28"}
