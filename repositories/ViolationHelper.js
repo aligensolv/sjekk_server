@@ -93,7 +93,7 @@ class ViolationHelperRepository{
 
       // Generate a unique filename for the barcode image
       const fileName = `${value}.png`;
-      const filePath = `public/barcodes/${fileName}`;
+      const filePath = `barcodes/${fileName}`;
 
       // Save the canvas to a file
       const out = fs.createWriteStream(filePath);
@@ -102,7 +102,7 @@ class ViolationHelperRepository{
 
       out.on('finish', () => {
         console.log(`Barcode created: ${filePath}`);
-        resolve(static_absolute_files_host + filePath);
+        resolve(static_files_host + filePath);
     });
         }))
     }
