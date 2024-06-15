@@ -76,6 +76,8 @@ export const createViolation = asyncWrapper(
             print_option,
             serial_number, barcode_image, ticket_image, ticket_number
         } = req.body
+
+        console.log(barcode_image);
         const { token } = req.headers
 
         const images = [];
