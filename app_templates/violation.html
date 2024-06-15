@@ -79,6 +79,10 @@
         .rules {
             font-size: 18px;
         }
+
+        .img {
+            mix-blend-mode: multiply;
+        }
     </style>
 </head>
 <body>
@@ -109,7 +113,7 @@
             <h2>Info</h2>
             <p>Fra: {{place_login_time}}</p>
             <p>Til: {{to_date}}</p>
-            <p>Levert: {{place_login_time}}</p>
+            <p>Levert: {{print_option}}</p>
             <p>Betijent: {{pnid}}</p>
         </div>
 

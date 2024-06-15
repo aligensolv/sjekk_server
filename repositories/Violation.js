@@ -358,7 +358,7 @@ class ViolationRepository{
                         kid_number: kid_number,
                         swift_code: swift_code,
                         iban_number: iban_numner,
-                        payment_date: created_at,
+                        payment_date: moment(created_at, 'DD.MM.YYYY HH:mm').add(3, 'weeks').format('DD.MM.YYYY'),
                     }
                 })
 
