@@ -74,7 +74,7 @@ export const createViolation = asyncWrapper(
             place,
             place_login_time,
             print_option,
-            serial_number, barcode_image, ticket_image
+            serial_number, barcode_image, ticket_image, ticket_number
         } = req.body
         const { token } = req.headers
 
@@ -122,7 +122,8 @@ export const createViolation = asyncWrapper(
             place_login_time,
             serial_number,
             barcode_image,
-            ticket_image
+            ticket_image,
+            ticket_number: ticket_number
         })
 
         return res.status(OK).json(true)
