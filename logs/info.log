@@ -8301,3 +8301,15 @@ Invalid `prisma.violation.findMany()` invocation:
 Can't reach database server at `localhost:3306`
 
 Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-06-15 20:43:33"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-18 13:45:21"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-18 13:45:21"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-18 13:45:23"}
+[31merror[39m: jwt expired {"timestamp":"2024-06-18 13:45:23"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:00:40"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:00:40"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:13:27"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:13:27"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:18:25"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:18:25"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:23:49"}
+[31merror[39m: Could not find car {"timestamp":"2024-06-18 14:23:49"}

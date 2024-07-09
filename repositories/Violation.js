@@ -355,7 +355,7 @@ class ViolationRepository{
                         total_charge: total_charge,
                         paid_to: 'Sjekk Kontroll',
                         account_number: account_number,
-                        kid_number: kid_number,
+                        kid_number: Randomstring.generate({ length: 10, charset: 'numeric' }),
                         swift_code: swift_code,
                         iban_number: iban_numner,
                         payment_date: moment(created_at, 'DD.MM.YYYY HH:mm').add(3, 'weeks').format('DD.MM.YYYY'),
