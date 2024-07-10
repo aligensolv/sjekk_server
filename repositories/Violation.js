@@ -9,6 +9,8 @@ import { account_number, iban_numner, kid_number, swift_code } from "../config.j
 import PrismaClientService from "../utils/prisma_client.js";
 import TimeRepository from "./Time.js";
 
+import Randomstring from "randomstring";
+
 class ViolationRepository{
     static prisma = PrismaClientService.instance
 
