@@ -39,7 +39,7 @@ class ViolationHelperRepository{
             promiseAsyncWrapper(
                 async (resolve, reject) => {
                     try{
-                        const data = `https://client.gensolv.no?plate_number=${plate_number}&ticket_number=${ticket_number}` // URL or any data you want to encode
+                        const data = `https://client.gensolv.no?auto_login=true&plate_number=${plate_number}&ticket_number=${ticket_number}` // URL or any data you want to encode
                         const qrCode = qr.image(data, { type: 'png', size: 10 });
                         let randomstring = this.generateRandomString()
                 
