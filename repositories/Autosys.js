@@ -6,8 +6,22 @@ import CustomError from "../interfaces/custom_error_class.js"
 import { INTERNAL_SERVER } from "../constants/status_codes.js"
 
 class AutosysRepository{
+    /**
+     * Retrieves information about a car based on its plate number.
+     *
+     * @param {Object} options - The options for retrieving the plate information.
+     * @param {string} options.plate_number - The plate number of the car.
+     * @return {Promise<{
+     *     car_type: string,
+     *     car_color: string,
+     *     car_brand: string,
+     *     car_model: string,
+     *     manufacture_year: number,
+     *     plate_number: string
+     * }>} A promise that resolves to an object containing information about the car.
+     * @throws {CustomError} If there is an error retrieving the plate information from the Autosys server.
+     */
     static  getPlateInformation({ plate_number }){
-        console.log(plate_number);
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) => {
                 try{

@@ -33,6 +33,17 @@ app.set('io', io)
 io.on('connection', (socket) => {
     console.log(`a new connection and count is: ${socket.client.conn.server.clientsCount}`)
 
+    socket.on('register-residential', (id) => {
+        socket.join(id)
+
+        io.to(id).emit('fm-message', {
+            message: 'hello from server'
+        })
+    })
+
+    socket.on('unregister-residential', (id) => {
+        socket.leave(id)
+    })
     
     socket.on('disconnect', () => {
         console.log(`User disconnected and count is: ${socket.client.conn.server.clientsCount}`);
@@ -68,6 +79,14 @@ import PartnerApi from './routes/partner_route.js'
 import CarLogApi from './routes/car_log_route.js'
 import RequestApi from './routes/place_requests.js'
 
+import NormalPlaceApi from './routes/normal_place_route.js'
+import ResidentialQuarterApi from './routes/residential_place_route.js'
+import ApartmentApi from './routes/apartment_route.js'
+
+import ResidentialCarApi from './routes/residential_car_route.js'
+
+import ResidentialDashboardApi from './routes/residential_dashboard_route.js'
+
 
 // public routes
 app.use(
@@ -91,7 +110,14 @@ app.use(
     StatisticsApi,
     PartnerApi,
     CarLogApi,
-    RequestApi
+    RequestApi,
+
+    NormalPlaceApi,
+    ResidentialQuarterApi,
+    ApartmentApi,
+
+    ResidentialCarApi,
+    ResidentialDashboardApi
 )
 
 

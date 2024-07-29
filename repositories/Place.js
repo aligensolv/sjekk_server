@@ -20,7 +20,9 @@ class PlaceRepository{
                             created_at: 'desc'
                         },
                         include: {
-                            partner: true
+                            normal_place: true,
+                            apartment: true,
+                            residential: true
                         }
                     })
                     return resolve(places)

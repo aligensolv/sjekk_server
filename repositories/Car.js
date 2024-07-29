@@ -38,15 +38,21 @@ class CarRepository{
     static getAllCarsByPlace({ place_id }) {
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                const cars = await this.prisma.car.findMany({
+                const cars = await this.prisma.registeredCar.findMany({
                     where: {
                         place_id: +place_id
                     },
-                    orderBy: {
-                        created_at: 'desc'
-                    },
-                    include:{
-                        place: true
+                    include: {
+                        place: {
+                            include: {
+                                normal_place: true,
+                                apartment: true,
+                                residential: true
+                            }
+                        },
+                        residential_car: true,
+                        normal_car: true,
+                        apartment_car: true
                     }
                 })
 

@@ -76,14 +76,14 @@ class PartnerRepository{
         ))
     }
 
-    static createPartner({ name, email, city, postal_code, address, other_address, fax_number, phone_number }){
+    static createPartner({ name, phone_number }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
                 const created_at = await TimeRepository.getCurrentTime()
 
                 let created_partner = await this.prisma.partner.create({
                     data: {
-                        name, email, city, postal_code, address, other_address, fax_number, phone_number,
+                        name, phone_number,
                         created_at
                     }
                 })

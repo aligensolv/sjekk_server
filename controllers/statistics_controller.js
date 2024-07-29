@@ -12,7 +12,7 @@ export const getAllStatistics = asyncWrapper(
         const placesCount = await prisma.place.count()
         const brandsCount = await prisma.brand.count()
         const colorsCount = await prisma.color.count()
-        const carsCount = await prisma.car.count()
+        const carsCount = await prisma.registeredCar.count()
         const violationsCount = await prisma.violation.count()
         const partnersCount = await prisma.partner.count()
 

@@ -12,20 +12,74 @@ model User {
   name String
   pnid String @unique
   password String
-  created_at String
 
+  created_at String
   updated_at String?
   deleted_at String?
   violations Violation[]
   shifts Shift[]
 }
 
-enum RegistrationSource {
+enum RegisterationSource {
+  normal_place_dashboard
   system
-  gateway
 }
 
-model Car {
+model NormalCar {
+  id Int @id @default(autoincrement())
+  registered_car_id Int @unique
+  registered_car  RegisteredCar @relation(fields: [registered_car_id], references: [id])
+
+  free_parking_hours Int
+  registeration_date String
+  expire_date String
+
+  registeration_source RegisterationSource
+
+  normal_place_id Int
+  normal_place NormalPlace @relation(fields: [normal_place_id], references: [id])
+
+  created_at String
+  updated_at String?
+  deleted_at String?
+}
+
+enum ResidentialRegisterationType {
+  reserved
+  guest
+}
+
+model ResidentialCar {
+  id Int @id @default(autoincrement())
+  parking_type ResidentialRegisterationType
+  registration_date String
+  expire_date String
+  subscription_plan_days Int
+
+  registered_car_id Int @unique
+  registered_car  RegisteredCar @relation(fields: [registered_car_id], references: [id])
+
+  residential_quarter_id Int
+  residential_quarter ResidentialQuarter @relation(fields: [residential_quarter_id], references: [id])
+
+  updated_at String?
+  deleted_at String?
+}
+
+model ApartmentCar {
+  id Int @id @default(autoincrement())
+
+  registered_car_id Int @unique
+  registered_car  RegisteredCar @relation(fields: [registered_car_id], references: [id])
+}
+
+enum RegisteredCarType {
+  normal
+  residential
+  apartment
+}
+
+model RegisteredCar {
   id Int @id @default(autoincrement())
   plate_number String
   car_model String
@@ -33,21 +87,19 @@ model Car {
   car_description String
   car_color String
   manufacture_year String
-  registration_type String
-  registration_source RegistrationSource
 
-  source_id Int?
-  source PlaceDashboard? @relation(fields: [source_id], references: [id])
+  registration_type RegisteredCarType
+  
+  apartment_car ApartmentCar?
+  normal_car NormalCar?
+  residential_car ResidentialCar?
+
+  updated_at String?
+  deleted_at String?
 
   place_id Int
   place Place @relation(fields: [place_id], references: [id])
 
-  violation Violation[]
-
-  free_parking_hours Int?
-  start_date String
-  end_date String
-  created_at String
 }
 
 model PartnerDashboard {
@@ -62,29 +114,24 @@ model PartnerDashboard {
 model Partner {
   id Int @id @default(autoincrement())
   name String
-  email String
-  city String
-  postal_code String
-  address String
-  other_address String?
-  fax_number String?
   phone_number String
+
   created_at String
   updated_at String?
   deleted_at String?
 
-  owned_places Place[]
+  owned_places NormalPlace[]
   owned_places_count Int @default(0)
   dashboard PartnerDashboard?
   place_requests PlaceRequest[]
 }
 
-model PlaceDashboard {
+model NormalPlaceDashboard {
   id Int @id @default(autoincrement())
   access_username String @unique
   access_code String
-  profile_image String?
 
+  profile_image String?
   free_parking_hours Int
   place_name String
   place_type String
@@ -92,10 +139,80 @@ model PlaceDashboard {
   updated_at String?
   deleted_at String?
 
-  place_id Int
-  place Place @relation(fields: [place_id], references: [id], onDelete: Cascade)
+  normal_place_id Int
+  normal_place NormalPlace @relation(fields: [normal_place_id], references: [id])
 
-  registered_cars Car[]
+}
+
+model NormalPlace {
+  id Int @id @default(autoincrement())
+  partner_id Int?
+  partner Partner? @relation(fields: [partner_id], references: [id], onDelete: SetNull)
+
+  location String
+  policy String
+  code String
+
+  place_type String
+
+  place_id Int @unique
+  place  Place @relation(fields: [place_id], references: [id])
+
+  dashboards NormalPlaceDashboard[]
+  registered_cars NormalCar[]
+
+  updated_at String?
+  deleted_at String?
+}
+
+model ResidentialDashboard {
+  id Int @id @default(autoincrement())
+  access_username String
+  access_code String
+
+  quarter_name String
+  max_cars_registrations Int
+  current_total_registered_cars Int @default(0)
+
+  residential_quarter_id Int @unique
+  residential_quarter ResidentialQuarter @relation(fields: [residential_quarter_id], references: [id])
+
+  created_at String
+  updated_at String?
+  deleted_at String?
+}
+
+model ResidentialQuarter {
+  id Int @id @default(autoincrement())
+  location String
+  policy String
+  code String
+
+  created_at String @default("")
+  updated_at String?
+  deleted_at String?
+
+  place_id Int @unique
+  place  Place @relation(fields: [place_id], references: [id])
+
+  residential_dashboard ResidentialDashboard?
+  residential_cars ResidentialCar[]
+}
+
+model Apartment {
+  id Int @id @default(autoincrement())
+  location String
+  policy String
+  code String
+
+  place_id Int @unique
+  place  Place @relation(fields: [place_id], references: [id])
+}
+
+enum PlaceType {
+  normal
+  residential
+  apartment
 }
 
 model Place {
@@ -106,14 +223,15 @@ model Place {
   created_at String
   updated_at String?
   deleted_at String?
-  is_verified Boolean
 
-  partner_id Int?
-  partner Partner? @relation(fields: [partner_id], references: [id], onDelete: SetNull)
+  place_type PlaceType
 
-  dashboard PlaceDashboard[]
-  cars Car[]
+  normal_place NormalPlace?
+  residential ResidentialQuarter?
+  apartment   Apartment?
+
   violations Violation[]
+  registered_cars RegisteredCar[]
 }
 
 model Extras {
@@ -313,8 +431,6 @@ model Violation {
 
   plate_info PlateInfo?
   is_car_registered Boolean
-  registered_car_id Int?
-  registered_car Car? @relation(fields: [registered_car_id], references: [id])
   
   place_login_time String
   print_option String
@@ -341,7 +457,6 @@ model CarLog {
   start_date String
   end_date String
 
-  registration_source RegistrationSource
   registered_by String
 
   place_location String

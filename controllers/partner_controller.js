@@ -1,6 +1,7 @@
 import { OK } from "../constants/status_codes.js";
 import asyncWrapper from "../middlewares/async_wrapper.js";
 import PartnerRepository from "../repositories/Partner.js";
+import ValidatorRepository from "../repositories/Validator.js";
 
 export const getAllPartners = asyncWrapper(
     async (req,res) => {
@@ -27,8 +28,13 @@ export const getAllPartnerPlacesCount = asyncWrapper(
 
 export const createPartner = asyncWrapper(
     async (req,res) => {
-        const { name, email, city, postal_code, address, other_address, fax_number, phone_number } = req.body
-        let result = await PartnerRepository.createPartner({ name, email, city, postal_code, address, other_address, fax_number, phone_number })
+        const { name, phone_number } = req.body
+
+        await ValidatorRepository.validateNotNull({
+            name, phone_number
+        })
+
+        let result = await PartnerRepository.createPartner({ name, phone_number })
         return res.status(OK).json(result)
     }
 )
