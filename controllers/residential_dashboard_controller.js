@@ -10,6 +10,7 @@ export const createResidentialDashboard = asyncWrapper(
         await ValidatorRepository.validateNotNull({ 
             access_username, access_code, residential_quarter_id, max_cars_registrations, quarter_name 
         })
+
         
         const result = await ResidentialDashboardRepository.createResidentialDashboard({
             access_username, access_code, residential_quarter_id, max_cars_registrations, quarter_name

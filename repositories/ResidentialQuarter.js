@@ -11,7 +11,9 @@ class ResidentialPlaceRepository{
                 async (resolve) =>{
                     const places = await this.prisma.residentialQuarter.findMany({
                         include: {
-                            place: true
+                            place: true,
+                            residential_dashboard: true,
+                            residential_cars: true
                         }
                     })
                     console.log(places);

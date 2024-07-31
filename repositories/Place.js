@@ -60,7 +60,7 @@ class PlaceRepository{
     static createPlace({ location, policy, code }){
         return new Promise(promiseAsyncWrapper(
             async (resolve) =>{
-                const created_at = await TimeRepository.getCurrentTime()
+                const created_at = TimeRepository.getCurrentTime()
                 const place = await this.prisma.place.create({
                     data: {
                         location, policy, code, created_at, is_verified: true
@@ -89,9 +89,11 @@ class PlaceRepository{
     }
 
     static deletePlace({ place_id }){
+        console.log(" i got deleted");
+        console.log(place_id);
         return new Promise(promiseAsyncWrapper(
             async (resolve) =>{
-                const deleted_at = await TimeRepository.getCurrentTime()
+                const deleted_at = TimeRepository.getCurrentTime()
                 const deleted = await this.prisma.place.update({
                     where: {
                         id: +place_id
@@ -100,6 +102,37 @@ class PlaceRepository{
                         deleted_at
                     }
                 })
+
+                if(deleted.place_type == 'residential'){
+                    const x = await this.prisma.residentialQuarter.update({
+                        where: {
+                            place_id: deleted.id
+                        },
+                        data: {
+                            deleted_at: deleted_at
+                        },
+                        include: {
+                            residential_dashboard: true
+                        }
+                    })
+
+                    if(x.residential_dashboard != null){
+                        await this.prisma.residentialDashboard.delete({
+                            where: {
+                                residential_quarter_id: x.id
+                            }
+                        })
+                    }
+                }else if(deleted.place_type == 'normal'){
+                    const x = await this.prisma.normalPlace.update({
+                        where: {
+                            place_id: deleted.id
+                        },
+                        data: {
+                            deleted_at: deleted_at
+                        }
+                    })
+                }
     
                 return resolve(deleted)
             }
@@ -109,7 +142,7 @@ class PlaceRepository{
     static async deletePlaceDashboard ({ dashboard_id }){
         return new Promise(promiseAsyncWrapper(
             async (resolve) =>{
-                const deleted = await this.prisma.placeDashboard.delete({
+                const deleted = await this.prisma.normalPlaceDashboard.delete({
                     where: {
                         id: +dashboard_id
                     }
@@ -132,6 +165,34 @@ class PlaceRepository{
                         deleted_at
                     }
                 })
+
+                await this.prisma.normalPlace.updateMany({
+                    where: {
+                        deleted_at: null
+                    },
+                    data: {
+                        deleted_at
+                    }
+                })
+
+                await this.prisma.residentialQuarter.updateMany({
+                    where: {
+                        deleted_at: null
+                    },
+                    data: {
+                        deleted_at
+                    }
+                })
+
+                await this.prisma.apartment.updateMany({
+                    where: {
+                        deleted_at: null
+                    },
+                    data: {
+                        deleted_at
+                    }
+                })
+                
                 return resolve(deleted)
             }
         ))
@@ -140,10 +201,10 @@ class PlaceRepository{
     static createPlaceDashboard({ place_id, access_code, access_username, place_name, place_type, free_parking_hours }){
         return new Promise(promiseAsyncWrapper(
             async (resolve) =>{
-                const created_at = await TimeRepository.getCurrentTime()
-                const dashboard = await this.prisma.placeDashboard.create({
+                const created_at = TimeRepository.getCurrentTime()
+                const dashboard = await this.prisma.normalPlaceDashboard.create({
                     data: {
-                        place_id: +place_id, 
+                        normal_place_id: +place_id, 
                         access_code, access_username,
                         place_name, place_type, free_parking_hours, created_at
                     }
@@ -157,9 +218,9 @@ class PlaceRepository{
     static getAllPlaceDashboards({ place_id }){
         return new Promise(promiseAsyncWrapper(
             async (resolve) =>{
-                const dashboards = await this.prisma.placeDashboard.findMany({
+                const dashboards = await this.prisma.normalPlaceDashboard.findMany({
                     where: {
-                        place_id: +place_id
+                        normal_place_id: +place_id
                     }
                 })
                 return resolve(dashboards)
@@ -170,7 +231,7 @@ class PlaceRepository{
     static async createCarFromPlaceDashboard({ plate_number, dashboard_id }){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let is_car_registered = await this.prisma.car.findFirst({
+                let is_car_registered = await this.prisma.registeredCar.findFirst({
                     where: {
                         plate_number: plate_number.toUpperCase().replace(/\s/g, '')
                     }
@@ -181,12 +242,12 @@ class PlaceRepository{
                     return reject(registeration_already_exists)
                 }
 
-                let place_dashboard = await this.prisma.placeDashboard.findUnique({
+                let place_dashboard = await this.prisma.normalPlaceDashboard.findUnique({
                     where: {
                         id: +dashboard_id
                     },
                     include: {
-                        place: true
+                        normal_place: true
                     }
                 })
 
@@ -196,16 +257,17 @@ class PlaceRepository{
                 }
 
                 const free_parking_hours = place_dashboard.free_parking_hours
-                const start_date = await TimeRepository.getCurrentTime()
-                const created_at = await TimeRepository.getCurrentTime()
+                const start_date =  TimeRepository.getCurrentTime()
+                const created_at = TimeRepository.getCurrentTime()
                 const autosys_car_data = await AutosysRepository.getPlateInformation({
                     plate_number: plate_number.toUpperCase().replace(/\s/g, '')
                 })
 
 
 
-                const car = await this.prisma.car.create({
+                const car = await this.prisma.registeredCar.create({
                     data: {
+                        
                         manufacture_year: autosys_car_data.manufacture_year ?? 'N/A',
                         car_model: autosys_car_data.car_model ?? 'N/A',
                         car_description: autosys_car_data.car_description ?? 'N/A',
@@ -225,28 +287,6 @@ class PlaceRepository{
                         created_at
                     }
                 })
-
-                await this.prisma.carLog.create({
-                    data: {
-                        start_date,
-                        end_date: await TimeRepository.increaseTimeByHours({
-                            hours: +free_parking_hours,
-                            current_time: start_date
-                        }),
-                        created_at,
-                        registration_source: 'gateway',
-                        registered_by: place_dashboard.place_name,
-                        place_location: place_dashboard.place.location,
-                        place_code: place_dashboard.place.code,
-                        place_policy: place_dashboard.place.policy,
-                        plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
-                        car_model: autosys_car_data.car_model ?? 'N/A',
-                        car_color: autosys_car_data.car_color ?? 'N/A',
-                        car_type: autosys_car_data.car_type ?? 'N/A',
-                        car_description: autosys_car_data.description ?? 'N/A',
-                        place_id: place_dashboard.place_id
-                    }
-                })
         
                 // await scheduleCarForRemove(+free_parking_time, car.id)
                 return resolve(car)
@@ -257,10 +297,17 @@ class PlaceRepository{
     static async getAllCarsRegisteredByPlaceDashboard({ place_dashboard_id }){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                let registered_cars = await this.prisma.car.findMany({
+                const dashboard = await this.prisma.normalPlaceDashboard.findUnique({
                     where: {
-                        source_id: +place_dashboard_id,
-                        registration_source: 'gateway',
+                        id: +place_dashboard_id
+                    },
+                    include: {
+                        normal_place: true
+                    }
+                })
+                let registered_cars = await this.prisma.normalCar.findMany({
+                    where: {
+                        normal_place_id: dashboard.normal_place_id
                     }
                 })
 

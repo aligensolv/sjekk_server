@@ -13,12 +13,25 @@ class CarRepository{
     static getAllCars(){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                const cars = await this.prisma.car.findMany({
-                    orderBy: {
-                        created_at: 'desc'
+                const cars = await this.prisma.registeredCar.findMany({
+                    where: {
+                        deleted_at: null
                     },
                     include: {
-                        place: true
+                        place: {
+                            include: {
+                                normal_place: true,
+                                apartment: true,
+                                residential: true
+                            }
+                        },
+                        normal_car: {
+                            include: {
+                                registered_car: true
+                            }
+                        },
+                        residential_car: true,
+                        apartment_car: true
                     }
                 })
                 return resolve(cars)
@@ -51,7 +64,11 @@ class CarRepository{
                             }
                         },
                         residential_car: true,
-                        normal_car: true,
+                        normal_car: {
+                            include: {
+                                registered_car: true
+                            }
+                        },
                         apartment_car: true
                     }
                 })
@@ -112,8 +129,15 @@ class CarRepository{
                     let not_found_error = new CustomError('Could not find car data', NOT_FOUND)
                     return reject(not_found_error)
                 }
+                console.log(place_id);
+                const place = await this.prisma.normalPlace.findUnique({
+                    where: {
+                        place_id: +place_id
+                    }
+                })
+                console.log(place);
 
-                const car = await this.prisma.car.create({
+                const car = await this.prisma.registeredCar.create({
                     data: {
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
                         manufacture_year: autosys_car_data.manufacture_year,
@@ -123,10 +147,17 @@ class CarRepository{
                         car_type: autosys_car_data.car_type,
 
                         place_id: +place_id,
-                        registration_source: 'system',
-                        start_date, end_date, created_at,
-                        registration_type,
-                        source_id: null
+                        registration_type: 'normal',
+                        normal_car: {
+                            create: {
+                                free_parking_hours: 2,
+                                registeration_date: start_date,
+                                expire_date: end_date,
+                                registeration_source: 'system',
+                                normal_place_id: place.id,
+                                created_at: created_at
+                            }
+                        }
 
                     }
                 })
@@ -143,7 +174,6 @@ class CarRepository{
                             start_date,
                             end_date,
                             created_at,
-                            registration_source: 'system',
                             registered_by: 'system',
                             place_location: place.location,
                             place_code: place.code,
@@ -183,11 +213,32 @@ class CarRepository{
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
 
-                const deleted = await this.prisma.car.delete({
+                const deleted = await this.prisma.registeredCar.update({
                     where: {
                         id: +car_id
+                    },
+                    data: {
+                        deleted_at: TimeRepository.getCurrentTime()
                     }
                 })
+
+                await this.prisma.normalCar.update({
+                    where: {
+                        registered_car_id: +car_id
+                    },
+                    data: {
+                        deleted_at: TimeRepository.getCurrentTime()
+                    }
+                })
+
+                // await this.prisma.residentialCar.update({
+                //     where: {
+                //         registered_car_id: +car_id
+                //     },
+                //     data: {
+                //         deleted_at: TimeRepository.getCurrentTime()
+                //     }
+                // })
                 return resolve(deleted)
             }
         ))

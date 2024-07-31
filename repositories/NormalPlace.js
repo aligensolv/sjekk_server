@@ -10,11 +10,17 @@ class NormalPlaceRepository{
             promiseAsyncWrapper(
                 async (resolve) =>{
                     const places = await this.prisma.normalPlace.findMany({
+                        where: {
+                            deleted_at: null
+                        },
                         include: {
                             place: true,
                             partner: true
                         }
                     })
+
+                    console.log("places are" );
+                    console.log(places);
 
                     return resolve(places)
                 }
@@ -59,6 +65,23 @@ class NormalPlaceRepository{
                 }
             )
         )
+    }
+
+    static updateNormalPlace({ place_id, location, policy, code, partner_id }){
+        return new Promise(promiseAsyncWrapper(
+            async (resolve) =>{
+                const updated = await this.prisma.normalPlace.update({
+                    where: {
+                        id: +place_id
+                    },
+                    data: {
+                        location, policy, code, partner_id: partner_id != undefined ? +partner_id : null
+                    }
+                })
+
+                return resolve(updated)
+            }
+        ))
     }
 }
 

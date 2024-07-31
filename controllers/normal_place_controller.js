@@ -20,3 +20,15 @@ export const createNormalPlace = asyncWrapper(
         return res.status(OK).json(result)
     }
 )
+
+export const updateNormalPlace = asyncWrapper(
+    async (req, res) => {
+        const { id: place_id } = req.params
+        const { location, policy, code } = req.body
+
+        await ValidatorRepository.validateNotNull({ location, policy, code })
+
+        const result = await NormalPlaceRepository.updateNormalPlace({ location, policy, code, place_id })
+        return res.status(OK).json(result)
+    }
+)

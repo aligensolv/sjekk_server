@@ -10,6 +10,7 @@ import PrismaClientService from "../utils/prisma_client.js";
 import TimeRepository from "./Time.js";
 
 import Randomstring from "randomstring";
+import axios from "axios";
 
 class ViolationRepository{
     static prisma = PrismaClientService.instance
@@ -25,7 +26,6 @@ class ViolationRepository{
                         place: true,
                         created_by: true,
                         images: true,
-                        registered_car: true,
                         rules: {
                             include: {
                                 extras_values: true,
@@ -75,7 +75,6 @@ class ViolationRepository{
                     include: {
                         place: true,
                         created_by: true,
-                        registered_car: true,
                         rules: {
                             include: {
                                 extras_values: true
@@ -108,7 +107,6 @@ class ViolationRepository{
                     include: {
                         place: true,
                         created_by: true,
-                        registered_car: true,
                         rules: {
                             include: {
                                 extras_values: true
@@ -193,11 +191,11 @@ class ViolationRepository{
     static createViolation({
         user_id, pnid, ticket_comment, system_comment, place, rules, session_id,
         images, plate_info, is_car_registered, registered_car, place_login_time, print_option,
-        serial_number, barcode_image, ticket_image, ticket_number
+        serial_number, barcode_image, ticket_image, ticket_number, kid_number
     }){
         return new Promise(promiseAsyncWrapepr(
             async(resolve) =>{
-                let created_at = await TimeRepository.getCurrentTime()
+                let created_at = TimeRepository.getCurrentTime()
                 
                 const total_charge = rules.reduce((acc,val) => acc + val.charge, 0)
 
@@ -259,9 +257,26 @@ class ViolationRepository{
                             }
                         },
                         is_car_registered,
-                        registered_car_id: registered_car != null ? registered_car.id : null,
                         session_id: session_id,
                     }
+                })
+
+                console.log({
+                    kid_number: kid_number,
+                    control_number: created.id,
+                    total_charge: total_charge,
+                    violated_at: created.created_at,
+                    employee_pnid: pnid,
+                    rules: rules
+                });
+
+                await axios.post('https://finance.gensolv.no/api/sanctions', {
+                    kid_number: kid_number.toString(),
+                    control_number: created.id.toString(),
+                    total_charge: total_charge,
+                    violated_at: created.created_at,
+                    employee_pnid: pnid,
+                    rules: rules
                 })
 
                 return resolve(created)
@@ -332,7 +347,7 @@ class ViolationRepository{
 
                 const { car_model, plate_number, manufacture_year, car_description, car_type, car_color, country_name, country_code   } = plate_info
                 const { location, code, policy, id: place_id } = place
-
+                const kid_number = Randomstring.generate({ length: 10, charset: 'numeric' })
                 let { ticket_link, qrcode_link } = await ViolationHelperRepository.generateTicketImage(ticketNumber,barcode_image,{
                     ticket_number: ticketNumber,
                     rules: rules,
@@ -357,7 +372,7 @@ class ViolationRepository{
                         total_charge: total_charge,
                         paid_to: 'Sjekk Kontroll',
                         account_number: account_number,
-                        kid_number: Randomstring.generate({ length: 10, charset: 'numeric' }),
+                        kid_number: kid_number,
                         swift_code: swift_code,
                         iban_number: iban_numner,
                         payment_date: moment(created_at, 'DD.MM.YYYY HH:mm').add(3, 'weeks').format('DD.MM.YYYY'),
@@ -369,7 +384,8 @@ class ViolationRepository{
                     qrcode_link, 
                     serial_number, 
                     ticket_number: ticketNumber, 
-                    barcode_link: barcode_image
+                    barcode_link: barcode_image,
+                    kid_number: kid_number
                  })
             }
         ))
