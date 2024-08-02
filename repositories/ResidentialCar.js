@@ -63,14 +63,22 @@ class ResidentialCarRepository{
             const isRegistrationExist = await this.prisma.registeredCar.findFirst({
                 where: {
                     plate_number,
-                    deleted_at: null
+                    deleted_at: null,
+                    registration_type: 'residential',
+                    residential_car: {
+                        parking_type: {
+                            equals: parking_type
+                        }
+                    }
                 },
                 include: {
                     residential_car: true
                 }
             })
 
-            if(isRegistrationExist){
+            console.log(parking_type);
+
+            if(isRegistrationExist && isRegistrationExist.residential_car.parking_type == parking_type){
                 const error = new CustomError(`Car already registered as ${isRegistrationExist.residential_car.parking_type}`, BAD_REQUEST)
                 return reject(error)
             }
@@ -155,7 +163,7 @@ class ResidentialCarRepository{
             const guest_cars_count = await this.prisma.residentialCar.count({
                 where: {
                     residential_quarter_id: +residential_quarter_id,
-                    parking_type: 'guest',
+                    parking_type: 'guest'
                 }
             })
 

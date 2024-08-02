@@ -120,6 +120,17 @@ class CarRepository{
     static createCar({ plate_number, start_date, end_date, registration_type, place_id }) {
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
+                const exists = await this.prisma.registeredCar.findFirst({
+                    where: {
+                        plate_number: plate_number.toUpperCase().replace(/\s/g, '')
+                    }
+                })
+
+                if(exists){
+                    let exists_error = new CustomError('Car already exists', NOT_FOUND)
+                    return reject(exists_error)
+                }
+
                 let created_at = TimeRepository.getCurrentTime()
                 let autosys_car_data = await AutosysRepository.getPlateInformation({
                     plate_number: plate_number.toUpperCase().replace(/\s/g, '')
@@ -129,6 +140,7 @@ class CarRepository{
                     let not_found_error = new CustomError('Could not find car data', NOT_FOUND)
                     return reject(not_found_error)
                 }
+                
                 console.log(place_id);
                 const place = await this.prisma.normalPlace.findUnique({
                     where: {

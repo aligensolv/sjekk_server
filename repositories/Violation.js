@@ -170,7 +170,6 @@ class ViolationRepository{
                     include: {
                         place: true,
                         created_by: true,
-                        registered_car: true,
                         rules: {
                             include: {
                                 extras_values: true,

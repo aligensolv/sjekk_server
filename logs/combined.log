@@ -2660,3 +2660,41 @@
 {"level":"error","message":"Request failed with status code 500","timestamp":"2024-07-31 13:58:25"}
 {"level":"error","message":"\nInvalid `prisma.registeredCar.findMany()` invocation:\n\n{\n  where: {\n    place_id: 3\n  },\n  include: {\n    place: {\n      include: {\n        normal_place: {\n          include: {\n            registered_car: true,\n            ~~~~~~~~~~~~~~\n?           partner?: true,\n?           place?: true,\n?           dashboards?: true,\n?           registered_cars?: true\n          }\n        },\n        apartment: true,\n        residential: true\n      }\n    },\n    residential_car: true,\n    normal_car: true,\n    apartment_car: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `NormalPlace`. Available options are marked with ?.","timestamp":"2024-07-31 14:19:06"}
 {"level":"error","message":"\nInvalid `prisma.registeredCar.findMany()` invocation:\n\n{\n  where: {\n    place_id: 3\n  },\n  include: {\n    place: {\n      include: {\n        normal_place: {\n          include: {\n            registered_car: true,\n            ~~~~~~~~~~~~~~\n?           partner?: true,\n?           place?: true,\n?           dashboards?: true,\n?           registered_cars?: true\n          }\n        },\n        apartment: true,\n        residential: true\n      }\n    },\n    residential_car: true,\n    normal_car: true,\n    apartment_car: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `NormalPlace`. Available options are marked with ?.","timestamp":"2024-07-31 14:19:06"}
+{"level":"error","message":"\nInvalid `prisma.ticketInfo.findFirst()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-08-02 03:19:55"}
+{"level":"error","message":"\nInvalid `prisma.ticketInfo.findFirst()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-08-02 03:19:55"}
+{"level":"error","message":"Ticket not found","timestamp":"2024-08-02 03:22:42"}
+{"level":"error","message":"Ticket not found","timestamp":"2024-08-02 03:22:42"}
+{"level":"error","message":"Ticket not found","timestamp":"2024-08-02 03:23:01"}
+{"level":"error","message":"Ticket not found","timestamp":"2024-08-02 03:23:01"}
+{"level":"error","message":"Ticket not found","timestamp":"2024-08-02 03:24:51"}
+{"level":"error","message":"Ticket not found","timestamp":"2024-08-02 03:24:51"}
+{"level":"error","message":"jwt expired","timestamp":"2024-08-02 03:35:06"}
+{"level":"error","message":"jwt expired","timestamp":"2024-08-02 03:35:06"}
+{"level":"error","message":"No user was found","timestamp":"2024-08-02 03:35:12"}
+{"level":"error","message":"No user was found","timestamp":"2024-08-02 03:35:12"}
+{"level":"error","message":"jwt expired","timestamp":"2024-08-02 03:35:12"}
+{"level":"error","message":"jwt expired","timestamp":"2024-08-02 03:35:12"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'findFirst')","timestamp":"2024-08-02 03:37:17"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'findFirst')","timestamp":"2024-08-02 03:37:17"}
+{"level":"error","message":"\nInvalid `prisma.violation.findFirst()` invocation:\n\n{\n  where: {\n    id: 1\n  },\n  include: {\n    place: true,\n    created_by: true,\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    rules: {\n      include: {\n        extras_values: true,\n        extras: true\n      }\n    },\n    images: true,\n    plate_info: true,\n    ticket_info: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?.","timestamp":"2024-08-02 03:37:58"}
+{"level":"error","message":"\nInvalid `prisma.violation.findFirst()` invocation:\n\n{\n  where: {\n    id: 1\n  },\n  include: {\n    place: true,\n    created_by: true,\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    rules: {\n      include: {\n        extras_values: true,\n        extras: true\n      }\n    },\n    images: true,\n    plate_info: true,\n    ticket_info: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?.","timestamp":"2024-08-02 03:37:58"}
+{"level":"error","message":"\nInvalid `prisma.violation.findFirst()` invocation:\n\n{\n  where: {\n    id: 1\n  },\n  include: {\n    place: true,\n    created_by: true,\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    rules: {\n      include: {\n        extras_values: true,\n        extras: true\n      }\n    },\n    images: true,\n    plate_info: true,\n    ticket_info: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?.","timestamp":"2024-08-02 03:38:00"}
+{"level":"error","message":"\nInvalid `prisma.violation.findFirst()` invocation:\n\n{\n  where: {\n    id: 1\n  },\n  include: {\n    place: true,\n    created_by: true,\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    rules: {\n      include: {\n        extras_values: true,\n        extras: true\n      }\n    },\n    images: true,\n    plate_info: true,\n    ticket_info: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?.","timestamp":"2024-08-02 03:38:00"}
+{"level":"error","message":"Cannot read properties of null (reading 'parking_type')","timestamp":"2024-08-02 04:31:59"}
+{"level":"error","message":"Cannot read properties of null (reading 'parking_type')","timestamp":"2024-08-02 04:31:59"}
+{"level":"error","message":"Cannot read properties of null (reading 'parking_type')","timestamp":"2024-08-02 04:32:41"}
+{"level":"error","message":"Cannot read properties of null (reading 'parking_type')","timestamp":"2024-08-02 04:32:41"}
+{"level":"error","message":"Car already registered as guest","timestamp":"2024-08-02 04:34:30"}
+{"level":"error","message":"Car already registered as guest","timestamp":"2024-08-02 04:34:30"}
+{"level":"error","message":"Car already registered as guest","timestamp":"2024-08-02 04:35:39"}
+{"level":"error","message":"Car already registered as guest","timestamp":"2024-08-02 04:35:39"}
+{"level":"error","message":"Car already registered as guest","timestamp":"2024-08-02 04:39:46"}
+{"level":"error","message":"Car already registered as guest","timestamp":"2024-08-02 04:39:46"}
+{"level":"error","message":"Car already registered as reserved","timestamp":"2024-08-02 04:40:00"}
+{"level":"error","message":"Car already registered as reserved","timestamp":"2024-08-02 04:40:00"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-08-02 04:40:09"}
+{"level":"error","message":"Autosys server error","timestamp":"2024-08-02 04:40:09"}
+{"level":"error","message":"Car already exists","timestamp":"2024-08-02 04:48:39"}
+{"level":"error","message":"Car already exists","timestamp":"2024-08-02 04:48:39"}
+{"level":"error","message":"Car already exists","timestamp":"2024-08-02 04:49:31"}
+{"level":"error","message":"Car already exists","timestamp":"2024-08-02 04:49:31"}

@@ -11314,3 +11314,145 @@ Invalid `prisma.registeredCar.findMany()` invocation:
 }
 
 Unknown field `registered_car` for include statement on model `NormalPlace`. Available options are marked with ?. {"timestamp":"2024-07-31 14:19:06"}
+[31merror[39m: 
+Invalid `prisma.ticketInfo.findFirst()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-08-02 03:19:55"}
+[31merror[39m: 
+Invalid `prisma.ticketInfo.findFirst()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-08-02 03:19:55"}
+[31merror[39m: Ticket not found {"timestamp":"2024-08-02 03:22:42"}
+[31merror[39m: Ticket not found {"timestamp":"2024-08-02 03:22:42"}
+[31merror[39m: Ticket not found {"timestamp":"2024-08-02 03:23:01"}
+[31merror[39m: Ticket not found {"timestamp":"2024-08-02 03:23:01"}
+[31merror[39m: Ticket not found {"timestamp":"2024-08-02 03:24:51"}
+[31merror[39m: Ticket not found {"timestamp":"2024-08-02 03:24:51"}
+[31merror[39m: jwt expired {"timestamp":"2024-08-02 03:35:06"}
+[31merror[39m: jwt expired {"timestamp":"2024-08-02 03:35:06"}
+[31merror[39m: No user was found {"timestamp":"2024-08-02 03:35:12"}
+[31merror[39m: No user was found {"timestamp":"2024-08-02 03:35:12"}
+[31merror[39m: jwt expired {"timestamp":"2024-08-02 03:35:12"}
+[31merror[39m: jwt expired {"timestamp":"2024-08-02 03:35:12"}
+[31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-08-02 03:37:17"}
+[31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-08-02 03:37:17"}
+[31merror[39m: 
+Invalid `prisma.violation.findFirst()` invocation:
+
+{
+  where: {
+    id: 1
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    rules: {
+      include: {
+        extras_values: true,
+        extras: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-08-02 03:37:58"}
+[31merror[39m: 
+Invalid `prisma.violation.findFirst()` invocation:
+
+{
+  where: {
+    id: 1
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    rules: {
+      include: {
+        extras_values: true,
+        extras: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-08-02 03:37:58"}
+[31merror[39m: 
+Invalid `prisma.violation.findFirst()` invocation:
+
+{
+  where: {
+    id: 1
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    rules: {
+      include: {
+        extras_values: true,
+        extras: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-08-02 03:38:00"}
+[31merror[39m: 
+Invalid `prisma.violation.findFirst()` invocation:
+
+{
+  where: {
+    id: 1
+  },
+  include: {
+    place: true,
+    created_by: true,
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    rules: {
+      include: {
+        extras_values: true,
+        extras: true
+      }
+    },
+    images: true,
+    plate_info: true,
+    ticket_info: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `Violation`. Available options are marked with ?. {"timestamp":"2024-08-02 03:38:00"}
+[31merror[39m: Cannot read properties of null (reading 'parking_type') {"timestamp":"2024-08-02 04:31:59"}
+[31merror[39m: Cannot read properties of null (reading 'parking_type') {"timestamp":"2024-08-02 04:31:59"}
+[31merror[39m: Cannot read properties of null (reading 'parking_type') {"timestamp":"2024-08-02 04:32:41"}
+[31merror[39m: Cannot read properties of null (reading 'parking_type') {"timestamp":"2024-08-02 04:32:41"}
+[31merror[39m: Car already registered as guest {"timestamp":"2024-08-02 04:34:30"}
+[31merror[39m: Car already registered as guest {"timestamp":"2024-08-02 04:34:30"}
+[31merror[39m: Car already registered as guest {"timestamp":"2024-08-02 04:35:39"}
+[31merror[39m: Car already registered as guest {"timestamp":"2024-08-02 04:35:39"}
+[31merror[39m: Car already registered as guest {"timestamp":"2024-08-02 04:39:46"}
+[31merror[39m: Car already registered as guest {"timestamp":"2024-08-02 04:39:46"}
+[31merror[39m: Car already registered as reserved {"timestamp":"2024-08-02 04:40:00"}
+[31merror[39m: Car already registered as reserved {"timestamp":"2024-08-02 04:40:00"}
+[31merror[39m: Autosys server error {"timestamp":"2024-08-02 04:40:09"}
+[31merror[39m: Autosys server error {"timestamp":"2024-08-02 04:40:09"}
+[31merror[39m: Car already exists {"timestamp":"2024-08-02 04:48:39"}
+[31merror[39m: Car already exists {"timestamp":"2024-08-02 04:48:39"}
+[31merror[39m: Car already exists {"timestamp":"2024-08-02 04:49:31"}
+[31merror[39m: Car already exists {"timestamp":"2024-08-02 04:49:31"}
