@@ -19,9 +19,6 @@ class NormalPlaceRepository{
                         }
                     })
 
-                    console.log("places are" );
-                    console.log(places);
-
                     return resolve(places)
                 }
             )

@@ -106,7 +106,7 @@ class PlaceRepository{
                 if(deleted.place_type == 'residential'){
                     const x = await this.prisma.residentialQuarter.update({
                         where: {
-                            place_id: deleted.id
+                            place_id: +place_id
                         },
                         data: {
                             deleted_at: deleted_at

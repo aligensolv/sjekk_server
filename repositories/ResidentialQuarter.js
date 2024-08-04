@@ -10,13 +10,15 @@ class ResidentialPlaceRepository{
             promiseAsyncWrapper(
                 async (resolve) =>{
                     const places = await this.prisma.residentialQuarter.findMany({
+                        where: {
+                            deleted_at: null
+                        },
                         include: {
                             place: true,
                             residential_dashboard: true,
                             residential_cars: true
                         }
                     })
-                    console.log(places);
                     return resolve(places)
                 }
             )
