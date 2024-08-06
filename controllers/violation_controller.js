@@ -55,7 +55,7 @@ export const getViolation = asyncWrapper(
 
 export const getViolationByTicketNumber = asyncWrapper(
     async (req,res) =>{
-        const { ticket_number } = req.params
+        const { id: ticket_number } = req.params
         const violation = await ViolationRepository.getViolationByTicketNumber({ ticket_number })
         return res.status(OK).json(violation)
     }
