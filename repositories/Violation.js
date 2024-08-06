@@ -275,7 +275,12 @@ class ViolationRepository{
                     total_charge: total_charge,
                     violated_at: created.created_at,
                     employee_pnid: pnid,
-                    rules: rules
+                    rules: rules.map(rule => {
+                        return {
+                            name: rule.name,
+                            charge: rule.charge
+                        }
+                    })
                 })
 
                 return resolve(created)
