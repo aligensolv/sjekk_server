@@ -112,7 +112,7 @@ class ResidentialCarRepository{
 
             await this.prisma.residentialDashboard.update({
                 where: {
-                    id: +residential_quarter_id
+                    residential_quarter_id: +residential_quarter_id
                 },
                 data: {
                     current_total_registered_cars: {
