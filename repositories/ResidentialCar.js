@@ -126,6 +126,7 @@ class ResidentialCarRepository{
 
     static deleteResidentialCar = async ({ residential_car_id }) => new Promise(promiseAsyncWrapper(
         async (resolve, reject) => {
+
             const registeredCar = await this.prisma.residentialCar.update({
                 where: {
                     id: +residential_car_id
@@ -137,7 +138,7 @@ class ResidentialCarRepository{
 
             await this.prisma.residentialDashboard.update({
                 where: {
-                    id: registeredCar.residential_quarter_id
+                    residential_quarter_id: registeredCar.residential_quarter_id
                 },
                 data: {
                     current_total_registered_cars: {
