@@ -47,3 +47,14 @@ export const validateToken = asyncWrapper(
         return res.status(OK).json(decoded)
     }
 )
+
+export const loginApartment = asyncWrapper(
+    async (req, res) => {
+        const { access_password, access_username } = req.body
+        
+        await ValidatorRepository.validateNotNull({ access_password, access_username })
+        const success_login_result = await AuthRepository.loginApartment({ access_password, access_username })           
+    
+        return res.status(OK).json(success_login_result)
+    }
+)

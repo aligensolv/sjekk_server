@@ -21,7 +21,6 @@ class PlaceRepository{
                         },
                         include: {
                             normal_place: true,
-                            apartment: true,
                             residential: true
                         }
                     })

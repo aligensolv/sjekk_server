@@ -160,6 +160,37 @@ class Auth{
             }
         ))
     }
+
+    static loginApartment = async ({ access_password, access_username }) => new Promise(promiseAsyncWrapper(
+        async (resolve, reject) => {
+            const apartment = await this.prisma.apartment.findFirst({
+                where: {
+                    username: access_username
+                }
+            })
+
+            if(!apartment){
+                const error = new CustomError('No such apartment exists', BAD_REQUEST)
+                return reject(error)
+            }
+
+            
+            if(!await this.decryptAndCheckPasswordMatch({normal: access_password, hashed: apartment.password})){
+                const error = new CustomError('Wrong password', BAD_REQUEST)
+                return reject(error)
+            }
+
+            const token = await this.generateToken({
+                id: apartment.id
+            })
+
+            return resolve({
+                token,
+                apartment
+            })
+        }
+    ))
+            
 }
 
 export default Auth

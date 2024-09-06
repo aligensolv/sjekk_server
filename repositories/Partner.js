@@ -97,6 +97,23 @@ class PartnerRepository{
         ))
     }
 
+    static updatePartner({ partner_id, name, phone_number }){
+        return new Promise(promiseAsyncWrapepr(
+            async (resolve, reject) =>{
+                const updated = await this.prisma.partner.update({
+                    where: {
+                        id: +partner_id
+                    },
+                    data: {
+                        name, phone_number
+                    }
+                })
+
+                return resolve(updated)
+            }
+        ))
+    }
+
     static createPartnerDashboard({ partner_id, access_username, access_code }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{

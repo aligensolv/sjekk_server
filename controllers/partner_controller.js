@@ -39,6 +39,15 @@ export const createPartner = asyncWrapper(
     }
 )
 
+export const updatePartner = asyncWrapper(
+    async (req,res) => {
+        const {id: partner_id} = req.params
+        const { name, phone_number } = req.body
+        let result = await PartnerRepository.updatePartner({ partner_id, name, phone_number })
+        return res.status(OK).json(result)
+    }
+)
+
 export const deletePartner = asyncWrapper(
     async (req,res) => {
         const {id: partner_id} = req.params

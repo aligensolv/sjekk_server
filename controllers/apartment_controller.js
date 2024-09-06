@@ -19,3 +19,12 @@ export const getAllApartments = asyncWrapper(
         return res.status(OK).json(result)
     }
 )
+
+
+export const getApartmentsByResidentialQuarter = asyncWrapper(
+    async (req, res) => {
+        const { id: residential_quarter_id } = req.params
+        const result = await ApartmentPlaceRepository.getApartmentsByResidentialQuarter({ residential_quarter_id })
+        return res.status(OK).json(result)
+    }
+)

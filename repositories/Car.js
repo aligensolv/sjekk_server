@@ -21,7 +21,6 @@ class CarRepository{
                         place: {
                             include: {
                                 normal_place: true,
-                                apartment: true,
                                 residential: true
                             }
                         },
@@ -158,13 +157,14 @@ class CarRepository{
                         car_color: autosys_car_data.car_color,
                         car_type: autosys_car_data.car_type,
 
+                        registration_date: start_date,
+                        expire_date: end_date,
+
                         place_id: +place_id,
                         registration_type: 'normal',
                         normal_car: {
                             create: {
                                 free_parking_hours: 2,
-                                registeration_date: start_date,
-                                expire_date: end_date,
                                 registeration_source: 'system',
                                 normal_place_id: place.id,
                                 created_at: created_at
@@ -208,12 +208,12 @@ class CarRepository{
     static updateCar({ car_id, start_date, end_date, plate_number }){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                const updated = await this.prisma.car.update({
+                const updated = await this.prisma.registeredCar.update({
                     where: {
                         id: +car_id
                     },
                     data: {
-                        start_date, end_date, plate_number
+                        registration_date: start_date, expire_date: end_date, plate_number
                     }
                 })
                 return resolve(updated)
@@ -234,23 +234,27 @@ class CarRepository{
                     }
                 })
 
-                await this.prisma.normalCar.update({
-                    where: {
-                        registered_car_id: +car_id
-                    },
-                    data: {
-                        deleted_at: TimeRepository.getCurrentTime()
-                    }
-                })
+                if(deleted.registration_type == 'normal'){
+                    await this.prisma.normalCar.update({
+                        where: {
+                            registered_car_id: +car_id
+                        },
+                        data: {
+                            deleted_at: TimeRepository.getCurrentTime()
+                        }
+                    })
+                }else if(deleted.registration_type == 'residential'){
+                    await this.prisma.residentialCar.update({
+                        where: {
+                            registered_car_id: +car_id
+                        },
+                        data: {
+                            deleted_at: TimeRepository.getCurrentTime()
+                        }
+                    })
+                }
 
-                // await this.prisma.residentialCar.update({
-                //     where: {
-                //         registered_car_id: +car_id
-                //     },
-                //     data: {
-                //         deleted_at: TimeRepository.getCurrentTime()
-                //     }
-                // })
+
                 return resolve(deleted)
             }
         ))

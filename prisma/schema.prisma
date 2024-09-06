@@ -31,8 +31,6 @@ model NormalCar {
   registered_car  RegisteredCar @relation(fields: [registered_car_id], references: [id])
 
   free_parking_hours Int
-  registeration_date String
-  expire_date String
 
   registeration_source RegisterationSource
 
@@ -52,8 +50,6 @@ enum ResidentialRegisterationType {
 model ResidentialCar {
   id Int @id @default(autoincrement())
   parking_type ResidentialRegisterationType
-  registration_date String
-  expire_date String
   subscription_plan_days Int
 
   registered_car_id Int @unique
@@ -87,6 +83,9 @@ model RegisteredCar {
   car_description String
   car_color String
   manufacture_year String
+
+  registration_date String
+  expire_date String
 
   registration_type RegisteredCarType
   
@@ -174,6 +173,11 @@ model ResidentialDashboard {
   max_cars_registrations Int
   current_total_registered_cars Int @default(0)
 
+  guest_free_days Int?
+  apartment_registration_qrcode String?
+  max_cars_by_apartment Int?
+
+
   residential_quarter_id Int @unique
   residential_quarter ResidentialQuarter @relation(fields: [residential_quarter_id], references: [id])
 
@@ -197,17 +201,11 @@ model ResidentialQuarter {
 
   residential_dashboard ResidentialDashboard?
   residential_cars ResidentialCar[]
+  apartment_requests ApartmentRequest[]
+  apartments Apartment[]
 }
 
-model Apartment {
-  id Int @id @default(autoincrement())
-  location String
-  policy String
-  code String
 
-  place_id Int @unique
-  place  Place @relation(fields: [place_id], references: [id])
-}
 
 enum PlaceType {
   normal
@@ -228,7 +226,6 @@ model Place {
 
   normal_place NormalPlace?
   residential ResidentialQuarter?
-  apartment   Apartment?
 
   violations Violation[]
   registered_cars RegisteredCar[]
@@ -484,4 +481,34 @@ model CarLogReport {
   average_parking_time Float
 
   created_at String
+}
+
+model Apartment {
+  id Int @id @default(autoincrement())
+    owner_name String
+  username String
+  password String
+  apartment_number String
+  email String
+  created_at String
+
+  residential_quarter_id Int
+  residential_quarter ResidentialQuarter @relation(fields: [residential_quarter_id], references: [id])
+}
+
+model ApartmentRequest {
+  id Int @id @default(autoincrement())
+  owner_name String
+  username String
+  password String
+  apartment_number String
+  email String
+  created_at String
+
+  residential_quarter_id Int
+  residential_quarter ResidentialQuarter @relation(fields: [residential_quarter_id], references: [id])
+}
+
+model ApartmentLocation {
+  id Int @id @default(autoincrement())
 }

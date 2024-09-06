@@ -3,16 +3,20 @@ import CustomError from "../interfaces/custom_error_class.js";
 import promiseAsyncWrapper from "../middlewares/promise_async_wrapper.js";
 import PrismaClientService from "../utils/prisma_client.js";
 import Auth from "./Auth.js";
+import ResidentialDashboardHelper from "./ResidentialDashboardHelper.js";
 import TimeRepository from "./Time.js";
 
 class ResidentialDashboardRepository{
     static prisma = PrismaClientService.instance
 
     static createResidentialDashboard = async ({
-        access_username, access_code, residential_quarter_id, max_cars_registrations, quarter_name
+        access_username, access_code, residential_quarter_id, max_cars_registrations, quarter_name, guest_parking_hours, max_cars_by_apartment
     }) => new Promise(promiseAsyncWrapper(
         async (resolve) => {
             const created_at = TimeRepository.getCurrentTime()
+            const apartment_registration_qrcode = await ResidentialDashboardHelper.generateTicketQRCode({
+                residential_quarter_id: +residential_quarter_id,
+            })
             const dashboard = await this.prisma.residentialDashboard.create({
                 data: {
                     access_username, 
@@ -20,6 +24,9 @@ class ResidentialDashboardRepository{
                     residential_quarter_id: +residential_quarter_id, 
                     max_cars_registrations: +max_cars_registrations, 
                     quarter_name,
+                    guest_free_days: +guest_parking_hours,
+                    max_cars_by_apartment: +max_cars_by_apartment,
+                    apartment_registration_qrcode: apartment_registration_qrcode,
                     created_at: created_at
                 }
             })
