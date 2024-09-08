@@ -175,6 +175,7 @@ model ResidentialDashboard {
 
   guest_free_days Int?
   apartment_registration_qrcode String?
+  apartment_registration_qrcode_link String?
   max_cars_by_apartment Int?
 
 

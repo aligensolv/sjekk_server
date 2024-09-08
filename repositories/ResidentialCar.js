@@ -93,16 +93,16 @@ class ResidentialCarRepository{
                     manufacture_year: car_data.manufacture_year,
                     registration_type: 'residential',
                     place_id: residential_quarter.residential_quarter.place_id,
+                    registration_date: created_at,
+                    expire_date: TimeRepository.increaseTimeByDays({
+                        current_time: created_at,
+                        days: +subscription_plan_days
+                    }),
 
                     residential_car: {
                         create: {
                             subscription_plan_days: +subscription_plan_days,
                             parking_type,
-                            registration_date: created_at,
-                            expire_date: TimeRepository.increaseTimeByDays({
-                                current_time: created_at,
-                                days: +subscription_plan_days
-                            }),
                             residential_quarter_id: +residential_quarter_id
                         }
                     }

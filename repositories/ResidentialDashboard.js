@@ -14,7 +14,7 @@ class ResidentialDashboardRepository{
     }) => new Promise(promiseAsyncWrapper(
         async (resolve) => {
             const created_at = TimeRepository.getCurrentTime()
-            const apartment_registration_qrcode = await ResidentialDashboardHelper.generateTicketQRCode({
+            const {apartment_registration_qrcode, qrcode_link} = await ResidentialDashboardHelper.generateTicketQRCode({
                 residential_quarter_id: +residential_quarter_id,
             })
             const dashboard = await this.prisma.residentialDashboard.create({
@@ -27,6 +27,7 @@ class ResidentialDashboardRepository{
                     guest_free_days: +guest_parking_hours,
                     max_cars_by_apartment: +max_cars_by_apartment,
                     apartment_registration_qrcode: apartment_registration_qrcode,
+                    apartment_registration_qrcode_link: qrcode_link,
                     created_at: created_at
                 }
             })

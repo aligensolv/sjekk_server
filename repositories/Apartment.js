@@ -25,7 +25,7 @@ class ApartmentRepository{
 
     static getApartmentsByResidentialQuarter = async ({ residential_quarter_id }) => new Promise(
         promiseAsyncWrapper(
-            async (resolve) =>{
+            async (resolve) =>{                
                 const places = await this.prisma.apartment.findMany({
                     where: {
                         residential_quarter_id: +residential_quarter_id

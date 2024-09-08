@@ -33180,3 +33180,643 @@ Invalid `prisma.place.findMany()` invocation:
 }
 
 Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-06 09:09:24"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:09:29"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:09:29"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:09:55"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:09:55"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:16"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:16"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:18"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:18"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:18"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:18"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:19"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:19"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:19"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-07 07:29:19"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:21"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:21"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:25"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:25"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:42"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:42"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:51"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:51"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:55"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-07 08:58:55"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    car_description: "Varebil kl 2",
+    manufacture_year: "2018",
+    registration_type: "residential",
+    place_id: 11,
+    residential_car: {
+      create: {
+        subscription_plan_days: 3,
+        parking_type: "guest",
+        registration_date: "07.09.2024 09:50",
+        expire_date: "10.09.2024 09:50",
+        residential_quarter_id: 5
+      }
+    },
++   registration_date: String
+  }
+}
+
+Argument `registration_date` is missing. {"timestamp":"2024-09-07 09:50:11"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    plate_number: "CV89558",
+    car_model: "PEUGEOT",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    car_description: "Varebil kl 2",
+    manufacture_year: "2018",
+    registration_type: "residential",
+    place_id: 11,
+    residential_car: {
+      create: {
+        subscription_plan_days: 3,
+        parking_type: "guest",
+        registration_date: "07.09.2024 09:50",
+        expire_date: "10.09.2024 09:50",
+        residential_quarter_id: 5
+      }
+    },
++   registration_date: String
+  }
+}
+
+Argument `registration_date` is missing. {"timestamp":"2024-09-07 09:50:11"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-07 10:23:24"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-07 10:23:24"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:50:09"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:50:09"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:50:12"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:50:12"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:51:06"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:51:06"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-07 12:51:14"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-07 12:51:14"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:52:48"}
+[31merror[39m: Cannot read properties of undefined (reading 'findUnique') {"timestamp":"2024-09-07 12:52:48"}
+[31merror[39m: 
+Invalid `prisma.normalPlaceDashboard.findUnique()` invocation:
+
+{
+  where: {
+    access_username: "xg"
+  },
+  include: {
+    place: true,
+    ~~~~~
+?   normal_place?: true
+  }
+}
+
+Unknown field `place` for include statement on model `NormalPlaceDashboard`. Available options are marked with ?. {"timestamp":"2024-09-07 12:53:27"}
+[31merror[39m: 
+Invalid `prisma.normalPlaceDashboard.findUnique()` invocation:
+
+{
+  where: {
+    access_username: "xg"
+  },
+  include: {
+    place: true,
+    ~~~~~
+?   normal_place?: true
+  }
+}
+
+Unknown field `place` for include statement on model `NormalPlaceDashboard`. Available options are marked with ?. {"timestamp":"2024-09-07 12:53:27"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-09-07 21:19:44"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-09-07 21:19:44"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:10:14"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:10:14"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:10:35"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 2,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:10:35"}
+[31merror[39m: No partner was found {"timestamp":"2024-09-08 13:21:38"}
+[31merror[39m: No partner was found {"timestamp":"2024-09-08 13:21:38"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:23:27"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:23:27"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:24:50"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:24:50"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:24:54"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:24:54"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:26:15"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:26:15"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:26:19"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:26:19"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:26:26"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    partner_id: 4,
+    ~~~~~~~~~~
+    deleted_at: null,
+?   AND?: PlaceWhereInput | PlaceWhereInput[],
+?   OR?: PlaceWhereInput[],
+?   NOT?: PlaceWhereInput | PlaceWhereInput[],
+?   id?: IntFilter | Int,
+?   location?: StringFilter | String,
+?   policy?: StringFilter | String,
+?   code?: StringFilter | String,
+?   created_at?: StringFilter | String,
+?   updated_at?: StringNullableFilter | String | Null,
+?   place_type?: EnumPlaceTypeFilter | PlaceType,
+?   normal_place?: NormalPlaceNullableRelationFilter | NormalPlaceWhereInput | Null,
+?   residential?: ResidentialQuarterNullableRelationFilter | ResidentialQuarterWhereInput | Null,
+?   violations?: ViolationListRelationFilter,
+?   registered_cars?: RegisteredCarListRelationFilter
+  }
+}
+
+Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:26:26"}

@@ -92,12 +92,9 @@ class Auth{
     static loginPlace({ access_username, access_code }){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                const dashboard = await this.prisma.placeDashboard.findUnique({
+                const dashboard = await this.prisma.normalPlaceDashboard.findUnique({
                     where: {
                         access_username
-                    },
-                    include: {
-                        place: true
                     }
                 })
 

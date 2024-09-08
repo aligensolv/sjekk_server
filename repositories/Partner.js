@@ -30,7 +30,7 @@ class PartnerRepository{
     static getAllPartnerPlaces({ partner_id }){
         return new Promise(promiseAsyncWrapepr(
             async (resolve, reject) =>{
-                const places = await this.prisma.place.findMany({
+                const places = await this.prisma.normalPlace.findMany({
                     where: {
                         partner_id: +partner_id,
                         deleted_at: null
