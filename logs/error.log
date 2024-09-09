@@ -33256,3 +33256,187 @@ Invalid `prisma.place.findMany()` invocation:
 }
 
 Unknown argument `partner_id`. Available options are marked with ?. {"timestamp":"2024-09-08 13:26:26"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-09 15:50:07"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-09 15:50:07"}
+[31merror[39m: Password is incorrect {"timestamp":"2024-09-09 15:50:29"}
+[31merror[39m: Password is incorrect {"timestamp":"2024-09-09 15:50:29"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-09 15:50:29"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-09 15:50:29"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    place_id: 11
+  },
+  include: {
+    place: {
+      include: {
+        normal_place: true,
+        apartment: true,
+        ~~~~~~~~~
+        residential: true,
+?       violations?: true,
+?       registered_cars?: true
+      }
+    },
+    residential_car: true,
+    normal_car: {
+      include: {
+        registered_car: true
+      }
+    },
+    apartment_car: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-09-09 15:51:01"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    place_id: 11
+  },
+  include: {
+    place: {
+      include: {
+        normal_place: true,
+        apartment: true,
+        ~~~~~~~~~
+        residential: true,
+?       violations?: true,
+?       registered_cars?: true
+      }
+    },
+    residential_car: true,
+    normal_car: {
+      include: {
+        registered_car: true
+      }
+    },
+    apartment_car: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-09-09 15:51:01"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    place_id: 1
+  },
+  include: {
+    place: {
+      include: {
+        normal_place: true,
+        apartment: true,
+        ~~~~~~~~~
+        residential: true,
+?       violations?: true,
+?       registered_cars?: true
+      }
+    },
+    residential_car: true,
+    normal_car: {
+      include: {
+        registered_car: true
+      }
+    },
+    apartment_car: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-09-09 15:51:40"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    place_id: 1
+  },
+  include: {
+    place: {
+      include: {
+        normal_place: true,
+        apartment: true,
+        ~~~~~~~~~
+        residential: true,
+?       violations?: true,
+?       registered_cars?: true
+      }
+    },
+    residential_car: true,
+    normal_car: {
+      include: {
+        registered_car: true
+      }
+    },
+    apartment_car: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-09-09 15:51:40"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    place_id: 1
+  },
+  include: {
+    place: {
+      include: {
+        normal_place: true,
+        apartment: true,
+        ~~~~~~~~~
+        residential: true,
+?       violations?: true,
+?       registered_cars?: true
+      }
+    },
+    residential_car: true,
+    normal_car: {
+      include: {
+        registered_car: true
+      }
+    },
+    apartment_car: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-09-09 15:52:23"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    place_id: 1
+  },
+  include: {
+    place: {
+      include: {
+        normal_place: true,
+        apartment: true,
+        ~~~~~~~~~
+        residential: true,
+?       violations?: true,
+?       registered_cars?: true
+      }
+    },
+    residential_car: true,
+    normal_car: {
+      include: {
+        registered_car: true
+      }
+    },
+    apartment_car: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-09-09 15:52:23"}
+[31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-09-09 16:04:13"}
+[31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-09-09 16:04:13"}
+[31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-09-09 16:05:35"}
+[31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-09-09 16:05:35"}

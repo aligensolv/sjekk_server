@@ -33,6 +33,9 @@ class CarRepository{
                         apartment_car: true
                     }
                 })
+
+                console.log(cars);
+                
                 return resolve(cars)
             }
         ))
@@ -58,7 +61,6 @@ class CarRepository{
                         place: {
                             include: {
                                 normal_place: true,
-                                apartment: true,
                                 residential: true
                             }
                         },
@@ -96,7 +98,7 @@ class CarRepository{
     static getCarByPlate({ plate_number }){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
-                const car = await this.prisma.car.findFirst({
+                const car = await this.prisma.registeredCar.findFirst({
                     where: {
                         plate_number: plate_number.toUpperCase().replace(/\s/g, '')
                     },
