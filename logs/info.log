@@ -34004,3 +34004,785 @@ Unknown field `apartment` for include statement on model `Place`. Available opti
 [31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-09-09 16:04:13"}
 [31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-09-09 16:05:35"}
 [31merror[39m: Cannot read properties of undefined (reading 'findFirst') {"timestamp":"2024-09-09 16:05:35"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the constraint: `User_pnid_key` {"timestamp":"2024-09-10 11:42:32"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the constraint: `User_pnid_key` {"timestamp":"2024-09-10 11:42:32"}
+[31merror[39m: No partner was found {"timestamp":"2024-09-10 11:46:55"}
+[31merror[39m: No partner was found {"timestamp":"2024-09-10 11:46:55"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-09-10 11:46:59"}
+[31merror[39m: Access code is incorrect {"timestamp":"2024-09-10 11:46:59"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "gsfg",
+    policy: "fdafad",
+    code: "gsfgsf",
+    created_at: "10.09.2024 12:16",
+    is_verified: true,
+    partner_id: 4,
++   place_type: PlaceType
+  }
+}
+
+Argument `place_type` is missing. {"timestamp":"2024-09-10 12:16:49"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "gsfg",
+    policy: "fdafad",
+    code: "gsfgsf",
+    created_at: "10.09.2024 12:16",
+    is_verified: true,
+    partner_id: 4,
++   place_type: PlaceType
+  }
+}
+
+Argument `place_type` is missing. {"timestamp":"2024-09-10 12:16:49"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 13:21:07"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 13:21:07"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 13:21:11"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 13:21:11"}
+[31merror[39m: 
+Invalid `prisma.normalPlaceDashboard.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    normal_place: true
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-09-10 13:58:56"}
+[31merror[39m: 
+Invalid `prisma.normalPlaceDashboard.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    normal_place: true
+  }
+}
+
+Argument `id` is missing. {"timestamp":"2024-09-10 13:58:56"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 14:36:24"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 14:36:24"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 14:36:27"}
+[31merror[39m: No dashboard username was found {"timestamp":"2024-09-10 14:36:27"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:41:35"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:41:35"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:45:02"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:45:02"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:45:19"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:45:19"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:46:08"}
+[31merror[39m: Car is already registered {"timestamp":"2024-09-10 14:46:08"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    start_date: "10.09.2024 14:46",
+    end_date: "10.09.2024 17:46",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 3,
+    place_id: undefined,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:46",
++   registration_date: String
+  }
+}
+
+Argument `registration_date` is missing. {"timestamp":"2024-09-10 14:46:43"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    start_date: "10.09.2024 14:46",
+    end_date: "10.09.2024 17:46",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 3,
+    place_id: undefined,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:46",
++   registration_date: String
+  }
+}
+
+Argument `registration_date` is missing. {"timestamp":"2024-09-10 14:46:43"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-10 14:48:20"}
+[31merror[39m: Client network socket disconnected before secure TLS connection was established {"timestamp":"2024-09-10 14:48:20"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:49",
+    expire_date: "10.09.2024 17:49",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 3,
+    place_id: undefined,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:49",
++   place: {
++     create: PlaceCreateWithoutRegistered_carsInput | PlaceUncheckedCreateWithoutRegistered_carsInput,
++     connectOrCreate: PlaceCreateOrConnectWithoutRegistered_carsInput,
++     connect: PlaceWhereUniqueInput
++   }
+  }
+}
+
+Argument `place` is missing. {"timestamp":"2024-09-10 14:49:07"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:49",
+    expire_date: "10.09.2024 17:49",
+    registration_source: "gateway",
+    registration_type: "External",
+    source_id: 3,
+    place_id: undefined,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:49",
++   place: {
++     create: PlaceCreateWithoutRegistered_carsInput | PlaceUncheckedCreateWithoutRegistered_carsInput,
++     connectOrCreate: PlaceCreateOrConnectWithoutRegistered_carsInput,
++     connect: PlaceWhereUniqueInput
++   }
+  }
+}
+
+Argument `place` is missing. {"timestamp":"2024-09-10 14:49:07"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:51",
+    expire_date: "10.09.2024 17:51",
+    registration_source: "gateway",
+    ~~~~~~~~~~~~~~~~~~~
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:51",
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   normal_car?: NormalCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `registration_source`. Available options are marked with ?. {"timestamp":"2024-09-10 14:51:18"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:51",
+    expire_date: "10.09.2024 17:51",
+    registration_source: "gateway",
+    ~~~~~~~~~~~~~~~~~~~
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:51",
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   normal_car?: NormalCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `registration_source`. Available options are marked with ?. {"timestamp":"2024-09-10 14:51:18"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:51",
+    expire_date: "10.09.2024 17:51",
+    registration_type: "External",
+                       ~~~~~~~~~~
+    source_id: 3,
+    place_id: 1,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:51"
+  }
+}
+
+Invalid value for argument `registration_type`. Expected RegisteredCarType. {"timestamp":"2024-09-10 14:51:44"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:51",
+    expire_date: "10.09.2024 17:51",
+    registration_type: "External",
+                       ~~~~~~~~~~
+    source_id: 3,
+    place_id: 1,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:51"
+  }
+}
+
+Invalid value for argument `registration_type`. Expected RegisteredCarType. {"timestamp":"2024-09-10 14:51:44"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:52",
+    expire_date: "10.09.2024 17:52",
+    registration_type: "normal",
+    source_id: 3,
+    ~~~~~~~~~
+    place_id: 1,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:52",
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   normal_car?: NormalCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `source_id`. Available options are marked with ?. {"timestamp":"2024-09-10 14:52:10"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:52",
+    expire_date: "10.09.2024 17:52",
+    registration_type: "normal",
+    source_id: 3,
+    ~~~~~~~~~
+    place_id: 1,
+    free_parking_hours: 3,
+    created_at: "10.09.2024 14:52",
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   normal_car?: NormalCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `source_id`. Available options are marked with ?. {"timestamp":"2024-09-10 14:52:10"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:52",
+    expire_date: "10.09.2024 17:52",
+    registration_type: "normal",
+    place_id: 1,
+    free_parking_hours: 3,
+    ~~~~~~~~~~~~~~~~~~
+    created_at: "10.09.2024 14:52",
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   normal_car?: NormalCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `free_parking_hours`. Available options are marked with ?. {"timestamp":"2024-09-10 14:52:29"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:52",
+    expire_date: "10.09.2024 17:52",
+    registration_type: "normal",
+    place_id: 1,
+    free_parking_hours: 3,
+    ~~~~~~~~~~~~~~~~~~
+    created_at: "10.09.2024 14:52",
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   normal_car?: NormalCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `free_parking_hours`. Available options are marked with ?. {"timestamp":"2024-09-10 14:52:29"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 14:57",
+        registration_source: "gateway"
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:57",
+    expire_date: "10.09.2024 17:57",
+    registration_type: "External",
+    source_id: 3,
+    created_at: "10.09.2024 14:57",
++   place: {
++     create: PlaceCreateWithoutRegistered_carsInput | PlaceUncheckedCreateWithoutRegistered_carsInput,
++     connectOrCreate: PlaceCreateOrConnectWithoutRegistered_carsInput,
++     connect: PlaceWhereUniqueInput
++   }
+  }
+}
+
+Argument `place` is missing. {"timestamp":"2024-09-10 14:57:36"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 14:57",
+        registration_source: "gateway"
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:57",
+    expire_date: "10.09.2024 17:57",
+    registration_type: "External",
+    source_id: 3,
+    created_at: "10.09.2024 14:57",
++   place: {
++     create: PlaceCreateWithoutRegistered_carsInput | PlaceUncheckedCreateWithoutRegistered_carsInput,
++     connectOrCreate: PlaceCreateOrConnectWithoutRegistered_carsInput,
++     connect: PlaceWhereUniqueInput
++   }
+  }
+}
+
+Argument `place` is missing. {"timestamp":"2024-09-10 14:57:36"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 14:58",
+        registration_source: "gateway",
++       registeration_source: RegisterationSource
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:58",
+    expire_date: "10.09.2024 17:58",
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1,
+    created_at: "10.09.2024 14:58"
+  }
+}
+
+Argument `registeration_source` is missing. {"timestamp":"2024-09-10 14:58:53"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 14:58",
+        registration_source: "gateway",
++       registeration_source: RegisterationSource
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 14:58",
+    expire_date: "10.09.2024 17:58",
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1,
+    created_at: "10.09.2024 14:58"
+  }
+}
+
+Argument `registeration_source` is missing. {"timestamp":"2024-09-10 14:58:53"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:00",
+        registration_source: "gateway",
++       registeration_source: RegisterationSource
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:00",
+    expire_date: "10.09.2024 18:00",
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1
+  }
+}
+
+Argument `registeration_source` is missing. {"timestamp":"2024-09-10 15:00:03"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:00",
+        registration_source: "gateway",
++       registeration_source: RegisterationSource
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:00",
+    expire_date: "10.09.2024 18:00",
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1
+  }
+}
+
+Argument `registeration_source` is missing. {"timestamp":"2024-09-10 15:00:03"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:00",
+        registration_source: "normal_place_dashboard",
++       registeration_source: RegisterationSource
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:00",
+    expire_date: "10.09.2024 18:00",
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1
+  }
+}
+
+Argument `registeration_source` is missing. {"timestamp":"2024-09-10 15:00:41"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:00",
+        registration_source: "normal_place_dashboard",
++       registeration_source: RegisterationSource
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:00",
+    expire_date: "10.09.2024 18:00",
+    registration_type: "External",
+    source_id: 3,
+    place_id: 1
+  }
+}
+
+Argument `registeration_source` is missing. {"timestamp":"2024-09-10 15:00:41"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:01",
+        registeration_source: "normal_place_dashboard"
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:01",
+    expire_date: "10.09.2024 18:01",
+    registration_type: "External",
+                       ~~~~~~~~~~
+    source_id: 3,
+    place_id: 1
+  }
+}
+
+Invalid value for argument `registration_type`. Expected RegisteredCarType. {"timestamp":"2024-09-10 15:01:05"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:01",
+        registeration_source: "normal_place_dashboard"
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:01",
+    expire_date: "10.09.2024 18:01",
+    registration_type: "External",
+                       ~~~~~~~~~~
+    source_id: 3,
+    place_id: 1
+  }
+}
+
+Invalid value for argument `registration_type`. Expected RegisteredCarType. {"timestamp":"2024-09-10 15:01:05"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:01",
+        registeration_source: "normal_place_dashboard"
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:01",
+    expire_date: "10.09.2024 18:01",
+    registration_type: "normal",
+    source_id: 3,
+    ~~~~~~~~~
+    place_id: 1,
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `source_id`. Available options are marked with ?. {"timestamp":"2024-09-10 15:01:49"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+{
+  data: {
+    normal_car: {
+      create: {
+        normal_place_id: 1,
+        free_parking_hours: 3,
+        created_at: "10.09.2024 15:01",
+        registeration_source: "normal_place_dashboard"
+      }
+    },
+    manufacture_year: "2018",
+    car_model: "PEUGEOT",
+    car_description: "Varebil kl 2",
+    car_color: "Grå",
+    car_type: "KJORETOY",
+    plate_number: "CV89558",
+    registration_date: "10.09.2024 15:01",
+    expire_date: "10.09.2024 18:01",
+    registration_type: "normal",
+    source_id: 3,
+    ~~~~~~~~~
+    place_id: 1,
+?   id?: Int,
+?   updated_at?: String | Null,
+?   deleted_at?: String | Null,
+?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,
+?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput
+  }
+}
+
+Unknown argument `source_id`. Available options are marked with ?. {"timestamp":"2024-09-10 15:01:49"}

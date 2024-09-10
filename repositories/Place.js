@@ -232,9 +232,19 @@ class PlaceRepository{
             async (resolve, reject) =>{
                 let is_car_registered = await this.prisma.registeredCar.findFirst({
                     where: {
-                        plate_number: plate_number.toUpperCase().replace(/\s/g, '')
+                        plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                        deleted_at: null,
+                        apartment_car: null,
+                        residential_car: null
+                    },
+                    include: {
+                        apartment_car: true,
+                        residential_car: true
                     }
                 })
+
+                console.log(is_car_registered);
+                
 
                 if(is_car_registered){
                     const registeration_already_exists = new CustomError('Car is already registered', BAD_REQUEST)
@@ -266,24 +276,27 @@ class PlaceRepository{
 
                 const car = await this.prisma.registeredCar.create({
                     data: {
-                        
+                        normal_car: {
+                            create:{
+                                normal_place_id: place_dashboard.normal_place.id,
+                                free_parking_hours,
+                                created_at,
+                                registeration_source: 'normal_place_dashboard',
+                            }
+                        },
                         manufacture_year: autosys_car_data.manufacture_year ?? 'N/A',
                         car_model: autosys_car_data.car_model ?? 'N/A',
                         car_description: autosys_car_data.car_description ?? 'N/A',
                         car_color: autosys_car_data.car_color ?? 'N/A',
                         car_type: autosys_car_data.car_type ?? 'N/A',
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
-                        start_date,
-                        end_date: TimeRepository.increaseTimeByHours({
+                        registration_date: start_date,
+                        expire_date: TimeRepository.increaseTimeByHours({
                             hours: +free_parking_hours,
                             current_time: start_date
                         }),
-                        registration_source: 'gateway',
-                        registration_type: 'External',
-                        source_id: +dashboard_id,
-                        place_id: place_dashboard.place_id,
-                        free_parking_hours,
-                        created_at
+                        registration_type: 'normal',
+                        place_id: place_dashboard.normal_place.place_id,
                     }
                 })
         
@@ -307,16 +320,22 @@ class PlaceRepository{
                 let registered_cars = await this.prisma.normalCar.findMany({
                     where: {
                         normal_place_id: dashboard.normal_place_id
+                    },
+                    include: {
+                        registered_car: true
                     }
                 })
 
                 registered_cars = registered_cars.map(car => {
                     return {
-                        start_date: car.start_date,
-                        end_date: car.end_date,
-                        plate_number: car.plate_number
+                        start_date: car.registered_car.registration_date,
+                        end_date: car.registered_car.expire_date,
+                        plate_number: car.registered_car.plate_number
                     }
                 })
+
+                console.log(registered_cars);
+                
                 return resolve(registered_cars)
             }
         ))
