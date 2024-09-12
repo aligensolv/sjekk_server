@@ -148,7 +148,7 @@ class PlaceRequestRepository {
                     })
                 }
     
-                return resolve(approval);
+                return resolve(true);
             })
         )
     }
