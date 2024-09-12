@@ -137,7 +137,7 @@ class PlaceRequestRepository {
                         }
                     })
                 }else if(updated_place_request.request_type == 'deletion'){
-                    await this.prisma.place.update({
+                    const updated = await this.prisma.place.update({
                         where: {
                             id: +updated_place_request.place_id
                         },
@@ -145,6 +145,26 @@ class PlaceRequestRepository {
                             deleted_at: current_date
                         }
                     })
+
+                    if(updated.place_type == 'normal'){
+                        await this.prisma.normalPlace.update({
+                            where: {
+                                id: +updated_place_request.place_id
+                            },
+                            data: {
+                                deleted_at: current_date
+                            }
+                        })
+                    } else if(updated.place_type == 'residential'){
+                        await this.prisma.residentialQuarter.update({
+                            where: {
+                                id: +updated_place_request.place_id
+                            },
+                            data: {
+                                deleted_at: current_date
+                            }
+                        })
+                    }
                 }
     
                 return resolve(true);
