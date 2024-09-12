@@ -124,7 +124,15 @@ class PlaceRequestRepository {
                             code: updated_place_request.code,
                             created_at: current_date,
 
-                            partner_id: updated_place_request.requested_by_id,
+                            normal_place: {
+                                create: {
+                                    place_type: '',
+                                    location: updated_place_request.location,
+                                    policy: updated_place_request.policy,
+                                    code: updated_place_request.code,
+                                    partner_id: updated_place_request.requested_by_id,
+                                }
+                            },
                             place_type: 'normal'
                         }
                     })
