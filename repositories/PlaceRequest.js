@@ -125,7 +125,8 @@ class PlaceRequestRepository {
                             created_at: current_date,
                             is_verified: true,
 
-                            partner_id: updated_place_request.requested_by_id
+                            partner_id: updated_place_request.requested_by_id,
+                            place_type: 'normal'
                         }
                     })
                 }else if(updated_place_request.request_type == 'deletion'){
