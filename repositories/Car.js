@@ -6,6 +6,9 @@ import AutosysRepository from "./Autosys.js";
 
 import { PrismaClient } from "@prisma/client"
 import TimeRepository from "./Time.js";
+import { io } from "../server.js";
+import SocketPocket from "../constants/socket.js";
+import { scheduleCarForRemove } from "../utils/car_deletion_cron.js";
 
 class CarRepository{
     static prisma = new PrismaClient()
@@ -55,7 +58,8 @@ class CarRepository{
             async (resolve, reject) =>{
                 const cars = await this.prisma.registeredCar.findMany({
                     where: {
-                        place_id: +place_id
+                        place_id: +place_id,
+                        deleted_at: null
                     },
                     include: {
                         place: {
@@ -169,7 +173,7 @@ class CarRepository{
                             create: {
                                 free_parking_hours: 2,
                                 registeration_source: 'system',
-                                normal_place_id: place.id,
+                                normal_place_id: +place_id,
                                 created_at: created_at
                             }
                         }
@@ -202,6 +206,14 @@ class CarRepository{
                         }
                     })
                 }
+
+                io.emit(SocketPocket.EMITS.NOTIFY_APP_WITH_CAR_REGISTRATION, {})
+                io.emit(SocketPocket.EMITS.NOTIFY_PUBLIC_PLACE_DASHBOARD_WITH_CAR_REGISTRATION, {})
+
+                scheduleCarForRemove({
+                    car_id: car.id,
+                    expirationDate: end_date
+                })
 
                 return resolve(car)
             }
@@ -257,6 +269,10 @@ class CarRepository{
                     })
                 }
 
+                io.emit(SocketPocket.EMITS.NOTIFY_APP_WITH_CAR_REMOVAL, {})
+                io.emit(SocketPocket.EMITS.NOTIFY_RESIDENTIAL_QUARTER_WITH_CAR_DELETION, {})
+                io.emit(SocketPocket.EMITS.NOTIFY_PUBLIC_PLACE_DASHBOARD_WITH_CAR_REMOVAL, {})
+
 
                 return resolve(deleted)
             }
@@ -267,6 +283,10 @@ class CarRepository{
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
                 await this.prisma.car.deleteMany({})
+                io.emit(SocketPocket.EMITS.NOTIFY_APP_WITH_CAR_REMOVAL, {})
+                io.emit(SocketPocket.EMITS.NOTIFY_RESIDENTIAL_QUARTER_WITH_CAR_DELETION, {})
+                io.emit(SocketPocket.EMITS.NOTIFY_PUBLIC_PLACE_DASHBOARD_WITH_CAR_REMOVAL, {})
+
                 return resolve(true)
             }
         ))

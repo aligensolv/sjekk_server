@@ -5,6 +5,9 @@ import { BAD_REQUEST, NOT_FOUND } from "../constants/status_codes.js";
 
 import { PrismaClient } from "@prisma/client"
 import TimeRepository from "./Time.js";
+import { scheduleCarForRemove } from "../utils/car_deletion_cron.js";
+import { io } from "../server.js";
+import SocketPocket from "../constants/socket.js";
 
 class PlaceRepository{
     static prisma = new PrismaClient()
@@ -297,6 +300,34 @@ class PlaceRepository{
                         }),
                         registration_type: 'normal',
                         place_id: place_dashboard.normal_place.place_id,
+                    }
+                })
+
+                io.emit(SocketPocket.EMITS.NOTIFY_APP_WITH_CAR_REGISTRATION, {})
+
+                scheduleCarForRemove({
+                    car_id: car.id,
+                    expirationDate: car.expire_date
+                })
+
+                await this.prisma.carLog.create({
+                    data: {
+                        start_date: created_at,
+                        end_date: TimeRepository.increaseTimeByHours({
+                            hours: +free_parking_hours,
+                            current_time: created_at
+                        }),
+                        created_at: created_at,
+                        registered_by: 'public_dashboard',
+                        place_location: place_dashboard.normal_place.location,
+                        place_code: place_dashboard.normal_place.code,
+                        place_policy: place_dashboard.normal_place.policy,
+                        plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                        car_model: autosys_car_data.car_model,
+                        car_color: autosys_car_data.car_color,
+                        car_type: autosys_car_data.car_type,
+                        car_description: autosys_car_data.car_description,
+                        place_id: +place_dashboard.normal_place.place_id
                     }
                 })
         

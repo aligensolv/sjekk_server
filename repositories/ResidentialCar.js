@@ -1,6 +1,7 @@
 import { BAD_REQUEST } from "../constants/status_codes.js"
 import CustomError from "../interfaces/custom_error_class.js"
 import promiseAsyncWrapper from "../middlewares/promise_async_wrapper.js"
+import { scheduleCarForRemove } from "../utils/car_deletion_cron.js"
 import PrismaClientService from "../utils/prisma_client.js"
 import AutosysRepository from "./Autosys.js"
 import TimeRepository from "./Time.js"
@@ -120,6 +121,30 @@ class ResidentialCarRepository{
                     }
                 }
             })
+
+            scheduleCarForRemove({
+                car_id: registeredCar.id,
+                expirationDate: registeredCar.expire_date
+            })
+
+            await this.prisma.carLog.create({
+                data: {
+                    start_date: created_at,
+                    end_date: registeredCar.expire_date,
+                    created_at,
+                    registered_by: 'residential',
+                    place_location: residential_quarter.residential_quarter.location,
+                    place_code: residential_quarter.residential_quarter.code,
+                    place_policy: residential_quarter.residential_quarter.policy,
+                    plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                    car_model: car_data.car_model,
+                    car_color: car_data.car_color ,
+                    car_type: car_data.car_type,
+                    car_description: car_data.car_description,
+                    place_id: +residential_quarter_id
+                }
+            })
+
             return resolve(registeredCar)
         }
     ))

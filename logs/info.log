@@ -34786,3 +34786,43 @@ Invalid `prisma.registeredCar.create()` invocation:
 }
 
 Unknown argument `source_id`. Available options are marked with ?. {"timestamp":"2024-09-10 15:01:49"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 14:25:07"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 14:25:07"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 14:39:21"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 14:39:21"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 14:58:54"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 14:58:54"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 15:00:22"}
+[31merror[39m: jwt expired {"timestamp":"2024-09-11 15:00:22"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-09-12 13:17:01"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-09-12 13:17:01"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-09-12 13:45:46"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-09-12 13:45:46"}
+[31merror[39m: Wrong password {"timestamp":"2024-09-12 13:46:09"}
+[31merror[39m: Wrong password {"timestamp":"2024-09-12 13:46:09"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-09-12 15:22:19"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-09-12 15:22:19"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-09-12 15:23:27"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-09-12 15:23:27"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-09-12 15:24:39"}
+[31merror[39m: Cannot read properties of null (reading 'id') {"timestamp":"2024-09-12 15:24:39"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+
+Foreign key constraint failed on the field: `normal_place_id` {"timestamp":"2024-09-12 15:25:14"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+
+Foreign key constraint failed on the field: `normal_place_id` {"timestamp":"2024-09-12 15:25:14"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+
+Foreign key constraint failed on the field: `normal_place_id` {"timestamp":"2024-09-12 15:27:00"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.create()` invocation:
+
+
+Foreign key constraint failed on the field: `normal_place_id` {"timestamp":"2024-09-12 15:27:00"}

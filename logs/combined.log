@@ -3706,3 +3706,27 @@
 {"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n{\n  data: {\n    normal_car: {\n      create: {\n        normal_place_id: 1,\n        free_parking_hours: 3,\n        created_at: \"10.09.2024 15:01\",\n        registeration_source: \"normal_place_dashboard\"\n      }\n    },\n    manufacture_year: \"2018\",\n    car_model: \"PEUGEOT\",\n    car_description: \"Varebil kl 2\",\n    car_color: \"Grå\",\n    car_type: \"KJORETOY\",\n    plate_number: \"CV89558\",\n    registration_date: \"10.09.2024 15:01\",\n    expire_date: \"10.09.2024 18:01\",\n    registration_type: \"External\",\n                       ~~~~~~~~~~\n    source_id: 3,\n    place_id: 1\n  }\n}\n\nInvalid value for argument `registration_type`. Expected RegisteredCarType.","timestamp":"2024-09-10 15:01:05"}
 {"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n{\n  data: {\n    normal_car: {\n      create: {\n        normal_place_id: 1,\n        free_parking_hours: 3,\n        created_at: \"10.09.2024 15:01\",\n        registeration_source: \"normal_place_dashboard\"\n      }\n    },\n    manufacture_year: \"2018\",\n    car_model: \"PEUGEOT\",\n    car_description: \"Varebil kl 2\",\n    car_color: \"Grå\",\n    car_type: \"KJORETOY\",\n    plate_number: \"CV89558\",\n    registration_date: \"10.09.2024 15:01\",\n    expire_date: \"10.09.2024 18:01\",\n    registration_type: \"normal\",\n    source_id: 3,\n    ~~~~~~~~~\n    place_id: 1,\n?   id?: Int,\n?   updated_at?: String | Null,\n?   deleted_at?: String | Null,\n?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,\n?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput\n  }\n}\n\nUnknown argument `source_id`. Available options are marked with ?.","timestamp":"2024-09-10 15:01:49"}
 {"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n{\n  data: {\n    normal_car: {\n      create: {\n        normal_place_id: 1,\n        free_parking_hours: 3,\n        created_at: \"10.09.2024 15:01\",\n        registeration_source: \"normal_place_dashboard\"\n      }\n    },\n    manufacture_year: \"2018\",\n    car_model: \"PEUGEOT\",\n    car_description: \"Varebil kl 2\",\n    car_color: \"Grå\",\n    car_type: \"KJORETOY\",\n    plate_number: \"CV89558\",\n    registration_date: \"10.09.2024 15:01\",\n    expire_date: \"10.09.2024 18:01\",\n    registration_type: \"normal\",\n    source_id: 3,\n    ~~~~~~~~~\n    place_id: 1,\n?   id?: Int,\n?   updated_at?: String | Null,\n?   deleted_at?: String | Null,\n?   apartment_car?: ApartmentCarUncheckedCreateNestedOneWithoutRegistered_carInput,\n?   residential_car?: ResidentialCarUncheckedCreateNestedOneWithoutRegistered_carInput\n  }\n}\n\nUnknown argument `source_id`. Available options are marked with ?.","timestamp":"2024-09-10 15:01:49"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 14:25:07"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 14:25:07"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 14:39:21"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 14:39:21"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 14:58:54"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 14:58:54"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 15:00:22"}
+{"level":"error","message":"jwt expired","timestamp":"2024-09-11 15:00:22"}
+{"level":"error","message":"No such dashboard exists","timestamp":"2024-09-12 13:17:01"}
+{"level":"error","message":"No such dashboard exists","timestamp":"2024-09-12 13:17:01"}
+{"level":"error","message":"No such dashboard exists","timestamp":"2024-09-12 13:45:46"}
+{"level":"error","message":"No such dashboard exists","timestamp":"2024-09-12 13:45:46"}
+{"level":"error","message":"Wrong password","timestamp":"2024-09-12 13:46:09"}
+{"level":"error","message":"Wrong password","timestamp":"2024-09-12 13:46:09"}
+{"level":"error","message":"Cannot read properties of null (reading 'id')","timestamp":"2024-09-12 15:22:19"}
+{"level":"error","message":"Cannot read properties of null (reading 'id')","timestamp":"2024-09-12 15:22:19"}
+{"level":"error","message":"Cannot read properties of null (reading 'id')","timestamp":"2024-09-12 15:23:27"}
+{"level":"error","message":"Cannot read properties of null (reading 'id')","timestamp":"2024-09-12 15:23:27"}
+{"level":"error","message":"Cannot read properties of null (reading 'id')","timestamp":"2024-09-12 15:24:39"}
+{"level":"error","message":"Cannot read properties of null (reading 'id')","timestamp":"2024-09-12 15:24:39"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n\nForeign key constraint failed on the field: `normal_place_id`","timestamp":"2024-09-12 15:25:14"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n\nForeign key constraint failed on the field: `normal_place_id`","timestamp":"2024-09-12 15:25:14"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n\nForeign key constraint failed on the field: `normal_place_id`","timestamp":"2024-09-12 15:27:00"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n\nForeign key constraint failed on the field: `normal_place_id`","timestamp":"2024-09-12 15:27:00"}

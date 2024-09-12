@@ -16,6 +16,7 @@ class AutosysRepository{
      *     car_color: string,
      *     car_brand: string,
      *     car_model: string,
+     *     car_description: string,
      *     manufacture_year: number,
      *     plate_number: string
      * }>} A promise that resolves to an object containing information about the car.

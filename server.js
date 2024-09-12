@@ -20,7 +20,7 @@ const __dirname = path.dirname(__filename)
 const app = express()
 
 const server = http.createServer(app)
-const io = new Server(server,{
+export const io = new Server(server,{
     cors: {
         origin: '*'
     }
@@ -88,6 +88,7 @@ import ResidentialCarApi from './routes/residential_car_route.js'
 import ResidentialDashboardApi from './routes/residential_dashboard_route.js'
 import ApartmentRequestApi from './routes/apartment_request_route.js'
 import ApartmentLocationRequestApi from './routes/apartment_location_request_route.js'
+import SocketPocket from './constants/socket.js'
 
 
 // public routes
@@ -126,7 +127,6 @@ app.use(
 
 
 app.use(ErrorHandlerMiddleware)
-
 
 app.get('*', (req, res) => {
     return res.status(NOT_FOUND).json({
