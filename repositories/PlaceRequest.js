@@ -142,7 +142,6 @@ class PlaceRequestRepository {
                             id: +updated_place_request.place_id
                         },
                         data: {
-                            is_verified: false,
                             deleted_at: current_date
                         }
                     })
