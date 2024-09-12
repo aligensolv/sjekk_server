@@ -105,14 +105,6 @@ class PlaceRequestRepository {
         return new Promise(
             promiseAsyncWrapper(async (resolve) => {
                 const current_date = await TimeRepository.getCurrentTime();
-                const approval = await this.prisma.placeRequestApproval.create({
-                    data: {
-                        request_id: +place_request_id,
-                        status: 'approved',
-                        comments: '',
-                        created_at: current_date
-                    }
-                });
     
                 const updated_place_request = await this.prisma.placeRequest.update({
                     where: {
