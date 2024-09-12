@@ -123,7 +123,6 @@ class PlaceRequestRepository {
                             policy: updated_place_request.policy,
                             code: updated_place_request.code,
                             created_at: current_date,
-                            is_verified: true,
 
                             partner_id: updated_place_request.requested_by_id,
                             place_type: 'normal'
