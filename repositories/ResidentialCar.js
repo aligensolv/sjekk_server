@@ -69,7 +69,8 @@ class ResidentialCarRepository{
                     residential_car: {
                         parking_type: {
                             equals: parking_type
-                        }
+                        },
+                        residential_quarter_id: +residential_quarter_id                  
                     }
                 },
                 include: {
