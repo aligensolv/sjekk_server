@@ -5,9 +5,9 @@ import ValidatorRepository from "../repositories/Validator.js"
 
 export const registerResidentialCar = asyncWrapper(
     async (req, res) => {
-        const { plate_number, parking_type, subscription_plan_days, residential_quarter_id } = req.body
+        const { plate_number, parking_type, subscription_plan_days, residential_quarter_id, apartment_id } = req.body
         await ValidatorRepository.validateNotNull({ plate_number, parking_type, subscription_plan_days, residential_quarter_id })
-        const result = await ResidentialCarRepository.registerResidentialCar({ plate_number, parking_type, subscription_plan_days, residential_quarter_id })
+        const result = await ResidentialCarRepository.registerResidentialCar({ plate_number, parking_type, subscription_plan_days, residential_quarter_id, apartment_id })
         return res.status(OK).json(result)
     }
 )
