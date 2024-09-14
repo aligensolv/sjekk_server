@@ -33,7 +33,8 @@ class ResidentialCarRepository{
                     deleted_at: null
                 },
                 include: {
-                    registered_car: true
+                    registered_car: true,
+                    apartment: true
                 }
             })
 
