@@ -163,6 +163,9 @@ class Auth{
             const apartment = await this.prisma.apartment.findFirst({
                 where: {
                     username: access_username
+                },
+                include: {
+                    residential_quarter: true
                 }
             })
 

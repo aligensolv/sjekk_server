@@ -27,6 +27,14 @@ export const getResidentialCarsByQuarter = asyncWrapper(
     }
 )
 
+export const getApartmentsCars = asyncWrapper(
+    async (req, res) => {
+        const { id: apartment_id } = req.params
+        const result = await ResidentialCarRepository.getApartmentsCars({ apartment_id })
+        return res.status(OK).json(result)
+    }
+)
+
 export const deleteResidentialCar = asyncWrapper(
     async (req, res) => {
         const { id: residential_car_id } = req.params

@@ -1,11 +1,12 @@
 import { Router } from "express"
 
-import { deleteResidentialCar, getAllResidentialCars, getResidentialCarsByQuarter, getResidentialDashboardStatistics, registerResidentialCar } from "../controllers/residential_car_controller.js"
+import { deleteResidentialCar, getAllResidentialCars, getApartmentsCars, getResidentialCarsByQuarter, getResidentialDashboardStatistics, registerResidentialCar } from "../controllers/residential_car_controller.js"
 
 const router = Router()
 
 router.get('/residential-cars', getAllResidentialCars)
 router.get('/residential-quarters/:id/residential-cars', getResidentialCarsByQuarter)
+router.get('/residential-quarters/apartments/:id/residential-cars', getApartmentsCars)
 
 router.get('/residential-quarters/:id/statistics', getResidentialDashboardStatistics)
 

@@ -58,15 +58,11 @@ model ResidentialCar {
   residential_quarter_id Int
   residential_quarter ResidentialQuarter @relation(fields: [residential_quarter_id], references: [id])
 
+  apartment_id Int?
+  apartment Apartment? @relation(fields: [apartment_id], references: [id])
+
   updated_at String?
   deleted_at String?
-}
-
-model ApartmentCar {
-  id Int @id @default(autoincrement())
-
-  registered_car_id Int @unique
-  registered_car  RegisteredCar @relation(fields: [registered_car_id], references: [id])
 }
 
 enum RegisteredCarType {
@@ -75,21 +71,27 @@ enum RegisteredCarType {
   apartment
 }
 
+model SystemCar {
+  id Int @id @default(autoincrement())
+  plate_number String
+  last_registered_date String
+  residential_quarter_id Int
+}
+
 model RegisteredCar {
   id Int @id @default(autoincrement())
   plate_number String
-  car_model String
-  car_type String
-  car_description String
-  car_color String
-  manufacture_year String
+  car_model String?
+  car_type String?
+  car_description String?
+  car_color String?
+  manufacture_year String?
 
   registration_date String
   expire_date String
 
   registration_type RegisteredCarType
   
-  apartment_car ApartmentCar?
   normal_car NormalCar?
   residential_car ResidentialCar?
 
@@ -495,6 +497,9 @@ model Apartment {
 
   residential_quarter_id Int
   residential_quarter ResidentialQuarter @relation(fields: [residential_quarter_id], references: [id])
+
+  residential_cars ResidentialCar[]
+
 }
 
 model ApartmentRequest {

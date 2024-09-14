@@ -41,8 +41,41 @@ class ResidentialCarRepository{
         }
     ))
 
-    static registerResidentialCar = async ({ plate_number, parking_type, subscription_plan_days, residential_quarter_id }) => new Promise(promiseAsyncWrapper(
+    static getApartmentsCars = async ({ apartment_id }) => new Promise(promiseAsyncWrapper(
+        async (resolve) =>{
+            const cars = await this.prisma.residentialCar.findMany({
+                where: {
+                    apartment_id: +apartment_id,
+                    deleted_at: null
+                },
+                include: {
+                    registered_car: true
+                }
+            })
+
+            return resolve(cars)
+        }
+    ))
+
+    static registerResidentialCar = async ({ plate_number, parking_type, subscription_plan_days, residential_quarter_id, apartment_id }) => new Promise(promiseAsyncWrapper(
         async (resolve, reject) => {
+            const checkResidentialQuarterRegistrationConstraint = await this.prisma.systemCar.findFirst({
+                where: {
+                    residential_quarter_id: +residential_quarter_id,
+                    plate_number: plate_number.toUpperCase().replace(/\s/g, '')
+                }
+            })
+
+            if(checkResidentialQuarterRegistrationConstraint){
+                const lastRegistrationTime = checkResidentialQuarterRegistrationConstraint.last_registered_date
+                const diffInDays = moment(TimeRepository.getCurrentTime(), 'DD.MM.YYYY HH:mm').diff(moment(lastRegistrationTime, 'DD.MM.YYYY HH:mm'), 'days')
+
+                if(diffInDays < 2){
+                    const error = new CustomError(`You can not register a car to a residential quarter more than once every two days.`, BAD_REQUEST)
+                    return reject(error)
+                }
+            }
+
             const created_at = TimeRepository.getCurrentTime()
             const car_data = await AutosysRepository.getPlateInformation({ plate_number })
 
@@ -70,8 +103,9 @@ class ResidentialCarRepository{
                         parking_type: {
                             equals: parking_type
                         },
-                        residential_quarter_id: +residential_quarter_id                  
-                    }
+                        residential_quarter_id: +residential_quarter_id,
+                        apartment_id: +apartment_id      
+                    },
                 },
                 include: {
                     residential_car: true
@@ -105,46 +139,59 @@ class ResidentialCarRepository{
                         create: {
                             subscription_plan_days: +subscription_plan_days,
                             parking_type,
-                            residential_quarter_id: +residential_quarter_id
+                            residential_quarter_id: +residential_quarter_id,
+                            apartment_id: +apartment_id
                         }
                     }
                     
                 }
             })
 
-            await this.prisma.residentialDashboard.update({
-                where: {
-                    residential_quarter_id: +residential_quarter_id
-                },
-                data: {
-                    current_total_registered_cars: {
-                        increment: 1
+            if(!checkResidentialQuarterRegistrationConstraint && registeredCar != null){
+                await this.prisma.systemCar.create({
+                    data: {
+                        residential_quarter_id: +residential_quarter_id,
+                        plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                        last_registered_date: TimeRepository.getCurrentTime()
                     }
-                }
-            })
+                })
+            }
 
-            scheduleCarForRemove({
-                car_id: registeredCar.id,
-                expirationDate: registeredCar.expire_date
-            })
-
-            await this.prisma.carLog.create({
-                data: {
-                    start_date: created_at,
-                    end_date: registeredCar.expire_date,
-                    created_at,
-                    registered_by: 'residential',
-                    place_location: residential_quarter.residential_quarter.location,
-                    place_code: residential_quarter.residential_quarter.code,
-                    place_policy: residential_quarter.residential_quarter.policy,
-                    plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
-                    car_model: car_data.car_model,
-                    car_color: car_data.car_color ,
-                    car_type: car_data.car_type,
-                    car_description: car_data.car_description,
-                    place_id: +residential_quarter_id
-                }
-            })
+            if(registeredCar != null){
+                await this.prisma.residentialDashboard.update({
+                    where: {
+                        residential_quarter_id: +residential_quarter_id
+                    },
+                    data: {
+                        current_total_registered_cars: {
+                            increment: 1
+                        }
+                    }
+                })
+    
+                scheduleCarForRemove({
+                    car_id: registeredCar.id,
+                    expirationDate: registeredCar.expire_date
+                })
+    
+                await this.prisma.carLog.create({
+                    data: {
+                        start_date: created_at,
+                        end_date: registeredCar.expire_date,
+                        created_at,
+                        registered_by: 'residential',
+                        place_location: residential_quarter.residential_quarter.location,
+                        place_code: residential_quarter.residential_quarter.code,
+                        place_policy: residential_quarter.residential_quarter.policy,
+                        plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                        car_model: car_data.car_model,
+                        car_color: car_data.car_color ,
+                        car_type: car_data.car_type,
+                        car_description: car_data.car_description,
+                        place_id: +residential_quarter_id
+                    }
+                })
+            }
 
             return resolve(registeredCar)
         }
