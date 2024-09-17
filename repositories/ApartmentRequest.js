@@ -68,7 +68,8 @@ class ApartmentRequestRepository {
                     apartment_number: apartment_number,
                     email: email,
                     created_at: TimeRepository.getCurrentTime(),
-
+                    building_number: building_number.toString(),
+                    floor_number: floor_number.toString(),
                     residential_quarter_id: +residential_quarter_id
                 }
             })
@@ -100,7 +101,9 @@ class ApartmentRequestRepository {
                     apartment_number: apartmentRequest.apartment_number,
                     email: apartmentRequest.email,
                     created_at: created_at,
-                    residential_quarter_id: +apartmentRequest.residential_quarter_id
+                    residential_quarter_id: +apartmentRequest.residential_quarter_id,
+                    building_number: apartmentRequest.building_number,
+                    floor_number: apartmentRequest.floor_number
                 }
             })
 
