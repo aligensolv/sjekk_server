@@ -7,7 +7,7 @@ import AutosysRepository from "./Autosys.js";
 import { PrismaClient } from "@prisma/client"
 import TimeRepository from "./Time.js";
 import { io } from "../server.js";
-import SocketPocket from "../constants/socket.js";
+import SocketPocket from "../constants/socket_pocket.js";
 import { scheduleCarForRemove } from "../utils/car_deletion_cron.js";
 
 class CarRepository{
