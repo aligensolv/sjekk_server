@@ -7,7 +7,7 @@ import { PrismaClient } from "@prisma/client"
 import TimeRepository from "./Time.js";
 import { scheduleCarForRemove } from "../utils/car_deletion_cron.js";
 import { io } from "../server.js";
-import SocketPocket from "../constants/socket.js";
+import SocketPocket from "../constants/socket_pocket.js";
 
 class PlaceRepository{
     static prisma = new PrismaClient()
