@@ -88,7 +88,6 @@ import ResidentialCarApi from './routes/residential_car_route.js'
 import ResidentialDashboardApi from './routes/residential_dashboard_route.js'
 import ApartmentRequestApi from './routes/apartment_request_route.js'
 import ApartmentLocationRequestApi from './routes/apartment_location_request_route.js'
-import SocketPocket from './constants/socket.js'
 
 
 // public routes
