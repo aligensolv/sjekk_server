@@ -48,17 +48,6 @@ class ApartmentRequestRepository {
                 return reject(email_not_unique)
             }
 
-            const searchApartmentNumberExistence = await this.prisma.apartmentRequest.findFirst({
-                where: {
-                    apartment_number,
-                    residential_quarter_id: +residential_quarter_id
-                }
-            })
-
-            if(searchApartmentNumberExistence){
-                const apartment_number_not_unique = new CustomError('Apartment number already exists', 400)
-                return reject(apartment_number_not_unique)
-            }
 
             const apartmentRequest = await this.prisma.apartmentRequest.create({
                 data: {
