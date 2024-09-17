@@ -13,9 +13,9 @@ export const getAllApartmentRequests = asyncWrapper(
 export const createApartmentRequest = asyncWrapper(
     async (req, res) => {
         const { id: residential_quarter_id } = req.params
-        const { owner_name, username, password, apartment_number, email } = req.body
-        await ValidatorRepository.validateNotNull({ owner_name, username, password, apartment_number, email, residential_quarter_id })
-        const result = await ApartmentRequestRepository.createApartmentRequest({ owner_name, username, password, apartment_number, email, residential_quarter_id })
+        const { owner_name, username, password, apartment_number, email, building_number, floor_number } = req.body
+        await ValidatorRepository.validateNotNull({ owner_name, username, password, apartment_number, email, residential_quarter_id, building_number, floor_number })
+        const result = await ApartmentRequestRepository.createApartmentRequest({ owner_name, username, password, apartment_number, email, residential_quarter_id, building_number, floor_number })
         return res.status(OK).json(result)
     }
 )

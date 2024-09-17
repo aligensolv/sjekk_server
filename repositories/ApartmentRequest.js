@@ -24,7 +24,7 @@ class ApartmentRequestRepository {
         })
     )
 
-    static createApartmentRequest = async ({ owner_name, username, password, apartment_number, email, residential_quarter_id }) => new Promise(
+    static createApartmentRequest = async ({ building_number, floor_number, owner_name, username, password, apartment_number, email, residential_quarter_id }) => new Promise(
         promiseAsyncWrapper(async (resolve,reject) => {
             const searchUsernameExistence = await this.prisma.apartmentRequest.findFirst({
                 where: {

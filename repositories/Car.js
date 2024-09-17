@@ -33,7 +33,6 @@ class CarRepository{
                             }
                         },
                         residential_car: true,
-                        apartment_car: true
                     }
                 })
 
@@ -74,7 +73,6 @@ class CarRepository{
                                 registered_car: true
                             }
                         },
-                        apartment_car: true
                     }
                 })
 
