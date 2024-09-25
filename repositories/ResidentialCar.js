@@ -5,21 +5,25 @@ import { scheduleCarForRemove } from "../utils/car_deletion_cron.js"
 import PrismaClientService from "../utils/prisma_client.js"
 import AutosysRepository from "./Autosys.js"
 import TimeRepository from "./Time.js"
+import moment from "moment"
 
 class ResidentialCarRepository{
     static prisma = PrismaClientService.instance
     
     static getAllResidentialCars = async () => new Promise(promiseAsyncWrapper(
         async (resolve) =>{
-            const cars = await this.prisma.registeredCar.findMany({
+            const cars = await this.prisma.residentialCar.findMany({
                 where: {
-                    registration_type: 'residential',
                     deleted_at: null
                 },
                 include: {
-                    residential_car: true
+                    registered_car: true,
+                    apartment: true
                 }
             })
+
+            console.log(cars);
+            
 
             return resolve(cars)
         }
@@ -122,7 +126,7 @@ class ResidentialCarRepository{
 
             const registeredCar = await this.prisma.registeredCar.create({
                 data: {
-                    plate_number: car_data.plate_number,
+                    plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
                     car_model: car_data.car_model,
                     car_color: car_data.car_color,
                     car_type: car_data.car_type,

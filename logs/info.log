@@ -34826,3 +34826,179 @@ Invalid `prisma.registeredCar.create()` invocation:
 
 
 Foreign key constraint failed on the field: `normal_place_id` {"timestamp":"2024-09-12 15:27:00"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-23 13:50:01"}
+[31merror[39m: Car already exists {"timestamp":"2024-09-23 13:50:01"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    registration_type: "residential",
+    deleted_at: null
+  },
+  include: {
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    apartment: true,
+?   normal_car?: true,
+?   residential_car?: true,
+?   place?: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?. {"timestamp":"2024-09-23 14:12:25"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    registration_type: "residential",
+    deleted_at: null
+  },
+  include: {
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    apartment: true,
+?   normal_car?: true,
+?   residential_car?: true,
+?   place?: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?. {"timestamp":"2024-09-23 14:12:25"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    registration_type: "residential",
+    deleted_at: null
+  },
+  include: {
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    apartment: true,
+?   normal_car?: true,
+?   residential_car?: true,
+?   place?: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?. {"timestamp":"2024-09-23 14:12:25"}
+[31merror[39m: 
+Invalid `prisma.registeredCar.findMany()` invocation:
+
+{
+  where: {
+    registration_type: "residential",
+    deleted_at: null
+  },
+  include: {
+    registered_car: true,
+    ~~~~~~~~~~~~~~
+    apartment: true,
+?   normal_car?: true,
+?   residential_car?: true,
+?   place?: true
+  }
+}
+
+Unknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?. {"timestamp":"2024-09-23 14:12:25"}
+[31merror[39m: No such apartment exists {"timestamp":"2024-09-23 14:35:58"}
+[31merror[39m: No such apartment exists {"timestamp":"2024-09-23 14:35:58"}
+[31merror[39m: 
+Invalid `prisma.apartmentRequest.create()` invocation:
+
+{
+  data: {
+    owner_name: "test",
+    username: "test",
+    password: "$2b$10$qaGlIXV.SXuMHdEhDh3K9uj.6VvZ4cBrbBdW0VtrFo0s0tsJ/bgUK",
+    apartment_number: "test",
+    email: "test@gmail.com",
+    created_at: "23.09.2024 14:36",
+    building_number: "test",
+    ~~~~~~~~~~~~~~~
+    floor_number: "test",
+    residential_quarter_id: 5,
+?   id?: Int
+  }
+}
+
+Unknown argument `building_number`. Available options are marked with ?. {"timestamp":"2024-09-23 14:36:17"}
+[31merror[39m: 
+Invalid `prisma.apartmentRequest.create()` invocation:
+
+{
+  data: {
+    owner_name: "test",
+    username: "test",
+    password: "$2b$10$qaGlIXV.SXuMHdEhDh3K9uj.6VvZ4cBrbBdW0VtrFo0s0tsJ/bgUK",
+    apartment_number: "test",
+    email: "test@gmail.com",
+    created_at: "23.09.2024 14:36",
+    building_number: "test",
+    ~~~~~~~~~~~~~~~
+    floor_number: "test",
+    residential_quarter_id: 5,
+?   id?: Int
+  }
+}
+
+Unknown argument `building_number`. Available options are marked with ?. {"timestamp":"2024-09-23 14:36:17"}
+[31merror[39m: No such apartment exists {"timestamp":"2024-09-23 14:51:51"}
+[31merror[39m: No such apartment exists {"timestamp":"2024-09-23 14:51:51"}
+[31merror[39m: No such apartment exists {"timestamp":"2024-09-23 14:52:00"}
+[31merror[39m: No such apartment exists {"timestamp":"2024-09-23 14:52:00"}
+[31merror[39m: unable to verify the first certificate {"timestamp":"2024-09-25 13:05:56"}
+[31merror[39m: unable to verify the first certificate {"timestamp":"2024-09-25 13:05:56"}
+[31merror[39m: moment is not defined {"timestamp":"2024-09-25 14:18:23"}
+[31merror[39m: moment is not defined {"timestamp":"2024-09-25 14:18:23"}
+[31merror[39m: moment is not defined {"timestamp":"2024-09-25 14:19:04"}
+[31merror[39m: moment is not defined {"timestamp":"2024-09-25 14:19:04"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-09-25 14:19:22"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-09-25 14:19:23"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:32:17"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:32:17"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:33:13"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:33:13"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:33:54"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:33:54"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:34:44"}
+[31merror[39m: New password cannot be the same as old password {"timestamp":"2024-09-25 14:34:44"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:36:12"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:36:12"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:36:45"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:36:45"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:37:08"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:37:08"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:37:33"}
+[31merror[39m: Old password is incorrect {"timestamp":"2024-09-25 14:37:33"}
+[31merror[39m: 
+Invalid `prisma.apartment.update()` invocation:
+
+{
+  where: {
+    id: 6
+  },
+  data: {
+    password: {}
+              ~~
+  }
+}
+
+Argument `password`: Invalid value provided. Expected String, provided Object. {"timestamp":"2024-09-25 14:37:42"}
+[31merror[39m: 
+Invalid `prisma.apartment.update()` invocation:
+
+{
+  where: {
+    id: 6
+  },
+  data: {
+    password: {}
+              ~~
+  }
+}
+
+Argument `password`: Invalid value provided. Expected String, provided Object. {"timestamp":"2024-09-25 14:37:42"}

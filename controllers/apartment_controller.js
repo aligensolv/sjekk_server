@@ -13,6 +13,18 @@ export const createApartment = asyncWrapper(
     }
 )
 
+
+export const changeApartmentPassword = asyncWrapper(
+    async (req, res) => {
+        const { id: apartment_id } = req.params
+        const { old_password, new_password } = req.body
+        const result = await ApartmentPlaceRepository.changeApartmentPassword({
+            old_password, new_password, apartment_id
+        })
+        return res.status(OK).json(result)
+    }
+)
+
 export const getAllApartments = asyncWrapper(
     async (req, res) => {
         const result = await ApartmentPlaceRepository.getAllApartment()

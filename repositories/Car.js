@@ -126,7 +126,8 @@ class CarRepository{
                 const exists = await this.prisma.registeredCar.findFirst({
                     where: {
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
-                        deleted_at: null
+                        deleted_at: null,
+                        place_id: +place_id
                     }
                 })
 

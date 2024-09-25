@@ -493,8 +493,8 @@ model Apartment {
   password String
   apartment_number String
   email String
-  building_number String
-  floor_number String
+  building_number String?
+  floor_number String?
   created_at String
 
   residential_quarter_id Int
@@ -511,8 +511,8 @@ model ApartmentRequest {
   password String
   apartment_number String
   email String
-  building_number String
-  floor_number String
+  building_number String?
+  floor_number String?
   created_at String
 
   residential_quarter_id Int

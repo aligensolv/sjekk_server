@@ -3730,3 +3730,43 @@
 {"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n\nForeign key constraint failed on the field: `normal_place_id`","timestamp":"2024-09-12 15:25:14"}
 {"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n\nForeign key constraint failed on the field: `normal_place_id`","timestamp":"2024-09-12 15:27:00"}
 {"level":"error","message":"\nInvalid `prisma.registeredCar.create()` invocation:\n\n\nForeign key constraint failed on the field: `normal_place_id`","timestamp":"2024-09-12 15:27:00"}
+{"level":"error","message":"Car already exists","timestamp":"2024-09-23 13:50:01"}
+{"level":"error","message":"Car already exists","timestamp":"2024-09-23 13:50:01"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.findMany()` invocation:\n\n{\n  where: {\n    registration_type: \"residential\",\n    deleted_at: null\n  },\n  include: {\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    apartment: true,\n?   normal_car?: true,\n?   residential_car?: true,\n?   place?: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?.","timestamp":"2024-09-23 14:12:25"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.findMany()` invocation:\n\n{\n  where: {\n    registration_type: \"residential\",\n    deleted_at: null\n  },\n  include: {\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    apartment: true,\n?   normal_car?: true,\n?   residential_car?: true,\n?   place?: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?.","timestamp":"2024-09-23 14:12:25"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.findMany()` invocation:\n\n{\n  where: {\n    registration_type: \"residential\",\n    deleted_at: null\n  },\n  include: {\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    apartment: true,\n?   normal_car?: true,\n?   residential_car?: true,\n?   place?: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?.","timestamp":"2024-09-23 14:12:25"}
+{"level":"error","message":"\nInvalid `prisma.registeredCar.findMany()` invocation:\n\n{\n  where: {\n    registration_type: \"residential\",\n    deleted_at: null\n  },\n  include: {\n    registered_car: true,\n    ~~~~~~~~~~~~~~\n    apartment: true,\n?   normal_car?: true,\n?   residential_car?: true,\n?   place?: true\n  }\n}\n\nUnknown field `registered_car` for include statement on model `RegisteredCar`. Available options are marked with ?.","timestamp":"2024-09-23 14:12:25"}
+{"level":"error","message":"No such apartment exists","timestamp":"2024-09-23 14:35:58"}
+{"level":"error","message":"No such apartment exists","timestamp":"2024-09-23 14:35:58"}
+{"level":"error","message":"\nInvalid `prisma.apartmentRequest.create()` invocation:\n\n{\n  data: {\n    owner_name: \"test\",\n    username: \"test\",\n    password: \"$2b$10$qaGlIXV.SXuMHdEhDh3K9uj.6VvZ4cBrbBdW0VtrFo0s0tsJ/bgUK\",\n    apartment_number: \"test\",\n    email: \"test@gmail.com\",\n    created_at: \"23.09.2024 14:36\",\n    building_number: \"test\",\n    ~~~~~~~~~~~~~~~\n    floor_number: \"test\",\n    residential_quarter_id: 5,\n?   id?: Int\n  }\n}\n\nUnknown argument `building_number`. Available options are marked with ?.","timestamp":"2024-09-23 14:36:17"}
+{"level":"error","message":"\nInvalid `prisma.apartmentRequest.create()` invocation:\n\n{\n  data: {\n    owner_name: \"test\",\n    username: \"test\",\n    password: \"$2b$10$qaGlIXV.SXuMHdEhDh3K9uj.6VvZ4cBrbBdW0VtrFo0s0tsJ/bgUK\",\n    apartment_number: \"test\",\n    email: \"test@gmail.com\",\n    created_at: \"23.09.2024 14:36\",\n    building_number: \"test\",\n    ~~~~~~~~~~~~~~~\n    floor_number: \"test\",\n    residential_quarter_id: 5,\n?   id?: Int\n  }\n}\n\nUnknown argument `building_number`. Available options are marked with ?.","timestamp":"2024-09-23 14:36:17"}
+{"level":"error","message":"No such apartment exists","timestamp":"2024-09-23 14:51:51"}
+{"level":"error","message":"No such apartment exists","timestamp":"2024-09-23 14:51:51"}
+{"level":"error","message":"No such apartment exists","timestamp":"2024-09-23 14:52:00"}
+{"level":"error","message":"No such apartment exists","timestamp":"2024-09-23 14:52:00"}
+{"level":"error","message":"unable to verify the first certificate","timestamp":"2024-09-25 13:05:56"}
+{"level":"error","message":"unable to verify the first certificate","timestamp":"2024-09-25 13:05:56"}
+{"level":"error","message":"moment is not defined","timestamp":"2024-09-25 14:18:23"}
+{"level":"error","message":"moment is not defined","timestamp":"2024-09-25 14:18:23"}
+{"level":"error","message":"moment is not defined","timestamp":"2024-09-25 14:19:04"}
+{"level":"error","message":"moment is not defined","timestamp":"2024-09-25 14:19:04"}
+{"level":"error","message":"You can not register a car to a residential quarter more than once every two days.","timestamp":"2024-09-25 14:19:22"}
+{"level":"error","message":"You can not register a car to a residential quarter more than once every two days.","timestamp":"2024-09-25 14:19:23"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:32:17"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:32:17"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:33:13"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:33:13"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:33:54"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:33:54"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:34:44"}
+{"level":"error","message":"New password cannot be the same as old password","timestamp":"2024-09-25 14:34:44"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:36:12"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:36:12"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:36:45"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:36:45"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:37:08"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:37:08"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:37:33"}
+{"level":"error","message":"Old password is incorrect","timestamp":"2024-09-25 14:37:33"}
+{"level":"error","message":"\nInvalid `prisma.apartment.update()` invocation:\n\n{\n  where: {\n    id: 6\n  },\n  data: {\n    password: {}\n              ~~\n  }\n}\n\nArgument `password`: Invalid value provided. Expected String, provided Object.","timestamp":"2024-09-25 14:37:42"}
+{"level":"error","message":"\nInvalid `prisma.apartment.update()` invocation:\n\n{\n  where: {\n    id: 6\n  },\n  data: {\n    password: {}\n              ~~\n  }\n}\n\nArgument `password`: Invalid value provided. Expected String, provided Object.","timestamp":"2024-09-25 14:37:42"}
