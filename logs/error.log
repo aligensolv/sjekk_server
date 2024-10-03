@@ -34438,3 +34438,201 @@ Invalid `prisma.apartment.update()` invocation:
 }
 
 Argument `password`: Invalid value provided. Expected String, provided Object. {"timestamp":"2024-09-25 14:37:42"}
+[31merror[39m: max_cars_registrations is not defined {"timestamp":"2024-10-03 15:47:59"}
+[31merror[39m: max_cars_registrations is not defined {"timestamp":"2024-10-03 15:47:59"}
+[31merror[39m: max_cars_registrations is not defined {"timestamp":"2024-10-03 15:48:38"}
+[31merror[39m: max_cars_registrations is not defined {"timestamp":"2024-10-03 15:48:38"}
+[31merror[39m: max_cars_registrations is not defined {"timestamp":"2024-10-03 15:49:08"}
+[31merror[39m: max_cars_registrations is not defined {"timestamp":"2024-10-03 15:49:08"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "dafda",
+    policy: "fdaf",
+    code: "fda",
+    created_at: "03.10.2024 15:50",
+    place_type: "residential",
+    residential: {
+      create: {
+        location: "dafda",
+        policy: "fdaf",
+        code: "fda",
+        max_cars_registrations: 2,
+        quarter_name: "fda",
+        guest_parking_hours: 2,
+        ~~~~~~~~~~~~~~~~~~~
+        max_cars_by_apartment: 1,
+?       current_total_registered_cars?: Int,
+?       guest_free_days?: Int | Null,
+?       created_at?: String,
+?       updated_at?: String | Null,
+?       deleted_at?: String | Null,
+?       residential_dashboard?: ResidentialDashboardCreateNestedOneWithoutResidential_quarterInput,
+?       residential_cars?: ResidentialCarCreateNestedManyWithoutResidential_quarterInput,
+?       apartment_requests?: ApartmentRequestCreateNestedManyWithoutResidential_quarterInput,
+?       apartments?: ApartmentCreateNestedManyWithoutResidential_quarterInput
+      }
+    }
+  }
+}
+
+Unknown argument `guest_parking_hours`. Available options are marked with ?. {"timestamp":"2024-10-03 15:50:36"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+{
+  data: {
+    location: "dafda",
+    policy: "fdaf",
+    code: "fda",
+    created_at: "03.10.2024 15:50",
+    place_type: "residential",
+    residential: {
+      create: {
+        location: "dafda",
+        policy: "fdaf",
+        code: "fda",
+        max_cars_registrations: 2,
+        quarter_name: "fda",
+        guest_parking_hours: 2,
+        ~~~~~~~~~~~~~~~~~~~
+        max_cars_by_apartment: 1,
+?       current_total_registered_cars?: Int,
+?       guest_free_days?: Int | Null,
+?       created_at?: String,
+?       updated_at?: String | Null,
+?       deleted_at?: String | Null,
+?       residential_dashboard?: ResidentialDashboardCreateNestedOneWithoutResidential_quarterInput,
+?       residential_cars?: ResidentialCarCreateNestedManyWithoutResidential_quarterInput,
+?       apartment_requests?: ApartmentRequestCreateNestedManyWithoutResidential_quarterInput,
+?       apartments?: ApartmentCreateNestedManyWithoutResidential_quarterInput
+      }
+    }
+  }
+}
+
+Unknown argument `guest_parking_hours`. Available options are marked with ?. {"timestamp":"2024-10-03 15:50:36"}
+[31merror[39m: Cannot read properties of null (reading 'residential_quarter') {"timestamp":"2024-10-03 15:52:04"}
+[31merror[39m: Cannot read properties of null (reading 'residential_quarter') {"timestamp":"2024-10-03 15:52:04"}
+[31merror[39m: 
+Invalid `prisma.residentialDashboard.update()` invocation:
+
+{
+  where: {
+    residential_quarter_id: 1
+  },
+  data: {
+    current_total_registered_cars: {
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      increment: 1
+    },
+?   access_username?: String | StringFieldUpdateOperationsInput,
+?   access_code?: String | StringFieldUpdateOperationsInput,
+?   apartment_registration_qrcode?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   apartment_registration_qrcode_link?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   created_at?: String | StringFieldUpdateOperationsInput,
+?   updated_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   deleted_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   residential_quarter?: ResidentialQuarterUpdateOneRequiredWithoutResidential_dashboardNestedInput
+  }
+}
+
+Unknown argument `current_total_registered_cars`. Available options are marked with ?. {"timestamp":"2024-10-03 15:56:29"}
+[31merror[39m: 
+Invalid `prisma.residentialDashboard.update()` invocation:
+
+{
+  where: {
+    residential_quarter_id: 1
+  },
+  data: {
+    current_total_registered_cars: {
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      increment: 1
+    },
+?   access_username?: String | StringFieldUpdateOperationsInput,
+?   access_code?: String | StringFieldUpdateOperationsInput,
+?   apartment_registration_qrcode?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   apartment_registration_qrcode_link?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   created_at?: String | StringFieldUpdateOperationsInput,
+?   updated_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   deleted_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   residential_quarter?: ResidentialQuarterUpdateOneRequiredWithoutResidential_dashboardNestedInput
+  }
+}
+
+Unknown argument `current_total_registered_cars`. Available options are marked with ?. {"timestamp":"2024-10-03 15:56:29"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:56:53"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:56:53"}
+[31merror[39m: 
+Invalid `prisma.residentialDashboard.update()` invocation:
+
+{
+  where: {
+    residential_quarter_id: 1
+  },
+  data: {
+    current_total_registered_cars: {
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      decrement: 1
+    },
+?   access_username?: String | StringFieldUpdateOperationsInput,
+?   access_code?: String | StringFieldUpdateOperationsInput,
+?   apartment_registration_qrcode?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   apartment_registration_qrcode_link?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   created_at?: String | StringFieldUpdateOperationsInput,
+?   updated_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   deleted_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   residential_quarter?: ResidentialQuarterUpdateOneRequiredWithoutResidential_dashboardNestedInput
+  }
+}
+
+Unknown argument `current_total_registered_cars`. Available options are marked with ?. {"timestamp":"2024-10-03 15:57:04"}
+[31merror[39m: 
+Invalid `prisma.residentialDashboard.update()` invocation:
+
+{
+  where: {
+    residential_quarter_id: 1
+  },
+  data: {
+    current_total_registered_cars: {
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      decrement: 1
+    },
+?   access_username?: String | StringFieldUpdateOperationsInput,
+?   access_code?: String | StringFieldUpdateOperationsInput,
+?   apartment_registration_qrcode?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   apartment_registration_qrcode_link?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   created_at?: String | StringFieldUpdateOperationsInput,
+?   updated_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   deleted_at?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   residential_quarter?: ResidentialQuarterUpdateOneRequiredWithoutResidential_dashboardNestedInput
+  }
+}
+
+Unknown argument `current_total_registered_cars`. Available options are marked with ?. {"timestamp":"2024-10-03 15:57:04"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:57:11"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:57:11"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:57:16"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:57:16"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:57:37"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:57:37"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:58:48"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 15:58:48"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-10-03 16:04:41"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-10-03 16:04:41"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:12:14"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:12:14"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:17:45"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:17:45"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:18:45"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:18:45"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:19:52"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:19:52"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:21:29"}
+[31merror[39m: [object Object] {"timestamp":"2024-10-03 16:21:29"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 16:22:48"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 16:22:48"}

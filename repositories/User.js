@@ -7,6 +7,8 @@ import { ALREADY_EXISTS } from "../constants/status_codes.js"
 import { PrismaClient } from "@prisma/client"
 import TimeRepository from "./Time.js"
 
+import Randomstring from "randomstring"
+
 class UserRepository{
     static prisma = new PrismaClient()
     static async createUser({ name, pnid, password }){
@@ -20,6 +22,7 @@ class UserRepository{
                         name,
                         pnid,
                         password: encrypted_password,
+                        unique_code: `U-PN-${Randomstring.generate(8)}`,
                         created_at
                     }
                 })

@@ -11,6 +11,7 @@ model User {
   id Int @id @default(autoincrement())
   name String
   pnid String @unique
+  unique_code String?
   password String
 
   created_at String
@@ -171,14 +172,9 @@ model ResidentialDashboard {
   access_username String
   access_code String
 
-  quarter_name String
-  max_cars_registrations Int
-  current_total_registered_cars Int @default(0)
 
-  guest_free_days Int?
   apartment_registration_qrcode String?
   apartment_registration_qrcode_link String?
-  max_cars_by_apartment Int?
 
 
   residential_quarter_id Int @unique
@@ -194,6 +190,12 @@ model ResidentialQuarter {
   location String
   policy String
   code String
+
+  quarter_name String
+  max_cars_registrations Int
+  current_total_registered_cars Int @default(0)
+  guest_free_days Int?
+  max_cars_by_apartment Int?
 
   created_at String @default("")
   updated_at String?

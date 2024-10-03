@@ -18,7 +18,8 @@ class ResidentialCarRepository{
                 },
                 include: {
                     registered_car: true,
-                    apartment: true
+                    apartment: true,
+                    residential_quarter: true
                 }
             })
 
@@ -76,6 +77,8 @@ class ResidentialCarRepository{
                 const diffInDays = moment(TimeRepository.getCurrentTime(), 'DD.MM.YYYY HH:mm').diff(moment(lastRegistrationTime, 'DD.MM.YYYY HH:mm'), 'days')
 
                 if(diffInDays < 2){
+                    console.log('diff is fired');
+                    
                     const error = new CustomError(`You can not register a car to a residential quarter more than once every two days.`, BAD_REQUEST)
                     return reject(error)
                 }
@@ -84,16 +87,14 @@ class ResidentialCarRepository{
             const created_at = TimeRepository.getCurrentTime()
             const car_data = await AutosysRepository.getPlateInformation({ plate_number })
 
-            const residential_quarter = await this.prisma.residentialDashboard.findUnique({
+
+            const residentialQ = await this.prisma.residentialQuarter.findUnique({
                 where: {
-                    residential_quarter_id: +residential_quarter_id
-                },
-                include: {
-                    residential_quarter: true
+                    id: +residential_quarter_id
                 }
             })
 
-            if(residential_quarter.current_total_registered_cars >= residential_quarter.max_cars_registrations){
+            if(residentialQ.current_total_registered_cars >= residentialQ.max_cars_registrations){
                 const error = new CustomError('Max cars registrations reached', BAD_REQUEST)
                 return reject(error)
             }
@@ -108,7 +109,7 @@ class ResidentialCarRepository{
                         parking_type: {
                             equals: parking_type
                         },
-                        residential_quarter_id: +residential_quarter_id,
+                        residential_quarter_id: +residentialQ.id,
                         apartment_id: +apartment_id      
                     },
                 },
@@ -120,6 +121,7 @@ class ResidentialCarRepository{
             console.log(parking_type);
 
             if(isRegistrationExist && isRegistrationExist.residential_car.parking_type == parking_type){
+                console.log('is ege is fired');
                 const error = new CustomError(`Car already registered as ${isRegistrationExist.residential_car.parking_type}`, BAD_REQUEST)
                 return reject(error)
             }
@@ -133,7 +135,7 @@ class ResidentialCarRepository{
                     car_description: car_data.car_description,
                     manufacture_year: car_data.manufacture_year,
                     registration_type: 'residential',
-                    place_id: residential_quarter.residential_quarter.place_id,
+                    place_id: residentialQ.place_id,
                     registration_date: created_at,
                     expire_date: TimeRepository.increaseTimeByDays({
                         current_time: created_at,
@@ -144,7 +146,7 @@ class ResidentialCarRepository{
                         create: {
                             subscription_plan_days: +subscription_plan_days,
                             parking_type,
-                            residential_quarter_id: +residential_quarter_id,
+                            residential_quarter_id: +residentialQ.id,
                             apartment_id: +apartment_id
                         }
                     }
@@ -163,9 +165,9 @@ class ResidentialCarRepository{
             }
 
             if(registeredCar != null){
-                await this.prisma.residentialDashboard.update({
+                await this.prisma.residentialQuarter.update({
                     where: {
-                        residential_quarter_id: +residential_quarter_id
+                        id: +residential_quarter_id
                     },
                     data: {
                         current_total_registered_cars: {
@@ -173,11 +175,7 @@ class ResidentialCarRepository{
                         }
                     }
                 })
-    
-                scheduleCarForRemove({
-                    car_id: registeredCar.id,
-                    expirationDate: registeredCar.expire_date
-                })
+
     
                 await this.prisma.carLog.create({
                     data: {
@@ -185,9 +183,9 @@ class ResidentialCarRepository{
                         end_date: registeredCar.expire_date,
                         created_at,
                         registered_by: 'residential',
-                        place_location: residential_quarter.residential_quarter.location,
-                        place_code: residential_quarter.residential_quarter.code,
-                        place_policy: residential_quarter.residential_quarter.policy,
+                        place_location: residentialQ.location,
+                        place_code: residentialQ.code,
+                        place_policy: residentialQ.policy,
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
                         car_model: car_data.car_model,
                         car_color: car_data.car_color ,

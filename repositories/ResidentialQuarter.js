@@ -25,10 +25,12 @@ class ResidentialPlaceRepository{
         )
     }
 
-    static createResidentialQuarter({ location, policy, code }){
+    static createResidentialQuarter({ location, policy, code, max_cars_registrations, quarter_name, guest_parking_hours, max_cars_by_apartment }){
         return new Promise(
             promiseAsyncWrapper(
                 async (resolve) => {
+                    console.log(' iwas jere');
+                    
                     const place = await this.prisma.place.create({
                         data: {
                             location,
@@ -41,6 +43,10 @@ class ResidentialPlaceRepository{
                                     location,
                                     policy,
                                     code,
+                                    max_cars_registrations,
+                                    quarter_name,
+                                    guest_free_days: guest_parking_hours,
+                                    max_cars_by_apartment,
                                 }
                             }
                         }

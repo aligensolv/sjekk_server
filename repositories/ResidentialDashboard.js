@@ -10,7 +10,7 @@ class ResidentialDashboardRepository{
     static prisma = PrismaClientService.instance
 
     static createResidentialDashboard = async ({
-        access_username, access_code, residential_quarter_id, max_cars_registrations, quarter_name, guest_parking_hours, max_cars_by_apartment
+        access_username, access_code, residential_quarter_id
     }) => new Promise(promiseAsyncWrapper(
         async (resolve) => {
             const created_at = TimeRepository.getCurrentTime()
@@ -22,10 +22,6 @@ class ResidentialDashboardRepository{
                     access_username, 
                     access_code: await Auth.encryptPassword(access_code), 
                     residential_quarter_id: +residential_quarter_id, 
-                    max_cars_registrations: +max_cars_registrations, 
-                    quarter_name,
-                    guest_free_days: +guest_parking_hours,
-                    max_cars_by_apartment: +max_cars_by_apartment,
                     apartment_registration_qrcode: apartment_registration_qrcode,
                     apartment_registration_qrcode_link: qrcode_link,
                     created_at: created_at

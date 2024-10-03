@@ -13,11 +13,11 @@ export const getAllResidentialQuarters = asyncWrapper(
 
 export const createResidentialQuarter = asyncWrapper(
     async (req, res) => {
-        const { location, policy, code } = req.body
+        const { location, policy, code, max_cars_registrations, quarter_name, guest_parking_hours, max_cars_by_apartment } = req.body
 
-        await ValidatorRepository.validateNotNull({ location, policy, code })
+        await ValidatorRepository.validateNotNull({ location, policy, code, max_cars_registrations, quarter_name, guest_parking_hours, max_cars_by_apartment })
 
-        const result = await ResidentialPlaceRepository.createResidentialQuarter({ location, policy, code })
+        const result = await ResidentialPlaceRepository.createResidentialQuarter({ location, policy, code, max_cars_registrations, quarter_name, guest_parking_hours, max_cars_by_apartment })
         return res.status(OK).json(result)
     }
 )
