@@ -154,6 +154,12 @@ class CarRepository{
                 })
                 console.log(place);
 
+                const nPlace = await this.prisma.normalPlace.findUnique({
+                    where: {
+                        place_id: +place_id
+                    }
+                })
+
                 const car = await this.prisma.registeredCar.create({
                     data: {
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
@@ -172,7 +178,7 @@ class CarRepository{
                             create: {
                                 free_parking_hours: 2,
                                 registeration_source: 'system',
-                                normal_place_id: +place_id,
+                                normal_place_id: +nPlace.id,
                                 created_at: created_at
                             }
                         }
