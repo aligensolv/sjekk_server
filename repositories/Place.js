@@ -353,8 +353,7 @@ class PlaceRepository{
             async (resolve, reject) =>{
                 const dashboard = await this.prisma.normalPlaceDashboard.findUnique({
                     where: {
-                        id: +place_dashboard_id,
-                        deleted_at: null
+                        id: +place_dashboard_id
                     },
                     include: {
                         normal_place: true
@@ -362,7 +361,8 @@ class PlaceRepository{
                 })
                 let registered_cars = await this.prisma.normalCar.findMany({
                     where: {
-                        normal_place_id: dashboard.normal_place_id
+                        normal_place_id: dashboard.normal_place_id,
+                        deleted_at: null
                     },
                     include: {
                         registered_car: true
