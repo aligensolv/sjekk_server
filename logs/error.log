@@ -34636,3 +34636,53 @@ Unknown argument `current_total_registered_cars`. Available options are marked w
 [31merror[39m: [object Object] {"timestamp":"2024-10-03 16:21:29"}
 [31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 16:22:48"}
 [31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2024-10-03 16:22:48"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Foreign key constraint failed on the field: `user_id` {"timestamp":"2024-10-04 03:33:21"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Foreign key constraint failed on the field: `user_id` {"timestamp":"2024-10-04 03:33:21"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Foreign key constraint failed on the field: `user_id` {"timestamp":"2024-10-04 03:38:36"}
+[31merror[39m: 
+Invalid `prisma.violation.create()` invocation:
+
+
+Foreign key constraint failed on the field: `user_id` {"timestamp":"2024-10-04 03:38:36"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-10-04 03:47:42"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-10-04 03:47:42"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-10-04 03:47:43"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-10-04 03:47:43"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-10-04 03:47:58"}
+[31merror[39m: 
+Invalid `prisma.shift.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-10-04 03:47:58"}

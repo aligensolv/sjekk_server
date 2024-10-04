@@ -11,6 +11,7 @@ import TimeRepository from "./Time.js";
 
 import Randomstring from "randomstring";
 import axios from "axios";
+import Auth from "./Auth.js";
 
 class ViolationRepository{
     static prisma = PrismaClientService.instance
@@ -201,7 +202,6 @@ class ViolationRepository{
 
                 const { car_model, plate_number, manufacture_year, car_description, car_type, car_color, country_name, country_code   } = plate_info
                 const { location, code, policy, id: place_id } = place
-
 
                 const created = await this.prisma.violation.create({
                     data: {

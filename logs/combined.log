@@ -3808,3 +3808,13 @@
 {"level":"error","message":[{"error":"subscription_plan_days cannot be null or empty","field":"subscription_plan_days"}],"timestamp":"2024-10-03 16:21:29"}
 {"level":"error","message":"You can not register a car to a residential quarter more than once every two days.","timestamp":"2024-10-03 16:22:48"}
 {"level":"error","message":"You can not register a car to a residential quarter more than once every two days.","timestamp":"2024-10-03 16:22:48"}
+{"level":"error","message":"\nInvalid `prisma.violation.create()` invocation:\n\n\nForeign key constraint failed on the field: `user_id`","timestamp":"2024-10-04 03:33:21"}
+{"level":"error","message":"\nInvalid `prisma.violation.create()` invocation:\n\n\nForeign key constraint failed on the field: `user_id`","timestamp":"2024-10-04 03:33:21"}
+{"level":"error","message":"\nInvalid `prisma.violation.create()` invocation:\n\n\nForeign key constraint failed on the field: `user_id`","timestamp":"2024-10-04 03:38:36"}
+{"level":"error","message":"\nInvalid `prisma.violation.create()` invocation:\n\n\nForeign key constraint failed on the field: `user_id`","timestamp":"2024-10-04 03:38:36"}
+{"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:42"}
+{"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:42"}
+{"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:43"}
+{"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:43"}
+{"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:58"}
+{"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:58"}

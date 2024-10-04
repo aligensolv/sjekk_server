@@ -13,6 +13,7 @@ let lockViolationCron = cron.schedule('0 0 0 * * *', async () => {
 
 async function deleteExpiredCars() {
   try {
+    
     let prisma = PrismaClientService.instance
     const cars = await prisma.registeredCar.findMany({})
   

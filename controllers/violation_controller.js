@@ -77,6 +77,7 @@ export const createViolation = asyncWrapper(
             serial_number, barcode_image, ticket_image, ticket_number, kid_number
         } = req.body
 
+        console.log('inside create val');
         console.log(barcode_image);
         const { token } = req.headers
 
