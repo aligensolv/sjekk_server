@@ -353,7 +353,8 @@ class PlaceRepository{
             async (resolve, reject) =>{
                 const dashboard = await this.prisma.normalPlaceDashboard.findUnique({
                     where: {
-                        id: +place_dashboard_id
+                        id: +place_dashboard_id,
+                        deleted_at: null
                     },
                     include: {
                         normal_place: true
