@@ -233,16 +233,27 @@ class PlaceRepository{
     static async createCarFromPlaceDashboard({ plate_number, dashboard_id }){
         return new Promise(promiseAsyncWrapper(
             async (resolve, reject) =>{
+                const dashboard = await this.prisma.normalPlaceDashboard.findUnique({
+                    where: {
+                        id: +dashboard_id
+                    },
+                    include: {
+                        normal_place: true
+                    }
+                })
+
                 let is_car_registered = await this.prisma.registeredCar.findFirst({
                     where: {
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
                         deleted_at: null,
-                        apartment_car: null,
-                        residential_car: null
+                        residential_car: null,
+                        normal_car: {
+                            normal_place_id: +dashboard.normal_place_id
+                        }
                     },
                     include: {
-                        apartment_car: true,
-                        residential_car: true
+                        residential_car: false,
+                        normal_car: true
                     }
                 })
 
