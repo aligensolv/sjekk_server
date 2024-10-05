@@ -68,11 +68,12 @@ class ResidentialCarRepository{
             const checkResidentialQuarterRegistrationConstraint = await this.prisma.systemCar.findFirst({
                 where: {
                     residential_quarter_id: +residential_quarter_id,
-                    plate_number: plate_number.toUpperCase().replace(/\s/g, '')
+                    plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
+                    registration_type: parking_type.toLowerCase().replace(/\s/g, ''),
                 }
             })
 
-            if(checkResidentialQuarterRegistrationConstraint){
+            if(checkResidentialQuarterRegistrationConstraint && checkResidentialQuarterRegistrationConstraint.registration_type == 'guest'){
                 const lastRegistrationTime = checkResidentialQuarterRegistrationConstraint.last_registered_date
                 const diffInDays = moment(TimeRepository.getCurrentTime(), 'DD.MM.YYYY HH:mm').diff(moment(lastRegistrationTime, 'DD.MM.YYYY HH:mm'), 'days')
 
@@ -137,9 +138,9 @@ class ResidentialCarRepository{
                     registration_type: 'residential',
                     place_id: residentialQ.place_id,
                     registration_date: created_at,
-                    expire_date: TimeRepository.increaseTimeByDays({
+                    expire_date: TimeRepository.increaseTimeByHours({
                         current_time: created_at,
-                        days: +subscription_plan_days
+                        days: residentialQ.guest_free_days
                     }),
 
                     residential_car: {
@@ -159,7 +160,11 @@ class ResidentialCarRepository{
                     data: {
                         residential_quarter_id: +residential_quarter_id,
                         plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
-                        last_registered_date: TimeRepository.getCurrentTime()
+                        registration_type: 'guest',
+                        last_registered_date: TimeRepository.increaseTimeByHours({
+                            current_time: created_at,
+                            days: residentialQ.guest_free_days
+                        })
                     }
                 })
             }

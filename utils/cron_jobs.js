@@ -15,7 +15,11 @@ async function deleteExpiredCars() {
   try {
     
     let prisma = PrismaClientService.instance
-    const cars = await prisma.registeredCar.findMany({})
+    const cars = await prisma.registeredCar.findMany({
+      where: {
+        deleted_at: null
+      }
+    })
   
   
     await Promise.all(

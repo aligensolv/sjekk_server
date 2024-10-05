@@ -72,10 +72,17 @@ enum RegisteredCarType {
   apartment
 }
 
+enum SystemCarRegistrationType {
+  reserved
+  guest
+  public
+}
+
 model SystemCar {
   id Int @id @default(autoincrement())
   plate_number String
   last_registered_date String
+  registration_type SystemCarRegistrationType
   residential_quarter_id Int
 }
 

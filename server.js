@@ -3,7 +3,7 @@ import path from 'path'
 import compression from 'compression'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-import { port, host } from './config.js'
+import { port, host, compiledApartmentRequestTemplate, compiledApartmentRequestAcceptedTemplate } from './config.js'
 import { NOT_FOUND } from './constants/status_codes.js'
 import ErrorHandlerMiddleware from './middlewares/error_handler.js'
 import { fileURLToPath } from 'url'
@@ -123,6 +123,45 @@ app.use(
     ApartmentRequestApi,
     ApartmentLocationRequestApi
 )
+
+
+import Handlebars from 'handlebars'
+import { sendAlertMail } from './services/smtp_service.js'
+
+app.get('/test', async (req,res) => {
+    // const template = compiledApartmentRequestTemplate({
+    //     owner_name: 'John Doe',
+    //     username: 'johndoe123',
+    //     email: 'john.doe@example.com',
+    //     building_number: '12B',
+    //     apartment_number: '101',
+    //     floor_number: '3',
+    //     residential_quarter: 'Sunset Park',
+    //   })
+
+    const template = compiledApartmentRequestAcceptedTemplate({
+        owner_name: 'Jane Smith',
+        username: 'janesmith789',
+        email: 'jane.smith@example.com',
+        building_number: '24A',
+        apartment_number: '205',
+        floor_number: '2',
+        residential_quarter: 'Maple Grove',
+        dashboard_link: 'https://dashboard.parksync.com',
+        year: new Date().getFullYear(),
+      })
+
+    sendAlertMail({
+        subject: 'Apartment accepted',
+        text: template,
+        to: 'alitarek99944@gmail.com',
+        html: template
+    })
+
+    return res.status(200).json({
+        message: 'success'
+    })
+})
 
 
 app.use(ErrorHandlerMiddleware)

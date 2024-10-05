@@ -43,3 +43,15 @@ const reportTemplateSource = fs.readFileSync('app_templates/violation.html', 'ut
 
 // Precompile the template
 export const compiledReportTemplate = Handlebars.compile(reportTemplateSource);
+
+// Read the template file synchronously
+const apartmentRequestTemplateSource = fs.readFileSync('app_templates/apartment_request_received_template.html', 'utf-8');
+
+// Precompile the template
+export const compiledApartmentRequestTemplate = Handlebars.compile(apartmentRequestTemplateSource);
+
+// Read the template file synchronously
+const apartmentRequestAcceptedTemplateSource = fs.readFileSync('app_templates/apartment_request_accepted_template.html', 'utf-8');
+
+// Precompile the template
+export const compiledApartmentRequestAcceptedTemplate = Handlebars.compile(apartmentRequestAcceptedTemplateSource);
