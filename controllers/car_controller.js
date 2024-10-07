@@ -43,9 +43,9 @@ export const getCarByPlate = asyncWrapper(
 
 export const createCar = asyncWrapper(
     async (req,res) => {
-        const { plate_number, start_date, end_date, registration_type, place_id } = req.body
+        const { plate_number, start_date, end_date, registration_type, place_id, country } = req.body
         console.log(req.body);
-        const car = await CarRepository.createCar({ plate_number, start_date, end_date, registration_type, place_id })
+        const car = await CarRepository.createCar({ plate_number, start_date, end_date, registration_type, place_id, country })
         return res.status(OK).json(car)
     }
 )

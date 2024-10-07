@@ -63,7 +63,7 @@ class ResidentialCarRepository{
         }
     ))
 
-    static registerResidentialCar = async ({ plate_number, parking_type, subscription_plan_days, residential_quarter_id, apartment_id }) => new Promise(promiseAsyncWrapper(
+    static registerResidentialCar = async ({ plate_number, parking_type, subscription_plan_days, residential_quarter_id, apartment_id, country }) => new Promise(promiseAsyncWrapper(
         async (resolve, reject) => {
             const checkResidentialQuarterRegistrationConstraint = await this.prisma.systemCar.findFirst({
                 where: {
@@ -86,7 +86,15 @@ class ResidentialCarRepository{
             }
 
             const created_at = TimeRepository.getCurrentTime()
-            const car_data = await AutosysRepository.getPlateInformation({ plate_number })
+            const car_data = country == null || country?.code == 'no' ? 
+                await AutosysRepository.getPlateInformation({ plate_number })
+                : {
+                    car_model: null,
+                    car_color: null,
+                    car_type: null,
+                    car_description: null,
+                    manufacture_year: null
+                }
 
 
             const residentialQ = await this.prisma.residentialQuarter.findUnique({

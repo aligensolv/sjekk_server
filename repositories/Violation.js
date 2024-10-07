@@ -271,7 +271,7 @@ class ViolationRepository{
 
                 await axios.post('https://finance.gensolv.no/api/sanctions', {
                     kid_number: kid_number.toString(),
-                    control_number: created.id.toString(),
+                    control_number: ticket_number,
                     total_charge: total_charge,
                     violated_at: created.created_at,
                     employee_pnid: pnid,
