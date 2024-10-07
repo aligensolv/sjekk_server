@@ -141,11 +141,11 @@ class CarRepository{
                 await AutosysRepository.getPlateInformation({
                     plate_number: plate_number.toUpperCase().replace(/\s/g, '')
                 }) : {
-                    manufacture_year: undefined,
-                    car_model: undefined,
-                    car_description: undefined,
-                    car_color: undefined,
-                    car_type: undefined
+                    manufacture_year: null,
+                    car_model: null,
+                    car_description: null,
+                    car_color: null,
+                    car_type: null
                 }
 
                 if(!autosys_car_data){
@@ -214,6 +214,7 @@ class CarRepository{
                             car_color: autosys_car_data.car_color,
                             car_type: autosys_car_data.car_type,
                             car_description: autosys_car_data.car_description,
+                            manufacture_year: autosys_car_data.manufacture_year,
                             place_id: +place_id
                         }
                     })

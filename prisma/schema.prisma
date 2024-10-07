@@ -472,10 +472,11 @@ model CarLog {
   place_code String
   place_policy String
 
-  car_model String
-  car_type String
-  car_description String
-  car_color String
+  car_model String?
+  car_type String?
+  car_description String?
+  car_color String?
+  manufacture_year String?
   plate_number String
 
   created_at String
