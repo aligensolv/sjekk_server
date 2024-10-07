@@ -148,7 +148,7 @@ class ResidentialCarRepository{
                     registration_date: created_at,
                     expire_date: TimeRepository.increaseTimeByHours({
                         current_time: created_at,
-                        days: residentialQ.guest_free_days
+                        hours: residentialQ.guest_free_days
                     }),
 
                     residential_car: {
