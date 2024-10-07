@@ -89,11 +89,11 @@ class ResidentialCarRepository{
             const car_data = country == null || country?.code == 'no' ? 
                 await AutosysRepository.getPlateInformation({ plate_number })
                 : {
-                    car_model: null,
-                    car_color: null,
-                    car_type: null,
-                    car_description: null,
-                    manufacture_year: null
+                    car_model: undefined,
+                    car_color: undefined,
+                    car_type: undefined,
+                    car_description: undefined,
+                    manufacture_year: undefined
                 }
 
 
