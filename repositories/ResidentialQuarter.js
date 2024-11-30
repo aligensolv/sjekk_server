@@ -15,8 +15,12 @@ class ResidentialPlaceRepository{
                         },
                         include: {
                             place: true,
-                            residential_dashboard: true,
-                            residential_cars: true
+                            residential_dashboard: {
+                                include: {
+                                    notification_subscriptions: true
+                                }
+                            },
+                            residential_cars: true,
                         }
                     })
                     return resolve(places)

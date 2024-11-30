@@ -89,6 +89,11 @@ import ResidentialDashboardApi from './routes/residential_dashboard_route.js'
 import ApartmentRequestApi from './routes/apartment_request_route.js'
 import ApartmentLocationRequestApi from './routes/apartment_location_request_route.js'
 
+import NotificationSubscriptionApi from './routes/notification_subscription_router.js'
+import SystemNotificationComponentApi from './routes/system_notification_component_route.js'
+import ManagerApi from './routes/manager_route.js'
+import NotificationAnalyticsApi from './routes/notification_analytics_route.js'
+
 
 // public routes
 app.use(
@@ -101,6 +106,10 @@ app.use(
     '/api',
     // ValidateApiToken,
     UserRoute,
+    ManagerApi,
+    NotificationSubscriptionApi,
+    SystemNotificationComponentApi,
+    NotificationAnalyticsApi,
     PlaceRoute,
     ViolationApi,
     ShiftApi,
@@ -123,46 +132,6 @@ app.use(
     ApartmentRequestApi,
     ApartmentLocationRequestApi
 )
-
-
-import Handlebars from 'handlebars'
-import { sendAlertMail } from './services/smtp_service.js'
-
-app.get('/test', async (req,res) => {
-    // const template = compiledApartmentRequestTemplate({
-    //     owner_name: 'John Doe',
-    //     username: 'johndoe123',
-    //     email: 'john.doe@example.com',
-    //     building_number: '12B',
-    //     apartment_number: '101',
-    //     floor_number: '3',
-    //     residential_quarter: 'Sunset Park',
-    //   })
-
-    const template = compiledApartmentRequestAcceptedTemplate({
-        owner_name: 'Jane Smith',
-        username: 'janesmith789',
-        email: 'jane.smith@example.com',
-        building_number: '24A',
-        apartment_number: '205',
-        floor_number: '2',
-        residential_quarter: 'Maple Grove',
-        dashboard_link: 'https://dashboard.parksync.com',
-        year: new Date().getFullYear(),
-      })
-
-    sendAlertMail({
-        subject: 'Apartment accepted',
-        text: template,
-        to: 'alitarek99944@gmail.com',
-        html: template
-    })
-
-    return res.status(200).json({
-        message: 'success'
-    })
-})
-
 
 app.use(ErrorHandlerMiddleware)
 

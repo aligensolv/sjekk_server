@@ -35250,3 +35250,699 @@ Invalid `prisma.shift.update()` invocation:
 
 
 An operation failed because it depends on one or more records that were required but not found. Record to update not found. {"timestamp":"2024-10-04 03:47:58"}
+[31merror[39m: Wrong password {"timestamp":"2024-10-17 16:27:08"}
+[31merror[39m: Wrong password {"timestamp":"2024-10-17 16:27:08"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:30:36"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:30:36"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:31:19"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:31:19"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:31:31"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:31:31"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:31:37"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:31:37"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:32:33"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:32:33"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:32:50"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:32:50"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:34:34"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:34:34"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:35:56"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:35:56"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:36:39"}
+[31merror[39m: Unexpected token o in JSON at position 1 {"timestamp":"2024-10-17 16:36:39"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:24:25"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:24:25"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:24:35"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:24:35"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:15"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:15"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:18"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:18"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:23"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:23"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:32"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 15:31:32"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 18:17:26"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-18 18:17:26"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-20 15:55:44"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-10-20 15:55:44"}
+[31merror[39m: Wrong password {"timestamp":"2024-10-27 12:53:49"}
+[31merror[39m: Wrong password {"timestamp":"2024-10-27 12:53:49"}
+[31merror[39m: 
+Invalid `prisma.user.count()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:32"}
+[31merror[39m: 
+Invalid `prisma.user.count()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:32"}
+[31merror[39m: 
+Invalid `prisma.user.count()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:36"}
+[31merror[39m: 
+Invalid `prisma.user.count()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:36"}
+[31merror[39m: 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:39"}
+[31merror[39m: 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:39"}
+[31merror[39m: 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:43"}
+[31merror[39m: 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:43"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:53"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:53"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:53"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:53"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:53"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:53"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:58"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:58"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:58"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:58"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:58"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:52:58"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:53"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:53"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:53"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:53"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:55"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:55"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:55"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:55"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:57"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:57"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:57"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:57"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:57"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:57"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:59"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:53:59"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:54:01"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`. {"timestamp":"2024-11-17 16:54:01"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:07"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:09"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.normalPlace.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.partner.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.residentialQuarter.findMany()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:54:33"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:55:07"}
+[31merror[39m: 
+Invalid `prisma.place.create()` invocation:
+
+
+Database `sjekk` does not exist on the database server at `localhost:3306`. {"timestamp":"2024-11-17 16:55:07"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:55:03"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:55:03"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:55:09"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:55:09"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:58:17"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:58:17"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:58:52"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:58:52"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:59:05"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 18:59:05"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:00:38"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:00:38"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:02:18"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:02:18"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:03:17"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:03:17"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:04:21"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:04:21"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:04:43"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:04:43"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-11-19 19:17:41"}
+[31merror[39m: [object Object],[object Object] {"timestamp":"2024-11-19 19:17:41"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:18:47"}
+[31merror[39m: Manager doesn't exists {"timestamp":"2024-11-19 19:18:47"}
+[31merror[39m: Password Mismatch {"timestamp":"2024-11-19 19:18:51"}
+[31merror[39m: Password Mismatch {"timestamp":"2024-11-19 19:18:51"}
+[31merror[39m: notifications is not defined {"timestamp":"2024-11-28 14:24:51"}
+[31merror[39m: notifications is not defined {"timestamp":"2024-11-28 14:24:51"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-11-28 14:29:48"}
+[31merror[39m: No such dashboard exists {"timestamp":"2024-11-28 14:29:48"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.create()` invocation:
+
+{
+  data: {
+    body: undefined,
+    icon: undefined,
+    image: undefined,
+    is_favorite: undefined,
+    created_at: "28.11.2024 17:07",
++   title: String
+  }
+}
+
+Argument `title` is missing. {"timestamp":"2024-11-28 17:07:48"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.create()` invocation:
+
+{
+  data: {
+    body: undefined,
+    icon: undefined,
+    image: undefined,
+    is_favorite: undefined,
+    created_at: "28.11.2024 17:07",
++   title: String
+  }
+}
+
+Argument `title` is missing. {"timestamp":"2024-11-28 17:07:48"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.create()` invocation:
+
+{
+  data: {
+    body: undefined,
+    icon: undefined,
+    image: undefined,
+    is_favorite: undefined,
+    created_at: "28.11.2024 17:09",
++   title: String
+  }
+}
+
+Argument `title` is missing. {"timestamp":"2024-11-28 17:09:44"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.create()` invocation:
+
+{
+  data: {
+    body: undefined,
+    icon: undefined,
+    image: undefined,
+    is_favorite: undefined,
+    created_at: "28.11.2024 17:09",
++   title: String
+  }
+}
+
+Argument `title` is missing. {"timestamp":"2024-11-28 17:09:44"}
+[31merror[39m: activity.sent_at.toISOString is not a function {"timestamp":"2024-11-29 12:54:45"}
+[31merror[39m: activity.sent_at.toISOString is not a function {"timestamp":"2024-11-29 12:54:45"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.create()` invocation:
+
+{
+  data: {
+    body: undefined,
+    icon: undefined,
+    image: undefined,
+    is_favorite: undefined,
+    created_at: "29.11.2024 12:59",
++   title: String
+  }
+}
+
+Argument `title` is missing. {"timestamp":"2024-11-29 12:59:41"}
+[31merror[39m: 
+Invalid `prisma.systemNotificationComponent.create()` invocation:
+
+{
+  data: {
+    body: undefined,
+    icon: undefined,
+    image: undefined,
+    is_favorite: undefined,
+    created_at: "29.11.2024 12:59",
++   title: String
+  }
+}
+
+Argument `title` is missing. {"timestamp":"2024-11-29 12:59:41"}
+[31merror[39m: ENOENT: no such file or directory, open 'E:\workspace\projects\sjekk_kontroll\sjekk_server\uploads\2024-11-29T11-05-45.155ZUntitled Diagram.drawio.png' {"timestamp":"2024-11-29 13:05:45"}
+[31merror[39m: ENOENT: no such file or directory, open 'E:\workspace\projects\sjekk_kontroll\public\notifications-uploads\2024-11-29T11-07-35.328ZUntitled Diagram.drawio.png' {"timestamp":"2024-11-29 13:07:35"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:51:37"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:51:37"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:53:21"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:53:21"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:53:28"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:53:28"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:54:10"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:54:10"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:54:35"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:54:35"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:55:58"}
+[31merror[39m: Cannot read properties of null (reading 'normal_place_id') {"timestamp":"2024-11-29 14:55:58"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2024-11-29 16:19:09"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2024-11-29 16:19:09"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2024-11-29 16:20:02"}
+[31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2024-11-29 16:20:02"}
+[31merror[39m: Cannot read properties of undefined (reading 'length') {"timestamp":"2024-11-29 16:21:04"}
+[31merror[39m: Cannot read properties of undefined (reading 'length') {"timestamp":"2024-11-29 16:21:04"}

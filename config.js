@@ -55,3 +55,9 @@ const apartmentRequestAcceptedTemplateSource = fs.readFileSync('app_templates/ap
 
 // Precompile the template
 export const compiledApartmentRequestAcceptedTemplate = Handlebars.compile(apartmentRequestAcceptedTemplateSource);
+
+export const webPushPublicKey = process.env.WEB_PUSH_PUBLIC_KEY
+export const webPushPrivateKey = process.env.WEB_PUSH_PRIVATE_KEY
+
+
+export const residential_link = is_development ? process.env.DEV_BASE_RESIDENTIAL_URL : process.env.PROD_BASE_RESIDENTIAL_URL

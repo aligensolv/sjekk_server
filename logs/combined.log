@@ -3818,3 +3818,187 @@
 {"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:43"}
 {"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:58"}
 {"level":"error","message":"\nInvalid `prisma.shift.update()` invocation:\n\n\nAn operation failed because it depends on one or more records that were required but not found. Record to update not found.","timestamp":"2024-10-04 03:47:58"}
+{"level":"error","message":"Wrong password","timestamp":"2024-10-17 16:27:08"}
+{"level":"error","message":"Wrong password","timestamp":"2024-10-17 16:27:08"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:30:36"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:30:36"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:31:19"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:31:19"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:31:31"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:31:31"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:31:37"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:31:37"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:32:33"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:32:33"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:32:50"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:32:50"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:34:34"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:34:34"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:35:56"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:35:56"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:36:39"}
+{"level":"error","message":"Unexpected token o in JSON at position 1","timestamp":"2024-10-17 16:36:39"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:24:25"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:24:25"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:24:35"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:24:35"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:15"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:15"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:18"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:18"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:23"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:23"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:32"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 15:31:32"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 18:17:26"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-18 18:17:26"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-20 15:55:44"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-10-20 15:55:44"}
+{"level":"error","message":"Wrong password","timestamp":"2024-10-27 12:53:49"}
+{"level":"error","message":"Wrong password","timestamp":"2024-10-27 12:53:49"}
+{"level":"error","message":"\nInvalid `prisma.user.count()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:32"}
+{"level":"error","message":"\nInvalid `prisma.user.count()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:32"}
+{"level":"error","message":"\nInvalid `prisma.user.count()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:36"}
+{"level":"error","message":"\nInvalid `prisma.user.count()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:36"}
+{"level":"error","message":"\nInvalid `prisma.user.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:39"}
+{"level":"error","message":"\nInvalid `prisma.user.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:39"}
+{"level":"error","message":"\nInvalid `prisma.user.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:43"}
+{"level":"error","message":"\nInvalid `prisma.user.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:43"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:53"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:53"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:53"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:53"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:53"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:53"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:58"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:58"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:58"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:58"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:58"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:52:58"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:53"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:53"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:53"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:53"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:55"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:55"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:55"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:55"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:57"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:57"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:57"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:57"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:57"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:57"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:59"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:53:59"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:54:01"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nCan't reach database server at `localhost:3306`\n\nPlease make sure your database server is running at `localhost:3306`.","timestamp":"2024-11-17 16:54:01"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:07"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:09"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.normalPlace.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.partner.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.residentialQuarter.findMany()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:54:33"}
+{"level":"error","message":"\nInvalid `prisma.place.create()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:55:07"}
+{"level":"error","message":"\nInvalid `prisma.place.create()` invocation:\n\n\nDatabase `sjekk` does not exist on the database server at `localhost:3306`.","timestamp":"2024-11-17 16:55:07"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:55:03"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:55:03"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:55:09"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:55:09"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:58:17"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:58:17"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:58:52"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:58:52"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:59:05"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 18:59:05"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:00:38"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:00:38"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:02:18"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:02:18"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:03:17"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:03:17"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:04:21"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:04:21"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:04:43"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:04:43"}
+{"level":"error","message":[{"error":"username cannot be null or empty","field":"username"},{"error":"password cannot be null or empty","field":"password"}],"timestamp":"2024-11-19 19:17:41"}
+{"level":"error","message":[{"error":"username cannot be null or empty","field":"username"},{"error":"password cannot be null or empty","field":"password"}],"timestamp":"2024-11-19 19:17:41"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:18:47"}
+{"level":"error","message":"Manager doesn't exists","timestamp":"2024-11-19 19:18:47"}
+{"level":"error","message":"Password Mismatch","timestamp":"2024-11-19 19:18:51"}
+{"level":"error","message":"Password Mismatch","timestamp":"2024-11-19 19:18:51"}
+{"level":"error","message":"notifications is not defined","timestamp":"2024-11-28 14:24:51"}
+{"level":"error","message":"notifications is not defined","timestamp":"2024-11-28 14:24:51"}
+{"level":"error","message":"No such dashboard exists","timestamp":"2024-11-28 14:29:48"}
+{"level":"error","message":"No such dashboard exists","timestamp":"2024-11-28 14:29:48"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.create()` invocation:\n\n{\n  data: {\n    body: undefined,\n    icon: undefined,\n    image: undefined,\n    is_favorite: undefined,\n    created_at: \"28.11.2024 17:07\",\n+   title: String\n  }\n}\n\nArgument `title` is missing.","timestamp":"2024-11-28 17:07:48"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.create()` invocation:\n\n{\n  data: {\n    body: undefined,\n    icon: undefined,\n    image: undefined,\n    is_favorite: undefined,\n    created_at: \"28.11.2024 17:07\",\n+   title: String\n  }\n}\n\nArgument `title` is missing.","timestamp":"2024-11-28 17:07:48"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.create()` invocation:\n\n{\n  data: {\n    body: undefined,\n    icon: undefined,\n    image: undefined,\n    is_favorite: undefined,\n    created_at: \"28.11.2024 17:09\",\n+   title: String\n  }\n}\n\nArgument `title` is missing.","timestamp":"2024-11-28 17:09:44"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.create()` invocation:\n\n{\n  data: {\n    body: undefined,\n    icon: undefined,\n    image: undefined,\n    is_favorite: undefined,\n    created_at: \"28.11.2024 17:09\",\n+   title: String\n  }\n}\n\nArgument `title` is missing.","timestamp":"2024-11-28 17:09:44"}
+{"level":"error","message":"activity.sent_at.toISOString is not a function","timestamp":"2024-11-29 12:54:45"}
+{"level":"error","message":"activity.sent_at.toISOString is not a function","timestamp":"2024-11-29 12:54:45"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.create()` invocation:\n\n{\n  data: {\n    body: undefined,\n    icon: undefined,\n    image: undefined,\n    is_favorite: undefined,\n    created_at: \"29.11.2024 12:59\",\n+   title: String\n  }\n}\n\nArgument `title` is missing.","timestamp":"2024-11-29 12:59:41"}
+{"level":"error","message":"\nInvalid `prisma.systemNotificationComponent.create()` invocation:\n\n{\n  data: {\n    body: undefined,\n    icon: undefined,\n    image: undefined,\n    is_favorite: undefined,\n    created_at: \"29.11.2024 12:59\",\n+   title: String\n  }\n}\n\nArgument `title` is missing.","timestamp":"2024-11-29 12:59:41"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'E:\\workspace\\projects\\sjekk_kontroll\\sjekk_server\\uploads\\2024-11-29T11-05-45.155ZUntitled Diagram.drawio.png'","timestamp":"2024-11-29 13:05:45"}
+{"level":"error","message":"ENOENT: no such file or directory, open 'E:\\workspace\\projects\\sjekk_kontroll\\public\\notifications-uploads\\2024-11-29T11-07-35.328ZUntitled Diagram.drawio.png'","timestamp":"2024-11-29 13:07:35"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:51:37"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:51:37"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:53:21"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:53:21"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:53:28"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:53:28"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:54:10"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:54:10"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:54:35"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:54:35"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:55:58"}
+{"level":"error","message":"Cannot read properties of null (reading 'normal_place_id')","timestamp":"2024-11-29 14:55:58"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2024-11-29 16:19:09"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2024-11-29 16:19:09"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2024-11-29 16:20:02"}
+{"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2024-11-29 16:20:02"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'length')","timestamp":"2024-11-29 16:21:04"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'length')","timestamp":"2024-11-29 16:21:04"}

@@ -223,6 +223,9 @@ class PlaceRepository{
                 const dashboards = await this.prisma.normalPlaceDashboard.findMany({
                     where: {
                         normal_place_id: +place_id
+                    },
+                    include: {
+                        notification_subscriptions: true
                     }
                 })
                 return resolve(dashboards)

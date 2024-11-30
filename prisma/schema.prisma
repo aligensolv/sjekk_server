@@ -135,10 +135,24 @@ model Partner {
   place_requests PlaceRequest[]
 }
 
+model PublicPlaceNotificationSubscription {
+  id Int @id @default(autoincrement())
+  public_dashboard_id Int
+  public_dashboard NormalPlaceDashboard @relation(fields: [public_dashboard_id], references: [id])
+  push_manager_subscription String? @db.LongText
+  user_agent String
+  ip_address String
+  channel NotificationChannel @default(public_place)
+  channel_member_id Int
+}
+
+
 model NormalPlaceDashboard {
   id Int @id @default(autoincrement())
   access_username String @unique
   access_code String
+
+  notification_subscriptions PublicPlaceNotificationSubscription[]
 
   profile_image String?
   free_parking_hours Int
@@ -174,6 +188,17 @@ model NormalPlace {
   deleted_at String?
 }
 
+model ResidentialDashboardNotificationSubscription {
+  id Int @id @default(autoincrement())
+  residential_dashboard_id Int
+  residential_dashboard ResidentialDashboard @relation(fields: [residential_dashboard_id], references: [id])
+  push_manager_subscription String? @db.LongText
+  user_agent String
+  ip_address String
+  channel NotificationChannel @default(public_place)
+  channel_member_id Int
+}
+
 model ResidentialDashboard {
   id Int @id @default(autoincrement())
   access_username String
@@ -182,6 +207,7 @@ model ResidentialDashboard {
 
   apartment_registration_qrcode String?
   apartment_registration_qrcode_link String?
+  notification_subscriptions ResidentialDashboardNotificationSubscription[]
 
 
   residential_quarter_id Int @unique
@@ -496,9 +522,20 @@ model CarLogReport {
   created_at String
 }
 
+model ApartmentNotificationSubscription {
+  id Int @id @default(autoincrement())
+  aprtment_id Int
+  apartment Apartment @relation(fields: [aprtment_id], references: [id])
+  push_manager_subscription String? @db.LongText
+  user_agent String
+  ip_address String
+  channel NotificationChannel @default(apartment)
+  channel_member_id Int
+}
+
 model Apartment {
   id Int @id @default(autoincrement())
-    owner_name String
+  owner_name String
   username String
   password String
   apartment_number String
@@ -512,6 +549,7 @@ model Apartment {
 
   residential_cars ResidentialCar[]
 
+  notification_subscriptions ApartmentNotificationSubscription[]
 }
 
 model ApartmentRequest {
@@ -531,4 +569,47 @@ model ApartmentRequest {
 
 model ApartmentLocation {
   id Int @id @default(autoincrement())
+}
+
+model SystemNotificationComponent {
+  id Int @id @default(autoincrement())
+  title String
+  body String?
+  icon String?
+  image String?
+  is_favorite Boolean @default(false)
+  sent_times Int @default(0)
+  created_at String
+  updated_at String?
+}
+
+enum NotificationChannel {
+  apartment
+  residential
+  public_place
+}
+
+model Notification {
+  id Int @id @default(autoincrement())
+  title String
+  body String?
+  icon String?
+  image String?
+  is_clicked Boolean @default(false)
+  sent_at String
+  channel NotificationChannel
+  channel_member_id Int
+}
+
+enum ManagerRole {
+  admin
+  superuser
+}
+
+model Manager {
+  id Int @id @default(autoincrement())
+  username String
+  password String
+  created_at String
+  role ManagerRole
 }

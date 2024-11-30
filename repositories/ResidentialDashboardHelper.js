@@ -4,6 +4,7 @@ import fs from 'fs'
 import qr from 'qr-image'
 import { fileURLToPath } from 'url'
 import path from "path"
+import { residential_link } from "../config.js";
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -21,7 +22,7 @@ class ResidentialDashboardHelper {
             promiseAsyncWrapper(
                 async (resolve, reject) => {
                     try{
-                        const data = `https://residential.gensolv.no/quarters/${residential_quarter_id}/apartments/registration` // URL or any data you want to encode
+                        const data = `${residential_link}/quarters/${residential_quarter_id}/apartments/registration` // URL or any data you want to encode
                         const qrCode = qr.image(data, { type: 'png', size: 10 });
                 
                         // Generate a unique filename
