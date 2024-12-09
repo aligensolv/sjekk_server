@@ -12,12 +12,9 @@ class ApartmentRepository{
         return new Promise(
             promiseAsyncWrapper(
                 async (resolve) =>{
-                    const places = await this.prisma.place.findMany({
-                        where: {
-                            place_type: 'apartment'
-                        },
+                    const places = await this.prisma.apartment.findMany({
                         include: {
-                            apartment: true
+                            residential_quarter: true
                         }
                     })
                     return resolve(places)

@@ -1,11 +1,36 @@
+import multer from "multer";
 import { Router } from "express"
 import PrismaClientService from "../utils/prisma_client.js"
 import webPush from "../services/web_push.js"
 import NotificationRepository from "../repositories/Notification.js"
 import notificationQueue from "../background_tasks/push_notification_queue.js"
+import asyncWrapper from '../middlewares/async_wrapper.js'
 
 const router = Router()
 const prisma = PrismaClientService.instance
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './public/notifications-uploads/');
+    },
+    filename: function (req, file, cb) {
+        cb(null, new Date().toISOString().replace(/:/g, '-') + '-' + file.originalname);
+    }
+});
+
+const fileFilter = (req, file, cb) => {
+    if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+        cb(null, true);
+    } else {
+        cb(new Error('Only JPEG and PNG files are accepted'), false);
+    }
+};
+
+const upload = multer({
+    storage: storage,
+    fileFilter: fileFilter
+});
+
 
 router.post('/residential-quarter-dashboard/:id/notification/subscription', async (req, res) => {
     try{
@@ -82,9 +107,9 @@ router.post('/residential-quarter-dashboard/:id/notification/unsubscribe', async
     })
 })
 
-router.post('/residential-quarter-dashboard/:id/send-notification', async (req, res) => {
+router.post('/residential-quarter-dashboard/:id/send-notification', upload.fields([{ name: 'image', maxCount: 1 }, { name: 'icon', maxCount: 1 }]), async (req, res) => {
     const { id } = req.params
-    const { title, body, image, icon } = req.body
+    const { title, body } = req.body
 
     
 
@@ -334,9 +359,58 @@ router.post('/apartment-dashboard/:id/send-notification', async (req, res) => {
     })
 })
 
-router.post('/notification-subscriptions/send-notification', async (req, res) => {
-    const { title, body, icon, image } = req.body
-})
+
+router.get('/notifications', asyncWrapper(
+    async (req, res) => {
+        const prisma = PrismaClientService.instance
+        const notifications = await prisma.notification.findMany({})
+        console.log(notifications);
+        
+        return res.json(notifications)
+    }
+))
+
+router.get('/notifications/residential', asyncWrapper(
+    async (req, res) => {
+        const prisma = PrismaClientService.instance
+        const notifications = await prisma.notification.findMany({
+            where: {
+                channel: 'residential'
+            }
+        })
+        console.log(notifications);
+        
+        return res.json(notifications)
+    }
+))
+
+router.get('/notifications/public-place', asyncWrapper(
+    async (req, res) => {
+        const prisma = PrismaClientService.instance
+        const notifications = await prisma.notification.findMany({
+            where: {
+                channel: 'public_place'
+            }
+        })
+        console.log(notifications);
+        
+        return res.json(notifications)
+    }
+))
+
+router.get('/notifications/apartment', asyncWrapper(
+    async (req, res) => {
+        const prisma = PrismaClientService.instance
+        const notifications = await prisma.notification.findMany({
+            where: {
+                channel: 'apartment'
+            }
+        })
+        console.log(notifications);
+        
+        return res.json(notifications)
+    }
+))
 
 
 export default router

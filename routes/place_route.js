@@ -14,6 +14,8 @@ import {
     updatePlace 
 } from "../controllers/place_controller.js"
 import { getAllPlaceviolations } from '../controllers/violation_controller.js';
+import asyncWrapper from '../middlewares/async_wrapper.js';
+import PrismaClientService from '../utils/prisma_client.js';
 
 const router = Router();
 
@@ -36,5 +38,19 @@ router.put('/places/:id', updatePlace)
 
 
 router.get('/places/:id/violations', getAllPlaceviolations)
+
+router.get('/public-places/:id/notifications', asyncWrapper(
+    async (req, res) => {
+        const { id } = req.params
+        const prisma = PrismaClientService.instance
+        const notifications = await prisma.notification.findMany({
+            where: {
+                channel: 'public_place',
+                channel_member_id: +id
+            }
+        })
+        res.status(200).json(notifications)
+    }
+))
 
 export default router

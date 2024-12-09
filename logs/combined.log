@@ -4002,3 +4002,7 @@
 {"level":"error","message":"Cannot read properties of undefined (reading '0')","timestamp":"2024-11-29 16:20:02"}
 {"level":"error","message":"Cannot read properties of undefined (reading 'length')","timestamp":"2024-11-29 16:21:04"}
 {"level":"error","message":"Cannot read properties of undefined (reading 'length')","timestamp":"2024-11-29 16:21:04"}
+{"level":"error","message":"PrismaClientService is not defined","timestamp":"2024-12-09 11:10:58"}
+{"level":"error","message":"PrismaClientService is not defined","timestamp":"2024-12-09 11:10:58"}
+{"level":"error","message":"\nInvalid `prisma.place.findMany()` invocation:\n\n{\n  where: {\n    place_type: \"apartment\"\n  },\n  include: {\n    apartment: true,\n    ~~~~~~~~~\n    residential: true,\n?   normal_place?: true,\n?   violations?: true,\n?   registered_cars?: true\n  }\n}\n\nUnknown field `apartment` for include statement on model `Place`. Available options are marked with ?.","timestamp":"2024-12-09 11:28:34"}
+{"level":"error","message":"\nInvalid `prisma.place.findMany()` invocation:\n\n{\n  where: {\n    place_type: \"apartment\"\n  },\n  include: {\n    apartment: true,\n    ~~~~~~~~~\n    residential: true,\n?   normal_place?: true,\n?   violations?: true,\n?   registered_cars?: true\n  }\n}\n\nUnknown field `apartment` for include statement on model `Place`. Available options are marked with ?.","timestamp":"2024-12-09 11:28:34"}

@@ -35946,3 +35946,41 @@ Argument `title` is missing. {"timestamp":"2024-11-29 12:59:41"}
 [31merror[39m: Cannot read properties of undefined (reading '0') {"timestamp":"2024-11-29 16:20:02"}
 [31merror[39m: Cannot read properties of undefined (reading 'length') {"timestamp":"2024-11-29 16:21:04"}
 [31merror[39m: Cannot read properties of undefined (reading 'length') {"timestamp":"2024-11-29 16:21:04"}
+[31merror[39m: PrismaClientService is not defined {"timestamp":"2024-12-09 11:10:58"}
+[31merror[39m: PrismaClientService is not defined {"timestamp":"2024-12-09 11:10:58"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    place_type: "apartment"
+  },
+  include: {
+    apartment: true,
+    ~~~~~~~~~
+    residential: true,
+?   normal_place?: true,
+?   violations?: true,
+?   registered_cars?: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-12-09 11:28:34"}
+[31merror[39m: 
+Invalid `prisma.place.findMany()` invocation:
+
+{
+  where: {
+    place_type: "apartment"
+  },
+  include: {
+    apartment: true,
+    ~~~~~~~~~
+    residential: true,
+?   normal_place?: true,
+?   violations?: true,
+?   registered_cars?: true
+  }
+}
+
+Unknown field `apartment` for include statement on model `Place`. Available options are marked with ?. {"timestamp":"2024-12-09 11:28:34"}
