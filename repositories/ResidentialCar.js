@@ -70,15 +70,20 @@ class ResidentialCarRepository{
                     residential_quarter_id: +residential_quarter_id,
                     plate_number: plate_number.toUpperCase().replace(/\s/g, ''),
                     registration_type: parking_type.toLowerCase().replace(/\s/g, ''),
+                    car_type: apartment_id ? 'apartment' : 'residential'
                 }
             })
 
             if(checkResidentialQuarterRegistrationConstraint && checkResidentialQuarterRegistrationConstraint.registration_type == 'guest'){
+                
                 const lastRegistrationTime = checkResidentialQuarterRegistrationConstraint.last_registered_date
                 const diffInDays = moment(TimeRepository.getCurrentTime(), 'DD.MM.YYYY HH:mm').diff(moment(lastRegistrationTime, 'DD.MM.YYYY HH:mm'), 'days')
 
                 if(diffInDays < 2){
-                    console.log('diff is fired');
+                    if(checkResidentialQuarterRegistrationConstraint.car_type == 'apartment'){
+                        const error = new CustomError(`You can not register a car to an apartment more than once every two days.`, BAD_REQUEST)
+                        return reject(error)
+                    }
                     
                     const error = new CustomError(`You can not register a car to a residential quarter more than once every two days.`, BAD_REQUEST)
                     return reject(error)
@@ -113,7 +118,7 @@ class ResidentialCarRepository{
                 where: {
                     plate_number,
                     deleted_at: null,
-                    registration_type: 'residential',
+                    registration_type: apartment_id ? 'apartment' : 'residential',
                     residential_car: {
                         parking_type: {
                             equals: parking_type
@@ -172,7 +177,8 @@ class ResidentialCarRepository{
                         last_registered_date: TimeRepository.increaseTimeByHours({
                             current_time: created_at,
                             days: residentialQ.guest_free_days
-                        })
+                        }),
+                        car_type: apartment_id ? 'apartment' : 'residential'
                     }
                 })
             }
@@ -225,9 +231,9 @@ class ResidentialCarRepository{
                 }
             })
 
-            await this.prisma.residentialDashboard.update({
+            await this.prisma.residentialQuarter.update({
                 where: {
-                    residential_quarter_id: registeredCar.residential_quarter_id
+                    id: registeredCar.residential_quarter_id
                 },
                 data: {
                     current_total_registered_cars: {

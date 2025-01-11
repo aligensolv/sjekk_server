@@ -3,7 +3,7 @@ import path from 'path'
 import compression from 'compression'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-import { port, host, compiledApartmentRequestTemplate, compiledApartmentRequestAcceptedTemplate } from './config.js'
+import { port, host, compiledApartmentRequestTemplate, compiledApartmentRequestAcceptedTemplate, stripe_secret_key } from './config.js'
 import { NOT_FOUND } from './constants/status_codes.js'
 import ErrorHandlerMiddleware from './middlewares/error_handler.js'
 import { fileURLToPath } from 'url'
@@ -51,8 +51,89 @@ io.on('connection', (socket) => {
 })
 
 
+const stripe = new Stripe(stripe_secret_key);
+
+
+const handleUpdatePayment = async (charge) => {
+    const kid = charge.metadata.kid;
+
+    const payment = await PrismaClientService.instance.payment.update({
+        where: {
+            kid_number: kid
+        },
+        data: {
+            status: 'completed',
+            metadata: {
+                create: {
+                    paid_at: TimeRepository.getCurrentTime(),
+                    card_holder_details: {
+                        create: {
+                            full_name: charge.billing_details.name ?? 'No name',
+                            card_number: '**** **** **** ' + charge.payment_method_details.card.last4,
+                            country: charge.billing_details.address.country,
+                            email: charge.billing_details.email
+                        }
+                    },
+                    charge_id: charge.id,
+                    payment_intent_id: charge.payment_intent,
+                    receipt_link: charge.receipt_url,
+                    payment_method: charge.payment_method_details.type,
+                }
+            }
+        }
+    })
+
+    await PaymentRepository.stroePaymentLog({
+        action: 'payment success',
+        details: `Payment for kid ${kid} was successful`,
+        log_level: 'info'
+    })
+
+    // await axios.post(`https://finance.gensolv.no/api/sanctions/kid/${kid}`)
+}
+
+// This is your Stripe CLI webhook secret for testing your endpoint locally.
+const endpointSecret = "whsec_98cc1d77cf62daff2989ad62f110fe7749019db2999fa5c4798beea706919e25";
+
+app.post('/api/webhook', bodyParser.raw({ type: 'application/json' }), (request, response) => {
+  const sig = request.headers['stripe-signature'];
+
+  let event;
+
+  try {
+    event = stripe.webhooks.constructEvent(request.body, sig, endpointSecret);
+    
+  } catch (err) {
+    response.status(400).send(`Webhook Error: ${err.message}`);
+    return;
+  }
+
+  // Handle the event
+  switch (event.type) {
+    case 'payment_intent.succeeded':
+    //   const paymentIntentSucceeded = event.data.object;
+    //   console.log(paymentIntentSucceeded);
+      
+      break;
+    case 'charge.succeeded':
+      const chargeSucceeded = event.data.object;
+      handleUpdatePayment(chargeSucceeded);
+      
+
+    
+    // ... handle other event types
+    default:
+      console.log(`Unhandled event type ${event.type}`);
+  }
+
+  // Return a 200 response to acknowledge receipt of the event
+  response.send();
+});
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+// app.use(express.raw({ type: 'application/json' }))
 
 app.use(
     cors()
@@ -94,6 +175,15 @@ import SystemNotificationComponentApi from './routes/system_notification_compone
 import ManagerApi from './routes/manager_route.js'
 import NotificationAnalyticsApi from './routes/notification_analytics_route.js'
 
+import PaymentApi from './routes/payment_route.js'
+import Stripe from 'stripe'
+import PrismaClientService from './utils/prisma_client.js'
+import TimeRepository from './repositories/Time.js'
+
+import PaymentReportApi from './routes/payment_report_route.js'
+import axios from 'axios'
+import PaymentRepository from './repositories/Payment.js'
+
 
 // public routes
 app.use(
@@ -130,8 +220,12 @@ app.use(
     ResidentialCarApi,
     ResidentialDashboardApi,
     ApartmentRequestApi,
-    ApartmentLocationRequestApi
+    ApartmentLocationRequestApi,
+
+    PaymentApi,
+    PaymentReportApi
 )
+
 
 app.use(ErrorHandlerMiddleware)
 

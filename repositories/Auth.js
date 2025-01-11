@@ -58,7 +58,10 @@ class Auth{
                 
                 const dashboard = await this.prisma.partnerDashboard.findUnique({
                     where: {
-                        access_username
+                        access_username,
+                        partner: {
+                            deleted_at: null
+                        }
                     },
                     include: {
                         partner: true

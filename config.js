@@ -38,6 +38,9 @@ const violationTemplateSource = fs.readFileSync('app_templates/violation.html', 
 // Precompile the template
 export const compiledViolationTemplate = Handlebars.compile(violationTemplateSource);
 
+const paymentReportTemplateSource = fs.readFileSync('app_templates/payment_report_template.html', 'utf-8');
+export const compiledPaymentReportTemplate = Handlebars.compile(paymentReportTemplateSource);
+
 // Read the template file synchronously
 const reportTemplateSource = fs.readFileSync('app_templates/violation.html', 'utf-8');
 
@@ -61,3 +64,7 @@ export const webPushPrivateKey = process.env.WEB_PUSH_PRIVATE_KEY
 
 
 export const residential_link = is_development ? process.env.DEV_BASE_RESIDENTIAL_URL : process.env.PROD_BASE_RESIDENTIAL_URL
+
+
+// payment gateway
+export const stripe_secret_key = process.env.STRIPE_SECRET_KEY

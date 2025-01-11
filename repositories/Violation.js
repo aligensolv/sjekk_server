@@ -12,6 +12,9 @@ import TimeRepository from "./Time.js";
 import Randomstring from "randomstring";
 import axios from "axios";
 import Auth from "./Auth.js";
+import PaymentRepository from "./Payment.js";
+import { io } from "../server.js";
+import SocketPocket from "../constants/socket_pocket.js";
 
 class ViolationRepository{
     static prisma = PrismaClientService.instance
@@ -35,6 +38,15 @@ class ViolationRepository{
                         },
                         ticket_info: true,
                         plate_info: true,
+                        payment: {
+                            include: {
+                                metadata: {
+                                    include: {
+                                        card_holder_details: true,
+                                    }
+                                }
+                            }
+                        }
                     }
                 })
                 return resolve(violations)
@@ -83,7 +95,16 @@ class ViolationRepository{
                         },
                         plate_info: true,
                         ticket_info: true,
-                        images: true
+                        images: true,
+                        payment: {
+                            include: {
+                                metadata: {
+                                    include: {
+                                        card_holder_details: true
+                                    }
+                                }
+                            }
+                        }
                     }
                 })
 
@@ -115,7 +136,16 @@ class ViolationRepository{
                         },
                         images: true,
                         plate_info: true,
-                        ticket_info: true
+                        ticket_info: true,
+                        payment: {
+                            include: {
+                                metadata: {
+                                    include: {
+                                        card_holder_details: true
+                                    }
+                                }
+                            }
+                        }
                     }
                 })
 
@@ -136,15 +166,24 @@ class ViolationRepository{
                     include: {
                         place: true,
                         created_by: true,
-                        registered_car: true,
                         rules: {
                             include: {
-                                extras_values: true
+                                extras_values: true,
+                                extras: true
                             }
                         },
                         images: true,
                         plate_info: true,
-                        ticket_info: true
+                        ticket_info: true,
+                        payment: {
+                            include: {
+                                metadata: {
+                                    include: {
+                                        card_holder_details: true
+                                    }
+                                }
+                            }
+                        }
                     }
                 })
 
@@ -226,6 +265,7 @@ class ViolationRepository{
                                 print_option,
                                 barcode_image,
                                 serial_number,
+                                kid: kid_number,
                                 created_at
                             }
                         },
@@ -260,15 +300,6 @@ class ViolationRepository{
                     }
                 })
 
-                console.log({
-                    kid_number: kid_number,
-                    control_number: created.id,
-                    total_charge: total_charge,
-                    violated_at: created.created_at,
-                    employee_pnid: pnid,
-                    rules: rules
-                });
-
                 await axios.post('https://finance.gensolv.no/api/sanctions', {
                     kid_number: kid_number.toString(),
                     control_number: ticket_number,
@@ -282,6 +313,48 @@ class ViolationRepository{
                         }
                     })
                 })
+
+                const intent = await PaymentRepository.createPaymentIntent({
+                    amount: total_charge,
+                    currency: 'nok',
+                })
+
+                await this.prisma.violation.update({
+                    where: {
+                        id: created.id
+                    },
+                    include: {
+                        ticket_info: true
+                    },
+                    data: {
+                        ticket_info: {
+                            update: {
+                                payment_intent_client_secret: intent.client_secret
+                            }
+                        }
+                    }
+                })
+
+                await this.prisma.payment.create({
+                    data: {
+                        violation_id: created.id,
+                        kid_number: kid_number,
+                        required_amount: total_charge,
+                        status: 'idle',
+                        init_date: created.created_at,
+                        refund: undefined,
+                        plate_number: registered_car.plate_number,
+                        control_number: created.id,
+                        sanction_id: created.id,
+
+                        metadata: undefined
+
+                    }
+                })
+
+                io.emit(SocketPocket.EMITS.NOTIFY_VIOLATION_CREATION, {})
+                io.emit(SocketPocket.EMITS.NOTIFY_PAYMENT_INITIALIZATION, {})
+
 
                 return resolve(created)
             }
