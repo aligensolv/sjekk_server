@@ -12,7 +12,10 @@ export const getPaymentReports = asyncWrapper(
 
 export const generatePaymentReport = asyncWrapper(
     async (req, res) => {
-        const report = await PaymentReportRepository.generatePaymentReport()
+        const { start_date, end_date, report_name } = req.body
+        const report = await PaymentReportRepository.generatePaymentReport({
+            start_date, end_date, report_name
+        })
 
         return res.status(OK).json(report)
     }

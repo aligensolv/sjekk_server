@@ -38,7 +38,7 @@ const violationTemplateSource = fs.readFileSync('app_templates/violation.html', 
 // Precompile the template
 export const compiledViolationTemplate = Handlebars.compile(violationTemplateSource);
 
-const paymentReportTemplateSource = fs.readFileSync('app_templates/payment_report_template.html', 'utf-8');
+const paymentReportTemplateSource = fs.readFileSync('app_templates/complete_payment_report_template.html', 'utf-8');
 export const compiledPaymentReportTemplate = Handlebars.compile(paymentReportTemplateSource);
 
 // Read the template file synchronously

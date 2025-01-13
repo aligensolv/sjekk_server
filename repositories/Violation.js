@@ -352,6 +352,15 @@ class ViolationRepository{
                     }
                 })
 
+                await this.prisma.paymentLogs.create({
+                    data: {
+                        action: `payment initialization ${created.id}`,
+                        details: `Payment intent created for violation ${created.id}`,
+                        level: 'info',
+                        timestamp: (new Date()).toString()
+                    }
+                })
+
                 io.emit(SocketPocket.EMITS.NOTIFY_VIOLATION_CREATION, {})
                 io.emit(SocketPocket.EMITS.NOTIFY_PAYMENT_INITIALIZATION, {})
 

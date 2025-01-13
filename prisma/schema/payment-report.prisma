@@ -5,6 +5,10 @@ model PaymentReportMetadata {
     payment_report PaymentReport? @relation(fields: [payment_report_id], references: [id])
 
     generated_by String
+    start_date String
+    end_date String
+
+    statistics Json
 }
 
 model PaymentReport {

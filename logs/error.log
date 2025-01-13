@@ -159124,3 +159124,141 @@ Invalid `prisma.payment.findUnique()` invocation:
 Argument `id` is missing. {"timestamp":"2025-01-11 16:38:33"}
 [31merror[39m: An error occurred with our connection to Stripe. Request was retried 2 times. {"timestamp":"2025-01-11 16:42:52"}
 [31merror[39m: An error occurred with our connection to Stripe. Request was retried 2 times. {"timestamp":"2025-01-11 16:42:52"}
+[31merror[39m: Cannot destructure property 'from' of 'undefined' as it is undefined. {"timestamp":"2025-01-11 20:03:02"}
+[31merror[39m: Cannot destructure property 'from' of 'undefined' as it is undefined. {"timestamp":"2025-01-11 20:03:02"}
+[31merror[39m: Missing helper: "json" {"timestamp":"2025-01-11 20:49:24"}
+[31merror[39m: Missing helper: "json" {"timestamp":"2025-01-11 20:49:24"}
+[31merror[39m: Parse error on line 177:
+...sm text-gray-500">{{rules[0].name}}</td>
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' {"timestamp":"2025-01-11 20:55:01"}
+[31merror[39m: Parse error on line 177:
+...sm text-gray-500">{{rules[0].name}}</td>
+-----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID' {"timestamp":"2025-01-11 20:55:01"}
+[31merror[39m: Missing helper: "eq" {"timestamp":"2025-01-11 21:19:06"}
+[31merror[39m: Missing helper: "eq" {"timestamp":"2025-01-11 21:19:06"}
+[31merror[39m: opts.inverse is not a function {"timestamp":"2025-01-11 21:21:19"}
+[31merror[39m: opts.inverse is not a function {"timestamp":"2025-01-11 21:21:19"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+{
+  data: {
+    metadata: {
+      create: {
+        generated_by: "Moataz Abubaker",
+        start_date: "2025-01-16T08:27:30.000Z",
+        end_date: "2025-01-25T08:27:30.000Z"
+      }
+    },
++   report_name: String
+  }
+}
+
+Argument `report_name` is missing. {"timestamp":"2025-01-13 10:27:47"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+{
+  data: {
+    metadata: {
+      create: {
+        generated_by: "Moataz Abubaker",
+        start_date: "2025-01-16T08:27:30.000Z",
+        end_date: "2025-01-25T08:27:30.000Z"
+      }
+    },
++   report_name: String
+  }
+}
+
+Argument `report_name` is missing. {"timestamp":"2025-01-13 10:27:47"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+{
+  data: {
+    metadata: {
+      create: {
+        generated_by: "Moataz Abubaker",
+        start_date: "2025-01-16T08:27:30.000Z",
+        end_date: "2025-01-25T08:27:30.000Z"
+      }
+    },
+    report_name: "undefined_payment_report_1736756918036",
+    report_path: "payment_reports/undefined_payment_report_1736756918036.pdf",
++   created_at: String
+  }
+}
+
+Argument `created_at` is missing. {"timestamp":"2025-01-13 10:28:38"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+{
+  data: {
+    metadata: {
+      create: {
+        generated_by: "Moataz Abubaker",
+        start_date: "2025-01-16T08:27:30.000Z",
+        end_date: "2025-01-25T08:27:30.000Z"
+      }
+    },
+    report_name: "undefined_payment_report_1736756918036",
+    report_path: "payment_reports/undefined_payment_report_1736756918036.pdf",
++   created_at: String
+  }
+}
+
+Argument `created_at` is missing. {"timestamp":"2025-01-13 10:28:38"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+{
+  data: {
+    metadata: {
+      create: {
+        generated_by: "Moataz Abubaker",
+        start_date: "2025-01-16T08:27:30.000Z",
+        end_date: "2025-01-25T08:27:30.000Z",
++       statistics: JsonNullValueInput | Json
+      }
+    },
+    report_name: "undefined_payment_report_1736756941333",
+    report_path: "payment_reports/undefined_payment_report_1736756941333.pdf",
+    created_at: "13.01.2025 10:29"
+  }
+}
+
+Argument `statistics` is missing. {"timestamp":"2025-01-13 10:29:01"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+{
+  data: {
+    metadata: {
+      create: {
+        generated_by: "Moataz Abubaker",
+        start_date: "2025-01-16T08:27:30.000Z",
+        end_date: "2025-01-25T08:27:30.000Z",
++       statistics: JsonNullValueInput | Json
+      }
+    },
+    report_name: "undefined_payment_report_1736756941333",
+    report_path: "payment_reports/undefined_payment_report_1736756941333.pdf",
+    created_at: "13.01.2025 10:29"
+  }
+}
+
+Argument `statistics` is missing. {"timestamp":"2025-01-13 10:29:01"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+
+Unique constraint failed on the fields: (`id`) {"timestamp":"2025-01-13 10:29:23"}
+[31merror[39m: 
+Invalid `prisma.paymentReport.create()` invocation:
+
+
+Unique constraint failed on the fields: (`id`) {"timestamp":"2025-01-13 10:29:23"}
