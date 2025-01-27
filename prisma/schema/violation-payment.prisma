@@ -74,6 +74,8 @@ model Payment {
   plate_number String
   control_number String
 
+  payment_intent_client_secret String @default("")
+
   sanction_id Int? @unique
   sanction Violation? @relation(fields: [sanction_id], references: [id])
 

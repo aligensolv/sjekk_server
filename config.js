@@ -68,3 +68,5 @@ export const residential_link = is_development ? process.env.DEV_BASE_RESIDENTIA
 
 // payment gateway
 export const stripe_secret_key = process.env.STRIPE_SECRET_KEY
+
+export const stripe_webhook_endpoint_secret = process.env.STRIPE_WEBHOOK_ENDPOINT_SECRET

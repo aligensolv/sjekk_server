@@ -3,7 +3,7 @@ import path from 'path'
 import compression from 'compression'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-import { port, host, compiledApartmentRequestTemplate, compiledApartmentRequestAcceptedTemplate, stripe_secret_key } from './config.js'
+import { port, stripe_secret_key, stripe_webhook_endpoint_secret } from './config.js'
 import { NOT_FOUND } from './constants/status_codes.js'
 import ErrorHandlerMiddleware from './middlewares/error_handler.js'
 import { fileURLToPath } from 'url'
@@ -85,15 +85,13 @@ const handleUpdatePayment = async (charge) => {
 
     await PaymentRepository.stroePaymentLog({
         action: 'payment success',
-        details: `Payment for kid ${kid} was successful`,
+        details: `Payment for kid ${kid} was successful at ${TimeRepository.getCurrentTime()}`,
         log_level: 'info'
     })
 
-    // await axios.post(`https://finance.gensolv.no/api/sanctions/kid/${kid}`)
+    await axios.post(`https://finance.gensolv.no/api/sanctions/kid/${kid}`)
 }
 
-// This is your Stripe CLI webhook secret for testing your endpoint locally.
-const endpointSecret = "whsec_98cc1d77cf62daff2989ad62f110fe7749019db2999fa5c4798beea706919e25";
 
 app.post('/api/webhook', bodyParser.raw({ type: 'application/json' }), (request, response) => {
   const sig = request.headers['stripe-signature'];
@@ -101,7 +99,7 @@ app.post('/api/webhook', bodyParser.raw({ type: 'application/json' }), (request,
   let event;
 
   try {
-    event = stripe.webhooks.constructEvent(request.body, sig, endpointSecret);
+    event = stripe.webhooks.constructEvent(request.body, sig, stripe_webhook_endpoint_secret);
     
   } catch (err) {
     response.status(400).send(`Webhook Error: ${err.message}`);

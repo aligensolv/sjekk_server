@@ -416,7 +416,6 @@ model TicketInfo {
   created_at String
 
   kid String @default("")
-  payment_intent_client_secret String @default("")
 
   violation_id Int @unique
   violation Violation @relation(fields: [violation_id], references: [id])

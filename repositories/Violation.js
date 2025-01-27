@@ -319,21 +319,6 @@ class ViolationRepository{
                     currency: 'nok',
                 })
 
-                await this.prisma.violation.update({
-                    where: {
-                        id: created.id
-                    },
-                    include: {
-                        ticket_info: true
-                    },
-                    data: {
-                        ticket_info: {
-                            update: {
-                                payment_intent_client_secret: intent.client_secret
-                            }
-                        }
-                    }
-                })
 
                 await this.prisma.payment.create({
                     data: {
@@ -346,6 +331,7 @@ class ViolationRepository{
                         plate_number: registered_car.plate_number,
                         control_number: created.id,
                         sanction_id: created.id,
+                        payment_intent_client_secret: intent.client_secret,
 
                         metadata: undefined
 

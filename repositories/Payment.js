@@ -152,6 +152,12 @@ class PaymentRepository {
                                     extras: true
                                 }
                             },
+                            created_by: {
+                                include: {
+                                    shifts: true,
+                                    
+                                }
+                            },
                             plate_info: true,
                             images: true
                         }
@@ -186,6 +192,7 @@ class PaymentRepository {
                                     extras: true
                                 }
                             },
+                            created_by: true,
                             plate_info: true,
                             images: true
                         }
