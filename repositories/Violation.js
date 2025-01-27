@@ -328,7 +328,7 @@ class ViolationRepository{
                         status: 'idle',
                         init_date: created.created_at,
                         refund: undefined,
-                        plate_number: registered_car.plate_number,
+                        plate_number: plate_number,
                         control_number: created.id,
                         sanction_id: created.id,
                         payment_intent_client_secret: intent.client_secret,
