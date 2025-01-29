@@ -56,6 +56,9 @@ const stripe = new Stripe(stripe_secret_key);
 
 const handleUpdatePayment = async (charge) => {
     const kid = charge.metadata.kid;
+    console.log(kid);
+    console.log(charge);
+    
 
     const payment = await PrismaClientService.instance.payment.update({
         where: {
