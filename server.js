@@ -109,8 +109,12 @@ app.post('/api/webhook', bodyParser.raw({ type: 'application/json' }), (request,
     return;
   }
 
+  console.log(event.type);
+    console.log(event.data.object);
+
   // Handle the event
   switch (event.type) {
+    
     case 'payment_intent.succeeded':
     //   const paymentIntentSucceeded = event.data.object;
     //   console.log(paymentIntentSucceeded);
