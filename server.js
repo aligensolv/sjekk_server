@@ -121,6 +121,8 @@ app.post('/api/webhook', bodyParser.raw({ type: 'application/json' }), (request,
       
       break;
     case 'charge.succeeded':
+        console.warn("charge succeeded");
+        
       const chargeSucceeded = event.data.object;
       handleUpdatePayment(chargeSucceeded);
       
