@@ -137,16 +137,9 @@ class CarRepository{
                 }
 
                 let created_at = TimeRepository.getCurrentTime()
-                let autosys_car_data = country == null || country?.code == 'no' ? 
-                await AutosysRepository.getPlateInformation({
+                let autosys_car_data = await AutosysRepository.getPlateInformation({
                     plate_number: plate_number.toUpperCase().replace(/\s/g, '')
-                }) : {
-                    manufacture_year: null,
-                    car_model: null,
-                    car_description: null,
-                    car_color: null,
-                    car_type: null
-                }
+                })
 
                 if(!autosys_car_data){
                     let not_found_error = new CustomError('Could not find car data', NOT_FOUND)

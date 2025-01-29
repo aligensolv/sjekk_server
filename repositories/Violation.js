@@ -208,6 +208,15 @@ class ViolationRepository{
                         id: ticketInfo.violation_id
                     },
                     include: {
+                        payment: {
+                            include: {
+                                metadata: {
+                                    include: {
+                                        card_holder_details: true
+                                    }
+                                }
+                            }
+                        },
                         place: true,
                         created_by: true,
                         rules: {
@@ -340,8 +349,8 @@ class ViolationRepository{
 
                 await this.prisma.paymentLogs.create({
                     data: {
-                        action: `payment initialization ${created.id}`,
-                        details: `Payment intent created for violation ${created.id}`,
+                        action: `payment initialization for ticket ${ticket_number} with kid ${kid_number}`,
+                        details: `Payment intent created for ticket ${ticket_number} with kid ${kid_number}`,
                         level: 'info',
                         timestamp: (new Date()).toString()
                     }
