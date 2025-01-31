@@ -16,6 +16,14 @@ class UserRepository{
             promiseAsyncWrapper(async (resolve,reject) => {
                 const encrypted_password = await AuthRepository.encryptPassword(password)
                 const created_at = await TimeRepository.getCurrentTime()  
+
+                const searched_user = await this.prisma.user.findUnique({ where: { pnid } })
+
+                if(searched_user != null && searched_user.deleted_at == null){
+                    return reject(
+                        new CustomError("User already exists", ALREADY_EXISTS)
+                    )
+                }
     
                 const user = await this.prisma.user.create({
                     data: {
