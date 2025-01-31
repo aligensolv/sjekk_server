@@ -326,6 +326,9 @@ class ViolationRepository{
                 const intent = await PaymentRepository.createPaymentIntent({
                     amount: total_charge,
                     currency: 'nok',
+                    metadata: {
+                        kid: kid_number
+                    }
                 })
 
 
