@@ -159262,3 +159262,83 @@ Invalid `prisma.paymentReport.create()` invocation:
 
 
 Unique constraint failed on the fields: (`id`) {"timestamp":"2025-01-13 10:29:23"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:23:20"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:23:20"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:25:24"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:25:24"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:26:04"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:26:04"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:28:01"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:28:01"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:29:04"}
+[31merror[39m: User already exists {"timestamp":"2025-02-01 08:29:04"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the fields: (`pnid`) {"timestamp":"2025-02-01 08:29:53"}
+[31merror[39m: 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the fields: (`pnid`) {"timestamp":"2025-02-01 08:29:53"}
+[31merror[39m: No partner was found {"timestamp":"2025-02-01 08:33:20"}
+[31merror[39m: No partner was found {"timestamp":"2025-02-01 08:33:20"}
+[31merror[39m: Access code is incorrect {"timestamp":"2025-02-01 08:33:24"}
+[31merror[39m: Access code is incorrect {"timestamp":"2025-02-01 08:33:24"}
+[31merror[39m: No dashboard username was found {"timestamp":"2025-02-01 08:40:01"}
+[31merror[39m: No dashboard username was found {"timestamp":"2025-02-01 08:40:01"}
+[31merror[39m: No such dashboard exists {"timestamp":"2025-02-01 08:50:08"}
+[31merror[39m: No such dashboard exists {"timestamp":"2025-02-01 08:50:08"}
+[31merror[39m: read ECONNRESET {"timestamp":"2025-02-01 09:17:33"}
+[31merror[39m: read ECONNRESET {"timestamp":"2025-02-01 09:17:33"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2025-02-01 09:19:10"}
+[31merror[39m: You can not register a car to a residential quarter more than once every two days. {"timestamp":"2025-02-01 09:19:10"}
+[31merror[39m: Car already registered as reserved {"timestamp":"2025-02-01 09:20:18"}
+[31merror[39m: Car already registered as reserved {"timestamp":"2025-02-01 09:20:18"}
+[31merror[39m: 
+Invalid `prisma.notification.findMany()` invocation:
+
+{
+  where: {
+    channel: "apartment",
++   channel_member_id: {
++     equals: Int | IntFieldRefInput,
++     in: Int[] | ListIntFieldRefInput,
++     notIn: Int[] | ListIntFieldRefInput,
++     lt: Int | IntFieldRefInput,
++     lte: Int | IntFieldRefInput,
++     gt: Int | IntFieldRefInput,
++     gte: Int | IntFieldRefInput,
++     not: Int | NestedIntFilter
++   }
+  }
+}
+
+Argument `channel_member_id` is missing. {"timestamp":"2025-02-01 09:23:40"}
+[31merror[39m: 
+Invalid `prisma.notification.findMany()` invocation:
+
+{
+  where: {
+    channel: "apartment",
++   channel_member_id: {
++     equals: Int | IntFieldRefInput,
++     in: Int[] | ListIntFieldRefInput,
++     notIn: Int[] | ListIntFieldRefInput,
++     lt: Int | IntFieldRefInput,
++     lte: Int | IntFieldRefInput,
++     gt: Int | IntFieldRefInput,
++     gte: Int | IntFieldRefInput,
++     not: Int | NestedIntFilter
++   }
+  }
+}
+
+Argument `channel_member_id` is missing. {"timestamp":"2025-02-01 09:23:40"}
+[31merror[39m: No such apartment exists {"timestamp":"2025-02-01 09:23:50"}
+[31merror[39m: No such apartment exists {"timestamp":"2025-02-01 09:23:50"}
+[31merror[39m: read ECONNRESET {"timestamp":"2025-02-01 09:25:30"}
+[31merror[39m: read ECONNRESET {"timestamp":"2025-02-01 09:25:30"}
+[31merror[39m: You can not register a car to an apartment more than once every two days. {"timestamp":"2025-02-01 09:25:50"}
+[31merror[39m: You can not register a car to an apartment more than once every two days. {"timestamp":"2025-02-01 09:25:50"}
